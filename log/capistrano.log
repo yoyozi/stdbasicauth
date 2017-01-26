@@ -7835,3 +7835,86 @@
   INFO [1d76e4d7] Finished in 0.554 seconds with exit status 0 (successful).
  DEBUG Uploading /home/deployer/apps/std/shared/config/secrets.yml 0.0%
   INFO Uploading /home/deployer/apps/std/shared/config/secrets.yml 100.0%
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-26 15:45:02 +0200 cap production setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [50e2e675] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [50e2e675] Command: [ -d $HOME/.rbenv ]
+ DEBUG [50e2e675] Finished in 3.303 seconds with exit status 0 (successful).
+ DEBUG [57a01383] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [57a01383] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [57a01383] Finished in 3.302 seconds with exit status 0 (successful).
+ DEBUG [d30a37fc] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [d30a37fc] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [d30a37fc] Finished in 0.550 seconds with exit status 0 (successful).
+ DEBUG [34214725] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [34214725] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [34214725] 	true
+ DEBUG [34214725] 	
+ DEBUG [34214725] Finished in 0.816 seconds with exit status 0 (successful).
+ DEBUG [a3843d60] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [a3843d60] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [a3843d60] Finished in 0.548 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/std_production 0.0%
+  INFO Uploading /tmp/std_production 100.0%
+  INFO [c0b88011] Running /usr/bin/env sudo mv /tmp/std_production /etc/nginx/sites-available as deployer@138.197.73.98
+ DEBUG [c0b88011] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/std_production /etc/nginx/sites-available )
+  INFO [c0b88011] Finished in 0.564 seconds with exit status 0 (successful).
+  INFO [a5ebc8ce] Running /usr/bin/env sudo ln -fs /etc/nginx/sites-available/std_production /etc/nginx/sites-enabled/std_production as deployer@138.197.73.98
+ DEBUG [a5ebc8ce] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo ln -fs /etc/nginx/sites-available/std_production /etc/nginx/sites-enabled/std_production )
+  INFO [a5ebc8ce] Finished in 0.567 seconds with exit status 0 (successful).
+ DEBUG [0da67a5c] Running /usr/bin/env id -un as deployer@138.197.73.98
+ DEBUG [0da67a5c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -un )
+ DEBUG [0da67a5c] 	deployer
+ DEBUG [0da67a5c] 	
+ DEBUG [0da67a5c] Finished in 0.553 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/unicorn_std_production 0.0%
+  INFO Uploading /tmp/unicorn_std_production 100.0%
+  INFO [7f91517b] Running /usr/bin/env sudo mv /tmp/unicorn_std_production /etc/init.d as deployer@138.197.73.98
+ DEBUG [7f91517b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/unicorn_std_production /etc/init.d )
+  INFO [7f91517b] Finished in 0.560 seconds with exit status 0 (successful).
+  INFO [4b63a90c] Running /usr/bin/env chmod +x /etc/init.d/unicorn_std_production as deployer@138.197.73.98
+ DEBUG [4b63a90c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod +x /etc/init.d/unicorn_std_production )
+  INFO [4b63a90c] Finished in 0.554 seconds with exit status 0 (successful).
+  INFO [4f03c7bc] Running /usr/bin/env sudo update-rc.d -f unicorn_std_production defaults as deployer@138.197.73.98
+ DEBUG [4f03c7bc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo update-rc.d -f unicorn_std_production defaults )
+ DEBUG [4f03c7bc] 	 System start/stop links for /etc/init.d/unicorn_std_production already exist.
+ DEBUG [4f03c7bc] 	
+  INFO [4f03c7bc] Finished in 0.567 seconds with exit status 0 (successful).
+  INFO [01919b3f] Running /usr/bin/env mkdir -pv /home/deployer/apps/std/shared/config as deployer@138.197.73.98
+ DEBUG [01919b3f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -pv /home/deployer/apps/std/shared/config )
+  INFO [01919b3f] Finished in 0.556 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/deployer/apps/std/shared/config/unicorn.rb 0.0%
+  INFO Uploading /home/deployer/apps/std/shared/config/unicorn.rb 100.0%
+  INFO [dbc16d7b] Running /usr/bin/env sudo mkdir -pv /etc/logrotate.d as deployer@138.197.73.98
+ DEBUG [dbc16d7b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mkdir -pv /etc/logrotate.d )
+  INFO [dbc16d7b] Finished in 0.563 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/unicorn_std_production 0.0%
+  INFO Uploading /tmp/unicorn_std_production 100.0%
+  INFO [e4837c1e] Running /usr/bin/env sudo mv /tmp/unicorn_std_production /etc/logrotate.d as deployer@138.197.73.98
+ DEBUG [e4837c1e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/unicorn_std_production /etc/logrotate.d )
+  INFO [e4837c1e] Finished in 0.562 seconds with exit status 0 (successful).
+  INFO [5e6a331d] Running /usr/bin/env sudo chown root:root /etc/logrotate.d/unicorn_std_production as deployer@138.197.73.98
+ DEBUG [5e6a331d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo chown root:root /etc/logrotate.d/unicorn_std_production )
+  INFO [5e6a331d] Finished in 0.560 seconds with exit status 0 (successful).
+ DEBUG [42c7072f] Running /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='std_production';" | grep -q 1 as deployer@138.197.73.98
+ DEBUG [42c7072f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='std_production';" | grep -q 1 )
+ DEBUG [42c7072f] Finished in 0.610 seconds with exit status 0 (successful).
+ DEBUG [fadb9f51] Running /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_database WHERE datname='std_production';" | grep -q 1 as deployer@138.197.73.98
+ DEBUG [fadb9f51] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_database WHERE datname='std_production';" | grep -q 1 )
+ DEBUG [fadb9f51] Finished in 0.676 seconds with exit status 0 (successful).
+ DEBUG [8fc86a60] Running [ -e /home/deployer/apps/std/db/database.yml ] as deployer@138.197.73.98
+ DEBUG [8fc86a60] Command: [ -e /home/deployer/apps/std/db/database.yml ]
+ DEBUG [8fc86a60] Finished in 0.552 seconds with exit status 0 (successful).
+ DEBUG Downloading database.yml 0.0%
+  INFO Downloading database.yml 100.0%
+  INFO [41e75aaf] Running /usr/bin/env mkdir -pv /home/deployer/apps/std/shared/config as deployer@138.197.73.98
+ DEBUG [41e75aaf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -pv /home/deployer/apps/std/shared/config )
+  INFO [41e75aaf] Finished in 0.865 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/deployer/apps/std/shared/config/database.yml 0.0%
+  INFO Uploading /home/deployer/apps/std/shared/config/database.yml 100.0%
+  INFO [1a70209f] Running /usr/bin/env mkdir -pv /home/deployer/apps/std/shared/config as deployer@138.197.73.98
+ DEBUG [1a70209f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -pv /home/deployer/apps/std/shared/config )
+  INFO [1a70209f] Finished in 0.555 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/deployer/apps/std/shared/config/secrets.yml 0.0%
+  INFO Uploading /home/deployer/apps/std/shared/config/secrets.yml 100.0%

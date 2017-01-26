@@ -1,0 +1,9 @@
+/db/*.sqlite3
+/db/*.sqlite3-journal
+*/log/
+!/log/.keep
+/tmp
+/config/database.yml
+/.env
+/config/secrets.yml
+

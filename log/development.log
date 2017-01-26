@@ -10,3 +10,44 @@ Started GET "/rails/info/properties" for ::1 at 2017-01-26 14:32:32 +0200
 Processing by Rails::InfoController#properties as */*
   Rendered /Users/craig/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/info/properties.html.erb (0.4ms)
 Completed 200 OK in 181ms (Views: 29.0ms | ActiveRecord: 128.7ms)
+
+
+Started GET "/" for ::1 at 2017-01-26 15:51:06 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/craig/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (1.5ms)
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for ::1 at 2017-01-26 15:51:10 +0200
+Processing by Rails::InfoController#properties as */*
+  Rendered /Users/craig/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/info/properties.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 31.9ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/" for ::1 at 2017-01-26 20:46:55 +0200
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 318ms (Views: 311.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-01-26 20:46:56 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-01-26 20:46:56 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-01-26 20:46:56 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-01-26 20:46:56 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2017-01-26 20:46:56 +0200
+
+
+Started GET "/pages/about.html" for ::1 at 2017-01-26 20:47:17 +0200
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"about"}
+  Rendered pages/about.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)

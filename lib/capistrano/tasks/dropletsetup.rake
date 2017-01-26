@@ -1,42 +1,31 @@
 namespace :dropletsetup do
 
-    desc "Remote server set locale"
-    task :set_locale do 
-      on roles(:app) do
-            execute "echo 'export LANG=\"en_US.utf8\"' >> ~/.bashrc"
-            execute "echo 'export LANGUAGE=\"en_US.utf8\"' >> ~/.bashrc"
-            execute "echo 'export LC_ALL=\"en_US.UTF-8\"' >> ~/.bashrc"
-            execute "source /home/#{fetch(:user)}/.bashrc"
-            execute "source /home/deployer/.bashrc"
-        end
-    end
 
     desc "Updating the server"
-    task :update_server do 
+    task :_1_update_server do 
         on roles(:app) do 
          execute :sudo, "/usr/bin/apt-get -y update"
        end
     end
    
     desc "Install python software properties"
-    task :install_python_software_properties do 
+    task :_2_install_python_software_properties do 
         on roles(:app) do 
            execute :sudo, "/usr/bin/apt-get -y install python-software-properties"
        end
     end 
         
     desc "Install software libaries"
-    task :install_libraries do 
+    task :_3_install_libraries do 
         on roles(:app) do 
            execute :sudo,  "apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libpq-dev"
        end
     end
 
     desc "Install rbenv and ruby rbenv plugin and run  for 2.3.1 then rehash"
-    task :install_rbenv_2_3_1 do 
+    task :_4_install_rbenv_2_3_1 do 
         on roles(:app) do 
             execute "git clone https://github.com/rbenv/rbenv.git ~/.rbenv"
-            execute "git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build"
             execute "git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build"
             execute "git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash"
             execute "echo 'export PATH=$HOME/.rbenv/bin:$PATH'  >> ~/.bashrc"
@@ -48,7 +37,7 @@ namespace :dropletsetup do
     end
 
     desc "Download nodejs repo then update then install nodejs"
-    task :install_nodejs do 
+    task :_5_install_nodejs do 
         on roles(:app) do 
             execute 'echo | sudo add-apt-repository ppa:chris-lea/node.js'      
             execute :sudo, "/usr/bin/apt-get -y update"      
@@ -57,7 +46,7 @@ namespace :dropletsetup do
     end
            
     desc "Install bundler and Rails 4.2.5"
-    task :install_bundler do 
+    task :_6_install_bundler do 
         on roles(:app) do 
            execute "/home/deployer/.rbenv/shims/gem install bundler"
            execute "echo 'gem: --no-ri --no-rdoc' >> /home/deployer/.gemrc"      
@@ -66,14 +55,14 @@ namespace :dropletsetup do
     end
 
     desc "Install nginx"
-    task :install_nginx do 
+    task :_7_install_nginx do 
         on roles(:app) do 
            execute :sudo, "apt-get -y install nginx"
        end
     end  
 
     desc "Install Postgresql"
-    task :install_PGSQL do 
+    task :_8_install_PGSQL do 
         on roles(:app) do 
            execute :sudo, "apt-get -y install postgresql postgresql-contrib libpq-dev"
        end

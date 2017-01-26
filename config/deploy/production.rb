@@ -7,8 +7,10 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-server  '138.197.73.98', roles: [:web, :app, :db], port: fetch(:port), user: fetch(:user),primary: true
+#server  "138.197.73.98", roles: [:web, :app, :db], port: fetch(:port), user: fetch(:user),primary: true
+#set :ssh_options,     {forward_agent: true, auth_methods: %w(publickey), user: 'deployer'}
 
+server          '138.197.73.98', roles: [:web, :app, :db], port: fetch(:port), user: fetch(:user),primary: true
 
 
 # role-based syntax
@@ -51,13 +53,13 @@ server  '138.197.73.98', roles: [:web, :app, :db], port: fetch(:port), user: fet
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-# server "example.com",
-#   user: "user_name",
+#server "138.197.73.98",
+#   user: "deployer",
 #   roles: %w{web app},
 #   ssh_options: {
-#     user: "user_name", # overrides user setting above
-#     keys: %w(/home/user_name/.ssh/id_rsa),
-#     forward_agent: false,
-#     auth_methods: %w(publickey password)
-#     # password: "please use keys"
-#   }
+##     user: "user_name", # overrides user setting above
+#     keys: %w(~/.ssh/id_rsa),
+#     forward_agent: true,
+#     auth_methods: %w(publickey)
+##     # password: "please use keys"
+#  }

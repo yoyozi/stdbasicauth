@@ -62,8 +62,15 @@ __AFTER Defaults        env_reset
 > visudo
 
 ```
+for now
+#deployer ALL=(ALL) ALL=NOPASSWD
+will change to 
 deploy_user ALL=NOPASSWD:/usr/bin/apt-get
 ```
+
+**Set the locale (add at end of file)**
+> sudo vi /etc/environment
+> export LANG=en_US.utf8
 
 ## Then from local machine (on mac use):
 > ssh-copy-id deploy_user@x.x.x.x
@@ -107,96 +114,12 @@ end
 ```
 
 > bundle
-> cap install STAGES=production
+> cap install
 > vi ./Capfile
 
-**Create the task remote_server_setup.rake in ./lib/capistrano/tasks in the rails app directory**
-```
-namespace :dropletsetup do
-
-    desc "Remote server set locale"
-    task :set_locale do 
-      on roles(:app) do
-            execute "echo 'export LANG=\"en_US.utf8\"' >> ~/.bashrc"
-            execute "echo 'export LANGUAGE=\"en_US.utf8\"' >> ~/.bashrc"
-            execute "echo 'export LC_ALL=\"en_US.UTF-8\"' >> ~/.bashrc"
-            execute "source /home/#{fetch(:user)}/.bashrc"
-            execute "source /home/deployer/.bashrc"
-        end
-    end
-
-    desc "Updating the server"
-    task :update_server do 
-        on roles(:app) do 
-         execute :sudo, "/usr/bin/apt-get -y update"
-       end
-    end
-   
-    desc "Install python software properties"
-    task :install_python_software_properties do 
-        on roles(:app) do 
-           execute :sudo, "/usr/bin/apt-get -y install python-software-properties"
-       end
-    end 
-        
-    desc "Install software libaries"
-    task :install_libraries do 
-        on roles(:app) do 
-           execute :sudo,  "apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libpq-dev"
-       end
-    end
-
-    desc "Install rbenv and ruby rbenv plugin and run  for 2.3.1 then rehash"
-    task :install_rbenv_2_3_1 do 
-        on roles(:app) do 
-            execute "git clone https://github.com/rbenv/rbenv.git ~/.rbenv"
-            execute "git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build"
-            execute "git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build"
-            execute "git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash"
-            execute "echo 'export PATH=$HOME/.rbenv/bin:$PATH'  >> ~/.bashrc"
-            execute "echo 'eval \"$(rbenv init -)\" ' >> ~/.bashrc"      
-          execute "/home/#{fetch(:user)}/.rbenv/bin/rbenv install 2.3.1"
-          execute "/home/#{fetch(:user)}/.rbenv/bin/rbenv global 2.3.1"
-          execute "/home/#{fetch(:user)}/.rbenv/bin/rbenv rehash"  
-        end
-    end
-
-    desc "Download nodejs repo then update then install nodejs"
-    task :install_nodejs do 
-        on roles(:app) do 
-            execute 'echo | sudo add-apt-repository ppa:chris-lea/node.js'      
-            execute :sudo, "/usr/bin/apt-get -y update"      
-            execute :sudo, "/usr/bin/apt-get -y install nodejs"
-       end
-    end
-           
-    desc "Install bundler and Rails 4.2.5"
-    task :install_bundler do 
-        on roles(:app) do 
-           execute "/home/deployer/.rbenv/shims/gem install bundler"
-           execute "echo 'gem: --no-ri --no-rdoc' >> /home/deployer/.gemrc"      
-           execute "/home/deployer/.rbenv/shims/gem install rails -v 4.2.5"
-        end
-    end
-
-    desc "Install nginx"
-    task :install_nginx do 
-        on roles(:app) do 
-           execute :sudo, "apt-get -y install nginx"
-       end
-    end  
-
-    desc "Install Postgresql"
-    task :install_PGSQL do 
-        on roles(:app) do 
-           execute :sudo, "apt-get -y install postgresql postgresql-contrib libpq-dev"
-       end
-    end                
-          
-end
-```
 
 
+> vi ./config/Capfile
 
 ```
 # Load DSL and set up stages
@@ -228,11 +151,11 @@ install_plugin Capistrano::SCM::Git
 #   https://github.com/capistrano/passenger
 #
 # require "capistrano/rvm"
-require "capistrano/rbenv"
+# require "capistrano/rbenv"
 # require "capistrano/chruby"
-require "capistrano/bundler"
-require "capistrano/rails/assets"
-require "capistrano/rails/migrations"
+# require "capistrano/bundler"
+# require "capistrano/rails/assets"
+# require "capistrano/rails/migrations"
 # require "capistrano/passenger"
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
@@ -240,32 +163,53 @@ Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
 
 ```
 
-**Edit the deploy.rb and Capfile file created by "cap install" in your rails app**
 > vi ./config/deploy.rb
 
 ```
 # config valid only for current version of Capistrano
-lock '3.7.1'
+lock "3.7.1"
 
-set :user,      'deploy_user'
-set :port,      XXXX
-server          'x.x.x.x', roles: [:web, :app, :db], port: fetch(:port), user: fetch(:user),primary: true
+set :user,      'deployer'
+set :port,      22
 
-set :application, 'app-name'
-set :repo_url, 'git@github.com:account-name/repo.git'
+
+set :application, 'std'
+set :repo_url, 'https://github.com/yoyozi/std.git'
 set :branch, "master"
 
 # Don't change these unless you know what you're doing
 set :pty,             true
 set :stage,           "production"
 set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
-set :ssh_options,     {forward_agent: true, auth_methods: %w(publickey), user: 'deployer'}
+set :ssh_options,     {forward_agent: true, auth_methods: %w(publickey), user: 'craig'}
 
-## Defaults:
-# set :scm,           :git
-# set :branch,        :master
-# set :format,        :pretty
-# set :log_level,     :debug
+
+# Default branch is :master
+# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+
+# Default deploy_to directory is /var/www/my_app_name
+# set :deploy_to, "/var/www/my_app_name"
+
+# Default value for :format is :airbrussh.
+# set :format, :airbrussh
+
+# You can configure the Airbrussh format using :format_options.
+# These are the defaults.
+# set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
+
+# Default value for :pty is false
+# set :pty, true
+
+# Default value for :linked_files is []
+# append :linked_files, "config/database.yml", "config/secrets.yml"
+
+# Default value for linked_dirs is []
+# append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+
+# Default value for default_env is {}
+# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+
+# Default value for keep_releases is 5
 # set :keep_releases, 5
 
 # Linked Files & Directories (Default None):
@@ -273,51 +217,37 @@ set :ssh_options,     {forward_agent: true, auth_methods: %w(publickey), user: '
 #set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 ```
 
-
-**Create the setup namespace tasks to build the droplet server**
-
-In ./lib/capistrano/tasks create a file "remote_server_setup", this file will setup base requirements ruby and rails
+**Create the task dropletsetup.rake in ./lib/capistrano/tasks in the rails app directory**
 
 ```
 namespace :dropletsetup do
 
-    desc "Remote server set locale"
-    task :set_locale do 
-      on roles(:app) do
-            execute "echo 'export LANG=\"en_US.utf8\"' >> ~/.bashrc"
-            execute "echo 'export LANGUAGE=\"en_US.utf8\"' >> ~/.bashrc"
-            execute "echo 'export LC_ALL=\"en_US.UTF-8\"' >> ~/.bashrc"
-            execute "source /home/#{fetch(:user)}/.bashrc"
-            execute "source /home/deployer/.bashrc"
-        end
-    end
 
     desc "Updating the server"
-    task :update_server do 
+    task :_1_update_server do 
         on roles(:app) do 
          execute :sudo, "/usr/bin/apt-get -y update"
        end
     end
    
     desc "Install python software properties"
-    task :install_python_software_properties do 
+    task :_2_install_python_software_properties do 
         on roles(:app) do 
            execute :sudo, "/usr/bin/apt-get -y install python-software-properties"
        end
     end 
         
     desc "Install software libaries"
-    task :install_libraries do 
+    task :_3_install_libraries do 
         on roles(:app) do 
-           execute :sudo,  "apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev"
+           execute :sudo,  "apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libpq-dev"
        end
     end
 
     desc "Install rbenv and ruby rbenv plugin and run  for 2.3.1 then rehash"
-    task :install_rbenv_2_3_1 do 
+    task :_4_install_rbenv_2_3_1 do 
         on roles(:app) do 
             execute "git clone https://github.com/rbenv/rbenv.git ~/.rbenv"
-            execute "git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build"
             execute "git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build"
             execute "git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash"
             execute "echo 'export PATH=$HOME/.rbenv/bin:$PATH'  >> ~/.bashrc"
@@ -329,7 +259,7 @@ namespace :dropletsetup do
     end
 
     desc "Download nodejs repo then update then install nodejs"
-    task :install_nodejs do 
+    task :_5_install_nodejs do 
         on roles(:app) do 
             execute 'echo | sudo add-apt-repository ppa:chris-lea/node.js'      
             execute :sudo, "/usr/bin/apt-get -y update"      
@@ -338,17 +268,32 @@ namespace :dropletsetup do
     end
            
     desc "Install bundler and Rails 4.2.5"
-    task :install_bundler do 
+    task :_6_install_bundler do 
         on roles(:app) do 
            execute "/home/deployer/.rbenv/shims/gem install bundler"
            execute "echo 'gem: --no-ri --no-rdoc' >> /home/deployer/.gemrc"      
            execute "/home/deployer/.rbenv/shims/gem install rails -v 4.2.5"
         end
-    end                  
+    end
+
+    desc "Install nginx"
+    task :_7_install_nginx do 
+        on roles(:app) do 
+           execute :sudo, "apt-get -y install nginx"
+       end
+    end  
+
+    desc "Install Postgresql"
+    task :_8_install_PGSQL do 
+        on roles(:app) do 
+           execute :sudo, "apt-get -y install postgresql postgresql-contrib libpq-dev"
+       end
+    end                
           
 end
 ```
 
+## Run all the tasks above
 
 **Then lets install a pluging to make sure the deploy path is created**
 

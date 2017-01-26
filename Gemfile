@@ -47,5 +47,6 @@ group :development do
   gem 'capistrano-rbenv-install'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
+  gem 'capistrano-secrets-yml'
 end
 

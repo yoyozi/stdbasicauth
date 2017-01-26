@@ -8230,3 +8230,320 @@
   INFO [a9731cfe] Running /usr/bin/env echo "Branch master (at 03ce8d8844cf5e94fbf9cc2e0a80a2554270afa6) deployed as release 20170126134732 by craig" >> /home/deployer/apps/std/revisions.log as deployer@138.197.73.98
  DEBUG [a9731cfe] Command: cd /home/deployer/apps/std/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 03ce8d8844cf5e94fbf9cc2e0a80a2554270afa6) deployed as release 20170126134732 by craig" >> /home/deployer/apps/std/revisions.log )
   INFO [a9731cfe] Finished in 0.577 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-26 20:48:13 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [33c83d28] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [33c83d28] Command: [ -d $HOME/.rbenv ]
+ DEBUG [33c83d28] Finished in 3.297 seconds with exit status 0 (successful).
+ DEBUG [624d694d] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [624d694d] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [624d694d] Finished in 3.147 seconds with exit status 0 (successful).
+ DEBUG [39038310] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [39038310] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [39038310] Finished in 0.548 seconds with exit status 0 (successful).
+ DEBUG [d84e37b6] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [d84e37b6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [d84e37b6] 	true
+ DEBUG [d84e37b6] 	
+ DEBUG [d84e37b6] Finished in 0.821 seconds with exit status 0 (successful).
+ DEBUG [e657a81b] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [e657a81b] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [e657a81b] Finished in 0.549 seconds with exit status 0 (successful).
+  INFO [9ed27f18] Running /usr/bin/env mkdir -p /tmp as deployer@138.197.73.98
+ DEBUG [9ed27f18] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [9ed27f18] Finished in 0.551 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-std-production-craig.sh 0.0%
+  INFO Uploading /tmp/git-ssh-std-production-craig.sh 100.0%
+  INFO [fbf2cf60] Running /usr/bin/env chmod 700 /tmp/git-ssh-std-production-craig.sh as deployer@138.197.73.98
+ DEBUG [fbf2cf60] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-std-production-craig.sh )
+  INFO [fbf2cf60] Finished in 0.553 seconds with exit status 0 (successful).
+  INFO [79ec9d3f] Running /usr/bin/env git ls-remote --heads https://github.com/yoyozi/std.git as deployer@138.197.73.98
+ DEBUG [79ec9d3f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-std-production-craig.sh" ; /usr/bin/env git ls-remote --heads https://github.com/yoyozi/std.git )
+ DEBUG [79ec9d3f] 	1b0af9adc9d47d90a1cdf6e15ce9ea79f1565848
+ DEBUG [79ec9d3f] 		
+ DEBUG [79ec9d3f] 	refs/heads/master
+ DEBUG [79ec9d3f] 	
+  INFO [79ec9d3f] Finished in 0.817 seconds with exit status 0 (successful).
+  INFO [35612bb4] Running /usr/bin/env sudo mkdir -pv /home/deployer/apps/std as deployer@138.197.73.98
+ DEBUG [35612bb4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mkdir -pv /home/deployer/apps/std )
+  INFO [35612bb4] Finished in 0.563 seconds with exit status 0 (successful).
+ DEBUG [29916d15] Running /usr/bin/env id -un as deployer@138.197.73.98
+ DEBUG [29916d15] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -un )
+ DEBUG [29916d15] 	deployer
+ DEBUG [29916d15] 	
+ DEBUG [29916d15] Finished in 0.552 seconds with exit status 0 (successful).
+ DEBUG [410fe7c6] Running /usr/bin/env id -gn as deployer@138.197.73.98
+ DEBUG [410fe7c6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -gn )
+ DEBUG [410fe7c6] 	deployer
+ DEBUG [410fe7c6] 	
+ DEBUG [410fe7c6] Finished in 0.553 seconds with exit status 0 (successful).
+  INFO [33975605] Running /usr/bin/env sudo chown deployer:deployer /home/deployer/apps/std as deployer@138.197.73.98
+ DEBUG [33975605] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo chown deployer:deployer /home/deployer/apps/std )
+  INFO [33975605] Finished in 0.559 seconds with exit status 0 (successful).
+  INFO [ca9962b5] Running /usr/bin/env mkdir -p /home/deployer/apps/std/shared /home/deployer/apps/std/releases as deployer@138.197.73.98
+ DEBUG [ca9962b5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/std/shared /home/deployer/apps/std/releases )
+  INFO [ca9962b5] Finished in 0.554 seconds with exit status 0 (successful).
+  INFO [67fc57bf] Running /usr/bin/env mkdir -p /home/deployer/apps/std/shared/log /home/deployer/apps/std/shared/tmp/pids /home/deployer/apps/std/shared/public/assets as deployer@138.197.73.98
+ DEBUG [67fc57bf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/std/shared/log /home/deployer/apps/std/shared/tmp/pids /home/deployer/apps/std/shared/public/assets )
+  INFO [67fc57bf] Finished in 0.553 seconds with exit status 0 (successful).
+ DEBUG [19f8f4cb] Running [ -f /home/deployer/apps/std/current/REVISION ] as deployer@138.197.73.98
+ DEBUG [19f8f4cb] Command: [ -f /home/deployer/apps/std/current/REVISION ]
+ DEBUG [19f8f4cb] Finished in 0.549 seconds with exit status 0 (successful).
+ DEBUG [dfc10f0f] Running /usr/bin/env cat /home/deployer/apps/std/current/REVISION 2>/dev/null as deployer@138.197.73.98
+ DEBUG [dfc10f0f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cat /home/deployer/apps/std/current/REVISION 2>/dev/null )
+ DEBUG [dfc10f0f] 	03ce8d8844cf5e94fbf9cc2e0a80a2554270afa6
+ DEBUG [dfc10f0f] Finished in 0.551 seconds with exit status 0 (successful).
+ DEBUG [43126003] Running [ -f /home/deployer/apps/std/repo/HEAD ] as deployer@138.197.73.98
+ DEBUG [43126003] Command: [ -f /home/deployer/apps/std/repo/HEAD ]
+ DEBUG [43126003] Finished in 0.549 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deployer/apps/std/repo
+ DEBUG [cbe39483] Running if test ! -d /home/deployer/apps/std/repo; then echo "Directory does not exist '/home/deployer/apps/std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [cbe39483] Command: if test ! -d /home/deployer/apps/std/repo; then echo "Directory does not exist '/home/deployer/apps/std/repo'" 1>&2; false; fi
+ DEBUG [cbe39483] Finished in 0.548 seconds with exit status 0 (successful).
+  INFO [71e518cb] Running /usr/bin/env git remote update --prune as deployer@138.197.73.98
+ DEBUG [71e518cb] Command: cd /home/deployer/apps/std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-std-production-craig.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [71e518cb] 	Fetching origin
+ DEBUG [71e518cb] 	
+ DEBUG [71e518cb] 	remote: Counting objects: 14, done.[K
+ DEBUG [71e518cb] 	
+ DEBUG [71e518cb] 	remote: Compressing objects:  14% (1/7)   [K
+ DEBUG [71e518cb] 	remote: Compressing objects:  28% (2/7)   [K
+ DEBUG [71e518cb] 	remote: Compressing objects:  42% (3/7)   [K
+ DEBUG [71e518cb] 	remote: Compressing objects:  57% (4/7)   [K
+ DEBUG [71e518cb] 	remote: Compressing objects:  71% (5/7)   [K
+ DEBUG [71e518cb] 	remote: Compressing objects:  85% (6/7)   [K
+ DEBUG [71e518cb] 	remote: Compressing objects: 100% (7/7)   [K
+ DEBUG [71e518cb] 	remote: Compressing objects: 100% (7/7), done.[K
+ DEBUG [71e518cb] 	
+ DEBUG [71e518cb] 	remote: Total 14 (delta 5), reused 14 (delta 5), pack-reused 0[K
+ DEBUG [71e518cb] 	
+ DEBUG [71e518cb] 	Unpacking objects:   7% (1/14)   
+ DEBUG [71e518cb] 	Unpacking objects:  14% (2/14)   
+ DEBUG [71e518cb] 	Unpacking objects:  21% (3/14)   
+ DEBUG [71e518cb] 	Unpacking objects:  28% (4/14)   
+ DEBUG [71e518cb] 	Unpacking objects:  35% (5/14)   
+ DEBUG [71e518cb] 	Unpacking objects:  42% (6/14)   
+ DEBUG [71e518cb] 	Unpacking objects:  50% (7/14)   
+ DEBUG [71e518cb] 	Unpacking objects:  57% (8/14)   
+ DEBUG [71e518cb] 	Unpacking objects:  64% (9/14)   
+ DEBUG [71e518cb] 	Unpacking objects:  71% (10/14)   
+ DEBUG [71e518cb] 	Unpacking objects:  78% (11/14)   
+ DEBUG [71e518cb] 	Unpacking objects:  85% (12/14)   
+ DEBUG [71e518cb] 	Unpacking objects:  92% (13/14)   
+ DEBUG [71e518cb] 	Unpacking objects: 100% (14/14)   
+ DEBUG [71e518cb] 	Unpacking objects: 100% (14/14), done.
+ DEBUG [71e518cb] 	
+ DEBUG [71e518cb] 	From https://github.com/yoyozi/std
+ DEBUG [71e518cb] 	
+ DEBUG [71e518cb] 	   03ce8d8..1b0af9a  master     -> master
+ DEBUG [71e518cb] 	
+  INFO [71e518cb] Finished in 1.301 seconds with exit status 0 (successful).
+ DEBUG [9c9cb09c] Running if test ! -d /home/deployer/apps/std/repo; then echo "Directory does not exist '/home/deployer/apps/std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [9c9cb09c] Command: if test ! -d /home/deployer/apps/std/repo; then echo "Directory does not exist '/home/deployer/apps/std/repo'" 1>&2; false; fi
+ DEBUG [9c9cb09c] Finished in 0.548 seconds with exit status 0 (successful).
+  INFO [7be0dbf0] Running /usr/bin/env mkdir -p /home/deployer/apps/std/releases/20170126184830 as deployer@138.197.73.98
+ DEBUG [7be0dbf0] Command: cd /home/deployer/apps/std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-std-production-craig.sh" ; /usr/bin/env mkdir -p /home/deployer/apps/std/releases/20170126184830 )
+  INFO [7be0dbf0] Finished in 0.558 seconds with exit status 0 (successful).
+  INFO [cc8d912d] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deployer/apps/std/releases/20170126184830 as deployer@138.197.73.98
+ DEBUG [cc8d912d] Command: cd /home/deployer/apps/std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-std-production-craig.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deployer/apps/std/releases/20170126184830 )
+  INFO [cc8d912d] Finished in 0.575 seconds with exit status 0 (successful).
+ DEBUG [7cc7d672] Running if test ! -d /home/deployer/apps/std/repo; then echo "Directory does not exist '/home/deployer/apps/std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [7cc7d672] Command: if test ! -d /home/deployer/apps/std/repo; then echo "Directory does not exist '/home/deployer/apps/std/repo'" 1>&2; false; fi
+ DEBUG [7cc7d672] Finished in 0.550 seconds with exit status 0 (successful).
+ DEBUG [58cefdb9] Running /usr/bin/env git rev-list --max-count=1 master as deployer@138.197.73.98
+ DEBUG [58cefdb9] Command: cd /home/deployer/apps/std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-std-production-craig.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [58cefdb9] 	1b0af9adc9d47d90a1cdf6e15ce9ea79f1565848
+ DEBUG [58cefdb9] 	
+ DEBUG [58cefdb9] Finished in 0.555 seconds with exit status 0 (successful).
+ DEBUG [8d1c8b27] Running if test ! -d /home/deployer/apps/std/releases/20170126184830; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170126184830'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [8d1c8b27] Command: if test ! -d /home/deployer/apps/std/releases/20170126184830; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170126184830'" 1>&2; false; fi
+ DEBUG [8d1c8b27] Finished in 0.553 seconds with exit status 0 (successful).
+  INFO [9af77ddf] Running /usr/bin/env echo "1b0af9adc9d47d90a1cdf6e15ce9ea79f1565848" >> REVISION as deployer@138.197.73.98
+ DEBUG [9af77ddf] Command: cd /home/deployer/apps/std/releases/20170126184830 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "1b0af9adc9d47d90a1cdf6e15ce9ea79f1565848" >> REVISION )
+  INFO [9af77ddf] Finished in 0.552 seconds with exit status 0 (successful).
+  INFO [cc203b7f] Running /usr/bin/env mkdir -p /home/deployer/apps/std/releases/20170126184830/config as deployer@138.197.73.98
+ DEBUG [cc203b7f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/std/releases/20170126184830/config )
+  INFO [cc203b7f] Finished in 0.553 seconds with exit status 0 (successful).
+ DEBUG [957764de] Running [ -L /home/deployer/apps/std/releases/20170126184830/config/database.yml ] as deployer@138.197.73.98
+ DEBUG [957764de] Command: [ -L /home/deployer/apps/std/releases/20170126184830/config/database.yml ]
+ DEBUG [957764de] Finished in 0.548 seconds with exit status 1 (failed).
+ DEBUG [8c6d1680] Running [ -f /home/deployer/apps/std/releases/20170126184830/config/database.yml ] as deployer@138.197.73.98
+ DEBUG [8c6d1680] Command: [ -f /home/deployer/apps/std/releases/20170126184830/config/database.yml ]
+ DEBUG [8c6d1680] Finished in 0.548 seconds with exit status 1 (failed).
+  INFO [0884a36e] Running /usr/bin/env ln -s /home/deployer/apps/std/shared/config/database.yml /home/deployer/apps/std/releases/20170126184830/config/database.yml as deployer@138.197.73.98
+ DEBUG [0884a36e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/std/shared/config/database.yml /home/deployer/apps/std/releases/20170126184830/config/database.yml )
+  INFO [0884a36e] Finished in 0.553 seconds with exit status 0 (successful).
+ DEBUG [f4da958a] Running [ -L /home/deployer/apps/std/releases/20170126184830/config/secrets.yml ] as deployer@138.197.73.98
+ DEBUG [f4da958a] Command: [ -L /home/deployer/apps/std/releases/20170126184830/config/secrets.yml ]
+ DEBUG [f4da958a] Finished in 0.546 seconds with exit status 1 (failed).
+ DEBUG [3e4a905d] Running [ -f /home/deployer/apps/std/releases/20170126184830/config/secrets.yml ] as deployer@138.197.73.98
+ DEBUG [3e4a905d] Command: [ -f /home/deployer/apps/std/releases/20170126184830/config/secrets.yml ]
+ DEBUG [3e4a905d] Finished in 0.549 seconds with exit status 1 (failed).
+  INFO [95d2c293] Running /usr/bin/env ln -s /home/deployer/apps/std/shared/config/secrets.yml /home/deployer/apps/std/releases/20170126184830/config/secrets.yml as deployer@138.197.73.98
+ DEBUG [95d2c293] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/std/shared/config/secrets.yml /home/deployer/apps/std/releases/20170126184830/config/secrets.yml )
+  INFO [95d2c293] Finished in 0.554 seconds with exit status 0 (successful).
+  INFO [f7401aae] Running /usr/bin/env mkdir -p /home/deployer/apps/std/releases/20170126184830 /home/deployer/apps/std/releases/20170126184830/tmp /home/deployer/apps/std/releases/20170126184830/public as deployer@138.197.73.98
+ DEBUG [f7401aae] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/std/releases/20170126184830 /home/deployer/apps/std/releases/20170126184830/tmp /home/deployer/apps/std/releases/20170126184830/public )
+  INFO [f7401aae] Finished in 0.556 seconds with exit status 0 (successful).
+ DEBUG [20c1626f] Running [ -L /home/deployer/apps/std/releases/20170126184830/log ] as deployer@138.197.73.98
+ DEBUG [20c1626f] Command: [ -L /home/deployer/apps/std/releases/20170126184830/log ]
+ DEBUG [20c1626f] Finished in 0.553 seconds with exit status 1 (failed).
+ DEBUG [e8283f58] Running [ -d /home/deployer/apps/std/releases/20170126184830/log ] as deployer@138.197.73.98
+ DEBUG [e8283f58] Command: [ -d /home/deployer/apps/std/releases/20170126184830/log ]
+ DEBUG [e8283f58] Finished in 0.550 seconds with exit status 0 (successful).
+  INFO [0f7d6109] Running /usr/bin/env rm -rf /home/deployer/apps/std/releases/20170126184830/log as deployer@138.197.73.98
+ DEBUG [0f7d6109] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /home/deployer/apps/std/releases/20170126184830/log )
+  INFO [0f7d6109] Finished in 0.556 seconds with exit status 0 (successful).
+  INFO [5f651f79] Running /usr/bin/env ln -s /home/deployer/apps/std/shared/log /home/deployer/apps/std/releases/20170126184830/log as deployer@138.197.73.98
+ DEBUG [5f651f79] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/std/shared/log /home/deployer/apps/std/releases/20170126184830/log )
+  INFO [5f651f79] Finished in 0.555 seconds with exit status 0 (successful).
+ DEBUG [a5a6238c] Running [ -L /home/deployer/apps/std/releases/20170126184830/tmp/pids ] as deployer@138.197.73.98
+ DEBUG [a5a6238c] Command: [ -L /home/deployer/apps/std/releases/20170126184830/tmp/pids ]
+ DEBUG [a5a6238c] Finished in 0.563 seconds with exit status 1 (failed).
+ DEBUG [c37e2ad7] Running [ -d /home/deployer/apps/std/releases/20170126184830/tmp/pids ] as deployer@138.197.73.98
+ DEBUG [c37e2ad7] Command: [ -d /home/deployer/apps/std/releases/20170126184830/tmp/pids ]
+ DEBUG [c37e2ad7] Finished in 0.571 seconds with exit status 1 (failed).
+  INFO [302e1cf4] Running /usr/bin/env ln -s /home/deployer/apps/std/shared/tmp/pids /home/deployer/apps/std/releases/20170126184830/tmp/pids as deployer@138.197.73.98
+ DEBUG [302e1cf4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/std/shared/tmp/pids /home/deployer/apps/std/releases/20170126184830/tmp/pids )
+  INFO [302e1cf4] Finished in 0.562 seconds with exit status 0 (successful).
+ DEBUG [ffc217a3] Running [ -L /home/deployer/apps/std/releases/20170126184830/public/assets ] as deployer@138.197.73.98
+ DEBUG [ffc217a3] Command: [ -L /home/deployer/apps/std/releases/20170126184830/public/assets ]
+ DEBUG [ffc217a3] Finished in 0.547 seconds with exit status 1 (failed).
+ DEBUG [04692915] Running [ -d /home/deployer/apps/std/releases/20170126184830/public/assets ] as deployer@138.197.73.98
+ DEBUG [04692915] Command: [ -d /home/deployer/apps/std/releases/20170126184830/public/assets ]
+ DEBUG [04692915] Finished in 0.548 seconds with exit status 1 (failed).
+  INFO [19bd46ee] Running /usr/bin/env ln -s /home/deployer/apps/std/shared/public/assets /home/deployer/apps/std/releases/20170126184830/public/assets as deployer@138.197.73.98
+ DEBUG [19bd46ee] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/std/shared/public/assets /home/deployer/apps/std/releases/20170126184830/public/assets )
+  INFO [19bd46ee] Finished in 0.552 seconds with exit status 0 (successful).
+ DEBUG [fff8eb97] Running if test ! -d /home/deployer/apps/std/releases/20170126184830; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170126184830'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [fff8eb97] Command: if test ! -d /home/deployer/apps/std/releases/20170126184830; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170126184830'" 1>&2; false; fi
+ DEBUG [fff8eb97] Finished in 0.551 seconds with exit status 0 (successful).
+ DEBUG [39a528fd] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deployer/apps/std/shared/bundle as deployer@138.197.73.98
+ DEBUG [39a528fd] Command: cd /home/deployer/apps/std/releases/20170126184830 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deployer/apps/std/shared/bundle )
+ DEBUG [39a528fd] 	[31mThe following gems are missing[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * net-ssh (4.0.1)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * sshkit (1.11.5)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * airbrussh (1.1.2)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * debug_inspector (0.0.2)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * binding_of_caller (0.7.2)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * byebug (9.0.6)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * capistrano (3.7.1)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * capistrano-bundler (1.2.0)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * capistrano-postgresql (4.2.1)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * capistrano-rails (1.2.2)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * capistrano-rbenv (2.0.4)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * capistrano-rbenv-install (1.2.0)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * capistrano-safe-deploy-to (1.1.1)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * capistrano-secrets-yml (1.0.0)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * capistrano-ssh-doctor (1.0.0)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * capistrano-unicorn-nginx (4.0.0)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * spring (2.0.1)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[31m * web-console (2.3.0)[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [39a528fd] 	
+ DEBUG [39a528fd] Finished in 1.219 seconds with exit status 1 (failed).
+  INFO [3e212169] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deployer/apps/std/shared/bundle --without development test --deployment --quiet as deployer@138.197.73.98
+ DEBUG [3e212169] Command: cd /home/deployer/apps/std/releases/20170126184830 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deployer/apps/std/shared/bundle --without development test --deployment --quiet )
+  INFO [3e212169] Finished in 3.703 seconds with exit status 0 (successful).
+ DEBUG [349dee5e] Running if test ! -d /home/deployer/apps/std/releases/20170126184830; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170126184830'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [349dee5e] Command: if test ! -d /home/deployer/apps/std/releases/20170126184830; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170126184830'" 1>&2; false; fi
+ DEBUG [349dee5e] Finished in 0.552 seconds with exit status 0 (successful).
+  INFO [09c7fc6c] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deployer@138.197.73.98
+ DEBUG [09c7fc6c] Command: cd /home/deployer/apps/std/releases/20170126184830 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [09c7fc6c] Finished in 5.554 seconds with exit status 0 (successful).
+ DEBUG [6fd358cf] Running if test ! -d /home/deployer/apps/std/releases/20170126184830; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170126184830'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [6fd358cf] Command: if test ! -d /home/deployer/apps/std/releases/20170126184830; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170126184830'" 1>&2; false; fi
+ DEBUG [6fd358cf] Finished in 0.568 seconds with exit status 0 (successful).
+  INFO [96f76176] Running /usr/bin/env mkdir -p /home/deployer/apps/std/releases/20170126184830/assets_manifest_backup as deployer@138.197.73.98
+ DEBUG [96f76176] Command: cd /home/deployer/apps/std/releases/20170126184830 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/std/releases/20170126184830/assets_manifest_backup )
+  INFO [96f76176] Finished in 0.554 seconds with exit status 0 (successful).
+ DEBUG [110f7592] Running /usr/bin/env ls /home/deployer/apps/std/releases/20170126184830/public/assets/.sprockets-manifest* as deployer@138.197.73.98
+ DEBUG [110f7592] Command: cd /home/deployer/apps/std/releases/20170126184830 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /home/deployer/apps/std/releases/20170126184830/public/assets/.sprockets-manifest* )
+ DEBUG [110f7592] 	/home/deployer/apps/std/releases/20170126184830/public/assets/.sprockets-manifest-85550285d058ee63eaa27e7277e2e0be.json
+ DEBUG [110f7592] 	
+ DEBUG [110f7592] Finished in 0.556 seconds with exit status 0 (successful).
+ DEBUG [4f94a434] Running /usr/bin/env ls /home/deployer/apps/std/releases/20170126184830/public/assets/.sprockets-manifest* as deployer@138.197.73.98
+ DEBUG [4f94a434] Command: cd /home/deployer/apps/std/releases/20170126184830 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /home/deployer/apps/std/releases/20170126184830/public/assets/.sprockets-manifest* )
+ DEBUG [4f94a434] 	/home/deployer/apps/std/releases/20170126184830/public/assets/.sprockets-manifest-85550285d058ee63eaa27e7277e2e0be.json
+ DEBUG [4f94a434] 	
+ DEBUG [4f94a434] Finished in 0.565 seconds with exit status 0 (successful).
+  INFO [eb4ac0c1] Running /usr/bin/env cp /home/deployer/apps/std/releases/20170126184830/public/assets/.sprockets-manifest-85550285d058ee63eaa27e7277e2e0be.json /home/deployer/apps/std/releases/20170126184830/assets_manifest_backup as deployer@138.197.73.98
+ DEBUG [eb4ac0c1] Command: cd /home/deployer/apps/std/releases/20170126184830 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /home/deployer/apps/std/releases/20170126184830/public/assets/.sprockets-manifest-85550285d058ee63eaa27e7277e2e0be.json /home/deployer/apps/std/releases/20170126184830/assets_manifest_backup )
+  INFO [eb4ac0c1] Finished in 0.559 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [5e04eb09] Running if test ! -d /home/deployer/apps/std/releases/20170126184830; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170126184830'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [5e04eb09] Command: if test ! -d /home/deployer/apps/std/releases/20170126184830; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170126184830'" 1>&2; false; fi
+ DEBUG [5e04eb09] Finished in 0.552 seconds with exit status 0 (successful).
+  INFO [38374e5d] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as deployer@138.197.73.98
+ DEBUG [38374e5d] Command: cd /home/deployer/apps/std/releases/20170126184830 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+  INFO [38374e5d] Finished in 2.762 seconds with exit status 0 (successful).
+  INFO [8ef4fbb4] Running /usr/bin/env ln -s /home/deployer/apps/std/releases/20170126184830 /home/deployer/apps/std/releases/current as deployer@138.197.73.98
+ DEBUG [8ef4fbb4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/std/releases/20170126184830 /home/deployer/apps/std/releases/current )
+  INFO [8ef4fbb4] Finished in 0.556 seconds with exit status 0 (successful).
+  INFO [c4f0b405] Running /usr/bin/env mv /home/deployer/apps/std/releases/current /home/deployer/apps/std as deployer@138.197.73.98
+ DEBUG [c4f0b405] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mv /home/deployer/apps/std/releases/current /home/deployer/apps/std )
+  INFO [c4f0b405] Finished in 0.561 seconds with exit status 0 (successful).
+  INFO [b081576f] Running /usr/bin/env sudo /etc/init.d/nginx reload as deployer@138.197.73.98
+ DEBUG [b081576f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo /etc/init.d/nginx reload )
+ DEBUG [b081576f] 	 * Reloading nginx configuration nginx       
+ DEBUG [b081576f] 	[80G
+ DEBUG [b081576f] 	 
+ DEBUG [b081576f] 	
+ DEBUG [b081576f] 	[74G
+ DEBUG [b081576f] 	[ OK ]
+ DEBUG [b081576f] 	
+  INFO [b081576f] Finished in 0.584 seconds with exit status 0 (successful).
+  INFO [0ffca287] Running /usr/bin/env sudo service unicorn_std_production restart as deployer@138.197.73.98
+ DEBUG [0ffca287] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo service unicorn_std_production restart )
+ DEBUG [0ffca287] 	reloaded OK
+ DEBUG [0ffca287] 	
+  INFO [0ffca287] Finished in 0.574 seconds with exit status 0 (successful).
+ DEBUG [0473f2f7] Running /usr/bin/env ls -x /home/deployer/apps/std/releases as deployer@138.197.73.98
+ DEBUG [0473f2f7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls -x /home/deployer/apps/std/releases )
+ DEBUG [0473f2f7] 	20170126131915
+ DEBUG [0473f2f7] 		
+ DEBUG [0473f2f7] 	20170126132419
+ DEBUG [0473f2f7] 		
+ DEBUG [0473f2f7] 	20170126132610
+ DEBUG [0473f2f7] 		
+ DEBUG [0473f2f7] 	20170126132906
+ DEBUG [0473f2f7] 		
+ DEBUG [0473f2f7] 	20170126134732
+ DEBUG [0473f2f7] 	
+ DEBUG [0473f2f7] 	20170126184830
+ DEBUG [0473f2f7] 	
+ DEBUG [0473f2f7] Finished in 0.569 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 138.197.73.98
+  INFO [e2eb5669] Running /usr/bin/env rm -rf /home/deployer/apps/std/releases/20170126131915 as deployer@138.197.73.98
+ DEBUG [e2eb5669] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /home/deployer/apps/std/releases/20170126131915 )
+  INFO [e2eb5669] Finished in 0.575 seconds with exit status 0 (successful).
+ DEBUG [805ccbe6] Running if test ! -d /home/deployer/apps/std/releases; then echo "Directory does not exist '/home/deployer/apps/std/releases'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [805ccbe6] Command: if test ! -d /home/deployer/apps/std/releases; then echo "Directory does not exist '/home/deployer/apps/std/releases'" 1>&2; false; fi
+ DEBUG [805ccbe6] Finished in 0.551 seconds with exit status 0 (successful).
+  INFO [d95658a7] Running /usr/bin/env echo "Branch master (at 1b0af9adc9d47d90a1cdf6e15ce9ea79f1565848) deployed as release 20170126184830 by craig" >> /home/deployer/apps/std/revisions.log as deployer@138.197.73.98
+ DEBUG [d95658a7] Command: cd /home/deployer/apps/std/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 1b0af9adc9d47d90a1cdf6e15ce9ea79f1565848) deployed as release 20170126184830 by craig" >> /home/deployer/apps/std/revisions.log )
+  INFO [d95658a7] Finished in 0.552 seconds with exit status 0 (successful).

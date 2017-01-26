@@ -3,18 +3,15 @@
 * Ruby 2.3.1
 * Rails 4.2.5
 * Capistrano 3.7.1
-* Nginx
 * Posgresql
+* Nginx
 * Unicorn
 
 ## On local: setup new rails app and repo
 > rails _4.2.5_ new std --database=postgresql
-
-**Start the rails server to see that it works**
 > rails s
 
 **Setup the .gitignore file to ignore certain files** 
-Ignore the default SQLite database
 ```
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -45,7 +42,7 @@ to drop the origin
 to add the origin use the https url instead so its safer
 > git remote add origin https://github.com/user/repo.git
 
-## On remote: Sign up with new 64bit droplet on Digital Ocean or rebuild your existing droplet
+## On remote: Sign up with Digital Ocean or rebuild your existing droplet
 Delete the fingerprints of the known host in the known hosts file
 
 **User accounts and remote ssh. On droplet: Add the user you are going to use to deploy via capistrano and your own personal user account**
@@ -64,7 +61,7 @@ __AFTER Defaults        env_reset
 ```
 for now
 #deployer ALL=(ALL) ALL=NOPASSWD
-will change to 
+will change later to 
 deploy_user ALL=NOPASSWD:/usr/bin/apt-get
 ```
 
@@ -116,10 +113,6 @@ end
 > bundle
 > cap install
 > vi ./Capfile
-
-
-
-> vi ./config/Capfile
 
 ```
 # Load DSL and set up stages
@@ -297,38 +290,45 @@ end
 
 **Then lets install a pluging to make sure the deploy path is created**
 
-In the Gemfile add
-> gem 'capistrano-safe-deploy-to', '~> 1.1.1'
+In the Gemfile add under development
+```
+  gem 'capistrano-safe-deploy-to', '~> 1.1.1'
+  gem 'capistrano-unicorn-nginx'
+  gem 'capistrano-postgresql'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-rbenv-install'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-secrets-yml'
+```
 
-Then run bundle
-> bundle
+In the Capfile add
+```
+require "capistrano/rbenv"
+require "capistrano/bundler"
+require "capistrano/rails/assets"
+require "capistrano/rails/migrations"
+require 'capistrano/safe_deploy_to'
+require 'capistrano/unicorn_nginx'
+require 'capistrano/postgresql'
+require 'capistrano/rbenv_install'
+require 'capistrano/secrets_yml'
+```
 
-Then put in Capfile
-> require 'capistrano/safe_deploy_to'
-
-**Then lets install a pluging for Unicorn and Nginx**
-
-In the Gemfile add
-> gem 'capistrano-unicorn-nginx', '~> 3.2.0'
-
-Then run bundle
-> bundle
-
-Then put in Capfile
-> require 'capistrano/unicorn_nginx'
-> cap production setup
-
-Then in production.rb
+Then in production.rb enable looging for unicorn must apt-get install logrotate
 > set :unicorn_logrotate_enabled, true
+> bundle install
+
+**Make sure you are not putting the secrets.yml file into the repo and make sure you have in secrets.yml**
+```
+production:
+  secret_key_base: a8c8f482.......................
+```
+
+## Create some static pages and deploy
 
 
-**Then lets install a pluging to install Posgresql**
 
-In the Gemfile add
-> gem 'capistrano-postgresql', '~> 4.2.0'
 
-Then run bundle
-> bundle
 
-Then put in Capfile
-> require 'capistrano/postgresql'
+

@@ -11,7 +11,8 @@
 #set :ssh_options,     {forward_agent: true, auth_methods: %w(publickey), user: 'deployer'}
 
 server          '138.197.73.98', roles: [:web, :app, :db], port: fetch(:port), user: fetch(:user),primary: true
-
+#set :nginx_server_name, 'mydomain.com'
+set :unicorn_logrotate_enabled, true
 
 # role-based syntax
 # ==================

@@ -15,6 +15,8 @@ set :stage,           "production"
 set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
 set :ssh_options,     {forward_agent: true, auth_methods: %w(publickey), user: 'craig'}
 
+set :rbenv_ruby, '2.3.1'
+
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

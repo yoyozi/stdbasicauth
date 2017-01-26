@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -40,5 +40,12 @@ group :development do
   gem 'capistrano', '~> 3.7.1'
   gem 'capistrano-ssh-doctor'
   gem 'spring'
+  gem 'capistrano-safe-deploy-to', '~> 1.1.1'
+  gem 'capistrano-unicorn-nginx'
+  gem 'capistrano-postgresql'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-rbenv-install'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
 end
 

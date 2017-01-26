@@ -1,0 +1,12 @@
+
+
+Started GET "/" for ::1 at 2017-01-26 14:32:28 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/craig/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 16ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for ::1 at 2017-01-26 14:32:32 +0200
+Processing by Rails::InfoController#properties as */*
+  Rendered /Users/craig/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/info/properties.html.erb (0.4ms)
+Completed 200 OK in 181ms (Views: 29.0ms | ActiveRecord: 128.7ms)

@@ -240,7 +240,7 @@ namespace :dropletsetup do
     desc "Install software libaries"
     task :_3_install_libraries do 
         on roles(:app) do 
-           execute :sudo,  "apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libpq-dev"
+           execute :sudo,  "apt-get -y install git-core curl zlib1g-dev logrotate build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libpq-dev"
        end
     end
 
@@ -316,31 +316,10 @@ Then run bundle
 
 Then put in Capfile
 > require 'capistrano/unicorn_nginx'
+> cap production setup
 
-In config/deploy.rb
-> set :unicorn_workers, 4
-> set :nginx_server_name # defaults to <server_IP> Your application's domain.  The default is your server's IP address.
-> set :nginx_pid, "/run/nginx.pid"
-> set :nginx_location, "/etc/nginx" #Nginx installation directory.
-> set :fail_timeout, 0
-
-> set :unicorn_service, "unicorn_#{fetch(:application)}_#{fetch(:stage)}"
-> set :nginx_use_spdy, false
-> set :unicorn_pid, shared_path.join("tmp/pids/unicorn.pid")
-> set :unicorn_config, shared_path.join("config/unicorn.rb")
-> set :unicorn_workers, 2
-> set :unicorn_app_env
-> set :rails_env
-> set :unicorn_env
-> set :unicorn_use_tcp, -> { roles(:app).count > 1 }
-true if there are multiple app servers. nginx and unicorn communicate over tcp port.
-false for single node configuration. nginx and unicorn communicate over unix socket.
-> set :unicorn_tcp_listen_port, 8080
-specifies tcp port when unicorn_use_tcp is true.
-> set :unicorn_logrotate_enabled, false
-When true, use apt-get install logrotate.
-
-
+Then in production.rb
+> set :unicorn_logrotate_enabled, true
 
 
 **Then lets install a pluging to install Posgresql**

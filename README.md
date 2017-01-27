@@ -64,6 +64,9 @@ Test the login to github
 > ssh -T git@github.com
 Should be a welcome message
 
+Set the locale (add at end of file)
+> sudo vi /etc/environment
+> export LANG=en_US.utf8
 
 ## On local : ensure IP address and the project repo is adjusted to suite in:
 1deploy.rb and production.rb
@@ -78,18 +81,91 @@ production:
   secret_key_base: 
 ```
 
+Create the database.yml file
+```
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+
+development:
+  <<: *default
+  database: fut-std_development
+
+test:
+  <<: *default
+  database: fut-std_test
+
+production:
+  <<: *default
+  database: fut-std_production
+  username: fut-std
+  password: <%= ENV['STD_DATABASE_PASSWORD'] %>
+```
+
+In the Capfile make sure these are all commented out
+```
+# require "capistrano/rbenv"
+# require "capistrano/bundler"
+# require "capistrano/rails/assets"
+# require "capistrano/rails/migrations"
+# require 'capistrano/safe_deploy_to'
+# require 'capistrano/unicorn_nginx'
+# require 'capistrano/postgresql'
+# require 'capistrano/rbenv_install'
+# require 'capistrano/secrets_yml'
+```
+
+
+## Run the task droplet:dsetup
+Make sure file looks like this
+```
+namespace :droplet do
+
+  desc "Updating the server"  
+  task :dsetup do   
+      on roles(:app) do 
+        execute :sudo, "/usr/bin/apt-get -y update"
+        execute :sudo, "/usr/bin/apt-get -y install python-software-properties"
+        execute :sudo,  "apt-get -y install git-core curl zlib1g-dev logrotate build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libpq-dev"
+        execute 'echo | sudo add-apt-repository ppa:chris-lea/node.js'          
+        execute :sudo, "/usr/bin/apt-get -y install nodejs"
+        execute :sudo, "/usr/bin/apt-get -y update"  
+    end  
+  end 
+end
+```
+
+In the Capfile remove comments
+```
+require "capistrano/rbenv"
+require "capistrano/bundler"
+require "capistrano/rails/assets"
+require "capistrano/rails/migrations"
+require 'capistrano/safe_deploy_to'
+require 'capistrano/unicorn_nginx'
+require 'capistrano/postgresql'
+require 'capistrano/rbenv_install'
+require 'capistrano/secrets_yml'
+```
+
+And FINALY run 
+>cap production deploy
 
 
 
-Populate these with the output of "rake secrets"
-
-# Do not keep production secrets in the repository,
-# instead read values from the environment.
 
 
-**Set the locale (add at end of file)**
-> sudo vi /etc/environment
-> export LANG=en_US.utf8
+
+
+
+
+
+
+
+
+
 
 ## On local: Capistrano setup 
 
@@ -205,74 +281,21 @@ set :ssh_options,     {forward_agent: true, auth_methods: %w(publickey), user: '
 namespace :dropletsetup do
 
 
-    desc "Updating the server"
-    task :_1_update_server do 
-        on roles(:app) do 
-         execute :sudo, "/usr/bin/apt-get -y update"
-       end
-    end
-   
-    desc "Install python software properties"
-    task :_2_install_python_software_properties do 
-        on roles(:app) do 
-           execute :sudo, "/usr/bin/apt-get -y install python-software-properties"
-       end
-    end 
-        
-    desc "Install software libaries"
-    task :_3_install_libraries do 
-        on roles(:app) do 
-           execute :sudo,  "apt-get -y install git-core curl zlib1g-dev logrotate build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libpq-dev"
-       end
-    end
+namespace :droplet do
 
-    desc "Install rbenv and ruby rbenv plugin and run  for 2.3.1 then rehash"
-    task :_4_install_rbenv_2_3_1 do 
-        on roles(:app) do 
-            execute "git clone https://github.com/rbenv/rbenv.git ~/.rbenv"
-            execute "git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build"
-            execute "git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash"
-            execute "echo 'export PATH=$HOME/.rbenv/bin:$PATH'  >> ~/.bashrc"
-            execute "echo 'eval \"$(rbenv init -)\" ' >> ~/.bashrc"      
-          execute "/home/#{fetch(:user)}/.rbenv/bin/rbenv install 2.3.1"
-          execute "/home/#{fetch(:user)}/.rbenv/bin/rbenv global 2.3.1"
-          execute "/home/#{fetch(:user)}/.rbenv/bin/rbenv rehash"  
-        end
-    end
-
-    desc "Download nodejs repo then update then install nodejs"
-    task :_5_install_nodejs do 
-        on roles(:app) do 
-            execute 'echo | sudo add-apt-repository ppa:chris-lea/node.js'      
-            execute :sudo, "/usr/bin/apt-get -y update"      
-            execute :sudo, "/usr/bin/apt-get -y install nodejs"
-       end
-    end
-           
-    desc "Install bundler and Rails 4.2.5"
-    task :_6_install_bundler do 
-        on roles(:app) do 
-           execute "/home/deployer/.rbenv/shims/gem install bundler"
-           execute "echo 'gem: --no-ri --no-rdoc' >> /home/deployer/.gemrc"      
-           execute "/home/deployer/.rbenv/shims/gem install rails -v 4.2.5"
-        end
-    end
-
-    desc "Install nginx"
-    task :_7_install_nginx do 
-        on roles(:app) do 
-           execute :sudo, "apt-get -y install nginx"
-       end
+  desc "Updating the server"  
+  task :dsetup do   
+      on roles(:app) do 
+        execute :sudo, "/usr/bin/apt-get -y update"
+        execute :sudo, "/usr/bin/apt-get -y install python-software-properties"
+        execute :sudo,  "apt-get -y install git-core curl zlib1g-dev logrotate build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libpq-dev"
+        execute 'echo | sudo add-apt-repository ppa:chris-lea/node.js'          
+        execute :sudo, "/usr/bin/apt-get -y install nodejs"
+        execute :sudo, "/usr/bin/apt-get -y update"  
     end  
+  end 
+end  
 
-    desc "Install Postgresql"
-    task :_8_install_PGSQL do 
-        on roles(:app) do 
-           execute :sudo, "apt-get -y install postgresql postgresql-contrib libpq-dev"
-       end
-    end                
-          
-end
 ```
 
 ## Run all the tasks above

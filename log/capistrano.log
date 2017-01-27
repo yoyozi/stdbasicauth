@@ -8547,3 +8547,761 @@
   INFO [d95658a7] Running /usr/bin/env echo "Branch master (at 1b0af9adc9d47d90a1cdf6e15ce9ea79f1565848) deployed as release 20170126184830 by craig" >> /home/deployer/apps/std/revisions.log as deployer@138.197.73.98
  DEBUG [d95658a7] Command: cd /home/deployer/apps/std/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 1b0af9adc9d47d90a1cdf6e15ce9ea79f1565848) deployed as release 20170126184830 by craig" >> /home/deployer/apps/std/revisions.log )
   INFO [d95658a7] Finished in 0.552 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-27 22:12:07 +0200 cap production setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [164c128d] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [164c128d] Command: [ -d $HOME/.rbenv ]
+ DEBUG [164c128d] Finished in 3.397 seconds with exit status 1 (failed).
+  INFO [0138a920] Running /usr/bin/env git clone https://github.com/sstephenson/rbenv.git $HOME/.rbenv as deployer@138.197.73.98
+ DEBUG [0138a920] Command: /usr/bin/env git clone https://github.com/sstephenson/rbenv.git $HOME/.rbenv
+ DEBUG [0138a920] 	/usr/bin/env: git: No such file or directory
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-27 22:12:57 +0200 cap production rbenv:install
+  INFO ---------------------------------------------------------------------------
+ DEBUG [09164494] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [09164494] Command: [ -d $HOME/.rbenv ]
+ DEBUG [09164494] Finished in 3.316 seconds with exit status 1 (failed).
+  INFO [69a9db2d] Running /usr/bin/env git clone https://github.com/sstephenson/rbenv.git $HOME/.rbenv as deployer@138.197.73.98
+ DEBUG [69a9db2d] Command: /usr/bin/env git clone https://github.com/sstephenson/rbenv.git $HOME/.rbenv
+ DEBUG [69a9db2d] 	/usr/bin/env: 
+ DEBUG [69a9db2d] 	git
+ DEBUG [69a9db2d] 	: No such file or directory
+ DEBUG [69a9db2d] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-27 23:16:03 +0200 cap production AAdropletsetup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d392b29c] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [d392b29c] Command: [ -d $HOME/.rbenv ]
+ DEBUG [d392b29c] Finished in 3.452 seconds with exit status 1 (failed).
+  INFO [c297f5f6] Running /usr/bin/env git clone https://github.com/sstephenson/rbenv.git $HOME/.rbenv as deployer@138.197.73.98
+ DEBUG [c297f5f6] Command: /usr/bin/env git clone https://github.com/sstephenson/rbenv.git $HOME/.rbenv
+ DEBUG [c297f5f6] 	Cloning into '/home/deployer/.rbenv'...
+ DEBUG [c297f5f6] 	remote: Counting objects: 2595, done.[K
+ DEBUG [c297f5f6] 	
+ DEBUG [c297f5f6] 	Receiving objects:   0% (1/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:   1% (26/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:   2% (52/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:   3% (78/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:   4% (104/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:   5% (130/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:   6% (156/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:   7% (182/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:   8% (208/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:   9% (234/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  10% (260/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  11% (286/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  12% (312/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  13% (338/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  14% (364/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  15% (390/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  16% (416/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  17% (442/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  18% (468/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  19% (494/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  20% (519/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  21% (545/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  22% (571/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  23% (597/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  24% (623/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  25% (649/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  26% (675/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  27% (701/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  28% (727/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  29% (753/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  30% (779/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  31% (805/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  32% (831/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  33% (857/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  34% (883/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  35% (909/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  36% (935/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  37% (961/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  38% (987/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  39% (1013/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  40% (1038/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  41% (1064/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  42% (1090/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  43% (1116/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  44% (1142/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  45% (1168/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  46% (1194/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  47% (1220/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  48% (1246/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  49% (1272/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  50% (1298/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  51% (1324/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  52% (1350/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  53% (1376/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  54% (1402/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  55% (1428/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  56% (1454/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  57% (1480/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  58% (1506/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  59% (1532/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  60% (1557/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  61% (1583/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  62% (1609/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  63% (1635/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  64% (1661/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  65% (1687/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  66% (1713/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  67% (1739/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  68% (1765/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  69% (1791/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  70% (1817/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  71% (1843/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  72% (1869/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  73% (1895/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  74% (1921/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  75% (1947/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  76% (1973/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  77% (1999/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  78% (2025/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  79% (2051/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  80% (2076/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  81% (2102/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  82% (2128/2595)   
+ DEBUG [c297f5f6] 	remote: Total 2595 (delta 0), reused 0 (delta 0), pack-reused 2595[K
+ DEBUG [c297f5f6] 	
+ DEBUG [c297f5f6] 	Receiving objects:  83% (2154/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  84% (2180/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  85% (2206/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  86% (2232/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  87% (2258/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  88% (2284/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  89% (2310/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  90% (2336/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  91% (2362/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  92% (2388/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  93% (2414/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  94% (2440/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  95% (2466/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  96% (2492/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  97% (2518/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  98% (2544/2595)   
+ DEBUG [c297f5f6] 	Receiving objects:  99% (2570/2595)   
+ DEBUG [c297f5f6] 	Receiving objects: 100% (2595/2595)   
+ DEBUG [c297f5f6] 	Receiving objects: 100% (2595/2595), 473.54 KiB | 0 bytes/s, done.
+ DEBUG [c297f5f6] 	
+ DEBUG [c297f5f6] 	Resolving deltas:   0% (0/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:   1% (20/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:   2% (36/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:   3% (50/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:   4% (74/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:   5% (87/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:   6% (107/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:   8% (133/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:   9% (154/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  10% (166/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  11% (184/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  13% (219/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  14% (229/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  15% (246/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  16% (262/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  17% (282/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  18% (294/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  19% (313/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  20% (329/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  21% (343/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  25% (410/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  26% (434/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  28% (458/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  32% (527/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  33% (539/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  35% (583/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  36% (587/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  39% (649/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  41% (673/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  44% (721/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  47% (780/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  48% (784/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  49% (808/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  50% (822/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  52% (860/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  53% (867/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  54% (880/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  57% (933/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  58% (946/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  59% (969/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  62% (1016/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  63% (1038/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  64% (1056/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  65% (1059/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  67% (1094/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  68% (1112/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  70% (1142/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  74% (1213/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  75% (1222/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  76% (1239/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  77% (1270/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  78% (1271/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  79% (1296/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  80% (1310/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  81% (1321/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  83% (1368/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  86% (1401/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  87% (1418/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  88% (1436/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  89% (1450/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  90% (1471/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  94% (1535/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  95% (1553/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  96% (1565/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  98% (1609/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas:  99% (1614/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas: 100% (1629/1629)   
+ DEBUG [c297f5f6] 	Resolving deltas: 100% (1629/1629), done.
+ DEBUG [c297f5f6] 	
+ DEBUG [c297f5f6] 	Checking connectivity... 
+ DEBUG [c297f5f6] 	done.
+ DEBUG [c297f5f6] 	
+  INFO [c297f5f6] Finished in 4.049 seconds with exit status 0 (successful).
+ DEBUG [38421c89] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [38421c89] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [38421c89] Finished in 3.316 seconds with exit status 1 (failed).
+  INFO [fe1a137b] Running /usr/bin/env git clone https://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-build as deployer@138.197.73.98
+ DEBUG [fe1a137b] Command: /usr/bin/env git clone https://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-build
+ DEBUG [fe1a137b] 	Cloning into '/home/deployer/.rbenv/plugins/ruby-build'...
+ DEBUG [fe1a137b] 	
+ DEBUG [fe1a137b] 	remote: Counting objects: 7355, done.[K
+ DEBUG [fe1a137b] 	
+ DEBUG [fe1a137b] 	remote: Compressing objects:   0% (1/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:   1% (3/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:   2% (5/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:   3% (7/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:   4% (10/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:   5% (12/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:   6% (14/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:   7% (17/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:   8% (19/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:   9% (21/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  10% (23/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  11% (26/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  12% (28/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  13% (30/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  14% (33/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  15% (35/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  16% (37/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  17% (40/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  18% (42/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  19% (44/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  20% (46/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  21% (49/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  22% (51/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  23% (53/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  24% (56/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  25% (58/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  26% (60/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  27% (63/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  28% (65/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  29% (67/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  30% (69/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  31% (72/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  32% (74/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  33% (76/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  34% (79/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  35% (81/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  36% (83/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  37% (86/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  38% (88/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  39% (90/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  40% (92/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  41% (95/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  42% (97/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  43% (99/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  44% (102/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  45% (104/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  46% (106/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  47% (109/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  48% (111/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  49% (113/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  50% (115/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  51% (118/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  52% (120/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  53% (122/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  54% (125/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  55% (127/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  56% (129/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  57% (132/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  58% (134/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  59% (136/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  60% (138/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  61% (141/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  62% (143/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  63% (145/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  64% (148/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  65% (150/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  66% (152/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  67% (155/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  68% (157/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  69% (159/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  70% (161/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  71% (164/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  72% (166/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  73% (168/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  74% (171/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  75% (173/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  76% (175/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  77% (178/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  78% (180/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  79% (182/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  80% (184/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  81% (187/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  82% (189/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  83% (191/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  84% (194/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  85% (196/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  86% (198/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  87% (201/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  88% (203/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  89% (205/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  90% (207/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  91% (210/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  92% (212/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  93% (214/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  94% (217/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  95% (219/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  96% (221/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  97% (224/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  98% (226/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects:  99% (228/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects: 100% (230/230)   [K
+ DEBUG [fe1a137b] 	remote: Compressing objects: 100% (230/230), done.[K
+ DEBUG [fe1a137b] 	
+ DEBUG [fe1a137b] 	Receiving objects:   0% (1/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:   1% (74/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:   2% (148/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:   3% (221/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:   4% (295/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:   5% (368/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:   6% (442/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:   7% (515/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:   8% (589/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:   9% (662/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  10% (736/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  11% (810/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  12% (883/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  13% (957/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  14% (1030/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  15% (1104/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  16% (1177/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  17% (1251/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  18% (1324/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  19% (1398/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  20% (1471/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  21% (1545/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  22% (1619/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  23% (1692/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  24% (1766/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  25% (1839/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  26% (1913/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  27% (1986/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  28% (2060/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  29% (2133/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  30% (2207/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  31% (2281/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  32% (2354/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  33% (2428/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  34% (2501/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  35% (2575/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  36% (2648/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  37% (2722/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  38% (2795/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  39% (2869/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  40% (2942/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  41% (3016/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  42% (3090/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  43% (3163/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  44% (3237/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  45% (3310/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  46% (3384/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  47% (3457/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  48% (3531/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  49% (3604/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  50% (3678/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  51% (3752/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  52% (3825/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  53% (3899/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  54% (3972/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  55% (4046/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  56% (4119/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  57% (4193/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  58% (4266/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  59% (4340/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  60% (4413/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  61% (4487/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  62% (4561/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  63% (4634/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  64% (4708/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  65% (4781/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  66% (4855/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  67% (4928/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  68% (5002/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  69% (5075/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  70% (5149/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  71% (5223/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  72% (5296/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  73% (5370/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  74% (5443/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  75% (5517/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  76% (5590/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  77% (5664/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  78% (5737/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  79% (5811/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  80% (5884/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  81% (5958/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  82% (6032/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  83% (6105/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  84% (6179/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  85% (6252/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  86% (6326/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  87% (6399/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  88% (6473/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  89% (6546/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  90% (6620/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  91% (6694/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  92% (6767/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  93% (6841/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  94% (6914/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  95% (6988/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  96% (7061/7355)   
+ DEBUG [fe1a137b] 	remote: Total 7355 (delta 154), reused 0 (delta 0), pack-reused 7122[K
+ DEBUG [fe1a137b] 	
+ DEBUG [fe1a137b] 	Receiving objects:  97% (7135/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  98% (7208/7355)   
+ DEBUG [fe1a137b] 	Receiving objects:  99% (7282/7355)   
+ DEBUG [fe1a137b] 	Receiving objects: 100% (7355/7355)   
+ DEBUG [fe1a137b] 	Receiving objects: 100% (7355/7355), 1.46 MiB | 0 bytes/s, done.
+ DEBUG [fe1a137b] 	
+ DEBUG [fe1a137b] 	Resolving deltas:   0% (0/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:   1% (48/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:   2% (89/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:   3% (133/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:   4% (180/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:   5% (221/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:   6% (268/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:   7% (307/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:   8% (361/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:   9% (401/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  10% (452/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  16% (740/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  17% (750/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  18% (789/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  19% (835/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  20% (877/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  21% (924/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  22% (969/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  23% (1009/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  24% (1053/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  25% (1098/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  26% (1141/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  27% (1186/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  28% (1231/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  29% (1278/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  30% (1315/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  31% (1361/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  32% (1438/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  33% (1484/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  34% (1490/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  37% (1635/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  38% (1666/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  39% (1712/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  40% (1754/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  41% (1797/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  42% (1848/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  43% (1886/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  44% (1935/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  45% (1983/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  46% (2019/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  47% (2062/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  48% (2104/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  49% (2150/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  57% (2507/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  58% (2561/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  59% (2586/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  61% (2680/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  62% (2719/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  63% (2761/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  64% (2815/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  65% (2864/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  66% (2911/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  67% (2938/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  68% (2982/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  69% (3041/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  70% (3070/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  71% (3116/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  72% (3169/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  73% (3205/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  74% (3245/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  75% (3288/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  76% (3339/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  77% (3376/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  78% (3433/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  79% (3486/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  80% (3508/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  81% (3562/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  82% (3600/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  83% (3673/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  84% (3688/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  85% (3725/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  86% (3782/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  87% (3827/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  88% (3863/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  89% (3901/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  90% (3962/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  91% (4018/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  92% (4032/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  93% (4076/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  94% (4120/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  95% (4163/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  96% (4209/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  97% (4261/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas:  98% (4296/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas: 100% (4382/4382)   
+ DEBUG [fe1a137b] 	Resolving deltas: 100% (4382/4382), done.
+ DEBUG [fe1a137b] 	
+ DEBUG [fe1a137b] 	Checking connectivity... 
+ DEBUG [fe1a137b] 	done.
+ DEBUG [fe1a137b] 	
+  INFO [fe1a137b] Finished in 4.400 seconds with exit status 0 (successful).
+ DEBUG [566ddfc2] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [566ddfc2] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [566ddfc2] Finished in 0.546 seconds with exit status 1 (failed).
+ DEBUG [3081f302] Running [ ! -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [3081f302] Command: [ ! -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [3081f302] Finished in 0.551 seconds with exit status 1 (failed).
+ DEBUG [eb3ff686] Running if test ! -d $HOME/.rbenv/plugins/ruby-build; then echo "Directory does not exist '$HOME/.rbenv/plugins/ruby-build'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [eb3ff686] Command: if test ! -d $HOME/.rbenv/plugins/ruby-build; then echo "Directory does not exist '$HOME/.rbenv/plugins/ruby-build'" 1>&2; false; fi
+ DEBUG [eb3ff686] Finished in 0.552 seconds with exit status 0 (successful).
+  INFO [5239e26b] Running /usr/bin/env git pull as deployer@138.197.73.98
+ DEBUG [5239e26b] Command: cd $HOME/.rbenv/plugins/ruby-build && /usr/bin/env git pull
+ DEBUG [5239e26b] 	Already up-to-date.
+ DEBUG [5239e26b] 	
+  INFO [5239e26b] Finished in 0.869 seconds with exit status 0 (successful).
+  INFO [b32bcc15] Running /usr/bin/env $HOME/.rbenv/bin/rbenv install 2.3.1 as deployer@138.197.73.98
+ DEBUG [b32bcc15] Command: /usr/bin/env $HOME/.rbenv/bin/rbenv install 2.3.1
+ DEBUG [b32bcc15] 	perl: warning: Setting locale failed.
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	perl: warning: Please check that your locale settings:
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 		
+ DEBUG [b32bcc15] 	LANGUAGE = (unset),
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 		
+ DEBUG [b32bcc15] 	LC_ALL = (unset),
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 		
+ DEBUG [b32bcc15] 	LC_CTYPE = "UTF-8",
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 		
+ DEBUG [b32bcc15] 	LANG = "en_US.UTF-8"
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	    are supported and installed on your system.
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	Downloading ruby-2.3.1.tar.bz2...
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	-> https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.1.tar.bz2
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	Installing ruby-2.3.1...
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	[1mBUILD FAILED[m
+ DEBUG [b32bcc15] 	 (Ubuntu 14.04 using ruby-build 20170112-6-ged5abde)
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	Inspect or clean up the working tree at /tmp/ruby-build.20170127211621.7702
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	[33mResults logged to /tmp/ruby-build.20170127211621.7702.log[m
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	Last 10 log lines:
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	checking for ruby... false
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	checking build system type... x86_64-pc-linux-gnu
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	checking host system type... x86_64-pc-linux-gnu
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	checking target system type... x86_64-pc-linux-gnu
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	checking for gcc... no
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	checking for cc... no
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	checking for cl.exe... no
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	configure: error: in `/tmp/ruby-build.20170127211621.7702/ruby-2.3.1':
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	configure: error: no acceptable C compiler found in $PATH
+ DEBUG [b32bcc15] 	
+ DEBUG [b32bcc15] 	See `config.log' for more details
+ DEBUG [b32bcc15] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-27 23:17:22 +0200 cap production AAdropletsetup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [7ec3be5e] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [7ec3be5e] Command: [ -d $HOME/.rbenv ]
+ DEBUG [7ec3be5e] Finished in 3.140 seconds with exit status 0 (successful).
+ DEBUG [de920eae] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [de920eae] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [de920eae] Finished in 3.239 seconds with exit status 0 (successful).
+ DEBUG [4153dfd3] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [4153dfd3] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [4153dfd3] Finished in 0.567 seconds with exit status 1 (failed).
+ DEBUG [486d94ec] Running [ ! -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [486d94ec] Command: [ ! -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [486d94ec] Finished in 0.573 seconds with exit status 1 (failed).
+ DEBUG [77a2af85] Running if test ! -d $HOME/.rbenv/plugins/ruby-build; then echo "Directory does not exist '$HOME/.rbenv/plugins/ruby-build'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [77a2af85] Command: if test ! -d $HOME/.rbenv/plugins/ruby-build; then echo "Directory does not exist '$HOME/.rbenv/plugins/ruby-build'" 1>&2; false; fi
+ DEBUG [77a2af85] Finished in 0.573 seconds with exit status 0 (successful).
+  INFO [7d733b29] Running /usr/bin/env git pull as deployer@138.197.73.98
+ DEBUG [7d733b29] Command: cd $HOME/.rbenv/plugins/ruby-build && /usr/bin/env git pull
+ DEBUG [7d733b29] 	Already up-to-date.
+ DEBUG [7d733b29] 	
+  INFO [7d733b29] Finished in 0.874 seconds with exit status 0 (successful).
+  INFO [ce86d883] Running /usr/bin/env $HOME/.rbenv/bin/rbenv install 2.3.1 as deployer@138.197.73.98
+ DEBUG [ce86d883] Command: /usr/bin/env $HOME/.rbenv/bin/rbenv install 2.3.1
+ DEBUG [ce86d883] 	perl: warning: Setting locale failed.
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	perl: warning: Please check that your locale settings:
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 		
+ DEBUG [ce86d883] 	LANGUAGE = (unset),
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 		
+ DEBUG [ce86d883] 	LC_ALL = (unset),
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 		
+ DEBUG [ce86d883] 	LC_CTYPE = "UTF-8",
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 		
+ DEBUG [ce86d883] 	LANG = "en_US.UTF-8"
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	    are supported and installed on your system.
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	Downloading ruby-2.3.1.tar.bz2...
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	-> https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.1.tar.bz2
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	Installing ruby-2.3.1...
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	[1mBUILD FAILED[m
+ DEBUG [ce86d883] 	 (Ubuntu 14.04 using ruby-build 20170112-6-ged5abde)
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	Inspect or clean up the working tree at /tmp/ruby-build.20170127211731.8204
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	[33mResults logged to /tmp/ruby-build.20170127211731.8204.log[m
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	Last 10 log lines:
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	checking for ruby... false
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	checking build system type... x86_64-pc-linux-gnu
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	checking host system type... x86_64-pc-linux-gnu
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	checking target system type... x86_64-pc-linux-gnu
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	checking for gcc... no
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	checking for cc... no
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	checking for cl.exe... no
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	configure: error: in `/tmp/ruby-build.20170127211731.8204/ruby-2.3.1':
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	configure: error: no acceptable C compiler found in $PATH
+ DEBUG [ce86d883] 	
+ DEBUG [ce86d883] 	See `config.log' for more details
+ DEBUG [ce86d883] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-27 23:21:47 +0200 cap production droplet:setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [25cd0bf5] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [25cd0bf5] Command: [ -d $HOME/.rbenv ]
+ DEBUG [25cd0bf5] Finished in 3.372 seconds with exit status 0 (successful).
+ DEBUG [ebf69af9] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [ebf69af9] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [ebf69af9] Finished in 3.331 seconds with exit status 0 (successful).
+ DEBUG [71e5b7ae] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [71e5b7ae] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [71e5b7ae] Finished in 0.574 seconds with exit status 1 (failed).
+ DEBUG [d1e35b42] Running [ ! -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [d1e35b42] Command: [ ! -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [d1e35b42] Finished in 0.588 seconds with exit status 1 (failed).
+ DEBUG [0a59a8e5] Running if test ! -d $HOME/.rbenv/plugins/ruby-build; then echo "Directory does not exist '$HOME/.rbenv/plugins/ruby-build'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [0a59a8e5] Command: if test ! -d $HOME/.rbenv/plugins/ruby-build; then echo "Directory does not exist '$HOME/.rbenv/plugins/ruby-build'" 1>&2; false; fi
+ DEBUG [0a59a8e5] Finished in 0.575 seconds with exit status 0 (successful).
+  INFO [3cc09ac0] Running /usr/bin/env git pull as deployer@138.197.73.98
+ DEBUG [3cc09ac0] Command: cd $HOME/.rbenv/plugins/ruby-build && /usr/bin/env git pull
+ DEBUG [3cc09ac0] 	Already up-to-date.
+ DEBUG [3cc09ac0] 	
+  INFO [3cc09ac0] Finished in 0.930 seconds with exit status 0 (successful).
+  INFO [c48c038a] Running /usr/bin/env $HOME/.rbenv/bin/rbenv install 2.3.1 as deployer@138.197.73.98
+ DEBUG [c48c038a] Command: /usr/bin/env $HOME/.rbenv/bin/rbenv install 2.3.1
+ DEBUG [c48c038a] 	perl: warning: Setting locale failed.
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	perl: warning: Please check that your locale settings:
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 		
+ DEBUG [c48c038a] 	LANGUAGE = (unset),
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 		
+ DEBUG [c48c038a] 	LC_ALL = (unset),
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 		
+ DEBUG [c48c038a] 	LC_CTYPE = "UTF-8",
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 		
+ DEBUG [c48c038a] 	LANG = "en_US.UTF-8"
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	    are supported and installed on your system.
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	Downloading ruby-2.3.1.tar.bz2...
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	-> https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.1.tar.bz2
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	Installing ruby-2.3.1...
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	[1mBUILD FAILED[m
+ DEBUG [c48c038a] 	 (Ubuntu 14.04 using ruby-build 20170112-6-ged5abde)
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	Inspect or clean up the working tree at /tmp/ruby-build.20170127212156.8737
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	[33mResults logged to /tmp/ruby-build.20170127212156.8737.log[m
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	Last 10 log lines:
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	checking for ruby... false
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	checking build system type... x86_64-pc-linux-gnu
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	checking host system type... x86_64-pc-linux-gnu
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	checking target system type... x86_64-pc-linux-gnu
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	checking for gcc... no
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	checking for cc... no
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	checking for cl.exe... no
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	configure: error: in `/tmp/ruby-build.20170127212156.8737/ruby-2.3.1':
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	configure: error: no acceptable C compiler found in $PATH
+ DEBUG [c48c038a] 	
+ DEBUG [c48c038a] 	See `config.log' for more details
+ DEBUG [c48c038a] 	

@@ -1,54 +1,20 @@
-# Rails standard using Capistrano from Mac (Sierra)
-* Ubuntu Droplet from Digital Ocean 14.04.5
-* Ruby 2.3.1
-* Rails 4.2.5
-* Capistrano 3.7.1
-* Posgresql
-* Nginx
-* Unicorn
+## Loading this App to build on Digital Ocean
 
-## On local: setup new rails app and repo
-> rails _4.2.5_ new std --database=postgresql
-> rails s
+**Clone the std app to your desktop as the name of the new application**
 
-**Setup the .gitignore file to ignore certain files** 
-```
-/db/*.sqlite3
-/db/*.sqlite3-journal
-*/log/
-!/log/.keep
-/tmp
-/config/database.yml
-/.env
-/config/secrets.yml
-```
-
-**Add repo to Github: remember to upload your ssh key into github**
-```
-echo "# std" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/yoyozi/std.git
-git push -u origin master
-```
-
-to check the origin of the repository
-> git remote -v
-
-to drop the origin
-> git remote rm origin
-
-to add the origin use the https url instead so its safer
-> git remote add origin https://github.com/user/repo.git
+> git clone https://github.com/yoyozi/std.git fut-std
+> git remote set-url origin https://github.com/yoyozi/fut-std.git
+> git push -u origin master
 
 ## On remote: Sign up with Digital Ocean or rebuild your existing droplet
-Delete the fingerprints of the known host in the known hosts file
+Delete the fingerprints of the known host in the known hosts file on your local machine
 
-**User accounts and remote ssh. On droplet: Add the user you are going to use to deploy via capistrano and your own personal user account**
+**User accounts and remote ssh. On droplet**
+Log in with you cert and change root password
+> passwd
+> adduser username
 > adduser deploy_user
-
-**Add the deployer and your account to the sudo group to su -**
+> gpasswd -a username sudo
 > gpasswd -a deploy_user sudo
 
 **Make editing the sudo file use vim**
@@ -60,16 +26,12 @@ __AFTER Defaults        env_reset
 
 ```
 for now
-#deployer ALL=(ALL) ALL=NOPASSWD
+#deploy_user ALL=(ALL) NOPASSWD:ALL
 will change later to 
 deploy_user ALL=NOPASSWD:/usr/bin/apt-get
 ```
 
-**Set the locale (add at end of file)**
-> sudo vi /etc/environment
-> export LANG=en_US.utf8
-
-## Then from local machine (on mac use):
+## On local machine (on mac use):
 > ssh-copy-id deploy_user@x.x.x.x
 
 **Test that you can login with the deployer user and your own username, and su to root BEFORE removing root remote login!!!**
@@ -101,6 +63,33 @@ Cut and paste the output of below (the public key) to your github repo
 Test the login to github
 > ssh -T git@github.com
 Should be a welcome message
+
+
+## On local : ensure IP address and the project repo is adjusted to suite in:
+1deploy.rb and production.rb
+
+Recreate the keys using "rake secrets"
+```
+development:
+  secret_key_base: 
+test:
+  secret_key_base: 
+production:
+  secret_key_base: 
+```
+
+
+
+
+Populate these with the output of "rake secrets"
+
+# Do not keep production secrets in the repository,
+# instead read values from the environment.
+
+
+**Set the locale (add at end of file)**
+> sudo vi /etc/environment
+> export LANG=en_US.utf8
 
 ## On local: Capistrano setup 
 

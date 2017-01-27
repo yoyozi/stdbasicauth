@@ -91,16 +91,16 @@ default: &default
 
 development:
   <<: *default
-  database: fut-std_development
+  database: db_development
 
 test:
   <<: *default
-  database: fut-std_test
+  database: db_test
 
 production:
   <<: *default
-  database: fut-std_production
-  username: fut-std
+  database: db_production
+  username: db
   password: <%= ENV['STD_DATABASE_PASSWORD'] %>
 ```
 
@@ -149,6 +149,11 @@ require 'capistrano/postgresql'
 require 'capistrano/rbenv_install'
 require 'capistrano/secrets_yml'
 ```
+
+## Submit to repo
+> git add -A
+> git commit -m "Ready" 
+> git push -u origin master
 
 And FINALY run 
 >cap production deploy

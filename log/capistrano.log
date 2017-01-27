@@ -12800,3 +12800,1646 @@
  DEBUG [da9790f6] Finished in 3.463 seconds with exit status 0 (successful).
  DEBUG [3cf8f10c] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
  DEBUG [3cf8f10c] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-28 00:22:44 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e998449c] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [e998449c] Command: [ -d $HOME/.rbenv ]
+ DEBUG [e998449c] Finished in 3.529 seconds with exit status 0 (successful).
+ DEBUG [e7735fbc] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [e7735fbc] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [e7735fbc] Finished in 3.217 seconds with exit status 0 (successful).
+ DEBUG [a442ed28] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [a442ed28] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [a442ed28] Finished in 0.571 seconds with exit status 0 (successful).
+ DEBUG [c5fc2e99] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [c5fc2e99] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [c5fc2e99] 	true
+ DEBUG [c5fc2e99] 	
+ DEBUG [c5fc2e99] Finished in 0.844 seconds with exit status 0 (successful).
+ DEBUG [18cd7078] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [18cd7078] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [18cd7078] Finished in 0.552 seconds with exit status 0 (successful).
+  INFO [e6767efa] Running /usr/bin/env mkdir -p /tmp as deployer@138.197.73.98
+ DEBUG [e6767efa] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [e6767efa] Finished in 0.553 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-std-production-craig.sh 0.0%
+  INFO Uploading /tmp/git-ssh-std-production-craig.sh 100.0%
+  INFO [38ef26f4] Running /usr/bin/env chmod 700 /tmp/git-ssh-std-production-craig.sh as deployer@138.197.73.98
+ DEBUG [38ef26f4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-std-production-craig.sh )
+  INFO [38ef26f4] Finished in 0.554 seconds with exit status 0 (successful).
+  INFO [f7e6cdf4] Running /usr/bin/env git ls-remote --heads https://github.com/yoyozi/fut-std.git as deployer@138.197.73.98
+ DEBUG [f7e6cdf4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-std-production-craig.sh" ; /usr/bin/env git ls-remote --heads https://github.com/yoyozi/fut-std.git )
+ DEBUG [f7e6cdf4] 	979db99de2242cda711fa02e620c726393a06a13
+ DEBUG [f7e6cdf4] 		
+ DEBUG [f7e6cdf4] 	refs/heads/master
+ DEBUG [f7e6cdf4] 	
+  INFO [f7e6cdf4] Finished in 0.813 seconds with exit status 0 (successful).
+  INFO [98e7f292] Running /usr/bin/env sudo mkdir -pv /home/deployer/apps/std as deployer@138.197.73.98
+ DEBUG [98e7f292] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mkdir -pv /home/deployer/apps/std )
+  INFO [98e7f292] Finished in 0.563 seconds with exit status 0 (successful).
+ DEBUG [07c149de] Running /usr/bin/env id -un as deployer@138.197.73.98
+ DEBUG [07c149de] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -un )
+ DEBUG [07c149de] 	deployer
+ DEBUG [07c149de] 	
+ DEBUG [07c149de] Finished in 0.554 seconds with exit status 0 (successful).
+ DEBUG [2346a79e] Running /usr/bin/env id -gn as deployer@138.197.73.98
+ DEBUG [2346a79e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -gn )
+ DEBUG [2346a79e] 	deployer
+ DEBUG [2346a79e] 	
+ DEBUG [2346a79e] Finished in 0.556 seconds with exit status 0 (successful).
+  INFO [7c11ab57] Running /usr/bin/env sudo chown deployer:deployer /home/deployer/apps/std as deployer@138.197.73.98
+ DEBUG [7c11ab57] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo chown deployer:deployer /home/deployer/apps/std )
+  INFO [7c11ab57] Finished in 0.560 seconds with exit status 0 (successful).
+  INFO [caca7058] Running /usr/bin/env mkdir -p /home/deployer/apps/std/shared /home/deployer/apps/std/releases as deployer@138.197.73.98
+ DEBUG [caca7058] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/std/shared /home/deployer/apps/std/releases )
+  INFO [caca7058] Finished in 0.556 seconds with exit status 0 (successful).
+  INFO [4c34731b] Running /usr/bin/env mkdir -p /home/deployer/apps/std/shared/log /home/deployer/apps/std/shared/tmp/pids /home/deployer/apps/std/shared/public/assets as deployer@138.197.73.98
+ DEBUG [4c34731b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/std/shared/log /home/deployer/apps/std/shared/tmp/pids /home/deployer/apps/std/shared/public/assets )
+  INFO [4c34731b] Finished in 0.555 seconds with exit status 0 (successful).
+ DEBUG [2ee40453] Running [ -f /home/deployer/apps/std/current/REVISION ] as deployer@138.197.73.98
+ DEBUG [2ee40453] Command: [ -f /home/deployer/apps/std/current/REVISION ]
+ DEBUG [2ee40453] Finished in 0.550 seconds with exit status 1 (failed).
+ DEBUG [20a3cf08] Running [ -f /home/deployer/apps/std/repo/HEAD ] as deployer@138.197.73.98
+ DEBUG [20a3cf08] Command: [ -f /home/deployer/apps/std/repo/HEAD ]
+ DEBUG [20a3cf08] Finished in 0.551 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deployer/apps/std/repo
+ DEBUG [deecf26e] Running if test ! -d /home/deployer/apps/std/repo; then echo "Directory does not exist '/home/deployer/apps/std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [deecf26e] Command: if test ! -d /home/deployer/apps/std/repo; then echo "Directory does not exist '/home/deployer/apps/std/repo'" 1>&2; false; fi
+ DEBUG [deecf26e] Finished in 0.552 seconds with exit status 0 (successful).
+  INFO [283492e3] Running /usr/bin/env git remote update --prune as deployer@138.197.73.98
+ DEBUG [283492e3] Command: cd /home/deployer/apps/std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-std-production-craig.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [283492e3] 	Fetching origin
+ DEBUG [283492e3] 	
+ DEBUG [283492e3] 	remote: Counting objects: 10, done.[K
+ DEBUG [283492e3] 	
+ DEBUG [283492e3] 	remote: Compressing objects:  33% (1/3)   [K
+ DEBUG [283492e3] 	remote: Compressing objects:  66% (2/3)   [K
+ DEBUG [283492e3] 	remote: Compressing objects: 100% (3/3)   [K
+ DEBUG [283492e3] 	remote: Compressing objects: 100% (3/3), done.[K
+ DEBUG [283492e3] 	
+ DEBUG [283492e3] 	Unpacking objects:  10% (1/10)   
+ DEBUG [283492e3] 	Unpacking objects:  20% (2/10)   
+ DEBUG [283492e3] 	Unpacking objects:  30% (3/10)   
+ DEBUG [283492e3] 	Unpacking objects:  40% (4/10)   
+ DEBUG [283492e3] 	Unpacking objects:  50% (5/10)   
+ DEBUG [283492e3] 	Unpacking objects:  60% (6/10)   
+ DEBUG [283492e3] 	Unpacking objects:  70% (7/10)   
+ DEBUG [283492e3] 	Unpacking objects:  80% (8/10)   
+ DEBUG [283492e3] 	Unpacking objects:  90% (9/10)   
+ DEBUG [283492e3] 	remote: Total 10 (delta 5), reused 10 (delta 5), pack-reused 0[K
+ DEBUG [283492e3] 	
+ DEBUG [283492e3] 	Unpacking objects: 100% (10/10)   
+ DEBUG [283492e3] 	Unpacking objects: 100% (10/10), done.
+ DEBUG [283492e3] 	
+ DEBUG [283492e3] 	From https://github.com/yoyozi/fut-std
+ DEBUG [283492e3] 	
+ DEBUG [283492e3] 	   6c70566..979db99  master     -> master
+ DEBUG [283492e3] 	
+  INFO [283492e3] Finished in 1.368 seconds with exit status 0 (successful).
+ DEBUG [943f8153] Running if test ! -d /home/deployer/apps/std/repo; then echo "Directory does not exist '/home/deployer/apps/std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [943f8153] Command: if test ! -d /home/deployer/apps/std/repo; then echo "Directory does not exist '/home/deployer/apps/std/repo'" 1>&2; false; fi
+ DEBUG [943f8153] Finished in 0.551 seconds with exit status 0 (successful).
+  INFO [9f307695] Running /usr/bin/env mkdir -p /home/deployer/apps/std/releases/20170127222301 as deployer@138.197.73.98
+ DEBUG [9f307695] Command: cd /home/deployer/apps/std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-std-production-craig.sh" ; /usr/bin/env mkdir -p /home/deployer/apps/std/releases/20170127222301 )
+  INFO [9f307695] Finished in 0.558 seconds with exit status 0 (successful).
+  INFO [69715d70] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deployer/apps/std/releases/20170127222301 as deployer@138.197.73.98
+ DEBUG [69715d70] Command: cd /home/deployer/apps/std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-std-production-craig.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deployer/apps/std/releases/20170127222301 )
+  INFO [69715d70] Finished in 0.575 seconds with exit status 0 (successful).
+ DEBUG [4a510b63] Running if test ! -d /home/deployer/apps/std/repo; then echo "Directory does not exist '/home/deployer/apps/std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [4a510b63] Command: if test ! -d /home/deployer/apps/std/repo; then echo "Directory does not exist '/home/deployer/apps/std/repo'" 1>&2; false; fi
+ DEBUG [4a510b63] Finished in 0.553 seconds with exit status 0 (successful).
+ DEBUG [f8558480] Running /usr/bin/env git rev-list --max-count=1 master as deployer@138.197.73.98
+ DEBUG [f8558480] Command: cd /home/deployer/apps/std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-std-production-craig.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [f8558480] 	979db99de2242cda711fa02e620c726393a06a13
+ DEBUG [f8558480] 	
+ DEBUG [f8558480] Finished in 0.556 seconds with exit status 0 (successful).
+ DEBUG [c67d4a3d] Running if test ! -d /home/deployer/apps/std/releases/20170127222301; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170127222301'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [c67d4a3d] Command: if test ! -d /home/deployer/apps/std/releases/20170127222301; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170127222301'" 1>&2; false; fi
+ DEBUG [c67d4a3d] Finished in 0.553 seconds with exit status 0 (successful).
+  INFO [bef8ef4a] Running /usr/bin/env echo "979db99de2242cda711fa02e620c726393a06a13" >> REVISION as deployer@138.197.73.98
+ DEBUG [bef8ef4a] Command: cd /home/deployer/apps/std/releases/20170127222301 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "979db99de2242cda711fa02e620c726393a06a13" >> REVISION )
+  INFO [bef8ef4a] Finished in 0.558 seconds with exit status 0 (successful).
+  INFO [2681165e] Running /usr/bin/env mkdir -p /home/deployer/apps/std/releases/20170127222301/config as deployer@138.197.73.98
+ DEBUG [2681165e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/std/releases/20170127222301/config )
+  INFO [2681165e] Finished in 0.556 seconds with exit status 0 (successful).
+ DEBUG [2f1b6a11] Running [ -L /home/deployer/apps/std/releases/20170127222301/config/database.yml ] as deployer@138.197.73.98
+ DEBUG [2f1b6a11] Command: [ -L /home/deployer/apps/std/releases/20170127222301/config/database.yml ]
+ DEBUG [2f1b6a11] Finished in 0.554 seconds with exit status 1 (failed).
+ DEBUG [1a1bb25d] Running [ -f /home/deployer/apps/std/releases/20170127222301/config/database.yml ] as deployer@138.197.73.98
+ DEBUG [1a1bb25d] Command: [ -f /home/deployer/apps/std/releases/20170127222301/config/database.yml ]
+ DEBUG [1a1bb25d] Finished in 0.551 seconds with exit status 1 (failed).
+  INFO [fc62262b] Running /usr/bin/env ln -s /home/deployer/apps/std/shared/config/database.yml /home/deployer/apps/std/releases/20170127222301/config/database.yml as deployer@138.197.73.98
+ DEBUG [fc62262b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/std/shared/config/database.yml /home/deployer/apps/std/releases/20170127222301/config/database.yml )
+  INFO [fc62262b] Finished in 0.553 seconds with exit status 0 (successful).
+ DEBUG [e6b6f0ea] Running [ -L /home/deployer/apps/std/releases/20170127222301/config/secrets.yml ] as deployer@138.197.73.98
+ DEBUG [e6b6f0ea] Command: [ -L /home/deployer/apps/std/releases/20170127222301/config/secrets.yml ]
+ DEBUG [e6b6f0ea] Finished in 0.550 seconds with exit status 1 (failed).
+ DEBUG [ec95bb50] Running [ -f /home/deployer/apps/std/releases/20170127222301/config/secrets.yml ] as deployer@138.197.73.98
+ DEBUG [ec95bb50] Command: [ -f /home/deployer/apps/std/releases/20170127222301/config/secrets.yml ]
+ DEBUG [ec95bb50] Finished in 0.553 seconds with exit status 1 (failed).
+  INFO [9c0f6ede] Running /usr/bin/env ln -s /home/deployer/apps/std/shared/config/secrets.yml /home/deployer/apps/std/releases/20170127222301/config/secrets.yml as deployer@138.197.73.98
+ DEBUG [9c0f6ede] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/std/shared/config/secrets.yml /home/deployer/apps/std/releases/20170127222301/config/secrets.yml )
+  INFO [9c0f6ede] Finished in 0.553 seconds with exit status 0 (successful).
+  INFO [f224826d] Running /usr/bin/env mkdir -p /home/deployer/apps/std/releases/20170127222301 /home/deployer/apps/std/releases/20170127222301/tmp /home/deployer/apps/std/releases/20170127222301/public as deployer@138.197.73.98
+ DEBUG [f224826d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/std/releases/20170127222301 /home/deployer/apps/std/releases/20170127222301/tmp /home/deployer/apps/std/releases/20170127222301/public )
+  INFO [f224826d] Finished in 0.555 seconds with exit status 0 (successful).
+ DEBUG [281ffbad] Running [ -L /home/deployer/apps/std/releases/20170127222301/log ] as deployer@138.197.73.98
+ DEBUG [281ffbad] Command: [ -L /home/deployer/apps/std/releases/20170127222301/log ]
+ DEBUG [281ffbad] Finished in 0.550 seconds with exit status 1 (failed).
+ DEBUG [82ed9f15] Running [ -d /home/deployer/apps/std/releases/20170127222301/log ] as deployer@138.197.73.98
+ DEBUG [82ed9f15] Command: [ -d /home/deployer/apps/std/releases/20170127222301/log ]
+ DEBUG [82ed9f15] Finished in 0.550 seconds with exit status 0 (successful).
+  INFO [8066927e] Running /usr/bin/env rm -rf /home/deployer/apps/std/releases/20170127222301/log as deployer@138.197.73.98
+ DEBUG [8066927e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /home/deployer/apps/std/releases/20170127222301/log )
+  INFO [8066927e] Finished in 0.559 seconds with exit status 0 (successful).
+  INFO [94e341c1] Running /usr/bin/env ln -s /home/deployer/apps/std/shared/log /home/deployer/apps/std/releases/20170127222301/log as deployer@138.197.73.98
+ DEBUG [94e341c1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/std/shared/log /home/deployer/apps/std/releases/20170127222301/log )
+  INFO [94e341c1] Finished in 0.556 seconds with exit status 0 (successful).
+ DEBUG [1dd12a0e] Running [ -L /home/deployer/apps/std/releases/20170127222301/tmp/pids ] as deployer@138.197.73.98
+ DEBUG [1dd12a0e] Command: [ -L /home/deployer/apps/std/releases/20170127222301/tmp/pids ]
+ DEBUG [1dd12a0e] Finished in 0.549 seconds with exit status 1 (failed).
+ DEBUG [80d02858] Running [ -d /home/deployer/apps/std/releases/20170127222301/tmp/pids ] as deployer@138.197.73.98
+ DEBUG [80d02858] Command: [ -d /home/deployer/apps/std/releases/20170127222301/tmp/pids ]
+ DEBUG [80d02858] Finished in 0.550 seconds with exit status 1 (failed).
+  INFO [486fe806] Running /usr/bin/env ln -s /home/deployer/apps/std/shared/tmp/pids /home/deployer/apps/std/releases/20170127222301/tmp/pids as deployer@138.197.73.98
+ DEBUG [486fe806] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/std/shared/tmp/pids /home/deployer/apps/std/releases/20170127222301/tmp/pids )
+  INFO [486fe806] Finished in 0.556 seconds with exit status 0 (successful).
+ DEBUG [c6d2e760] Running [ -L /home/deployer/apps/std/releases/20170127222301/public/assets ] as deployer@138.197.73.98
+ DEBUG [c6d2e760] Command: [ -L /home/deployer/apps/std/releases/20170127222301/public/assets ]
+ DEBUG [c6d2e760] Finished in 0.557 seconds with exit status 1 (failed).
+ DEBUG [d38344e5] Running [ -d /home/deployer/apps/std/releases/20170127222301/public/assets ] as deployer@138.197.73.98
+ DEBUG [d38344e5] Command: [ -d /home/deployer/apps/std/releases/20170127222301/public/assets ]
+ DEBUG [d38344e5] Finished in 0.551 seconds with exit status 1 (failed).
+  INFO [ce53cc5f] Running /usr/bin/env ln -s /home/deployer/apps/std/shared/public/assets /home/deployer/apps/std/releases/20170127222301/public/assets as deployer@138.197.73.98
+ DEBUG [ce53cc5f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/std/shared/public/assets /home/deployer/apps/std/releases/20170127222301/public/assets )
+  INFO [ce53cc5f] Finished in 0.555 seconds with exit status 0 (successful).
+ DEBUG [caffb1b2] Running if test ! -d /home/deployer/apps/std/releases/20170127222301; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170127222301'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [caffb1b2] Command: if test ! -d /home/deployer/apps/std/releases/20170127222301; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170127222301'" 1>&2; false; fi
+ DEBUG [caffb1b2] Finished in 0.552 seconds with exit status 0 (successful).
+ DEBUG [3e448c31] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deployer/apps/std/shared/bundle as deployer@138.197.73.98
+ DEBUG [3e448c31] Command: cd /home/deployer/apps/std/releases/20170127222301 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deployer/apps/std/shared/bundle )
+ DEBUG [3e448c31] 	[31mThe following gems are missing[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * net-ssh (4.0.1)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * sshkit (1.11.5)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * airbrussh (1.1.2)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * debug_inspector (0.0.2)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * binding_of_caller (0.7.2)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * byebug (9.0.6)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * capistrano (3.7.1)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * capistrano-bundler (1.2.0)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * capistrano-postgresql (4.2.1)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * capistrano-rails (1.2.2)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * capistrano-rbenv (2.0.4)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * capistrano-rbenv-install (1.2.0)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * capistrano-safe-deploy-to (1.1.1)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * capistrano-secrets-yml (1.0.0)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * capistrano-ssh-doctor (1.0.0)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * capistrano-unicorn-nginx (4.0.0)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * spring (2.0.1)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[31m * web-console (2.3.0)[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [3e448c31] 	
+ DEBUG [3e448c31] Finished in 1.232 seconds with exit status 1 (failed).
+  INFO [681a3f95] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deployer/apps/std/shared/bundle --without development test --deployment --quiet as deployer@138.197.73.98
+ DEBUG [681a3f95] Command: cd /home/deployer/apps/std/releases/20170127222301 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deployer/apps/std/shared/bundle --without development test --deployment --quiet )
+  INFO [681a3f95] Finished in 3.427 seconds with exit status 0 (successful).
+ DEBUG [a6ccf8d6] Running if test ! -d /home/deployer/apps/std/releases/20170127222301; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170127222301'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [a6ccf8d6] Command: if test ! -d /home/deployer/apps/std/releases/20170127222301; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170127222301'" 1>&2; false; fi
+ DEBUG [a6ccf8d6] Finished in 0.552 seconds with exit status 0 (successful).
+  INFO [706f65ff] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deployer@138.197.73.98
+ DEBUG [706f65ff] Command: cd /home/deployer/apps/std/releases/20170127222301 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [706f65ff] Finished in 5.810 seconds with exit status 0 (successful).
+ DEBUG [7d057653] Running if test ! -d /home/deployer/apps/std/releases/20170127222301; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170127222301'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [7d057653] Command: if test ! -d /home/deployer/apps/std/releases/20170127222301; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170127222301'" 1>&2; false; fi
+ DEBUG [7d057653] Finished in 0.554 seconds with exit status 0 (successful).
+  INFO [7e0ad855] Running /usr/bin/env mkdir -p /home/deployer/apps/std/releases/20170127222301/assets_manifest_backup as deployer@138.197.73.98
+ DEBUG [7e0ad855] Command: cd /home/deployer/apps/std/releases/20170127222301 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/std/releases/20170127222301/assets_manifest_backup )
+  INFO [7e0ad855] Finished in 0.554 seconds with exit status 0 (successful).
+ DEBUG [f11d95e8] Running /usr/bin/env ls /home/deployer/apps/std/releases/20170127222301/public/assets/.sprockets-manifest* as deployer@138.197.73.98
+ DEBUG [f11d95e8] Command: cd /home/deployer/apps/std/releases/20170127222301 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /home/deployer/apps/std/releases/20170127222301/public/assets/.sprockets-manifest* )
+ DEBUG [f11d95e8] 	/home/deployer/apps/std/releases/20170127222301/public/assets/.sprockets-manifest-cefae14c10ec3e31fb9db9e01217e4e5.json
+ DEBUG [f11d95e8] 	
+ DEBUG [f11d95e8] Finished in 0.555 seconds with exit status 0 (successful).
+ DEBUG [2194ac1c] Running /usr/bin/env ls /home/deployer/apps/std/releases/20170127222301/public/assets/.sprockets-manifest* as deployer@138.197.73.98
+ DEBUG [2194ac1c] Command: cd /home/deployer/apps/std/releases/20170127222301 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /home/deployer/apps/std/releases/20170127222301/public/assets/.sprockets-manifest* )
+ DEBUG [2194ac1c] 	/home/deployer/apps/std/releases/20170127222301/public/assets/.sprockets-manifest-cefae14c10ec3e31fb9db9e01217e4e5.json
+ DEBUG [2194ac1c] 	
+ DEBUG [2194ac1c] Finished in 0.560 seconds with exit status 0 (successful).
+  INFO [9b9aa9d9] Running /usr/bin/env cp /home/deployer/apps/std/releases/20170127222301/public/assets/.sprockets-manifest-cefae14c10ec3e31fb9db9e01217e4e5.json /home/deployer/apps/std/releases/20170127222301/assets_manifest_backup as deployer@138.197.73.98
+ DEBUG [9b9aa9d9] Command: cd /home/deployer/apps/std/releases/20170127222301 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /home/deployer/apps/std/releases/20170127222301/public/assets/.sprockets-manifest-cefae14c10ec3e31fb9db9e01217e4e5.json /home/deployer/apps/std/releases/20170127222301/assets_manifest_backup )
+  INFO [9b9aa9d9] Finished in 0.559 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [e2a56926] Running if test ! -d /home/deployer/apps/std/releases/20170127222301; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170127222301'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [e2a56926] Command: if test ! -d /home/deployer/apps/std/releases/20170127222301; then echo "Directory does not exist '/home/deployer/apps/std/releases/20170127222301'" 1>&2; false; fi
+ DEBUG [e2a56926] Finished in 0.553 seconds with exit status 0 (successful).
+  INFO [0da1f62d] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as deployer@138.197.73.98
+ DEBUG [0da1f62d] Command: cd /home/deployer/apps/std/releases/20170127222301 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [0da1f62d] 	rake aborted!
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	Cannot load `Rails.application.database_configuration`:
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	Could not load database configuration. No such file - ["config/database.yml"]
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/railties-4.2.5/lib/rails/application/configuration.rb:110:in `database_configuration'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/railtie.rb:117:in `block (2 levels) in <class:Railtie>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:44:in `each'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/base.rb:315:in `<module:ActiveRecord>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/base.rb:26:in `<top (required)>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/mysql_database_tasks.rb:8:in `<class:MySQLDatabaseTasks>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/mysql_database_tasks.rb:3:in `<module:Tasks>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/ap
+ DEBUG [0da1f62d] 	ps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/mysql_database_tasks.rb:2:in `<module:ActiveRecord>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/mysql_database_tasks.rb:1:in `<top (required)>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:50:in `<module:DatabaseTasks>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:37:in `<module:Tasks>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:4:in `<module:ActiveRecord>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:3:in `<top (required)>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/railtie.rb:41:in `block (3 levels) in <class:Railtie>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/
+ DEBUG [0da1f62d] 	apps/std/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	Could not load database configuration. No such file - ["config/database.yml"]
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/railties-4.2.5/lib/rails/application/configuration.rb:110:in `database_configuration'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/railtie.rb:117:in `block (2 levels) in <class:Railtie>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:44:in `each'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/base.rb:315:in `<module:ActiveRecord>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/base.rb:26:in `<top (required)>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/mysql_database_tasks.rb:8:in `<class:MySQLDatabaseTasks>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/mysql_database_tasks.rb:3:in `<module:Tasks>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/ap
+ DEBUG [0da1f62d] 	ps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/mysql_database_tasks.rb:2:in `<module:ActiveRecord>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/mysql_database_tasks.rb:1:in `<top (required)>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:50:in `<module:DatabaseTasks>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:37:in `<module:Tasks>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:4:in `<module:ActiveRecord>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:3:in `<top (required)>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/apps/std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/railtie.rb:41:in `block (3 levels) in <class:Railtie>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/
+ DEBUG [0da1f62d] 	apps/std/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	/home/deployer/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	Tasks: TOP => db:migrate => db:load_config
+ DEBUG [0da1f62d] 	
+ DEBUG [0da1f62d] 	(See full trace by running task with --trace)
+ DEBUG [0da1f62d] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-28 00:25:26 +0200 cap production postgresql:ALL
+  INFO ---------------------------------------------------------------------------
+ DEBUG [316e2cb9] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [316e2cb9] Command: [ -d $HOME/.rbenv ]
+ DEBUG [316e2cb9] Finished in 3.120 seconds with exit status 0 (successful).
+ DEBUG [7f534ad0] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [7f534ad0] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [7f534ad0] Finished in 3.216 seconds with exit status 0 (successful).
+ DEBUG [89a0d32e] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [89a0d32e] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [89a0d32e] Finished in 0.546 seconds with exit status 0 (successful).
+ DEBUG [123abe10] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [123abe10] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [123abe10] 	true
+ DEBUG [123abe10] 	
+ DEBUG [123abe10] Finished in 0.842 seconds with exit status 0 (successful).
+ DEBUG [a44ea9bc] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [a44ea9bc] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [a44ea9bc] Finished in 0.546 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-28 00:25:55 +0200 cap production postgresql:setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a78e16d4] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [a78e16d4] Command: [ -d $HOME/.rbenv ]
+ DEBUG [a78e16d4] Finished in 3.269 seconds with exit status 0 (successful).
+ DEBUG [2fa42e4f] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [2fa42e4f] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [2fa42e4f] Finished in 3.155 seconds with exit status 0 (successful).
+ DEBUG [1a57589e] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [1a57589e] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [1a57589e] Finished in 0.550 seconds with exit status 0 (successful).
+ DEBUG [4383991b] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [4383991b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [4383991b] 	true
+ DEBUG [4383991b] 	
+ DEBUG [4383991b] Finished in 0.822 seconds with exit status 0 (successful).
+ DEBUG [d1407b8a] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [d1407b8a] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [d1407b8a] Finished in 0.550 seconds with exit status 0 (successful).
+ DEBUG [e673adcc] Running /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='std_production';" | grep -q 1 as deployer@138.197.73.98
+ DEBUG [e673adcc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='std_production';" | grep -q 1 )
+ DEBUG [e673adcc] 	sudo: unknown user: postgres
+ DEBUG [e673adcc] 	
+ DEBUG [e673adcc] 	sudo: unable to initialize policy plugin
+ DEBUG [e673adcc] 	
+ DEBUG [e673adcc] Finished in 0.559 seconds with exit status 1 (failed).
+ DEBUG [149543ae] Running /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user std_production WITH password '0e2a191087c748d7eb34';" as deployer@138.197.73.98
+ DEBUG [149543ae] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user std_production WITH password '0e2a191087c748d7eb34';" )
+ DEBUG [149543ae] 	sudo: unknown user: postgres
+ DEBUG [149543ae] 	
+ DEBUG [149543ae] 	sudo: unable to initialize policy plugin
+ DEBUG [149543ae] 	
+ DEBUG [149543ae] Finished in 0.563 seconds with exit status 1 (failed).
+ ERROR postgresql: creating database user failed!
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-28 00:29:01 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [4a8b45ae] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [4a8b45ae] Command: [ -d $HOME/.rbenv ]
+ DEBUG [4a8b45ae] Finished in 3.151 seconds with exit status 0 (successful).
+ DEBUG [6c9aa054] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [6c9aa054] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [6c9aa054] Finished in 3.168 seconds with exit status 0 (successful).
+ DEBUG [2e84ff0f] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [2e84ff0f] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [2e84ff0f] Finished in 0.550 seconds with exit status 0 (successful).
+ DEBUG [d5b9258d] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [d5b9258d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [d5b9258d] 	true
+ DEBUG [d5b9258d] 	
+ DEBUG [d5b9258d] Finished in 0.840 seconds with exit status 0 (successful).
+ DEBUG [c2382bb4] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [c2382bb4] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [c2382bb4] Finished in 0.551 seconds with exit status 0 (successful).
+  INFO [4af86298] Running /usr/bin/env mkdir -p /tmp as deployer@138.197.73.98
+ DEBUG [4af86298] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [4af86298] Finished in 0.557 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-fur-std-production-craig.sh 0.0%
+  INFO Uploading /tmp/git-ssh-fur-std-production-craig.sh 100.0%
+  INFO [430a5cae] Running /usr/bin/env chmod 700 /tmp/git-ssh-fur-std-production-craig.sh as deployer@138.197.73.98
+ DEBUG [430a5cae] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-fur-std-production-craig.sh )
+  INFO [430a5cae] Finished in 0.558 seconds with exit status 0 (successful).
+  INFO [c6d46ec8] Running /usr/bin/env git ls-remote --heads https://github.com/yoyozi/fut-std.git as deployer@138.197.73.98
+ DEBUG [c6d46ec8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fur-std-production-craig.sh" ; /usr/bin/env git ls-remote --heads https://github.com/yoyozi/fut-std.git )
+ DEBUG [c6d46ec8] 	979db99de2242cda711fa02e620c726393a06a13
+ DEBUG [c6d46ec8] 		
+ DEBUG [c6d46ec8] 	refs/heads/master
+ DEBUG [c6d46ec8] 	
+  INFO [c6d46ec8] Finished in 0.846 seconds with exit status 0 (successful).
+  INFO [e4f095bb] Running /usr/bin/env sudo mkdir -pv /home/deployer/apps/fur-std as deployer@138.197.73.98
+ DEBUG [e4f095bb] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mkdir -pv /home/deployer/apps/fur-std )
+ DEBUG [e4f095bb] 	mkdir: created directory '/home/deployer/apps/fur-std'
+ DEBUG [e4f095bb] 	
+  INFO [e4f095bb] Finished in 0.564 seconds with exit status 0 (successful).
+ DEBUG [59e34f25] Running /usr/bin/env id -un as deployer@138.197.73.98
+ DEBUG [59e34f25] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -un )
+ DEBUG [59e34f25] 	deployer
+ DEBUG [59e34f25] 	
+ DEBUG [59e34f25] Finished in 0.554 seconds with exit status 0 (successful).
+ DEBUG [f00ad937] Running /usr/bin/env id -gn as deployer@138.197.73.98
+ DEBUG [f00ad937] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -gn )
+ DEBUG [f00ad937] 	deployer
+ DEBUG [f00ad937] 	
+ DEBUG [f00ad937] Finished in 0.556 seconds with exit status 0 (successful).
+  INFO [a8626c6d] Running /usr/bin/env sudo chown deployer:deployer /home/deployer/apps/fur-std as deployer@138.197.73.98
+ DEBUG [a8626c6d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo chown deployer:deployer /home/deployer/apps/fur-std )
+  INFO [a8626c6d] Finished in 0.572 seconds with exit status 0 (successful).
+  INFO [e6309c43] Running /usr/bin/env mkdir -p /home/deployer/apps/fur-std/shared /home/deployer/apps/fur-std/releases as deployer@138.197.73.98
+ DEBUG [e6309c43] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fur-std/shared /home/deployer/apps/fur-std/releases )
+  INFO [e6309c43] Finished in 0.557 seconds with exit status 0 (successful).
+  INFO [d577f272] Running /usr/bin/env mkdir -p /home/deployer/apps/fur-std/shared/log /home/deployer/apps/fur-std/shared/tmp/pids /home/deployer/apps/fur-std/shared/public/assets as deployer@138.197.73.98
+ DEBUG [d577f272] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fur-std/shared/log /home/deployer/apps/fur-std/shared/tmp/pids /home/deployer/apps/fur-std/shared/public/assets )
+  INFO [d577f272] Finished in 0.554 seconds with exit status 0 (successful).
+ DEBUG [bca6df14] Running [ -f /home/deployer/apps/fur-std/current/REVISION ] as deployer@138.197.73.98
+ DEBUG [bca6df14] Command: [ -f /home/deployer/apps/fur-std/current/REVISION ]
+ DEBUG [bca6df14] Finished in 0.555 seconds with exit status 1 (failed).
+ DEBUG [85aac08a] Running [ -f /home/deployer/apps/fur-std/repo/HEAD ] as deployer@138.197.73.98
+ DEBUG [85aac08a] Command: [ -f /home/deployer/apps/fur-std/repo/HEAD ]
+ DEBUG [85aac08a] Finished in 0.550 seconds with exit status 1 (failed).
+ DEBUG [a688bdc1] Running if test ! -d /home/deployer/apps/fur-std; then echo "Directory does not exist '/home/deployer/apps/fur-std'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [a688bdc1] Command: if test ! -d /home/deployer/apps/fur-std; then echo "Directory does not exist '/home/deployer/apps/fur-std'" 1>&2; false; fi
+ DEBUG [a688bdc1] Finished in 0.556 seconds with exit status 0 (successful).
+  INFO [f3fc723e] Running /usr/bin/env git clone --mirror https://github.com/yoyozi/fut-std.git /home/deployer/apps/fur-std/repo as deployer@138.197.73.98
+ DEBUG [f3fc723e] Command: cd /home/deployer/apps/fur-std && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fur-std-production-craig.sh" ; /usr/bin/env git clone --mirror https://github.com/yoyozi/fut-std.git /home/deployer/apps/fur-std/repo )
+ DEBUG [f3fc723e] 	Cloning into bare repository '/home/deployer/apps/fur-std/repo'...
+ DEBUG [f3fc723e] 	
+ DEBUG [f3fc723e] 	remote: Counting objects: 158, done.[K
+ DEBUG [f3fc723e] 	
+ DEBUG [f3fc723e] 	remote: Compressing objects:   1% (1/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:   2% (2/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:   3% (3/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:
+ DEBUG [f3fc723e] 	   4% (4/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:   5% (5/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:   6% (6/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:   7% (7/93)   [K
+ DEBUG [f3fc723e] 	remote: Comp
+ DEBUG [f3fc723e] 	ressing objects:   8% (8/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:   9% (9/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  10% (10/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  1
+ DEBUG [f3fc723e] 	1% (11/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  12% (12/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  13% (13/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  15% (14/93)   [K
+ DEBUG [f3fc723e] 	remote: Com
+ DEBUG [f3fc723e] 	pressing objects:  16% (15/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  17% (16/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  18% (17/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  19% (18/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  20% (19/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  21% (20/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  22% (21/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  23% (22/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  24% (23/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  25% (24/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  26% (25/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  27% (26/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  29% (27/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  30% (28/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  31% (29/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  32% (30/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  33% (31/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  34% (32/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  35% (33/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  36% (34/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objec
+ DEBUG [f3fc723e] 	ts:  37% (35/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  38% (36/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  39% (37/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  40% (38/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objec
+ DEBUG [f3fc723e] 	ts:  41% (39/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  43% (40/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  44% (41/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  45% (42/93) 
+ DEBUG [f3fc723e] 	  [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  46% (43/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  47% (44/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  48% (45/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing ob
+ DEBUG [f3fc723e] 	jects:  49% (46/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  50% (47/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  51% (48/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  52% (49/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  53% (50/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  54% (51/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  55% (52/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objec
+ DEBUG [f3fc723e] 	ts:  56% (53/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  58% (54/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  59% (55/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  60% (56/93) 
+ DEBUG [f3fc723e] 	  [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  61% (57/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  62% (58/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  63% (59/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing ob
+ DEBUG [f3fc723e] 	jects:  64% (60/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  65% (61/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  66% (62/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  67% (63/9
+ DEBUG [f3fc723e] 	3)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  68% (64/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  69% (65/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  70% (66/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  72% (67/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  73% (68/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  74% (69/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  75% (70/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  76% (71/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  77% (72/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  78% (73/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  79% (74/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  80% (75/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  81% (76/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  82% (77/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  83% (78/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  84% (79/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  86% (80/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  87% (81/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  88% (82/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  89% (83/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  90% (84/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  91% (85/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  92% (86/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  93% (87/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  94% (88/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  95% (89/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  96% (90/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  97% (91/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects:  98% (92/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects: 100% (93/93)   [K
+ DEBUG [f3fc723e] 	remote: Compressing objects: 100% (93/93), done.[K
+ DEBUG [f3fc723e] 	
+ DEBUG [f3fc723e] 	Receiving objects:   0% (1/158)   
+ DEBUG [f3fc723e] 	Receiving objects:   1% (2/158)   
+ DEBUG [f3fc723e] 	Receiving objects:   2% (4/158)   
+ DEBUG [f3fc723e] 	Receiving objects:   3% (5/158)   
+ DEBUG [f3fc723e] 	Receiving objects:   4% (7/158)   
+ DEBUG [f3fc723e] 	Receiving objects:   5% (8/158)   
+ DEBUG [f3fc723e] 	Receiving objects:   6% (10/158)   
+ DEBUG [f3fc723e] 	Receiving objects:   7% (12/158)   
+ DEBUG [f3fc723e] 	Receiving objects:   8% (13/158)   
+ DEBUG [f3fc723e] 	Receiving objects:   9% (15/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  10% (16/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  11% (18/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  12% (19/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  13% (21/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  14% (23/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  15% (24/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  16% (26/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  17% (27/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  18% (29/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  19% (31/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  20% (32/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  21% (34/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  22% (35/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  23% (37/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  24% (38/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  25% (40/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  26% (42/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  27% (43/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  28% (45/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  29% (46/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  30% (48/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  31% (49/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  32% (51/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  33% (53/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  34% (54/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  35% (56/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  36% (57/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  37% (59/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  38% (61/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  39% (62/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  40% (64/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  41% (65/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  42% (67/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  43% (68/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  44% (70/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  45% (72/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  46% (73/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  47% (75/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  48% (76/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  49% (78/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  50% (79/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  51% (81/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  52% (83/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  53% (84/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  54% (86/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  55% (87/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  56% (89/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  57% (91/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  58% (92/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  59% (94/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  60% (95/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  61% (97/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  62% (98/158)   
+ DEBUG [f3fc723e] 	remote: Total 158 (delta 51), reused 151 (delta 44), pack-reused 0[K
+ DEBUG [f3fc723e] 	
+ DEBUG [f3fc723e] 	Receiving objects:  63% (100/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  64% (102/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  65% (103/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  66% (105/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  67% (106/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  68% (108/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  69% (110/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  70% (111/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  71% (113/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  72% (114/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  73% (116/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  74% (117/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  75% (119/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  76% (121/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  77% (122/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  78% (124/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  79% (125/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  80% (127/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  81% (128/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  82% (130/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  83% (132/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  84% (133/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  85% (135/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  86% (136/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  87% (138/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  88% (140/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  89% (141/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  90% (143/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  91% (144/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  92% (146/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  93% (147/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  94% (149/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  95% (151/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  96% (152/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  97% (154/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  98% (155/158)   
+ DEBUG [f3fc723e] 	Receiving objects:  99% (157/158)   
+ DEBUG [f3fc723e] 	Receiving objects: 100% (158/158)   
+ DEBUG [f3fc723e] 	Receiving objects: 100% (158/158), 117.32 KiB | 0 bytes/s, done.
+ DEBUG [f3fc723e] 	
+ DEBUG [f3fc723e] 	Resolving deltas:   0% (0/51)   
+ DEBUG [f3fc723e] 	Resolving deltas:  17% (9/51)   
+ DEBUG [f3fc723e] 	Resolving deltas:  25% (13/51)   
+ DEBUG [f3fc723e] 	Resolving deltas:  31% (16/51)   
+ DEBUG [f3fc723e] 	Resolving deltas:  39% (20/51)   
+ DEBUG [f3fc723e] 	Resolving deltas:  49% (25/51)   
+ DEBUG [f3fc723e] 	Resolving deltas:  50% (26/51)   
+ DEBUG [f3fc723e] 	Resolving deltas:  52% (27/51)   
+ DEBUG [f3fc723e] 	Resolving deltas:  60% (31/51)   
+ DEBUG [f3fc723e] 	Resolving deltas:  66% (34/51)   
+ DEBUG [f3fc723e] 	Resolving deltas:  72% (37/51)   
+ DEBUG [f3fc723e] 	Resolving deltas:  74% (38/51)   
+ DEBUG [f3fc723e] 	Resolving deltas:  76% (39/51)   
+ DEBUG [f3fc723e] 	Resolving deltas:  92% (47/51)   
+ DEBUG [f3fc723e] 	Resolving deltas:  94% (48/51)   
+ DEBUG [f3fc723e] 	Resolving deltas:  98% (50/51)   
+ DEBUG [f3fc723e] 	Resolving deltas: 100% (51/51)   
+ DEBUG [f3fc723e] 	Resolving deltas: 100% (51/51), done.
+ DEBUG [f3fc723e] 	
+ DEBUG [f3fc723e] 	Checking connectivity... 
+ DEBUG [f3fc723e] 	done.
+ DEBUG [f3fc723e] 	
+  INFO [f3fc723e] Finished in 1.383 seconds with exit status 0 (successful).
+ DEBUG [2ac70e32] Running if test ! -d /home/deployer/apps/fur-std/repo; then echo "Directory does not exist '/home/deployer/apps/fur-std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [2ac70e32] Command: if test ! -d /home/deployer/apps/fur-std/repo; then echo "Directory does not exist '/home/deployer/apps/fur-std/repo'" 1>&2; false; fi
+ DEBUG [2ac70e32] Finished in 0.555 seconds with exit status 0 (successful).
+  INFO [a8c1e2b1] Running /usr/bin/env git remote update --prune as deployer@138.197.73.98
+ DEBUG [a8c1e2b1] Command: cd /home/deployer/apps/fur-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fur-std-production-craig.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [a8c1e2b1] 	Fetching origin
+ DEBUG [a8c1e2b1] 	
+  INFO [a8c1e2b1] Finished in 0.811 seconds with exit status 0 (successful).
+ DEBUG [5749d969] Running if test ! -d /home/deployer/apps/fur-std/repo; then echo "Directory does not exist '/home/deployer/apps/fur-std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [5749d969] Command: if test ! -d /home/deployer/apps/fur-std/repo; then echo "Directory does not exist '/home/deployer/apps/fur-std/repo'" 1>&2; false; fi
+ DEBUG [5749d969] Finished in 0.561 seconds with exit status 0 (successful).
+  INFO [a2cb355b] Running /usr/bin/env mkdir -p /home/deployer/apps/fur-std/releases/20170127222917 as deployer@138.197.73.98
+ DEBUG [a2cb355b] Command: cd /home/deployer/apps/fur-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fur-std-production-craig.sh" ; /usr/bin/env mkdir -p /home/deployer/apps/fur-std/releases/20170127222917 )
+  INFO [a2cb355b] Finished in 0.556 seconds with exit status 0 (successful).
+  INFO [0830d2b5] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deployer/apps/fur-std/releases/20170127222917 as deployer@138.197.73.98
+ DEBUG [0830d2b5] Command: cd /home/deployer/apps/fur-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fur-std-production-craig.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deployer/apps/fur-std/releases/20170127222917 )
+  INFO [0830d2b5] Finished in 0.570 seconds with exit status 0 (successful).
+ DEBUG [31d6b55c] Running if test ! -d /home/deployer/apps/fur-std/repo; then echo "Directory does not exist '/home/deployer/apps/fur-std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [31d6b55c] Command: if test ! -d /home/deployer/apps/fur-std/repo; then echo "Directory does not exist '/home/deployer/apps/fur-std/repo'" 1>&2; false; fi
+ DEBUG [31d6b55c] Finished in 0.551 seconds with exit status 0 (successful).
+ DEBUG [6c071ea2] Running /usr/bin/env git rev-list --max-count=1 master as deployer@138.197.73.98
+ DEBUG [6c071ea2] Command: cd /home/deployer/apps/fur-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fur-std-production-craig.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [6c071ea2] 	979db99de2242cda711fa02e620c726393a06a13
+ DEBUG [6c071ea2] 	
+ DEBUG [6c071ea2] Finished in 0.557 seconds with exit status 0 (successful).
+ DEBUG [523a4a80] Running if test ! -d /home/deployer/apps/fur-std/releases/20170127222917; then echo "Directory does not exist '/home/deployer/apps/fur-std/releases/20170127222917'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [523a4a80] Command: if test ! -d /home/deployer/apps/fur-std/releases/20170127222917; then echo "Directory does not exist '/home/deployer/apps/fur-std/releases/20170127222917'" 1>&2; false; fi
+ DEBUG [523a4a80] Finished in 0.564 seconds with exit status 0 (successful).
+  INFO [24464fc2] Running /usr/bin/env echo "979db99de2242cda711fa02e620c726393a06a13" >> REVISION as deployer@138.197.73.98
+ DEBUG [24464fc2] Command: cd /home/deployer/apps/fur-std/releases/20170127222917 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "979db99de2242cda711fa02e620c726393a06a13" >> REVISION )
+  INFO [24464fc2] Finished in 0.562 seconds with exit status 0 (successful).
+  INFO [5de06539] Running /usr/bin/env mkdir -p /home/deployer/apps/fur-std/releases/20170127222917/config as deployer@138.197.73.98
+ DEBUG [5de06539] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fur-std/releases/20170127222917/config )
+  INFO [5de06539] Finished in 0.553 seconds with exit status 0 (successful).
+ DEBUG [0bf27043] Running [ -L /home/deployer/apps/fur-std/releases/20170127222917/config/database.yml ] as deployer@138.197.73.98
+ DEBUG [0bf27043] Command: [ -L /home/deployer/apps/fur-std/releases/20170127222917/config/database.yml ]
+ DEBUG [0bf27043] Finished in 0.551 seconds with exit status 1 (failed).
+ DEBUG [b9d15e51] Running [ -f /home/deployer/apps/fur-std/releases/20170127222917/config/database.yml ] as deployer@138.197.73.98
+ DEBUG [b9d15e51] Command: [ -f /home/deployer/apps/fur-std/releases/20170127222917/config/database.yml ]
+ DEBUG [b9d15e51] Finished in 0.549 seconds with exit status 1 (failed).
+  INFO [7aa0b903] Running /usr/bin/env ln -s /home/deployer/apps/fur-std/shared/config/database.yml /home/deployer/apps/fur-std/releases/20170127222917/config/database.yml as deployer@138.197.73.98
+ DEBUG [7aa0b903] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fur-std/shared/config/database.yml /home/deployer/apps/fur-std/releases/20170127222917/config/database.yml )
+  INFO [7aa0b903] Finished in 0.557 seconds with exit status 0 (successful).
+ DEBUG [14d0b151] Running [ -L /home/deployer/apps/fur-std/releases/20170127222917/config/secrets.yml ] as deployer@138.197.73.98
+ DEBUG [14d0b151] Command: [ -L /home/deployer/apps/fur-std/releases/20170127222917/config/secrets.yml ]
+ DEBUG [14d0b151] Finished in 0.550 seconds with exit status 1 (failed).
+ DEBUG [712907df] Running [ -f /home/deployer/apps/fur-std/releases/20170127222917/config/secrets.yml ] as deployer@138.197.73.98
+ DEBUG [712907df] Command: [ -f /home/deployer/apps/fur-std/releases/20170127222917/config/secrets.yml ]
+ DEBUG [712907df] Finished in 0.550 seconds with exit status 1 (failed).
+  INFO [87a48ba9] Running /usr/bin/env ln -s /home/deployer/apps/fur-std/shared/config/secrets.yml /home/deployer/apps/fur-std/releases/20170127222917/config/secrets.yml as deployer@138.197.73.98
+ DEBUG [87a48ba9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fur-std/shared/config/secrets.yml /home/deployer/apps/fur-std/releases/20170127222917/config/secrets.yml )
+  INFO [87a48ba9] Finished in 0.555 seconds with exit status 0 (successful).
+  INFO [0f03b436] Running /usr/bin/env mkdir -p /home/deployer/apps/fur-std/releases/20170127222917 /home/deployer/apps/fur-std/releases/20170127222917/tmp /home/deployer/apps/fur-std/releases/20170127222917/public as deployer@138.197.73.98
+ DEBUG [0f03b436] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fur-std/releases/20170127222917 /home/deployer/apps/fur-std/releases/20170127222917/tmp /home/deployer/apps/fur-std/releases/20170127222917/public )
+  INFO [0f03b436] Finished in 0.557 seconds with exit status 0 (successful).
+ DEBUG [3891996d] Running [ -L /home/deployer/apps/fur-std/releases/20170127222917/log ] as deployer@138.197.73.98
+ DEBUG [3891996d] Command: [ -L /home/deployer/apps/fur-std/releases/20170127222917/log ]
+ DEBUG [3891996d] Finished in 0.553 seconds with exit status 1 (failed).
+ DEBUG [3d7fb779] Running [ -d /home/deployer/apps/fur-std/releases/20170127222917/log ] as deployer@138.197.73.98
+ DEBUG [3d7fb779] Command: [ -d /home/deployer/apps/fur-std/releases/20170127222917/log ]
+ DEBUG [3d7fb779] Finished in 0.549 seconds with exit status 0 (successful).
+  INFO [197fb92a] Running /usr/bin/env rm -rf /home/deployer/apps/fur-std/releases/20170127222917/log as deployer@138.197.73.98
+ DEBUG [197fb92a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /home/deployer/apps/fur-std/releases/20170127222917/log )
+  INFO [197fb92a] Finished in 0.554 seconds with exit status 0 (successful).
+  INFO [72853703] Running /usr/bin/env ln -s /home/deployer/apps/fur-std/shared/log /home/deployer/apps/fur-std/releases/20170127222917/log as deployer@138.197.73.98
+ DEBUG [72853703] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fur-std/shared/log /home/deployer/apps/fur-std/releases/20170127222917/log )
+  INFO [72853703] Finished in 0.556 seconds with exit status 0 (successful).
+ DEBUG [46d257e7] Running [ -L /home/deployer/apps/fur-std/releases/20170127222917/tmp/pids ] as deployer@138.197.73.98
+ DEBUG [46d257e7] Command: [ -L /home/deployer/apps/fur-std/releases/20170127222917/tmp/pids ]
+ DEBUG [46d257e7] Finished in 0.550 seconds with exit status 1 (failed).
+ DEBUG [320726a4] Running [ -d /home/deployer/apps/fur-std/releases/20170127222917/tmp/pids ] as deployer@138.197.73.98
+ DEBUG [320726a4] Command: [ -d /home/deployer/apps/fur-std/releases/20170127222917/tmp/pids ]
+ DEBUG [320726a4] Finished in 0.550 seconds with exit status 1 (failed).
+  INFO [bedaf3e7] Running /usr/bin/env ln -s /home/deployer/apps/fur-std/shared/tmp/pids /home/deployer/apps/fur-std/releases/20170127222917/tmp/pids as deployer@138.197.73.98
+ DEBUG [bedaf3e7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fur-std/shared/tmp/pids /home/deployer/apps/fur-std/releases/20170127222917/tmp/pids )
+  INFO [bedaf3e7] Finished in 0.554 seconds with exit status 0 (successful).
+ DEBUG [1c03fb02] Running [ -L /home/deployer/apps/fur-std/releases/20170127222917/public/assets ] as deployer@138.197.73.98
+ DEBUG [1c03fb02] Command: [ -L /home/deployer/apps/fur-std/releases/20170127222917/public/assets ]
+ DEBUG [1c03fb02] Finished in 0.552 seconds with exit status 1 (failed).
+ DEBUG [2fda6065] Running [ -d /home/deployer/apps/fur-std/releases/20170127222917/public/assets ] as deployer@138.197.73.98
+ DEBUG [2fda6065] Command: [ -d /home/deployer/apps/fur-std/releases/20170127222917/public/assets ]
+ DEBUG [2fda6065] Finished in 0.551 seconds with exit status 1 (failed).
+  INFO [1a443a16] Running /usr/bin/env ln -s /home/deployer/apps/fur-std/shared/public/assets /home/deployer/apps/fur-std/releases/20170127222917/public/assets as deployer@138.197.73.98
+ DEBUG [1a443a16] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fur-std/shared/public/assets /home/deployer/apps/fur-std/releases/20170127222917/public/assets )
+  INFO [1a443a16] Finished in 0.564 seconds with exit status 0 (successful).
+ DEBUG [581b30c8] Running if test ! -d /home/deployer/apps/fur-std/releases/20170127222917; then echo "Directory does not exist '/home/deployer/apps/fur-std/releases/20170127222917'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [581b30c8] Command: if test ! -d /home/deployer/apps/fur-std/releases/20170127222917; then echo "Directory does not exist '/home/deployer/apps/fur-std/releases/20170127222917'" 1>&2; false; fi
+ DEBUG [581b30c8] Finished in 0.551 seconds with exit status 0 (successful).
+ DEBUG [18d11489] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deployer/apps/fur-std/shared/bundle as deployer@138.197.73.98
+ DEBUG [18d11489] Command: cd /home/deployer/apps/fur-std/releases/20170127222917 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deployer/apps/fur-std/shared/bundle )
+ DEBUG [18d11489] 	[31mThe following gems are missing[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * rake (12.0.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * i18n (0.7.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * json (1.8.6)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * minitest (5.10.1)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * thread_safe (0.3.5)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * tzinfo (1.2.2)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * activesupport (4.2.5)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * builder (3.2.3)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * erubis (2.7.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * mini_portile2 (2.1.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * nokogiri (1.7.0.1)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * rails-deprecated_sanitizer (1.0.3)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * rails-dom-testing (1.0.8)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * loofah (2.0.3)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * rails-html-sanitizer (1.0.3)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * actionview (4.2.5)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * rack (1.6.5)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * rack-test (0.6.3)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * actionpack (4.2.5)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * globalid (0.3.7)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * activejob (4.2.5)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * mime-types-data (3.2016.0521)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * mime-types (3.1)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * mail (2.6.4)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * actionmailer (4.2.5)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * activemodel (4.2.5)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * arel (6.0.4)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * activerecord (4.2.5)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * net-ssh (4.0.1)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * sshkit (1.11.5)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * airbrussh (1.1.2)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * debug_inspector (0.0.2)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * binding_of_caller (0.7.2)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * byebug (9.0.6)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * capistrano (3.7.1)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * capistrano-bundler (1.2.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * capistrano-postgresql (4.2.1)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * capistrano-rails (1.2.2)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * capistrano-rbenv (2.0.4)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * capistrano-rbenv-install (1.2.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * capistrano-safe-deploy-to (1.1.1)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * capistrano-secrets-yml (1.0.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * capistrano-ssh-doctor (1.0.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * capistrano-unicorn-nginx (4.0.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * coffee-script-source (1.12.2)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * execjs (2.7.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * coffee-script (2.4.1)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * thor (0.19.4)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * railties (4.2.5)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * coffee-rails (4.1.1)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * concurrent-ruby (1.0.4)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * multi_json (1.12.1)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * jbuilder (2.6.1)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * jquery-rails (4.2.2)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * kgio (2.11.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * pg (0.19.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * sprockets (3.7.1)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * sprockets-rails (3.2.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * rails (4.2.5)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * raindrops (0.17.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * rdoc (4.3.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * sass (3.4.23)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * tilt (2.0.5)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * sass-rails (5.0.6)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * sdoc (0.4.2)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * spring (2.0.1)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * turbolinks-source (5.0.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * turbolinks (5.0.1)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * uglifier (3.0.4)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * unicorn (5.2.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[31m * web-console (2.3.0)[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [18d11489] 	
+ DEBUG [18d11489] Finished in 1.220 seconds with exit status 1 (failed).
+  INFO [fe940fb4] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deployer/apps/fur-std/shared/bundle --without development test --deployment --quiet as deployer@138.197.73.98
+ DEBUG [fe940fb4] Command: cd /home/deployer/apps/fur-std/releases/20170127222917 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deployer/apps/fur-std/shared/bundle --without development test --deployment --quiet )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-28 00:30:14 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e1db2d31] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [e1db2d31] Command: [ -d $HOME/.rbenv ]
+ DEBUG [e1db2d31] Finished in 3.660 seconds with exit status 0 (successful).
+ DEBUG [8a41eef1] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [8a41eef1] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [8a41eef1] Finished in 3.937 seconds with exit status 0 (successful).
+ DEBUG [84815f1d] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [84815f1d] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [84815f1d] Finished in 0.563 seconds with exit status 0 (successful).
+ DEBUG [c9c5efec] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [c9c5efec] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [c9c5efec] 	true
+ DEBUG [c9c5efec] 	
+ DEBUG [c9c5efec] Finished in 1.192 seconds with exit status 0 (successful).
+ DEBUG [3f173958] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [3f173958] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [3f173958] Finished in 0.566 seconds with exit status 0 (successful).
+  INFO [db81ff8c] Running /usr/bin/env mkdir -p /tmp as deployer@138.197.73.98
+ DEBUG [db81ff8c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [db81ff8c] Finished in 0.568 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-fut-std-production-craig.sh 0.0%
+  INFO Uploading /tmp/git-ssh-fut-std-production-craig.sh 100.0%
+  INFO [ec5bd640] Running /usr/bin/env chmod 700 /tmp/git-ssh-fut-std-production-craig.sh as deployer@138.197.73.98
+ DEBUG [ec5bd640] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-fut-std-production-craig.sh )
+  INFO [ec5bd640] Finished in 0.572 seconds with exit status 0 (successful).
+  INFO [52dde7b7] Running /usr/bin/env git ls-remote --heads https://github.com/yoyozi/fut-std.git as deployer@138.197.73.98
+ DEBUG [52dde7b7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env git ls-remote --heads https://github.com/yoyozi/fut-std.git )
+ DEBUG [52dde7b7] 	979db99de2242cda711fa02e620c726393a06a13	refs/heads/master
+  INFO [52dde7b7] Finished in 1.008 seconds with exit status 0 (successful).
+  INFO [5e26715e] Running /usr/bin/env sudo mkdir -pv /home/deployer/apps/fut-std as deployer@138.197.73.98
+ DEBUG [5e26715e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mkdir -pv /home/deployer/apps/fut-std )
+ DEBUG [5e26715e] 	mkdir: created directory '/home/deployer/apps/fut-std'
+ DEBUG [5e26715e] 	
+  INFO [5e26715e] Finished in 0.582 seconds with exit status 0 (successful).
+ DEBUG [b368e5a0] Running /usr/bin/env id -un as deployer@138.197.73.98
+ DEBUG [b368e5a0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -un )
+ DEBUG [b368e5a0] 	deployer
+ DEBUG [b368e5a0] 	
+ DEBUG [b368e5a0] Finished in 0.571 seconds with exit status 0 (successful).
+ DEBUG [56c453c6] Running /usr/bin/env id -gn as deployer@138.197.73.98
+ DEBUG [56c453c6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -gn )
+ DEBUG [56c453c6] 	deployer
+ DEBUG [56c453c6] 	
+ DEBUG [56c453c6] Finished in 0.573 seconds with exit status 0 (successful).
+  INFO [c2e83eb2] Running /usr/bin/env sudo chown deployer:deployer /home/deployer/apps/fut-std as deployer@138.197.73.98
+ DEBUG [c2e83eb2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo chown deployer:deployer /home/deployer/apps/fut-std )
+  INFO [c2e83eb2] Finished in 0.580 seconds with exit status 0 (successful).
+  INFO [14bcdd5d] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/shared /home/deployer/apps/fut-std/releases as deployer@138.197.73.98
+ DEBUG [14bcdd5d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/shared /home/deployer/apps/fut-std/releases )
+  INFO [14bcdd5d] Finished in 0.572 seconds with exit status 0 (successful).
+  INFO [42d04c27] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/shared/log /home/deployer/apps/fut-std/shared/tmp/pids /home/deployer/apps/fut-std/shared/public/assets as deployer@138.197.73.98
+ DEBUG [42d04c27] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/shared/log /home/deployer/apps/fut-std/shared/tmp/pids /home/deployer/apps/fut-std/shared/public/assets )
+  INFO [42d04c27] Finished in 0.570 seconds with exit status 0 (successful).
+ DEBUG [a9f8e845] Running [ -f /home/deployer/apps/fut-std/current/REVISION ] as deployer@138.197.73.98
+ DEBUG [a9f8e845] Command: [ -f /home/deployer/apps/fut-std/current/REVISION ]
+ DEBUG [a9f8e845] Finished in 0.569 seconds with exit status 1 (failed).
+ DEBUG [01e3f93b] Running [ -f /home/deployer/apps/fut-std/repo/HEAD ] as deployer@138.197.73.98
+ DEBUG [01e3f93b] Command: [ -f /home/deployer/apps/fut-std/repo/HEAD ]
+ DEBUG [01e3f93b] Finished in 0.570 seconds with exit status 1 (failed).
+ DEBUG [8dfa7c67] Running if test ! -d /home/deployer/apps/fut-std; then echo "Directory does not exist '/home/deployer/apps/fut-std'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [8dfa7c67] Command: if test ! -d /home/deployer/apps/fut-std; then echo "Directory does not exist '/home/deployer/apps/fut-std'" 1>&2; false; fi
+ DEBUG [8dfa7c67] Finished in 0.564 seconds with exit status 0 (successful).
+  INFO [ae3ae76c] Running /usr/bin/env git clone --mirror https://github.com/yoyozi/fut-std.git /home/deployer/apps/fut-std/repo as deployer@138.197.73.98
+ DEBUG [ae3ae76c] Command: cd /home/deployer/apps/fut-std && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env git clone --mirror https://github.com/yoyozi/fut-std.git /home/deployer/apps/fut-std/repo )
+ DEBUG [ae3ae76c] 	Cloning into bare repository '/home/deployer/apps/fut-std/repo'...
+ DEBUG [ae3ae76c] 	remote: Counting objects: 158, done.[K
+ DEBUG [ae3ae76c] 	remote: Compressing objects:   1% (1/93)   [Kremote: Compressing objects:   2% (2/93)   [Kremote: Compressing objects:   3% (3/93)   [Kremote: Compressing objects:   4% (4/93)   [Kremote: Compressing objects:   5% (5/93)   [Kremote: Compressing objects:   6% (6/93)   [Kremote: Compressing objects:   7% (7/93)   [Kremote: Compressing objects:   8% (8/93)   [Kremote: Compressing objects:   9% (9/93)   [Kremote: Compressing objects:  10% (10/93)   [Kremote: Compressing objects:  11% (11/93)   [Kremote: Compressing objects:  12% (12/93)   [Kremote: Compressing objects:  13% (13/93)   [Kremote: Compressing objects:  15% (14/93)   [Kremote: Compressing objects:  16% (15/93)   [Kremote: Compressing objects:  17% (16/93)   [Kremote: Compressing objects:  18% (17/93)   [Kremote: Compressing objects:  19% (18/93)   [Kremote: Compressing objects:  20% (19/93)   [Kremote: Compressing objects:  21% (20/93)   [Kremote: Compressing objects:  22% (21/93)   [Kremote: Compressing objects:  23% (22/93)   [Kremote: Compressing objects:  24% (23/93)   [Kremote: Compressing objects:  25% (24/93)   [Kremote: Compressing objects:  26% (25/93)   [Kremote: Compressing objects:  27% (26/93)   [Kremote: Compressing objects:  29% (27/93)   [Kremote: Compressing objects:  30% (28/93)   [Kremote: Compressing objects:  31% (29/93)   [Kremote: Compressing objects:  32% (30/93)   [Kremote: Compressing objects:  33% (31/93)   [Kremote: Compressing objects:  34% (32/93)   [Kremote: Compressing objects:  35% (33/93)   [Kremote: Compressing objects:  36% (34/93)   [Kremote: Compressing objects:  37% (35/93)   [Kremote: Compressing objects:  38% (36/93)   [Kremote: Compressing objects:  39% (37/93)   [Kremote: Compressing objects:  40% (38/93)   [Kremote: Compressing objects:  41% (39/93)   [Kremote: Compressing objects:  43% (40/93)   [Kremote: Compressing objects:  44% (41/93)   [Kremote: Compressing objects:  45% (42/93)   [Kremote: Compressing objects:  46% (43/93)   [Kremote: Compressing objects:  47% (44/93)   [Kremote: Compressing objects:  48% (45/93)   [Kremote: Compressing objects:  49% (46/93)   [Kremote: Compressing objects:  50% (47/93)   [Kremote: Compressing objects:  51% (48/93)   [Kremote: Compressing objects:  52% (49/93)   [Kremote: Compressing objects:  53% (50/93)   [Kremote: Compressing objects:  54% (51/93)   [Kremote: Compressing objects:  55% (52/93)   [Kremote: Compressing objects:  56% (53/93)   [Kremote: Compressing objects:  58% (54/93)   [Kremote: Compressing objects:  59% (55/93)   [Kremote: Compressing objects:  60% (56/93)   [Kremote: Compressing objects:  61% (57/93)   [Kremote: Compressing objects:  62% (58/93)   [Kremote: Compressing objects:  63% (59/93)   [Kremote: Compressing objects:  64% (60/93)   [Kremote: Compressing objects:  65% (61/93)   [Kremote: Compressing objects:  66% (62/93)   [Kremote: Compressing objects:  67% (63/93)   [Kremote: Compressing objects:  68% (64/93)   [Kremote: Compressing objects:  69% (65/93)   [Kremote: Compressing objects:  70% (66/93)   [Kremote: Compressing objects:  72% (67/93)   [Kremote: Compressing objects:  73% (68/93)   [Kremote: Compressing objects:  74% (69/93)   [Kremote: Compressing objects:  75% (70/93)   [Kremote: Compressing objects:  76% (71/93)   [Kremote: Compressing objects:  77% (72/93)   [Kremote: Compressing objects:  78% (73/93)   [Kremote: Compressing objects:  79% (74/93)   [Kremote: Compressing objects:  80% (75/93)   [Kremote: Compressing objects:  81% (76/93)   [Kremote: Compressing objects:  82% (77/93)   [Kremote: Compressing objects:  83% (78/93)   [Kremote: Compressing objects:  84% (79/93)   [Kremote: Compressing objects:  86% (80/93)   [Kremote: Compressing objects:  87% (81/93)   [Kremote: Compressing objects:  88% (82/93)   [Kremote: Compressing objects:  89% (83/93)   [Kremote: Compressing objects:  90% (84/93)   [Kremote: Compressing objects:  91% (85/93)   [Kremote: Compressing obje
+ DEBUG [ae3ae76c] 	cts:  92% (86/93)   [Kremote: Compressing objects:  93% (87/93)   [Kremote: Compressing objects:  94% (88/93)   [Kremote: Compressing objects:  95% (89/93)   [Kremote: Compressing objects:  96% (90/93)   [Kremote: Compressing objects:  97% (91/93)   [Kremote: Compressing objects:  98% (92/93)   [Kremote: Compressing objects: 100% (93/93)   [Kremote: Compressing objects: 100% (93/93), done.[K
+ DEBUG [ae3ae76c] 	Receiving objects:   0% (1/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:   1% (2/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:   2% (4/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:   3% (5/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:   4% (7/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:   5% (8/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:   6% (10/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:   7% (12/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:   8% (13/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:   9% (15/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  10% (16/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  11% (18/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  12% (19/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  13% (21/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  14% (23/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  15% (24/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  16% (26/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  17% (27/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  18% (29/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  19% (31/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  20% (32/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  21% (34/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  22% (35/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  23% (37/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  24% (38/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  25% (40/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  26% (42/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  27% (43/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  28% (45/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  29% (46/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  30% (48/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  31% (49/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  32% (51/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  33% (53/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  34% (54/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  35% (56/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  36% (57/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  37% (59/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  38% (61/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  39% (62/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  40% (64/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  41% (65/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  42% (67/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  43% (68/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  44% (70/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  45% (72/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  46% (73/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  47% (75/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  48% (76/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  49% (78/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  50% (79/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  51% (81/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  52% (83/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  53% (84/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  54% (86/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  55% (87/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  56% (89/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  57% (91/158)   
+ DEBUG [ae3ae76c] 	remote: Total 158 (delta 51), reused 151 (delta 44), pack-reused 0[K
+ DEBUG [ae3ae76c] 	
+ DEBUG [ae3ae76c] 	Receiving objects:  58% (92/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  59% (94/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  60% (95/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  61% (97/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  62% (98/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  63% (100/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  64% (102/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  65% (103/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  66% (105/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  67% (106/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  68% (108/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  69% (110/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  70% (111/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  71% (113/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  72% (114/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  73% (116/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  74% (117/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  75% (119/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  76% (121/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  77% (122/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  78% (124/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  79% (125/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  80% (127/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  81% (128/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  82% (130/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  83% (132/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  84% (133/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  85% (135/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  86% (136/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  87% (138/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  88% (140/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  89% (141/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  90% (143/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  91% (144/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  92% (146/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  93% (147/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  94% (149/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  95% (151/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  96% (152/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  97% (154/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  98% (155/158)   
+ DEBUG [ae3ae76c] 	Receiving objects:  99% (157/158)   
+ DEBUG [ae3ae76c] 	Receiving objects: 100% (158/158)   
+ DEBUG [ae3ae76c] 	Receiving objects: 100% (158/158), 117.32 KiB | 0 bytes/s, done.
+ DEBUG [ae3ae76c] 	
+ DEBUG [ae3ae76c] 	Resolving deltas:   0% (0/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas:  17% (9/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas:  25% (13/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas:  31% (16/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas:  39% (20/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas:  49% (25/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas:  50% (26/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas:  52% (27/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas:  60% (31/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas:  66% (34/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas:  72% (37/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas:  74% (38/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas:  76% (39/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas:  92% (47/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas:  94% (48/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas:  98% (50/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas: 100% (51/51)   
+ DEBUG [ae3ae76c] 	Resolving deltas: 100% (51/51), done.
+ DEBUG [ae3ae76c] 	
+ DEBUG [ae3ae76c] 	Checking connectivity... 
+ DEBUG [ae3ae76c] 	done.
+ DEBUG [ae3ae76c] 	
+  INFO [ae3ae76c] Finished in 1.604 seconds with exit status 0 (successful).
+ DEBUG [2566a3be] Running if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [2566a3be] Command: if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi
+ DEBUG [2566a3be] Finished in 0.565 seconds with exit status 0 (successful).
+  INFO [109e54e5] Running /usr/bin/env git remote update --prune as deployer@138.197.73.98
+ DEBUG [109e54e5] Command: cd /home/deployer/apps/fut-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [109e54e5] 	Fetching origin
+ DEBUG [109e54e5] 	
+  INFO [109e54e5] Finished in 0.969 seconds with exit status 0 (successful).
+ DEBUG [6bff848a] Running if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [6bff848a] Command: if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi
+ DEBUG [6bff848a] Finished in 0.567 seconds with exit status 0 (successful).
+  INFO [69597e5c] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170127223031 as deployer@138.197.73.98
+ DEBUG [69597e5c] Command: cd /home/deployer/apps/fut-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170127223031 )
+  INFO [69597e5c] Finished in 0.572 seconds with exit status 0 (successful).
+  INFO [15f477e4] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deployer/apps/fut-std/releases/20170127223031 as deployer@138.197.73.98
+ DEBUG [15f477e4] Command: cd /home/deployer/apps/fut-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deployer/apps/fut-std/releases/20170127223031 )
+  INFO [15f477e4] Finished in 0.617 seconds with exit status 0 (successful).
+ DEBUG [dc0078b7] Running if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [dc0078b7] Command: if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi
+ DEBUG [dc0078b7] Finished in 0.566 seconds with exit status 0 (successful).
+ DEBUG [b6ba0de9] Running /usr/bin/env git rev-list --max-count=1 master as deployer@138.197.73.98
+ DEBUG [b6ba0de9] Command: cd /home/deployer/apps/fut-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [b6ba0de9] 	979db99de2242cda711fa02e620c726393a06a13
+ DEBUG [b6ba0de9] 	
+ DEBUG [b6ba0de9] Finished in 0.572 seconds with exit status 0 (successful).
+ DEBUG [96422511] Running if test ! -d /home/deployer/apps/fut-std/releases/20170127223031; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170127223031'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [96422511] Command: if test ! -d /home/deployer/apps/fut-std/releases/20170127223031; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170127223031'" 1>&2; false; fi
+ DEBUG [96422511] Finished in 0.570 seconds with exit status 0 (successful).
+  INFO [8a61889c] Running /usr/bin/env echo "979db99de2242cda711fa02e620c726393a06a13" >> REVISION as deployer@138.197.73.98
+ DEBUG [8a61889c] Command: cd /home/deployer/apps/fut-std/releases/20170127223031 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "979db99de2242cda711fa02e620c726393a06a13" >> REVISION )
+  INFO [8a61889c] Finished in 0.571 seconds with exit status 0 (successful).
+  INFO [25cacf08] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170127223031/config as deployer@138.197.73.98
+ DEBUG [25cacf08] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170127223031/config )
+  INFO [25cacf08] Finished in 0.569 seconds with exit status 0 (successful).
+ DEBUG [2d4982b2] Running [ -L /home/deployer/apps/fut-std/releases/20170127223031/config/database.yml ] as deployer@138.197.73.98
+ DEBUG [2d4982b2] Command: [ -L /home/deployer/apps/fut-std/releases/20170127223031/config/database.yml ]
+ DEBUG [2d4982b2] Finished in 0.566 seconds with exit status 1 (failed).
+ DEBUG [0297d58b] Running [ -f /home/deployer/apps/fut-std/releases/20170127223031/config/database.yml ] as deployer@138.197.73.98
+ DEBUG [0297d58b] Command: [ -f /home/deployer/apps/fut-std/releases/20170127223031/config/database.yml ]
+ DEBUG [0297d58b] Finished in 0.564 seconds with exit status 1 (failed).
+  INFO [00e23b2d] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/config/database.yml /home/deployer/apps/fut-std/releases/20170127223031/config/database.yml as deployer@138.197.73.98
+ DEBUG [00e23b2d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/config/database.yml /home/deployer/apps/fut-std/releases/20170127223031/config/database.yml )
+  INFO [00e23b2d] Finished in 0.569 seconds with exit status 0 (successful).
+ DEBUG [3a6c716c] Running [ -L /home/deployer/apps/fut-std/releases/20170127223031/config/secrets.yml ] as deployer@138.197.73.98
+ DEBUG [3a6c716c] Command: [ -L /home/deployer/apps/fut-std/releases/20170127223031/config/secrets.yml ]
+ DEBUG [3a6c716c] Finished in 0.565 seconds with exit status 1 (failed).
+ DEBUG [cbbcc2e0] Running [ -f /home/deployer/apps/fut-std/releases/20170127223031/config/secrets.yml ] as deployer@138.197.73.98
+ DEBUG [cbbcc2e0] Command: [ -f /home/deployer/apps/fut-std/releases/20170127223031/config/secrets.yml ]
+ DEBUG [cbbcc2e0] Finished in 0.563 seconds with exit status 1 (failed).
+  INFO [a3dd1213] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/config/secrets.yml /home/deployer/apps/fut-std/releases/20170127223031/config/secrets.yml as deployer@138.197.73.98
+ DEBUG [a3dd1213] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/config/secrets.yml /home/deployer/apps/fut-std/releases/20170127223031/config/secrets.yml )
+  INFO [a3dd1213] Finished in 0.576 seconds with exit status 0 (successful).
+  INFO [f9d6ca36] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170127223031 /home/deployer/apps/fut-std/releases/20170127223031/tmp /home/deployer/apps/fut-std/releases/20170127223031/public as deployer@138.197.73.98
+ DEBUG [f9d6ca36] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170127223031 /home/deployer/apps/fut-std/releases/20170127223031/tmp /home/deployer/apps/fut-std/releases/20170127223031/public )
+  INFO [f9d6ca36] Finished in 0.573 seconds with exit status 0 (successful).
+ DEBUG [35e673a6] Running [ -L /home/deployer/apps/fut-std/releases/20170127223031/log ] as deployer@138.197.73.98
+ DEBUG [35e673a6] Command: [ -L /home/deployer/apps/fut-std/releases/20170127223031/log ]
+ DEBUG [35e673a6] Finished in 0.563 seconds with exit status 1 (failed).
+ DEBUG [9db6d68a] Running [ -d /home/deployer/apps/fut-std/releases/20170127223031/log ] as deployer@138.197.73.98
+ DEBUG [9db6d68a] Command: [ -d /home/deployer/apps/fut-std/releases/20170127223031/log ]
+ DEBUG [9db6d68a] Finished in 0.564 seconds with exit status 0 (successful).
+  INFO [71e67317] Running /usr/bin/env rm -rf /home/deployer/apps/fut-std/releases/20170127223031/log as deployer@138.197.73.98
+ DEBUG [71e67317] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /home/deployer/apps/fut-std/releases/20170127223031/log )
+  INFO [71e67317] Finished in 0.573 seconds with exit status 0 (successful).
+  INFO [fe7577b4] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/log /home/deployer/apps/fut-std/releases/20170127223031/log as deployer@138.197.73.98
+ DEBUG [fe7577b4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/log /home/deployer/apps/fut-std/releases/20170127223031/log )
+  INFO [fe7577b4] Finished in 0.571 seconds with exit status 0 (successful).
+ DEBUG [94a0ca66] Running [ -L /home/deployer/apps/fut-std/releases/20170127223031/tmp/pids ] as deployer@138.197.73.98
+ DEBUG [94a0ca66] Command: [ -L /home/deployer/apps/fut-std/releases/20170127223031/tmp/pids ]
+ DEBUG [94a0ca66] Finished in 0.566 seconds with exit status 1 (failed).
+ DEBUG [3c9652a0] Running [ -d /home/deployer/apps/fut-std/releases/20170127223031/tmp/pids ] as deployer@138.197.73.98
+ DEBUG [3c9652a0] Command: [ -d /home/deployer/apps/fut-std/releases/20170127223031/tmp/pids ]
+ DEBUG [3c9652a0] Finished in 0.569 seconds with exit status 1 (failed).
+  INFO [8b746588] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/tmp/pids /home/deployer/apps/fut-std/releases/20170127223031/tmp/pids as deployer@138.197.73.98
+ DEBUG [8b746588] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/tmp/pids /home/deployer/apps/fut-std/releases/20170127223031/tmp/pids )
+  INFO [8b746588] Finished in 0.573 seconds with exit status 0 (successful).
+ DEBUG [5b370b93] Running [ -L /home/deployer/apps/fut-std/releases/20170127223031/public/assets ] as deployer@138.197.73.98
+ DEBUG [5b370b93] Command: [ -L /home/deployer/apps/fut-std/releases/20170127223031/public/assets ]
+ DEBUG [5b370b93] Finished in 0.566 seconds with exit status 1 (failed).
+ DEBUG [33e44569] Running [ -d /home/deployer/apps/fut-std/releases/20170127223031/public/assets ] as deployer@138.197.73.98
+ DEBUG [33e44569] Command: [ -d /home/deployer/apps/fut-std/releases/20170127223031/public/assets ]
+ DEBUG [33e44569] Finished in 0.565 seconds with exit status 1 (failed).
+  INFO [e0659f7a] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/public/assets /home/deployer/apps/fut-std/releases/20170127223031/public/assets as deployer@138.197.73.98
+ DEBUG [e0659f7a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/public/assets /home/deployer/apps/fut-std/releases/20170127223031/public/assets )
+  INFO [e0659f7a] Finished in 0.571 seconds with exit status 0 (successful).
+ DEBUG [fbf3e686] Running if test ! -d /home/deployer/apps/fut-std/releases/20170127223031; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170127223031'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [fbf3e686] Command: if test ! -d /home/deployer/apps/fut-std/releases/20170127223031; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170127223031'" 1>&2; false; fi
+ DEBUG [fbf3e686] Finished in 0.566 seconds with exit status 0 (successful).
+ DEBUG [b4eb6ba5] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deployer/apps/fut-std/shared/bundle as deployer@138.197.73.98
+ DEBUG [b4eb6ba5] Command: cd /home/deployer/apps/fut-std/releases/20170127223031 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deployer/apps/fut-std/shared/bundle )
+ DEBUG [b4eb6ba5] 	[31mThe following gems are missing[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * rake (12.0.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * i18n (0.7.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * json (1.8.6)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * minitest (5.10.1)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * thread_safe (0.3.5)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * tzinfo (1.2.2)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * activesupport (4.2.5)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * builder (3.2.3)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * erubis (2.7.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * mini_portile2 (2.1.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * nokogiri (1.7.0.1)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * rails-deprecated_sanitizer (1.0.3)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * rails-dom-testing (1.0.8)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * loofah (2.0.3)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * rails-html-sanitizer (1.0.3)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * actionview (4.2.5)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * rack (1.6.5)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * rack-test (0.6.3)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * actionpack (4.2.5)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * globalid (0.3.7)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * activejob (4.2.5)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * mime-types-data (3.2016.0521)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * mime-types (3.1)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * mail (2.6.4)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * actionmailer (4.2.5)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * activemodel (4.2.5)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * arel (6.0.4)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * activerecord (4.2.5)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * net-ssh (4.0.1)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * sshkit (1.11.5)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * airbrussh (1.1.2)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * debug_inspector (0.0.2)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * binding_of_caller (0.7.2)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * byebug (9.0.6)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * capistrano (3.7.1)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * capistrano-bundler (1.2.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * capistrano-postgresql (4.2.1)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * capistrano-rails (1.2.2)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * capistrano-rbenv (2.0.4)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * capistrano-rbenv-install (1.2.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * capistrano-safe-deploy-to (1.1.1)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * capistrano-secrets-yml (1.0.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * capistrano-ssh-doctor (1.0.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * capistrano-unicorn-nginx (4.0.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * coffee-script-source (1.12.2)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * execjs (2.7.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * coffee-script (2.4.1)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * thor (0.19.4)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * railties (4.2.5)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * coffee-rails (4.1.1)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * concurrent-ruby (1.0.4)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * multi_json (1.12.1)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * jbuilder (2.6.1)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * jquery-rails (4.2.2)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * kgio (2.11.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * pg (0.19.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * sprockets (3.7.1)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * sprockets-rails (3.2.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * rails (4.2.5)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * raindrops (0.17.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * rdoc (4.3.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * sass (3.4.23)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * tilt (2.0.5)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * sass-rails (5.0.6)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * sdoc (0.4.2)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * spring (2.0.1)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * turbolinks-source (5.0.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * turbolinks (5.0.1)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * uglifier (3.0.4)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * unicorn (5.2.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[31m * web-console (2.3.0)[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [b4eb6ba5] 	
+ DEBUG [b4eb6ba5] Finished in 1.825 seconds with exit status 1 (failed).
+  INFO [204390e3] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deployer/apps/fut-std/shared/bundle --without development test --deployment --quiet as deployer@138.197.73.98
+ DEBUG [204390e3] Command: cd /home/deployer/apps/fut-std/releases/20170127223031 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deployer/apps/fut-std/shared/bundle --without development test --deployment --quiet )
+  INFO [204390e3] Finished in 137.534 seconds with exit status 0 (successful).
+ DEBUG [d45a7310] Running if test ! -d /home/deployer/apps/fut-std/releases/20170127223031; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170127223031'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [d45a7310] Command: if test ! -d /home/deployer/apps/fut-std/releases/20170127223031; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170127223031'" 1>&2; false; fi
+ DEBUG [d45a7310] Finished in 0.574 seconds with exit status 0 (successful).
+  INFO [322bb51f] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deployer@138.197.73.98
+ DEBUG [322bb51f] Command: cd /home/deployer/apps/fut-std/releases/20170127223031 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+ DEBUG [322bb51f] 	I, [2017-01-27T22:33:15.984063 #2998]  INFO -- : Writing /home/deployer/apps/fut-std/releases/20170127223031/public/assets/application-b57b3bdfe72296fe43304d7dcc0d525ba53322bda7a2be20284f11d266ddd7ba.js
+ DEBUG [322bb51f] 	
+ DEBUG [322bb51f] 	I, [2017-01-27T22:33:15.984936 #2998]  INFO -- : Writing /home/deployer/apps/fut-std/releases/20170127223031/public/assets/application-b57b3bdfe72296fe43304d7dcc0d525ba53322bda7a2be20284f11d266ddd7ba.js.gz
+ DEBUG [322bb51f] 	
+ DEBUG [322bb51f] 	I, [2017-01-27T22:33:15.999607 #2998]  INFO -- : Writing /home/deployer/apps/fut-std/releases/20170127223031/public/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css
+ DEBUG [322bb51f] 	
+ DEBUG [322bb51f] 	I, [2017-01-27T22:33:15.999927 #2998]  INFO -- : Writing /home/deployer/apps/fut-std/releases/20170127223031/public/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css.gz
+ DEBUG [322bb51f] 	
+  INFO [322bb51f] Finished in 6.148 seconds with exit status 0 (successful).
+ DEBUG [b72d59e2] Running if test ! -d /home/deployer/apps/fut-std/releases/20170127223031; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170127223031'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [b72d59e2] Command: if test ! -d /home/deployer/apps/fut-std/releases/20170127223031; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170127223031'" 1>&2; false; fi
+ DEBUG [b72d59e2] Finished in 0.567 seconds with exit status 0 (successful).
+  INFO [d31bea18] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170127223031/assets_manifest_backup as deployer@138.197.73.98
+ DEBUG [d31bea18] Command: cd /home/deployer/apps/fut-std/releases/20170127223031 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170127223031/assets_manifest_backup )
+  INFO [d31bea18] Finished in 0.575 seconds with exit status 0 (successful).
+ DEBUG [621eb480] Running /usr/bin/env ls /home/deployer/apps/fut-std/releases/20170127223031/public/assets/.sprockets-manifest* as deployer@138.197.73.98
+ DEBUG [621eb480] Command: cd /home/deployer/apps/fut-std/releases/20170127223031 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /home/deployer/apps/fut-std/releases/20170127223031/public/assets/.sprockets-manifest* )
+ DEBUG [621eb480] 	/home/deployer/apps/fut-std/releases/20170127223031/public/assets/.sprockets-manifest-2b910709200b6fbd9f3fb06cca919ba4.json
+ DEBUG [621eb480] 	
+ DEBUG [621eb480] Finished in 0.575 seconds with exit status 0 (successful).
+ DEBUG [5069050c] Running /usr/bin/env ls /home/deployer/apps/fut-std/releases/20170127223031/public/assets/.sprockets-manifest* as deployer@138.197.73.98
+ DEBUG [5069050c] Command: cd /home/deployer/apps/fut-std/releases/20170127223031 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /home/deployer/apps/fut-std/releases/20170127223031/public/assets/.sprockets-manifest* )
+ DEBUG [5069050c] 	/home/deployer/apps/fut-std/releases/20170127223031/public/assets/.sprockets-manifest-2b910709200b6fbd9f3fb06cca919ba4.json
+ DEBUG [5069050c] 	
+ DEBUG [5069050c] Finished in 0.572 seconds with exit status 0 (successful).
+  INFO [529b490f] Running /usr/bin/env cp /home/deployer/apps/fut-std/releases/20170127223031/public/assets/.sprockets-manifest-2b910709200b6fbd9f3fb06cca919ba4.json /home/deployer/apps/fut-std/releases/20170127223031/assets_manifest_backup as deployer@138.197.73.98
+ DEBUG [529b490f] Command: cd /home/deployer/apps/fut-std/releases/20170127223031 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /home/deployer/apps/fut-std/releases/20170127223031/public/assets/.sprockets-manifest-2b910709200b6fbd9f3fb06cca919ba4.json /home/deployer/apps/fut-std/releases/20170127223031/assets_manifest_backup )
+  INFO [529b490f] Finished in 0.574 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [25efeb4d] Running if test ! -d /home/deployer/apps/fut-std/releases/20170127223031; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170127223031'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [25efeb4d] Command: if test ! -d /home/deployer/apps/fut-std/releases/20170127223031; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170127223031'" 1>&2; false; fi
+ DEBUG [25efeb4d] Finished in 0.567 seconds with exit status 0 (successful).
+  INFO [d3303b20] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as deployer@138.197.73.98
+ DEBUG [d3303b20] Command: cd /home/deployer/apps/fut-std/releases/20170127223031 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [d3303b20] 	rake aborted!
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	Cannot load `Rails.application.database_configuration`:
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	Could not load database configuration. No such file - ["config/database.yml"]
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/railties-4.2.5/lib/rails/application/configuration.rb:110:in `database_configuration'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/railtie.rb:117:in `block (2 levels) in <class:Railtie>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:44:in `each'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/base.rb:315:in `<module:ActiveRecord>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/base.rb:26:in `<top (required)>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/mysql_database_tasks.rb:8:in `<class:MySQLDatabaseTasks>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/mys
+ DEBUG [d3303b20] 	ql_database_tasks.rb:3:in `<module:Tasks>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/mysql_database_tasks.rb:2:in `<module:ActiveRecord>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/mysql_database_tasks.rb:1:in `<top (required)>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:50:in `<module:DatabaseTasks>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:37:in `<module:Tasks>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:4:in `<module:ActiveRecord>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:3:in `<top (required)>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/rub
+ DEBUG [d3303b20] 	y/2.3.0/gems/activerecord-4.2.5/lib/active_record/railtie.rb:41:in `block (3 levels) in <class:Railtie>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	Could not load database configuration. No such file - ["config/database.yml"]
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/railties-4.2.5/lib/rails/application/configuration.rb:110:in `database_configuration'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/railtie.rb:117:in `block (2 levels) in <class:Railtie>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:44:in `each'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/base.rb:315:in `<module:ActiveRecord>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/base.rb:26:in `<top (required)>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/mysql_database_tasks.rb:8:in `<class:MySQLDatabaseTasks>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/mys
+ DEBUG [d3303b20] 	ql_database_tasks.rb:3:in `<module:Tasks>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/mysql_database_tasks.rb:2:in `<module:ActiveRecord>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/mysql_database_tasks.rb:1:in `<top (required)>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:50:in `<module:DatabaseTasks>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:37:in `<module:Tasks>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:4:in `<module:ActiveRecord>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:3:in `<top (required)>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/rub
+ DEBUG [d3303b20] 	y/2.3.0/gems/activerecord-4.2.5/lib/active_record/railtie.rb:41:in `block (3 levels) in <class:Railtie>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	/home/deployer/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	Tasks: TOP => db:migrate => db:load_config
+ DEBUG [d3303b20] 	
+ DEBUG [d3303b20] 	(See full trace by running task with --trace)
+ DEBUG [d3303b20] 	

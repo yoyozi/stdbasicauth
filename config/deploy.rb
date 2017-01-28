@@ -13,7 +13,7 @@ set :branch, "master"
 set :pty,             true
 set :stage,           "production"
 set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
-set :ssh_options,     {forward_agent: true, auth_methods: %w(publickey), user: 'craig'}
+set :ssh_options,     {forward_agent: true, auth_methods: %w(publickey), user: 'deployer'}
 
 set :rbenv_ruby, '2.3.1'
 

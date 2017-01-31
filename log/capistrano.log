@@ -17095,3 +17095,1575 @@
  DEBUG [48dae7ab] 	
  DEBUG [48dae7ab] Finished in 0.811 seconds with exit status 1 (failed).
  ERROR postgresql: creating database user failed!
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 01:04:45 +0200 cap production postgresql:setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d0af877b] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [d0af877b] Command: [ -d $HOME/.rbenv ]
+ DEBUG [d0af877b] Finished in 3.264 seconds with exit status 0 (successful).
+ DEBUG [a9e254ea] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [a9e254ea] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [a9e254ea] Finished in 3.257 seconds with exit status 0 (successful).
+ DEBUG [7f4f3f0a] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [7f4f3f0a] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [7f4f3f0a] Finished in 0.568 seconds with exit status 0 (successful).
+ DEBUG [8539e4b3] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [8539e4b3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [8539e4b3] 	true
+ DEBUG [8539e4b3] 	
+ DEBUG [8539e4b3] Finished in 0.804 seconds with exit status 0 (successful).
+ DEBUG [2c2a9b5b] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [2c2a9b5b] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [2c2a9b5b] Finished in 0.567 seconds with exit status 0 (successful).
+ DEBUG [4de59596] Running /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 as deployer@138.197.73.98
+ DEBUG [4de59596] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 )
+ DEBUG [4de59596] 	perl: warning: Setting locale failed.
+ DEBUG [4de59596] 	
+ DEBUG [4de59596] 	perl: warning: Please check that your locale settings:
+ DEBUG [4de59596] 	
+ DEBUG [4de59596] 		
+ DEBUG [4de59596] 	LANGUAGE = (unset),
+ DEBUG [4de59596] 	
+ DEBUG [4de59596] 		
+ DEBUG [4de59596] 	LC_ALL = (unset),
+ DEBUG [4de59596] 	
+ DEBUG [4de59596] 		
+ DEBUG [4de59596] 	LC_CTYPE = "UTF-8",
+ DEBUG [4de59596] 	
+ DEBUG [4de59596] 		
+ DEBUG [4de59596] 	LANG = "en_US.UTF-8"
+ DEBUG [4de59596] 	
+ DEBUG [4de59596] 	    are supported and installed on your system.
+ DEBUG [4de59596] 	
+ DEBUG [4de59596] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [4de59596] 	
+ DEBUG [4de59596] Finished in 0.850 seconds with exit status 1 (failed).
+ DEBUG [bc496bec] Running /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password 'c3c511dba6d9b9d56572';" as deployer@138.197.73.98
+ DEBUG [bc496bec] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password 'c3c511dba6d9b9d56572';" )
+ DEBUG [bc496bec] 	perl: warning: Setting locale failed.
+ DEBUG [bc496bec] 	
+ DEBUG [bc496bec] 	perl: warning: Please check that your locale settings:
+ DEBUG [bc496bec] 	
+ DEBUG [bc496bec] 		
+ DEBUG [bc496bec] 	LANGUAGE = (unset),
+ DEBUG [bc496bec] 	
+ DEBUG [bc496bec] 		
+ DEBUG [bc496bec] 	LC_ALL = (unset),
+ DEBUG [bc496bec] 	
+ DEBUG [bc496bec] 		
+ DEBUG [bc496bec] 	LC_CTYPE = "UTF-8",
+ DEBUG [bc496bec] 	
+ DEBUG [bc496bec] 		
+ DEBUG [bc496bec] 	LANG = "en_US.UTF-8"
+ DEBUG [bc496bec] 	
+ DEBUG [bc496bec] 	    are supported and installed on your system.
+ DEBUG [bc496bec] 	
+ DEBUG [bc496bec] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [bc496bec] 	
+ DEBUG [bc496bec] 	ERROR:  syntax error at or near "-"
+ DEBUG [bc496bec] 	
+ DEBUG [bc496bec] 	LINE 1: CREATE user fut-std_production WITH password 'c3c511dba6d9b9...
+ DEBUG [bc496bec] 	
+ DEBUG [bc496bec] 	                       ^
+ DEBUG [bc496bec] 	
+ DEBUG [bc496bec] Finished in 0.861 seconds with exit status 1 (failed).
+ ERROR postgresql: creating database user failed!
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 01:07:54 +0200 cap production setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2b6866e0] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [2b6866e0] Command: [ -d $HOME/.rbenv ]
+ DEBUG [2b6866e0] Finished in 3.243 seconds with exit status 0 (successful).
+ DEBUG [ef3e1276] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [ef3e1276] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [ef3e1276] Finished in 3.182 seconds with exit status 0 (successful).
+ DEBUG [9d05d46b] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [9d05d46b] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [9d05d46b] Finished in 0.554 seconds with exit status 0 (successful).
+ DEBUG [9a14a9ea] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [9a14a9ea] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [9a14a9ea] 	true
+ DEBUG [9a14a9ea] 	
+ DEBUG [9a14a9ea] Finished in 0.814 seconds with exit status 0 (successful).
+ DEBUG [34481af8] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [34481af8] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [34481af8] Finished in 0.559 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/fut-std_production 0.0%
+  INFO Uploading /tmp/fut-std_production 100.0%
+  INFO [d8a84a55] Running /usr/bin/env sudo mv /tmp/fut-std_production /etc/nginx/sites-available as deployer@138.197.73.98
+ DEBUG [d8a84a55] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/fut-std_production /etc/nginx/sites-available )
+ DEBUG [d8a84a55] 	mv: 
+ DEBUG [d8a84a55] 	cannot move '/tmp/fut-std_production' to '/etc/nginx/sites-available'
+ DEBUG [d8a84a55] 	: No such file or directory
+ DEBUG [d8a84a55] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 01:08:45 +0200 cap production setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2d5cbcb3] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [2d5cbcb3] Command: [ -d $HOME/.rbenv ]
+ DEBUG [2d5cbcb3] Finished in 3.245 seconds with exit status 0 (successful).
+ DEBUG [95c4a235] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [95c4a235] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [95c4a235] Finished in 3.201 seconds with exit status 0 (successful).
+ DEBUG [952d04f5] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [952d04f5] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [952d04f5] Finished in 0.561 seconds with exit status 0 (successful).
+ DEBUG [f311c4a9] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [f311c4a9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [f311c4a9] 	true
+ DEBUG [f311c4a9] 	
+ DEBUG [f311c4a9] Finished in 0.816 seconds with exit status 0 (successful).
+ DEBUG [5b601ab2] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [5b601ab2] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [5b601ab2] Finished in 0.564 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/fut-std_production 0.0%
+  INFO Uploading /tmp/fut-std_production 100.0%
+  INFO [d602c9dd] Running /usr/bin/env sudo mv /tmp/fut-std_production /etc/nginx/sites-available as deployer@138.197.73.98
+ DEBUG [d602c9dd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/fut-std_production /etc/nginx/sites-available )
+ DEBUG [d602c9dd] 	mv: 
+ DEBUG [d602c9dd] 	cannot move '/tmp/fut-std_production' to '/etc/nginx/sites-available'
+ DEBUG [d602c9dd] 	: No such file or directory
+ DEBUG [d602c9dd] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 01:15:38 +0200 cap production droplet:setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [467f3c78] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [467f3c78] Command: [ -d $HOME/.rbenv ]
+ DEBUG [467f3c78] Finished in 3.242 seconds with exit status 0 (successful).
+ DEBUG [43a089ad] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [43a089ad] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [43a089ad] Finished in 3.337 seconds with exit status 0 (successful).
+ DEBUG [00203fae] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [00203fae] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [00203fae] Finished in 0.553 seconds with exit status 0 (successful).
+ DEBUG [d4e46ca3] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [d4e46ca3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [d4e46ca3] 	true
+ DEBUG [d4e46ca3] 	
+ DEBUG [d4e46ca3] Finished in 0.798 seconds with exit status 0 (successful).
+ DEBUG [c1eb68cb] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [c1eb68cb] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [c1eb68cb] Finished in 0.554 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 01:15:58 +0200 cap production droplet:dsetup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [de581915] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [de581915] Command: [ -d $HOME/.rbenv ]
+ DEBUG [de581915] Finished in 3.235 seconds with exit status 0 (successful).
+ DEBUG [ff526845] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [ff526845] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [ff526845] Finished in 3.248 seconds with exit status 0 (successful).
+ DEBUG [76191789] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [76191789] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [76191789] Finished in 0.549 seconds with exit status 0 (successful).
+ DEBUG [8ea49268] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [8ea49268] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [8ea49268] 	true
+ DEBUG [8ea49268] 	
+ DEBUG [8ea49268] Finished in 0.866 seconds with exit status 0 (successful).
+ DEBUG [3918305f] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [3918305f] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [3918305f] Finished in 0.549 seconds with exit status 0 (successful).
+  INFO [abe19c55] Running /usr/bin/env sudo apt-get -y install nginx as deployer@138.197.73.98
+ DEBUG [abe19c55] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo apt-get -y install nginx )
+ DEBUG [abe19c55] 	Reading package lists... 0%
+ DEBUG [abe19c55] 	Reading package lists... 100%
+ DEBUG [abe19c55] 	Reading package lists... Done
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Building dependency tree... 0%
+ DEBUG [abe19c55] 	Building dependency tree... 0%
+ DEBUG [abe19c55] 	Building dependency tree... 50%
+ DEBUG [abe19c55] 	Building dependency tree... 50%
+ DEBUG [abe19c55] 	Building dependency tree       
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Reading state information... 0%
+ DEBUG [abe19c55] 	Reading state information... 0%
+ DEBUG [abe19c55] 	Reading state information... Done
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	The following extra packages will be installed:
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	  fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	  libjpeg-turbo8 libjpeg8 libtiff5 libvpx1 libxpm4 nginx-common nginx-core
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Suggested packages:
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	  libgd-tools fcgiwrap nginx-doc
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	The following NEW packages will be installed:
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	  fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	  libjpeg-turbo8 libjpeg8 libtiff5 libvpx1 libxpm4 nginx nginx-common
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	  nginx-core
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	0 upgraded, 13 newly installed, 0 to remove and 42 not upgraded.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Need to get 2535 kB of archives.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	After this operation, 8563 kB of additional disk space will be used.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	0% [Working]
+ DEBUG [abe19c55] 	0% [Working]
+ DEBUG [abe19c55] 	            Get:1 http://mirrors.digitalocean.com/ubuntu/ trusty/main fonts-dejavu-core all 2.34-1ubuntu1 [1024 kB]
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	            0% [1 fonts-dejavu-core 0 B/1024 kB 0%] [Waiting for headers]
+ DEBUG [abe19c55] 	                                                             33% [1 fonts-dejavu-core 837 kB/1024 kB 82%] [Waiting for headers]
+ DEBUG [abe19c55] 	                                                                  40% [Waiting for headers]
+ DEBUG [abe19c55] 	                         Get:2 http://mirrors.digitalocean.com/ubuntu/ trusty-updates/main fontconfig-config all 2.11.0-0ubuntu4.2 [47.4 kB]
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	                         40% [2 fontconfig-config 0 B/47.4 kB 0%] [Waiting for headers]
+ DEBUG [abe19c55] 	                                                              42% [Waiting for headers]
+ DEBUG [abe19c55] 	42% [Waiting for headers]
+ DEBUG [abe19c55] 	                         Get:3 http://mirrors.digitalocean.com/ubuntu/ trusty-updates/main libfontconfig1 amd64 2.11.0-0ubuntu4.2 [123 kB]
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	                         42% [3 libfontconfig1 0 B/123 kB 0%] [Waiting for headers]
+ DEBUG [abe19c55] 	                                                          47% [Waiting for headers]
+ DEBUG [abe19c55] 	47% [Waiting for headers]
+ DEBUG [abe19c55] 	                         Get:4 http://mirrors.digitalocean.com/ubuntu/ trusty/main libjpeg-turbo8 amd64 1.3.0-0ubuntu2 [104 kB]
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	                         47% [4 libjpeg-turbo8 0 B/104 kB 0%] [Waiting for headers]
+ DEBUG [abe19c55] 	                                                          51% [Waiting for headers]
+ DEBUG [abe19c55] 	51% [Waiting for headers]
+ DEBUG [abe19c55] 	                         Get:5 http://mirrors.digitalocean.com/ubuntu/ trusty/main libjpeg8 amd64 8c-2ubuntu8 [2194 B]
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	                         51% [5 libjpeg8 0 B/2194 B 0%] [Waiting for headers]
+ DEBUG [abe19c55] 	                                                    51% [Waiting for headers]
+ DEBUG [abe19c55] 	51% [Waiting for headers]
+ DEBUG [abe19c55] 	                         Get:6 http://mirrors.digitalocean.com/ubuntu/ trusty-updates/main libjbig0 amd64 2.0-2ubuntu4.1 [26.1 kB]
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	                         51% [6 libjbig0 0 B/26.1 kB 0%] [Waiting for headers]
+ DEBUG [abe19c55] 	                                                     52% [Waiting for headers]
+ DEBUG [abe19c55] 	52% [Waiting for headers]
+ DEBUG [abe19c55] 	                         Get:7 http://mirrors.digitalocean.com/ubuntu/ trusty-updates/main libtiff5 amd64 4.0.3-7ubuntu0.4 [143 kB]
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	                         52% [7 libtiff5 0 B/143 kB 0%] [Waiting for headers]
+ DEBUG [abe19c55] 	                                                    58% [Waiting for headers]
+ DEBUG [abe19c55] 	58% [Waiting for headers]
+ DEBUG [abe19c55] 	                         Get:8 http://mirrors.digitalocean.com/ubuntu/ trusty/main libvpx1 amd64 1.3.0-2 [556 kB]
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	                         58% [8 libvpx1 0 B/556 kB 0%] [Waiting for headers]
+ DEBUG [abe19c55] 	                                                   61% [8 libvpx1 64.9 kB/556 kB 12%] [Waiting for headers]
+ DEBUG [abe19c55] 	61% [8 libvpx1 64.9 kB/556 kB 12%] [Waiting for headers]
+ DEBUG [abe19c55] 	                                                        80% [Waiting for headers]
+ DEBUG [abe19c55] 	                         Get:9 http://mirrors.digitalocean.com/ubuntu/ trusty/main libxpm4 amd64 1:3.5.10-1 [38.3 kB]
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	                         80% [9 libxpm4 0 B/38.3 kB 0%] [Waiting for headers]
+ DEBUG [abe19c55] 	                                                    81% [Waiting for headers]
+ DEBUG [abe19c55] 	                         Get:10 http://mirrors.digitalocean.com/ubuntu/ trusty-updates/main libgd3 amd64 2.1.0-3ubuntu0.5 [122 kB]
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	                         81% [10 libgd3 0 B/122 kB 0%] [Waiting for headers]
+ DEBUG [abe19c55] 	                                                   86% [Waiting for headers]
+ DEBUG [abe19c55] 	86% [Waiting for headers]
+ DEBUG [abe19c55] 	                         Get:11 http://mirrors.digitalocean.com/ubuntu/ trusty-updates/main nginx-common all 1.4.6-1ubuntu3.7 [19.0 kB]
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	                         86% [11 nginx-common 0 B/19.0 kB 0%] [Waiting for headers]
+ DEBUG [abe19c55] 	                                                          87% [Waiting for headers]
+ DEBUG [abe19c55] 	87% [Waiting for headers]
+ DEBUG [abe19c55] 	                         Get:12 http://mirrors.digitalocean.com/ubuntu/ trusty-updates/main nginx-core amd64 1.4.6-1ubuntu3.7 [325 kB]
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	                         87% [12 nginx-core 0 B/325 kB 0%] [Waiting for headers]
+ DEBUG [abe19c55] 	                                                       100% [Waiting for headers]
+ DEBUG [abe19c55] 	                          100% [Working]
+ DEBUG [abe19c55] 	              Get:13 http://mirrors.digitalocean.com/ubuntu/ trusty-updates/main nginx all 1.4.6-1ubuntu3.7 [5352 B]
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	              100% [13 nginx 0 B/5352 B 0%]
+ DEBUG [abe19c55] 	                             100% [Working]
+ DEBUG [abe19c55] 	              
+ DEBUG [abe19c55] 	Fetched 2535 kB in 1s (2152 kB/s)
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	perl: warning: Setting locale failed.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	perl: warning: Please check that your locale settings:
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 		
+ DEBUG [abe19c55] 	LANGUAGE = (unset),
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 		
+ DEBUG [abe19c55] 	LC_ALL = (unset),
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 		
+ DEBUG [abe19c55] 	LC_CTYPE = "UTF-8",
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 		
+ DEBUG [abe19c55] 	LANG = "en_US.UTF-8"
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	    are supported and installed on your system.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	locale: 
+ DEBUG [abe19c55] 	Cannot set LC_CTYPE to default locale
+ DEBUG [abe19c55] 	: No such file or directory
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	locale: 
+ DEBUG [abe19c55] 	Cannot set LC_ALL to default locale
+ DEBUG [abe19c55] 	: No such file or directory
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Preconfiguring packages ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Selecting previously unselected package fonts-dejavu-core.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	(Reading database ... 
+ DEBUG [abe19c55] 	(Reading database ... 5%
+ DEBUG [abe19c55] 	(Reading database ... 10%
+ DEBUG [abe19c55] 	(Reading database ... 15%
+ DEBUG [abe19c55] 	(Reading database ... 20%
+ DEBUG [abe19c55] 	(Reading database ... 25%
+ DEBUG [abe19c55] 	(Reading database ... 30%
+ DEBUG [abe19c55] 	(Reading database ... 35%
+ DEBUG [abe19c55] 	(Reading database ... 40%
+ DEBUG [abe19c55] 	(Reading database ... 45%
+ DEBUG [abe19c55] 	(Reading database ... 50%
+ DEBUG [abe19c55] 	(Reading database ... 55%
+ DEBUG [abe19c55] 	(Reading database ... 60%
+ DEBUG [abe19c55] 	(Reading database ... 65%
+ DEBUG [abe19c55] 	(Reading database ... 70%
+ DEBUG [abe19c55] 	(Reading database ... 75%
+ DEBUG [abe19c55] 	(Reading database ... 80%
+ DEBUG [abe19c55] 	(Reading database ... 85%
+ DEBUG [abe19c55] 	(Reading database ... 90%
+ DEBUG [abe19c55] 	(Reading database ... 95%
+ DEBUG [abe19c55] 	(Reading database ... 100%
+ DEBUG [abe19c55] 	(Reading database ... 
+ DEBUG [abe19c55] 	71727 files and directories currently installed.)
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Preparing to unpack .../fonts-dejavu-core_2.34-1ubuntu1_all.deb ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Unpacking fonts-dejavu-core (2.34-1ubuntu1) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Selecting previously unselected package fontconfig-config.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Preparing to unpack .../fontconfig-config_2.11.0-0ubuntu4.2_all.deb ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Unpacking fontconfig-config (2.11.0-0ubuntu4.2) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Selecting previously unselected package libfontconfig1:amd64.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Preparing to unpack .../libfontconfig1_2.11.0-0ubuntu4.2_amd64.deb ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Unpacking libfontconfig1:amd64 (2.11.0-0ubuntu4.2) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Selecting previously unselected package libjpeg-turbo8:amd64.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Preparing to unpack .../libjpeg-turbo8_1.3.0-0ubuntu2_amd64.deb ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Unpacking libjpeg-turbo8:amd64 (1.3.0-0ubuntu2) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Selecting previously unselected package libjpeg8:amd64.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Preparing to unpack .../libjpeg8_8c-2ubuntu8_amd64.deb ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Selecting previously unselected package libjbig0:amd64.
+ DEBUG [abe19c55] 	Preparing to unpack .../libjbig0_2.0-2ubuntu4.1_amd64.deb ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Unpacking libjbig0:amd64 (2.0-2ubuntu4.1) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Selecting previously unselected package libtiff5:amd64.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Preparing to unpack .../libtiff5_4.0.3-7ubuntu0.4_amd64.deb ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Unpacking libtiff5:amd64 (4.0.3-7ubuntu0.4) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Selecting previously unselected package libvpx1:amd64.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Preparing to unpack .../libvpx1_1.3.0-2_amd64.deb ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Unpacking libvpx1:amd64 (1.3.0-2) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Selecting previously unselected package libxpm4:amd64.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Preparing to unpack .../libxpm4_1%3a3.5.10-1_amd64.deb ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Unpacking libxpm4:amd64 (1:3.5.10-1) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Selecting previously unselected package libgd3:amd64.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Preparing to unpack .../libgd3_2.1.0-3ubuntu0.5_amd64.deb ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Unpacking libgd3:amd64 (2.1.0-3ubuntu0.5) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Selecting previously unselected package nginx-common.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Preparing to unpack .../nginx-common_1.4.6-1ubuntu3.7_all.deb ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Unpacking nginx-common (1.4.6-1ubuntu3.7) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Selecting previously unselected package nginx-core.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Preparing to unpack .../nginx-core_1.4.6-1ubuntu3.7_amd64.deb ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Unpacking nginx-core (1.4.6-1ubuntu3.7) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Selecting previously unselected package nginx.
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Preparing to unpack .../nginx_1.4.6-1ubuntu3.7_all.deb ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Unpacking nginx (1.4.6-1ubuntu3.7) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Processing triggers for ureadahead (0.100.0-16) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Setting up fonts-dejavu-core (2.34-1ubuntu1) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Setting up fontconfig-config (2.11.0-0ubuntu4.2) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Setting up libfontconfig1:amd64 (2.11.0-0ubuntu4.2) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Setting up libjpeg-turbo8:amd64 (1.3.0-0ubuntu2) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Setting up libjbig0:amd64 (2.0-2ubuntu4.1) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Setting up libtiff5:amd64 (4.0.3-7ubuntu0.4) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Setting up libvpx1:amd64 (1.3.0-2) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Setting up libxpm4:amd64 (1:3.5.10-1) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Setting up libgd3:amd64 (2.1.0-3ubuntu0.5) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Setting up nginx-common (1.4.6-1ubuntu3.7) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	locale: 
+ DEBUG [abe19c55] 	Cannot set LC_CTYPE to default locale
+ DEBUG [abe19c55] 	: No such file or directory
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	locale: 
+ DEBUG [abe19c55] 	Cannot set LC_ALL to default locale
+ DEBUG [abe19c55] 	: No such file or directory
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Processing triggers for ureadahead (0.100.0-16) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Setting up nginx-core (1.4.6-1ubuntu3.7) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Setting up nginx (1.4.6-1ubuntu3.7) ...
+ DEBUG [abe19c55] 	
+ DEBUG [abe19c55] 	Processing triggers for libc-bin (2.19-0ubuntu6.9) ...
+ DEBUG [abe19c55] 	
+  INFO [abe19c55] Finished in 6.392 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 01:17:11 +0200 cap production postgresql:setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [656ad50a] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [656ad50a] Command: [ -d $HOME/.rbenv ]
+ DEBUG [656ad50a] Finished in 3.403 seconds with exit status 0 (successful).
+ DEBUG [377bb037] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [377bb037] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [377bb037] Finished in 3.155 seconds with exit status 0 (successful).
+ DEBUG [62a1ffa4] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [62a1ffa4] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [62a1ffa4] Finished in 0.549 seconds with exit status 0 (successful).
+ DEBUG [e3eaa45b] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [e3eaa45b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [e3eaa45b] 	true
+ DEBUG [e3eaa45b] 	
+ DEBUG [e3eaa45b] Finished in 0.867 seconds with exit status 0 (successful).
+ DEBUG [9352afc1] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [9352afc1] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [9352afc1] Finished in 0.551 seconds with exit status 0 (successful).
+ DEBUG [5ddbc4c2] Running /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 as deployer@138.197.73.98
+ DEBUG [5ddbc4c2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 )
+ DEBUG [5ddbc4c2] 	perl: warning: Setting locale failed.
+ DEBUG [5ddbc4c2] 	
+ DEBUG [5ddbc4c2] 	perl: warning: Please check that your locale settings:
+ DEBUG [5ddbc4c2] 	
+ DEBUG [5ddbc4c2] 		
+ DEBUG [5ddbc4c2] 	LANGUAGE = (unset),
+ DEBUG [5ddbc4c2] 	
+ DEBUG [5ddbc4c2] 		
+ DEBUG [5ddbc4c2] 	LC_ALL = (unset),
+ DEBUG [5ddbc4c2] 	
+ DEBUG [5ddbc4c2] 		
+ DEBUG [5ddbc4c2] 	LC_CTYPE = "UTF-8",
+ DEBUG [5ddbc4c2] 	
+ DEBUG [5ddbc4c2] 		
+ DEBUG [5ddbc4c2] 	LANG = "en_US.UTF-8"
+ DEBUG [5ddbc4c2] 	
+ DEBUG [5ddbc4c2] 	    are supported and installed on your system.
+ DEBUG [5ddbc4c2] 	
+ DEBUG [5ddbc4c2] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [5ddbc4c2] 	
+ DEBUG [5ddbc4c2] Finished in 0.827 seconds with exit status 1 (failed).
+ DEBUG [ce75bdd0] Running /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password 'a048385f2560755a3225';" as deployer@138.197.73.98
+ DEBUG [ce75bdd0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password 'a048385f2560755a3225';" )
+ DEBUG [ce75bdd0] 	perl: warning: Setting locale failed.
+ DEBUG [ce75bdd0] 	
+ DEBUG [ce75bdd0] 	perl: warning: Please check that your locale settings:
+ DEBUG [ce75bdd0] 	
+ DEBUG [ce75bdd0] 		
+ DEBUG [ce75bdd0] 	LANGUAGE = (unset),
+ DEBUG [ce75bdd0] 	
+ DEBUG [ce75bdd0] 		
+ DEBUG [ce75bdd0] 	LC_ALL = (unset),
+ DEBUG [ce75bdd0] 	
+ DEBUG [ce75bdd0] 		
+ DEBUG [ce75bdd0] 	LC_CTYPE = "UTF-8",
+ DEBUG [ce75bdd0] 	
+ DEBUG [ce75bdd0] 		
+ DEBUG [ce75bdd0] 	LANG = "en_US.UTF-8"
+ DEBUG [ce75bdd0] 	
+ DEBUG [ce75bdd0] 	    are supported and installed on your system.
+ DEBUG [ce75bdd0] 	
+ DEBUG [ce75bdd0] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [ce75bdd0] 	
+ DEBUG [ce75bdd0] 	ERROR:  syntax error at or near "-"
+ DEBUG [ce75bdd0] 	
+ DEBUG [ce75bdd0] 	LINE 1: CREATE user fut-std_production WITH password 'a048385f256075...
+ DEBUG [ce75bdd0] 	
+ DEBUG [ce75bdd0] 	                       ^
+ DEBUG [ce75bdd0] 	
+ DEBUG [ce75bdd0] Finished in 0.823 seconds with exit status 1 (failed).
+ ERROR postgresql: creating database user failed!
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 01:18:23 +0200 cap production setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [dc75f7f1] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [dc75f7f1] Command: [ -d $HOME/.rbenv ]
+ DEBUG [dc75f7f1] Finished in 3.178 seconds with exit status 0 (successful).
+ DEBUG [d73190cf] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [d73190cf] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [d73190cf] Finished in 3.113 seconds with exit status 0 (successful).
+ DEBUG [9979d53e] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [9979d53e] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [9979d53e] Finished in 0.549 seconds with exit status 0 (successful).
+ DEBUG [dd5e32c6] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [dd5e32c6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [dd5e32c6] 	true
+ DEBUG [dd5e32c6] 	
+ DEBUG [dd5e32c6] Finished in 0.785 seconds with exit status 0 (successful).
+ DEBUG [0bc97675] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [0bc97675] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [0bc97675] Finished in 0.550 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/fut-std_production 0.0%
+  INFO Uploading /tmp/fut-std_production 100.0%
+  INFO [1c882a9a] Running /usr/bin/env sudo mv /tmp/fut-std_production /etc/nginx/sites-available as deployer@138.197.73.98
+ DEBUG [1c882a9a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/fut-std_production /etc/nginx/sites-available )
+  INFO [1c882a9a] Finished in 0.558 seconds with exit status 0 (successful).
+  INFO [b116d5bd] Running /usr/bin/env sudo ln -fs /etc/nginx/sites-available/fut-std_production /etc/nginx/sites-enabled/fut-std_production as deployer@138.197.73.98
+ DEBUG [b116d5bd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo ln -fs /etc/nginx/sites-available/fut-std_production /etc/nginx/sites-enabled/fut-std_production )
+  INFO [b116d5bd] Finished in 0.557 seconds with exit status 0 (successful).
+ DEBUG [a104bb7d] Running /usr/bin/env id -un as deployer@138.197.73.98
+ DEBUG [a104bb7d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -un )
+ DEBUG [a104bb7d] 	deployer
+ DEBUG [a104bb7d] 	
+ DEBUG [a104bb7d] Finished in 0.553 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/unicorn_fut-std_production 0.0%
+  INFO Uploading /tmp/unicorn_fut-std_production 100.0%
+  INFO [8da6456f] Running /usr/bin/env sudo mv /tmp/unicorn_fut-std_production /etc/init.d as deployer@138.197.73.98
+ DEBUG [8da6456f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/unicorn_fut-std_production /etc/init.d )
+  INFO [8da6456f] Finished in 0.560 seconds with exit status 0 (successful).
+  INFO [41757ec6] Running /usr/bin/env chmod +x /etc/init.d/unicorn_fut-std_production as deployer@138.197.73.98
+ DEBUG [41757ec6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod +x /etc/init.d/unicorn_fut-std_production )
+  INFO [41757ec6] Finished in 0.553 seconds with exit status 0 (successful).
+  INFO [5267326a] Running /usr/bin/env sudo update-rc.d -f unicorn_fut-std_production defaults as deployer@138.197.73.98
+ DEBUG [5267326a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo update-rc.d -f unicorn_fut-std_production defaults )
+ DEBUG [5267326a] 	perl: warning: Setting locale failed.
+ DEBUG [5267326a] 	
+ DEBUG [5267326a] 	perl: warning: Please check that your locale settings:
+ DEBUG [5267326a] 	
+ DEBUG [5267326a] 		
+ DEBUG [5267326a] 	LANGUAGE = (unset),
+ DEBUG [5267326a] 	
+ DEBUG [5267326a] 		
+ DEBUG [5267326a] 	LC_ALL = (unset),
+ DEBUG [5267326a] 	
+ DEBUG [5267326a] 		
+ DEBUG [5267326a] 	LC_CTYPE = "UTF-8",
+ DEBUG [5267326a] 	
+ DEBUG [5267326a] 		
+ DEBUG [5267326a] 	LANG = "en_US.UTF-8"
+ DEBUG [5267326a] 	
+ DEBUG [5267326a] 	    are supported and installed on your system.
+ DEBUG [5267326a] 	
+ DEBUG [5267326a] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [5267326a] 	
+ DEBUG [5267326a] 	 Adding system startup for /etc/init.d/unicorn_fut-std_production ...
+ DEBUG [5267326a] 	
+ DEBUG [5267326a] 	   /etc/rc0.d/K20unicorn_fut-std_production -> ../init.d/unicorn_fut-std_production
+ DEBUG [5267326a] 	
+ DEBUG [5267326a] 	   /etc/rc1.d/K20unicorn_fut-std_production -> ../init.d/unicorn_fut-std_production
+ DEBUG [5267326a] 	
+ DEBUG [5267326a] 	   /etc/rc6.d/K20unicorn_fut-std_production -> ../init.d/unicorn_fut-std_production
+ DEBUG [5267326a] 	
+ DEBUG [5267326a] 	   /etc/rc2.d/S20unicorn_fut-std_production -> ../init.d/unicorn_fut-std_production
+ DEBUG [5267326a] 	
+ DEBUG [5267326a] 	   /etc/rc3.d/S20unicorn_fut-std_production -> ../init.d/unicorn_fut-std_production
+ DEBUG [5267326a] 	
+ DEBUG [5267326a] 	   /etc/rc4.d/S20unicorn_fut-std_production -> ../init.d/unicorn_fut-std_production
+ DEBUG [5267326a] 	
+ DEBUG [5267326a] 	   /etc/rc5.d/S20unicorn_fut-std_production -> ../init.d/unicorn_fut-std_production
+ DEBUG [5267326a] 	
+  INFO [5267326a] Finished in 0.826 seconds with exit status 0 (successful).
+  INFO [208ac37e] Running /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config as deployer@138.197.73.98
+ DEBUG [208ac37e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config )
+ DEBUG [208ac37e] 	mkdir: created directory '/home/deployer/apps/fut-std/shared/config'
+ DEBUG [208ac37e] 	
+  INFO [208ac37e] Finished in 0.557 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/deployer/apps/fut-std/shared/config/unicorn.rb 0.0%
+  INFO Uploading /home/deployer/apps/fut-std/shared/config/unicorn.rb 100.0%
+  INFO [edad62de] Running /usr/bin/env sudo mkdir -pv /etc/logrotate.d as deployer@138.197.73.98
+ DEBUG [edad62de] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mkdir -pv /etc/logrotate.d )
+  INFO [edad62de] Finished in 0.556 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/unicorn_fut-std_production 0.0%
+  INFO Uploading /tmp/unicorn_fut-std_production 100.0%
+  INFO [86c3772c] Running /usr/bin/env sudo mv /tmp/unicorn_fut-std_production /etc/logrotate.d as deployer@138.197.73.98
+ DEBUG [86c3772c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/unicorn_fut-std_production /etc/logrotate.d )
+  INFO [86c3772c] Finished in 0.559 seconds with exit status 0 (successful).
+  INFO [d612870f] Running /usr/bin/env sudo chown root:root /etc/logrotate.d/unicorn_fut-std_production as deployer@138.197.73.98
+ DEBUG [d612870f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo chown root:root /etc/logrotate.d/unicorn_fut-std_production )
+  INFO [d612870f] Finished in 0.559 seconds with exit status 0 (successful).
+ DEBUG [fa2fcb0b] Running /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 as deployer@138.197.73.98
+ DEBUG [fa2fcb0b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 )
+ DEBUG [fa2fcb0b] 	perl: warning: Setting locale failed.
+ DEBUG [fa2fcb0b] 	
+ DEBUG [fa2fcb0b] 	perl: warning: Please check that your locale settings:
+ DEBUG [fa2fcb0b] 	
+ DEBUG [fa2fcb0b] 		
+ DEBUG [fa2fcb0b] 	LANGUAGE = (unset),
+ DEBUG [fa2fcb0b] 	
+ DEBUG [fa2fcb0b] 		
+ DEBUG [fa2fcb0b] 	LC_ALL = (unset),
+ DEBUG [fa2fcb0b] 	
+ DEBUG [fa2fcb0b] 		
+ DEBUG [fa2fcb0b] 	LC_CTYPE = "UTF-8",
+ DEBUG [fa2fcb0b] 	
+ DEBUG [fa2fcb0b] 		
+ DEBUG [fa2fcb0b] 	LANG = "en_US.UTF-8"
+ DEBUG [fa2fcb0b] 	
+ DEBUG [fa2fcb0b] 	    are supported and installed on your system.
+ DEBUG [fa2fcb0b] 	
+ DEBUG [fa2fcb0b] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [fa2fcb0b] 	
+ DEBUG [fa2fcb0b] Finished in 0.821 seconds with exit status 1 (failed).
+ DEBUG [a70f17b5] Running /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password '4ebeb0e72a3bf4dae047';" as deployer@138.197.73.98
+ DEBUG [a70f17b5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password '4ebeb0e72a3bf4dae047';" )
+ DEBUG [a70f17b5] 	perl: warning: Setting locale failed.
+ DEBUG [a70f17b5] 	
+ DEBUG [a70f17b5] 	perl: warning: Please check that your locale settings:
+ DEBUG [a70f17b5] 	
+ DEBUG [a70f17b5] 		
+ DEBUG [a70f17b5] 	LANGUAGE = (unset),
+ DEBUG [a70f17b5] 	
+ DEBUG [a70f17b5] 		
+ DEBUG [a70f17b5] 	LC_ALL = (unset),
+ DEBUG [a70f17b5] 	
+ DEBUG [a70f17b5] 		
+ DEBUG [a70f17b5] 	LC_CTYPE = "UTF-8",
+ DEBUG [a70f17b5] 	
+ DEBUG [a70f17b5] 		
+ DEBUG [a70f17b5] 	LANG = "en_US.UTF-8"
+ DEBUG [a70f17b5] 	
+ DEBUG [a70f17b5] 	    are supported and installed on your system.
+ DEBUG [a70f17b5] 	
+ DEBUG [a70f17b5] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [a70f17b5] 	
+ DEBUG [a70f17b5] 	ERROR:  syntax error at or near "-"
+ DEBUG [a70f17b5] 	
+ DEBUG [a70f17b5] 	LINE 1: CREATE user fut-std_production WITH password '4ebeb0e72a3bf4...
+ DEBUG [a70f17b5] 	
+ DEBUG [a70f17b5] 	                       ^
+ DEBUG [a70f17b5] 	
+ DEBUG [a70f17b5] Finished in 0.817 seconds with exit status 1 (failed).
+ ERROR postgresql: creating database user failed!
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 01:37:44 +0200 cap production droplet:dsetup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e73ebfd8] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [e73ebfd8] Command: [ -d $HOME/.rbenv ]
+ DEBUG [e73ebfd8] Finished in 3.190 seconds with exit status 0 (successful).
+ DEBUG [4e4d1586] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [4e4d1586] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [4e4d1586] Finished in 3.149 seconds with exit status 0 (successful).
+ DEBUG [61780d0a] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [61780d0a] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [61780d0a] Finished in 0.551 seconds with exit status 0 (successful).
+ DEBUG [ce34a553] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [ce34a553] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [ce34a553] 	true
+ DEBUG [ce34a553] 	
+ DEBUG [ce34a553] Finished in 0.777 seconds with exit status 0 (successful).
+ DEBUG [659dcc5c] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [659dcc5c] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [659dcc5c] Finished in 0.552 seconds with exit status 0 (successful).
+  INFO [2fc31ba8] Running /usr/bin/env sudo apt-get -y install postgresql postgresql-contrib libpq-dev as deployer@138.197.73.98
+ DEBUG [2fc31ba8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo apt-get -y install postgresql postgresql-contrib libpq-dev )
+ DEBUG [2fc31ba8] 	Reading package lists... 0%
+ DEBUG [2fc31ba8] 	Reading package lists... 100%
+ DEBUG [2fc31ba8] 	Reading package lists... Done
+ DEBUG [2fc31ba8] 	
+ DEBUG [2fc31ba8] 	Building dependency tree... 0%
+ DEBUG [2fc31ba8] 	Building dependency tree... 0%
+ DEBUG [2fc31ba8] 	Building dependency tree... 50%
+ DEBUG [2fc31ba8] 	Building dependency tree... 50%
+ DEBUG [2fc31ba8] 	Building dependency tree       
+ DEBUG [2fc31ba8] 	
+ DEBUG [2fc31ba8] 	Reading state information... 0%
+ DEBUG [2fc31ba8] 	Reading state information... 0%
+ DEBUG [2fc31ba8] 	Reading state information... Done
+ DEBUG [2fc31ba8] 	
+ DEBUG [2fc31ba8] 	libpq-dev is already the newest version.
+ DEBUG [2fc31ba8] 	
+ DEBUG [2fc31ba8] 	postgresql is already the newest version.
+ DEBUG [2fc31ba8] 	
+ DEBUG [2fc31ba8] 	postgresql-contrib is already the newest version.
+ DEBUG [2fc31ba8] 	
+ DEBUG [2fc31ba8] 	0 upgraded, 0 newly installed, 0 to remove and 42 not upgraded.
+ DEBUG [2fc31ba8] 	
+  INFO [2fc31ba8] Finished in 1.233 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 01:43:20 +0200 cap production setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [88bba0fd] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [88bba0fd] Command: [ -d $HOME/.rbenv ]
+ DEBUG [88bba0fd] Finished in 3.337 seconds with exit status 0 (successful).
+ DEBUG [29cdf1fa] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [29cdf1fa] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [29cdf1fa] Finished in 3.606 seconds with exit status 0 (successful).
+ DEBUG [13ae943d] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [13ae943d] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [13ae943d] Finished in 0.579 seconds with exit status 0 (successful).
+ DEBUG [402c7178] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [402c7178] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [402c7178] 	true
+ DEBUG [402c7178] 	
+ DEBUG [402c7178] Finished in 0.861 seconds with exit status 0 (successful).
+ DEBUG [738d3aae] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [738d3aae] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [738d3aae] Finished in 0.579 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/fut-std_production 0.0%
+  INFO Uploading /tmp/fut-std_production 100.0%
+  INFO [b0fc214b] Running /usr/bin/env sudo mv /tmp/fut-std_production /etc/nginx/sites-available as deployer@138.197.73.98
+ DEBUG [b0fc214b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/fut-std_production /etc/nginx/sites-available )
+  INFO [b0fc214b] Finished in 0.586 seconds with exit status 0 (successful).
+  INFO [7136019a] Running /usr/bin/env sudo ln -fs /etc/nginx/sites-available/fut-std_production /etc/nginx/sites-enabled/fut-std_production as deployer@138.197.73.98
+ DEBUG [7136019a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo ln -fs /etc/nginx/sites-available/fut-std_production /etc/nginx/sites-enabled/fut-std_production )
+  INFO [7136019a] Finished in 0.590 seconds with exit status 0 (successful).
+ DEBUG [d8252cac] Running /usr/bin/env id -un as deployer@138.197.73.98
+ DEBUG [d8252cac] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -un )
+ DEBUG [d8252cac] 	deployer
+ DEBUG [d8252cac] 	
+ DEBUG [d8252cac] Finished in 0.580 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/unicorn_fut-std_production 0.0%
+  INFO Uploading /tmp/unicorn_fut-std_production 100.0%
+  INFO [6fb88fb3] Running /usr/bin/env sudo mv /tmp/unicorn_fut-std_production /etc/init.d as deployer@138.197.73.98
+ DEBUG [6fb88fb3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/unicorn_fut-std_production /etc/init.d )
+  INFO [6fb88fb3] Finished in 0.586 seconds with exit status 0 (successful).
+  INFO [d19d44e2] Running /usr/bin/env chmod +x /etc/init.d/unicorn_fut-std_production as deployer@138.197.73.98
+ DEBUG [d19d44e2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod +x /etc/init.d/unicorn_fut-std_production )
+  INFO [d19d44e2] Finished in 0.580 seconds with exit status 0 (successful).
+  INFO [2c624c68] Running /usr/bin/env sudo update-rc.d -f unicorn_fut-std_production defaults as deployer@138.197.73.98
+ DEBUG [2c624c68] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo update-rc.d -f unicorn_fut-std_production defaults )
+ DEBUG [2c624c68] 	perl: warning: Setting locale failed.
+ DEBUG [2c624c68] 	
+ DEBUG [2c624c68] 	perl: warning: Please check that your locale settings:
+ DEBUG [2c624c68] 	
+ DEBUG [2c624c68] 		
+ DEBUG [2c624c68] 	LANGUAGE = (unset),
+ DEBUG [2c624c68] 	
+ DEBUG [2c624c68] 		
+ DEBUG [2c624c68] 	LC_ALL = (unset),
+ DEBUG [2c624c68] 	
+ DEBUG [2c624c68] 		
+ DEBUG [2c624c68] 	LC_CTYPE = "UTF-8",
+ DEBUG [2c624c68] 	
+ DEBUG [2c624c68] 		
+ DEBUG [2c624c68] 	LANG = "en_US.UTF-8"
+ DEBUG [2c624c68] 	
+ DEBUG [2c624c68] 	    are supported and installed on your system.
+ DEBUG [2c624c68] 	
+ DEBUG [2c624c68] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [2c624c68] 	
+ DEBUG [2c624c68] 	 System start/stop links for /etc/init.d/unicorn_fut-std_production already exist.
+ DEBUG [2c624c68] 	
+  INFO [2c624c68] Finished in 0.864 seconds with exit status 0 (successful).
+  INFO [a1fc1aff] Running /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config as deployer@138.197.73.98
+ DEBUG [a1fc1aff] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config )
+  INFO [a1fc1aff] Finished in 0.583 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/deployer/apps/fut-std/shared/config/unicorn.rb 0.0%
+  INFO Uploading /home/deployer/apps/fut-std/shared/config/unicorn.rb 100.0%
+  INFO [8bcc93ff] Running /usr/bin/env sudo mkdir -pv /etc/logrotate.d as deployer@138.197.73.98
+ DEBUG [8bcc93ff] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mkdir -pv /etc/logrotate.d )
+  INFO [8bcc93ff] Finished in 0.584 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/unicorn_fut-std_production 0.0%
+  INFO Uploading /tmp/unicorn_fut-std_production 100.0%
+  INFO [7b00637c] Running /usr/bin/env sudo mv /tmp/unicorn_fut-std_production /etc/logrotate.d as deployer@138.197.73.98
+ DEBUG [7b00637c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/unicorn_fut-std_production /etc/logrotate.d )
+  INFO [7b00637c] Finished in 0.585 seconds with exit status 0 (successful).
+  INFO [2ab82968] Running /usr/bin/env sudo chown root:root /etc/logrotate.d/unicorn_fut-std_production as deployer@138.197.73.98
+ DEBUG [2ab82968] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo chown root:root /etc/logrotate.d/unicorn_fut-std_production )
+  INFO [2ab82968] Finished in 0.586 seconds with exit status 0 (successful).
+ DEBUG [e9c4a8a2] Running /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 as deployer@138.197.73.98
+ DEBUG [e9c4a8a2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 )
+ DEBUG [e9c4a8a2] 	perl: warning: Setting locale failed.
+ DEBUG [e9c4a8a2] 	
+ DEBUG [e9c4a8a2] 	perl: warning: Please check that your locale settings:
+ DEBUG [e9c4a8a2] 	
+ DEBUG [e9c4a8a2] 		
+ DEBUG [e9c4a8a2] 	LANGUAGE = (unset),
+ DEBUG [e9c4a8a2] 	
+ DEBUG [e9c4a8a2] 		
+ DEBUG [e9c4a8a2] 	LC_ALL = (unset),
+ DEBUG [e9c4a8a2] 	
+ DEBUG [e9c4a8a2] 		
+ DEBUG [e9c4a8a2] 	LC_CTYPE = "UTF-8",
+ DEBUG [e9c4a8a2] 	
+ DEBUG [e9c4a8a2] 		
+ DEBUG [e9c4a8a2] 	LANG = "en_US.UTF-8"
+ DEBUG [e9c4a8a2] 	
+ DEBUG [e9c4a8a2] 	    are supported and installed on your system.
+ DEBUG [e9c4a8a2] 	
+ DEBUG [e9c4a8a2] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [e9c4a8a2] 	
+ DEBUG [e9c4a8a2] Finished in 0.861 seconds with exit status 1 (failed).
+ DEBUG [e2babe98] Running /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password 'a7dffa51636045fa9835';" as deployer@138.197.73.98
+ DEBUG [e2babe98] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password 'a7dffa51636045fa9835';" )
+ DEBUG [e2babe98] 	perl: warning: Setting locale failed.
+ DEBUG [e2babe98] 	
+ DEBUG [e2babe98] 	perl: warning: Please check that your locale settings:
+ DEBUG [e2babe98] 	
+ DEBUG [e2babe98] 		
+ DEBUG [e2babe98] 	LANGUAGE = (unset),
+ DEBUG [e2babe98] 	
+ DEBUG [e2babe98] 		
+ DEBUG [e2babe98] 	LC_ALL = (unset),
+ DEBUG [e2babe98] 	
+ DEBUG [e2babe98] 		
+ DEBUG [e2babe98] 	LC_CTYPE = "UTF-8",
+ DEBUG [e2babe98] 	
+ DEBUG [e2babe98] 		
+ DEBUG [e2babe98] 	LANG = "en_US.UTF-8"
+ DEBUG [e2babe98] 	
+ DEBUG [e2babe98] 	    are supported and installed on your system.
+ DEBUG [e2babe98] 	
+ DEBUG [e2babe98] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [e2babe98] 	
+ DEBUG [e2babe98] 	ERROR:  syntax error at or near "-"
+ DEBUG [e2babe98] 	
+ DEBUG [e2babe98] 	LINE 1: CREATE user fut-std_production WITH password 'a7dffa51636045...
+ DEBUG [e2babe98] 	
+ DEBUG [e2babe98] 	                       ^
+ DEBUG [e2babe98] 	
+ DEBUG [e2babe98] Finished in 0.861 seconds with exit status 1 (failed).
+ ERROR postgresql: creating database user failed!
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 01:44:04 +0200 cap production setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [fb562489] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [fb562489] Command: [ -d $HOME/.rbenv ]
+ DEBUG [fb562489] Finished in 3.160 seconds with exit status 0 (successful).
+ DEBUG [b1458ae9] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [b1458ae9] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [b1458ae9] Finished in 3.231 seconds with exit status 0 (successful).
+ DEBUG [2f3145ab] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [2f3145ab] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [2f3145ab] Finished in 0.563 seconds with exit status 0 (successful).
+ DEBUG [5a926399] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [5a926399] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [5a926399] 	true
+ DEBUG [5a926399] 	
+ DEBUG [5a926399] Finished in 0.796 seconds with exit status 0 (successful).
+ DEBUG [13c57b60] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [13c57b60] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [13c57b60] Finished in 0.572 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/fut-std_production 0.0%
+  INFO Uploading /tmp/fut-std_production 100.0%
+  INFO [2222d524] Running /usr/bin/env sudo mv /tmp/fut-std_production /etc/nginx/sites-available as deployer@138.197.73.98
+ DEBUG [2222d524] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/fut-std_production /etc/nginx/sites-available )
+  INFO [2222d524] Finished in 0.572 seconds with exit status 0 (successful).
+  INFO [d13be435] Running /usr/bin/env sudo ln -fs /etc/nginx/sites-available/fut-std_production /etc/nginx/sites-enabled/fut-std_production as deployer@138.197.73.98
+ DEBUG [d13be435] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo ln -fs /etc/nginx/sites-available/fut-std_production /etc/nginx/sites-enabled/fut-std_production )
+  INFO [d13be435] Finished in 0.575 seconds with exit status 0 (successful).
+ DEBUG [b0d541c5] Running /usr/bin/env id -un as deployer@138.197.73.98
+ DEBUG [b0d541c5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -un )
+ DEBUG [b0d541c5] 	deployer
+ DEBUG [b0d541c5] 	
+ DEBUG [b0d541c5] Finished in 0.569 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/unicorn_fut-std_production 0.0%
+  INFO Uploading /tmp/unicorn_fut-std_production 100.0%
+  INFO [7e787a6c] Running /usr/bin/env sudo mv /tmp/unicorn_fut-std_production /etc/init.d as deployer@138.197.73.98
+ DEBUG [7e787a6c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/unicorn_fut-std_production /etc/init.d )
+  INFO [7e787a6c] Finished in 0.573 seconds with exit status 0 (successful).
+  INFO [90b44a9c] Running /usr/bin/env chmod +x /etc/init.d/unicorn_fut-std_production as deployer@138.197.73.98
+ DEBUG [90b44a9c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod +x /etc/init.d/unicorn_fut-std_production )
+  INFO [90b44a9c] Finished in 0.565 seconds with exit status 0 (successful).
+  INFO [2af229d8] Running /usr/bin/env sudo update-rc.d -f unicorn_fut-std_production defaults as deployer@138.197.73.98
+ DEBUG [2af229d8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo update-rc.d -f unicorn_fut-std_production defaults )
+ DEBUG [2af229d8] 	perl: warning: Setting locale failed.
+ DEBUG [2af229d8] 	
+ DEBUG [2af229d8] 	perl: warning: Please check that your locale settings:
+ DEBUG [2af229d8] 	
+ DEBUG [2af229d8] 		
+ DEBUG [2af229d8] 	LANGUAGE = (unset),
+ DEBUG [2af229d8] 	
+ DEBUG [2af229d8] 		
+ DEBUG [2af229d8] 	LC_ALL = (unset),
+ DEBUG [2af229d8] 	
+ DEBUG [2af229d8] 		
+ DEBUG [2af229d8] 	LC_CTYPE = "UTF-8",
+ DEBUG [2af229d8] 	
+ DEBUG [2af229d8] 		
+ DEBUG [2af229d8] 	LANG = "en_US.UTF-8"
+ DEBUG [2af229d8] 	
+ DEBUG [2af229d8] 	    are supported and installed on your system.
+ DEBUG [2af229d8] 	
+ DEBUG [2af229d8] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [2af229d8] 	
+ DEBUG [2af229d8] 	 System start/stop links for /etc/init.d/unicorn_fut-std_production already exist.
+ DEBUG [2af229d8] 	
+  INFO [2af229d8] Finished in 0.842 seconds with exit status 0 (successful).
+  INFO [2685e169] Running /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config as deployer@138.197.73.98
+ DEBUG [2685e169] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config )
+  INFO [2685e169] Finished in 0.567 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/deployer/apps/fut-std/shared/config/unicorn.rb 0.0%
+  INFO Uploading /home/deployer/apps/fut-std/shared/config/unicorn.rb 100.0%
+  INFO [749f3e08] Running /usr/bin/env sudo mkdir -pv /etc/logrotate.d as deployer@138.197.73.98
+ DEBUG [749f3e08] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mkdir -pv /etc/logrotate.d )
+  INFO [749f3e08] Finished in 0.572 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/unicorn_fut-std_production 0.0%
+  INFO Uploading /tmp/unicorn_fut-std_production 100.0%
+  INFO [f269939d] Running /usr/bin/env sudo mv /tmp/unicorn_fut-std_production /etc/logrotate.d as deployer@138.197.73.98
+ DEBUG [f269939d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/unicorn_fut-std_production /etc/logrotate.d )
+  INFO [f269939d] Finished in 0.572 seconds with exit status 0 (successful).
+  INFO [220ef49a] Running /usr/bin/env sudo chown root:root /etc/logrotate.d/unicorn_fut-std_production as deployer@138.197.73.98
+ DEBUG [220ef49a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo chown root:root /etc/logrotate.d/unicorn_fut-std_production )
+  INFO [220ef49a] Finished in 0.579 seconds with exit status 0 (successful).
+ DEBUG [817b671e] Running /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 as deployer@138.197.73.98
+ DEBUG [817b671e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 )
+ DEBUG [817b671e] 	perl: warning: Setting locale failed.
+ DEBUG [817b671e] 	
+ DEBUG [817b671e] 	perl: warning: Please check that your locale settings:
+ DEBUG [817b671e] 	
+ DEBUG [817b671e] 		
+ DEBUG [817b671e] 	LANGUAGE = (unset),
+ DEBUG [817b671e] 	
+ DEBUG [817b671e] 		
+ DEBUG [817b671e] 	LC_ALL = (unset),
+ DEBUG [817b671e] 	
+ DEBUG [817b671e] 		
+ DEBUG [817b671e] 	LC_CTYPE = "UTF-8",
+ DEBUG [817b671e] 	
+ DEBUG [817b671e] 		
+ DEBUG [817b671e] 	LANG = "en_US.UTF-8"
+ DEBUG [817b671e] 	
+ DEBUG [817b671e] 	    are supported and installed on your system.
+ DEBUG [817b671e] 	
+ DEBUG [817b671e] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [817b671e] 	
+ DEBUG [817b671e] Finished in 0.845 seconds with exit status 1 (failed).
+ DEBUG [ad2a6f61] Running /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password 'afa9ddb506d3d0e331fb';" as deployer@138.197.73.98
+ DEBUG [ad2a6f61] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password 'afa9ddb506d3d0e331fb';" )
+ DEBUG [ad2a6f61] 	perl: warning: Setting locale failed.
+ DEBUG [ad2a6f61] 	
+ DEBUG [ad2a6f61] 	perl: warning: Please check that your locale settings:
+ DEBUG [ad2a6f61] 	
+ DEBUG [ad2a6f61] 		
+ DEBUG [ad2a6f61] 	LANGUAGE = (unset),
+ DEBUG [ad2a6f61] 	
+ DEBUG [ad2a6f61] 		
+ DEBUG [ad2a6f61] 	LC_ALL = (unset),
+ DEBUG [ad2a6f61] 	
+ DEBUG [ad2a6f61] 		
+ DEBUG [ad2a6f61] 	LC_CTYPE = "UTF-8",
+ DEBUG [ad2a6f61] 	
+ DEBUG [ad2a6f61] 		
+ DEBUG [ad2a6f61] 	LANG = "en_US.UTF-8"
+ DEBUG [ad2a6f61] 	
+ DEBUG [ad2a6f61] 	    are supported and installed on your system.
+ DEBUG [ad2a6f61] 	
+ DEBUG [ad2a6f61] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [ad2a6f61] 	
+ DEBUG [ad2a6f61] 	ERROR:  syntax error at or near "-"
+ DEBUG [ad2a6f61] 	
+ DEBUG [ad2a6f61] 	LINE 1: CREATE user fut-std_production WITH password 'afa9ddb506d3d0...
+ DEBUG [ad2a6f61] 	
+ DEBUG [ad2a6f61] 	                       ^
+ DEBUG [ad2a6f61] 	
+ DEBUG [ad2a6f61] Finished in 0.839 seconds with exit status 1 (failed).
+ ERROR postgresql: creating database user failed!
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 01:49:44 +0200 cap production droplet:dsetup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6fc04cd3] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [6fc04cd3] Command: [ -d $HOME/.rbenv ]
+ DEBUG [6fc04cd3] Finished in 3.245 seconds with exit status 0 (successful).
+ DEBUG [b94eec81] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [b94eec81] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [b94eec81] Finished in 3.479 seconds with exit status 0 (successful).
+ DEBUG [7aa87e26] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [7aa87e26] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [7aa87e26] Finished in 0.570 seconds with exit status 0 (successful).
+ DEBUG [f5a61923] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [f5a61923] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [f5a61923] 	true
+ DEBUG [f5a61923] 	
+ DEBUG [f5a61923] Finished in 0.823 seconds with exit status 0 (successful).
+ DEBUG [89b03d14] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [89b03d14] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [89b03d14] Finished in 0.570 seconds with exit status 0 (successful).
+  INFO [278755ba] Running /usr/bin/env sudo sudo apt-get install language-pack-UTF-8 as deployer@138.197.73.98
+ DEBUG [278755ba] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo sudo apt-get install language-pack-UTF-8 )
+ DEBUG [278755ba] 	Reading package lists... 0%
+ DEBUG [278755ba] 	Reading package lists... 100%
+ DEBUG [278755ba] 	Reading package lists... Done
+ DEBUG [278755ba] 	
+ DEBUG [278755ba] 	Building dependency tree... 0%
+ DEBUG [278755ba] 	Building dependency tree... 0%
+ DEBUG [278755ba] 	Building dependency tree... 50%
+ DEBUG [278755ba] 	Building dependency tree... 50%
+ DEBUG [278755ba] 	Building dependency tree       
+ DEBUG [278755ba] 	
+ DEBUG [278755ba] 	Reading state information... 0%
+ DEBUG [278755ba] 	Reading state information... 0%
+ DEBUG [278755ba] 	Reading state information... Done
+ DEBUG [278755ba] 	
+ DEBUG [278755ba] 	E
+ DEBUG [278755ba] 	: 
+ DEBUG [278755ba] 	Unable to locate package language-pack-UTF-8
+ DEBUG [278755ba] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 01:52:53 +0200 cap production droplet:dsetup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [5a0b5714] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [5a0b5714] Command: [ -d $HOME/.rbenv ]
+ DEBUG [5a0b5714] Finished in 3.278 seconds with exit status 0 (successful).
+ DEBUG [d82a6ca7] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [d82a6ca7] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [d82a6ca7] Finished in 3.209 seconds with exit status 0 (successful).
+ DEBUG [c21f75b7] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [c21f75b7] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [c21f75b7] Finished in 0.563 seconds with exit status 0 (successful).
+ DEBUG [d6f10f1f] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [d6f10f1f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [d6f10f1f] 	true
+ DEBUG [d6f10f1f] 	
+ DEBUG [d6f10f1f] Finished in 0.878 seconds with exit status 0 (successful).
+ DEBUG [96d41fb7] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [96d41fb7] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [96d41fb7] Finished in 0.568 seconds with exit status 0 (successful).
+  INFO [4b563f38] Running /usr/bin/env sudo sudo apt-get install --reinstall language-pack-en-base as deployer@138.197.73.98
+ DEBUG [4b563f38] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo sudo apt-get install --reinstall language-pack-en-base )
+ DEBUG [4b563f38] 	Reading package lists... 0%
+ DEBUG [4b563f38] 	Reading package lists... 100%
+ DEBUG [4b563f38] 	Reading package lists... Done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	Building dependency tree... 0%
+ DEBUG [4b563f38] 	Building dependency tree... 0%
+ DEBUG [4b563f38] 	Building dependency tree... 50%
+ DEBUG [4b563f38] 	Building dependency tree... 50%
+ DEBUG [4b563f38] 	Building dependency tree       
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	Reading state information... 0%
+ DEBUG [4b563f38] 	Reading state information... 0%
+ DEBUG [4b563f38] 	Reading state information... Done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	0 upgraded, 0 newly installed, 1 reinstalled, 0 to remove and 42 not upgraded.
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	Need to get 484 kB of archives.
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	After this operation, 0 B of additional disk space will be used.
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	0% [Working]
+ DEBUG [4b563f38] 	0% [Working]
+ DEBUG [4b563f38] 	            Get:1 http://mirrors.digitalocean.com/ubuntu/ trusty-updates/main language-pack-en-base all 1:14.04+20160720 [484 kB]
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	            0% [1 language-pack-en-base 0 B/484 kB 0%]
+ DEBUG [4b563f38] 	                                          100% [Working]
+ DEBUG [4b563f38] 	              
+ DEBUG [4b563f38] 	Fetched 484 kB in 0s (1623 kB/s)
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	perl: warning: Setting locale failed.
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	perl: warning: Please check that your locale settings:
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 		
+ DEBUG [4b563f38] 	LANGUAGE = (unset),
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 		
+ DEBUG [4b563f38] 	LC_ALL = (unset),
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 		
+ DEBUG [4b563f38] 	LC_CTYPE = "UTF-8",
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 		
+ DEBUG [4b563f38] 	LANG = "en_US.UTF-8"
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	    are supported and installed on your system.
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	locale: 
+ DEBUG [4b563f38] 	Cannot set LC_CTYPE to default locale
+ DEBUG [4b563f38] 	: No such file or directory
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	locale: 
+ DEBUG [4b563f38] 	Cannot set LC_ALL to default locale
+ DEBUG [4b563f38] 	: No such file or directory
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	(Reading database ... 
+ DEBUG [4b563f38] 	(Reading database ... 5%
+ DEBUG [4b563f38] 	(Reading database ... 10%
+ DEBUG [4b563f38] 	(Reading database ... 15%
+ DEBUG [4b563f38] 	(Reading database ... 20%
+ DEBUG [4b563f38] 	(Reading database ... 25%
+ DEBUG [4b563f38] 	(Reading database ... 30%
+ DEBUG [4b563f38] 	(Reading database ... 35%
+ DEBUG [4b563f38] 	(Reading database ... 40%
+ DEBUG [4b563f38] 	(Reading database ... 45%
+ DEBUG [4b563f38] 	(Reading database ... 50%
+ DEBUG [4b563f38] 	(Reading database ... 55%
+ DEBUG [4b563f38] 	(Reading database ... 60%
+ DEBUG [4b563f38] 	(Reading database ... 65%
+ DEBUG [4b563f38] 	(Reading database ... 70%
+ DEBUG [4b563f38] 	(Reading database ... 75%
+ DEBUG [4b563f38] 	(Reading database ... 80%
+ DEBUG [4b563f38] 	(Reading database ... 85%
+ DEBUG [4b563f38] 	(Reading database ... 90%
+ DEBUG [4b563f38] 	(Reading database ... 95%
+ DEBUG [4b563f38] 	(Reading database ... 100%
+ DEBUG [4b563f38] 	(Reading database ... 
+ DEBUG [4b563f38] 	71926 files and directories currently installed.)
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	Preparing to unpack .../language-pack-en-base_1%3a14.04+20160720_all.deb ...
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	Unpacking language-pack-en-base (1:14.04+20160720) over (1:14.04+20160720) ...
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	Setting up language-pack-en-base (1:14.04+20160720) ...
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	Generating locales...
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_AG.UTF-8... 
+ DEBUG [4b563f38] 	done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_AU.UTF-8... 
+ DEBUG [4b563f38] 	done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_BW.UTF-8... 
+ DEBUG [4b563f38] 	done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_CA.UTF-8... 
+ DEBUG [4b563f38] 	done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_DK.UTF-8... 
+ DEBUG [4b563f38] 	done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_GB.UTF-8... 
+ DEBUG [4b563f38] 	done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_HK.UTF-8... 
+ DEBUG [4b563f38] 	done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_IE.UTF-8... 
+ DEBUG [4b563f38] 	done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_IN.UTF-8... 
+ DEBUG [4b563f38] 	done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_NG.UTF-8... 
+ DEBUG [4b563f38] 	done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_NZ.UTF-8... 
+ DEBUG [4b563f38] 	done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_PH.UTF-8... 
+ DEBUG [4b563f38] 	done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_SG.UTF-8... 
+ DEBUG [4b563f38] 	done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_US.UTF-8... 
+ DEBUG [4b563f38] 	up-to-date
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_ZA.UTF-8... 
+ DEBUG [4b563f38] 	done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_ZM.UTF-8... 
+ DEBUG [4b563f38] 	done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	  en_ZW.UTF-8... 
+ DEBUG [4b563f38] 	done
+ DEBUG [4b563f38] 	
+ DEBUG [4b563f38] 	Generation complete.
+ DEBUG [4b563f38] 	
+  INFO [4b563f38] Finished in 18.989 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 01:56:22 +0200 cap production droplet:dsetup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [40a75041] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [40a75041] Command: [ -d $HOME/.rbenv ]
+ DEBUG [40a75041] Finished in 3.371 seconds with exit status 0 (successful).
+ DEBUG [daf920a7] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [daf920a7] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [daf920a7] Finished in 3.142 seconds with exit status 0 (successful).
+ DEBUG [9a7c12f1] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [9a7c12f1] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [9a7c12f1] Finished in 0.549 seconds with exit status 0 (successful).
+ DEBUG [dc356a1a] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [dc356a1a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [dc356a1a] 	true
+ DEBUG [dc356a1a] 	
+ DEBUG [dc356a1a] Finished in 0.788 seconds with exit status 0 (successful).
+ DEBUG [8d08f993] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [8d08f993] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [8d08f993] Finished in 0.549 seconds with exit status 0 (successful).
+  INFO [1e3bdd99] Running /usr/bin/env sudo sudo locale-gen en_GB.UTF-8 as deployer@138.197.73.98
+ DEBUG [1e3bdd99] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo sudo locale-gen en_GB.UTF-8 )
+ DEBUG [1e3bdd99] 	Generating locales...
+ DEBUG [1e3bdd99] 	
+ DEBUG [1e3bdd99] 	  en_GB.UTF-8... 
+ DEBUG [1e3bdd99] 	up-to-date
+ DEBUG [1e3bdd99] 	
+ DEBUG [1e3bdd99] 	Generation complete.
+ DEBUG [1e3bdd99] 	
+  INFO [1e3bdd99] Finished in 0.660 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 02:07:05 +0200 cap production droplet:dsetup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [76f53d46] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [76f53d46] Command: [ -d $HOME/.rbenv ]
+ DEBUG [76f53d46] Finished in 3.196 seconds with exit status 0 (successful).
+ DEBUG [c4f21cfa] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [c4f21cfa] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [c4f21cfa] Finished in 3.180 seconds with exit status 0 (successful).
+ DEBUG [8640b8a9] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [8640b8a9] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [8640b8a9] Finished in 0.563 seconds with exit status 0 (successful).
+ DEBUG [3c2306db] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [3c2306db] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [3c2306db] 	true
+ DEBUG [3c2306db] 	
+ DEBUG [3c2306db] Finished in 0.803 seconds with exit status 0 (successful).
+ DEBUG [1ea490d1] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [1ea490d1] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [1ea490d1] Finished in 0.568 seconds with exit status 0 (successful).
+  INFO [f8965638] Running echo 'export LANG="en_US.utf8"' >> ~/.bashrc as deployer@138.197.73.98
+ DEBUG [f8965638] Command: echo 'export LANG="en_US.utf8"' >> ~/.bashrc
+  INFO [f8965638] Finished in 0.559 seconds with exit status 0 (successful).
+  INFO [280cb19f] Running echo 'export LANGUAGE="en_US.utf8"' >> ~/.bashrc as deployer@138.197.73.98
+ DEBUG [280cb19f] Command: echo 'export LANGUAGE="en_US.utf8"' >> ~/.bashrc
+  INFO [280cb19f] Finished in 0.560 seconds with exit status 0 (successful).
+  INFO [5d3c2379] Running echo 'export LC_ALL="en_US.UTF-8"' >> ~/.bashrc as deployer@138.197.73.98
+ DEBUG [5d3c2379] Command: echo 'export LC_ALL="en_US.UTF-8"' >> ~/.bashrc
+  INFO [5d3c2379] Finished in 0.563 seconds with exit status 0 (successful).
+  INFO [9dc1c1d6] Running source /home/deployer/.bashrc as deployer@138.197.73.98
+ DEBUG [9dc1c1d6] Command: source /home/deployer/.bashrc
+  INFO [9dc1c1d6] Finished in 0.560 seconds with exit status 0 (successful).
+  INFO [4f4207f8] Running source /home/deployer/.bashrc as deployer@138.197.73.98
+ DEBUG [4f4207f8] Command: source /home/deployer/.bashrc
+  INFO [4f4207f8] Finished in 0.560 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 02:07:28 +0200 cap production postgresql:setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2e39070e] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [2e39070e] Command: [ -d $HOME/.rbenv ]
+ DEBUG [2e39070e] Finished in 3.257 seconds with exit status 0 (successful).
+ DEBUG [39033abd] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [39033abd] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [39033abd] Finished in 3.260 seconds with exit status 0 (successful).
+ DEBUG [242591aa] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [242591aa] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [242591aa] Finished in 0.561 seconds with exit status 0 (successful).
+ DEBUG [cc84265f] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [cc84265f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [cc84265f] 	true
+ DEBUG [cc84265f] 	
+ DEBUG [cc84265f] Finished in 0.824 seconds with exit status 0 (successful).
+ DEBUG [fa8ec6a6] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [fa8ec6a6] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [fa8ec6a6] Finished in 0.562 seconds with exit status 0 (successful).
+ DEBUG [1ba1280a] Running /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 as deployer@138.197.73.98
+ DEBUG [1ba1280a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 )
+ DEBUG [1ba1280a] 	perl: warning: Setting locale failed.
+ DEBUG [1ba1280a] 	
+ DEBUG [1ba1280a] 	perl: warning: Please check that your locale settings:
+ DEBUG [1ba1280a] 	
+ DEBUG [1ba1280a] 		
+ DEBUG [1ba1280a] 	LANGUAGE = (unset),
+ DEBUG [1ba1280a] 	
+ DEBUG [1ba1280a] 		
+ DEBUG [1ba1280a] 	LC_ALL = (unset),
+ DEBUG [1ba1280a] 	
+ DEBUG [1ba1280a] 		
+ DEBUG [1ba1280a] 	LC_CTYPE = "UTF-8",
+ DEBUG [1ba1280a] 	
+ DEBUG [1ba1280a] 		
+ DEBUG [1ba1280a] 	LANG = "en_US.UTF-8"
+ DEBUG [1ba1280a] 	
+ DEBUG [1ba1280a] 	    are supported and installed on your system.
+ DEBUG [1ba1280a] 	
+ DEBUG [1ba1280a] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [1ba1280a] 	
+ DEBUG [1ba1280a] Finished in 0.837 seconds with exit status 1 (failed).
+ DEBUG [c25e5245] Running /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password 'a1c37268cf778488c031';" as deployer@138.197.73.98
+ DEBUG [c25e5245] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password 'a1c37268cf778488c031';" )
+ DEBUG [c25e5245] 	perl: warning: Setting locale failed.
+ DEBUG [c25e5245] 	
+ DEBUG [c25e5245] 	perl: warning: Please check that your locale settings:
+ DEBUG [c25e5245] 	
+ DEBUG [c25e5245] 		
+ DEBUG [c25e5245] 	LANGUAGE = (unset),
+ DEBUG [c25e5245] 	
+ DEBUG [c25e5245] 		
+ DEBUG [c25e5245] 	LC_ALL = (unset),
+ DEBUG [c25e5245] 	
+ DEBUG [c25e5245] 		
+ DEBUG [c25e5245] 	LC_CTYPE = "UTF-8",
+ DEBUG [c25e5245] 	
+ DEBUG [c25e5245] 		
+ DEBUG [c25e5245] 	LANG = "en_US.UTF-8"
+ DEBUG [c25e5245] 	
+ DEBUG [c25e5245] 	    are supported and installed on your system.
+ DEBUG [c25e5245] 	
+ DEBUG [c25e5245] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [c25e5245] 	
+ DEBUG [c25e5245] 	ERROR:  syntax error at or near "-"
+ DEBUG [c25e5245] 	
+ DEBUG [c25e5245] 	LINE 1: CREATE user fut-std_production WITH password 'a1c37268cf7784...
+ DEBUG [c25e5245] 	
+ DEBUG [c25e5245] 	                       ^
+ DEBUG [c25e5245] 	
+ DEBUG [c25e5245] Finished in 0.835 seconds with exit status 1 (failed).
+ ERROR postgresql: creating database user failed!
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 21:50:19 +0200 cap production postgresql:setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d3467d75] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [d3467d75] Command: [ -d $HOME/.rbenv ]
+ DEBUG [d3467d75] Finished in 5.765 seconds with exit status 0 (successful).
+ DEBUG [4219cb8c] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [4219cb8c] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [4219cb8c] Finished in 3.220 seconds with exit status 0 (successful).
+ DEBUG [99c6dca6] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [99c6dca6] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [99c6dca6] Finished in 0.568 seconds with exit status 0 (successful).
+ DEBUG [964e810c] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [964e810c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [964e810c] 	true
+ DEBUG [964e810c] 	
+ DEBUG [964e810c] Finished in 0.907 seconds with exit status 0 (successful).
+ DEBUG [7331befa] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [7331befa] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [7331befa] Finished in 0.567 seconds with exit status 0 (successful).
+ DEBUG [f8b0d0e5] Running /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 as deployer@138.197.73.98
+ DEBUG [f8b0d0e5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 )
+ DEBUG [f8b0d0e5] 	perl: warning: Setting locale failed.
+ DEBUG [f8b0d0e5] 	
+ DEBUG [f8b0d0e5] 	perl: warning: Please check that your locale settings:
+ DEBUG [f8b0d0e5] 	
+ DEBUG [f8b0d0e5] 		
+ DEBUG [f8b0d0e5] 	LANGUAGE = (unset),
+ DEBUG [f8b0d0e5] 	
+ DEBUG [f8b0d0e5] 		
+ DEBUG [f8b0d0e5] 	LC_ALL = (unset),
+ DEBUG [f8b0d0e5] 	
+ DEBUG [f8b0d0e5] 		
+ DEBUG [f8b0d0e5] 	LC_CTYPE = "UTF-8",
+ DEBUG [f8b0d0e5] 	
+ DEBUG [f8b0d0e5] 		
+ DEBUG [f8b0d0e5] 	LANG = "en_US.UTF-8"
+ DEBUG [f8b0d0e5] 	
+ DEBUG [f8b0d0e5] 	    are supported and installed on your system.
+ DEBUG [f8b0d0e5] 	
+ DEBUG [f8b0d0e5] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [f8b0d0e5] 	
+ DEBUG [f8b0d0e5] Finished in 0.851 seconds with exit status 1 (failed).
+ DEBUG [cb8601d5] Running /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password '02c7cab54d37c35cb532';" as deployer@138.197.73.98
+ DEBUG [cb8601d5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password '02c7cab54d37c35cb532';" )
+ DEBUG [cb8601d5] 	perl: warning: Setting locale failed.
+ DEBUG [cb8601d5] 	
+ DEBUG [cb8601d5] 	perl: warning: Please check that your locale settings:
+ DEBUG [cb8601d5] 	
+ DEBUG [cb8601d5] 		
+ DEBUG [cb8601d5] 	LANGUAGE = (unset),
+ DEBUG [cb8601d5] 	
+ DEBUG [cb8601d5] 		
+ DEBUG [cb8601d5] 	LC_ALL = (unset),
+ DEBUG [cb8601d5] 	
+ DEBUG [cb8601d5] 		
+ DEBUG [cb8601d5] 	LC_CTYPE = "UTF-8",
+ DEBUG [cb8601d5] 	
+ DEBUG [cb8601d5] 		
+ DEBUG [cb8601d5] 	LANG = "en_US.UTF-8"
+ DEBUG [cb8601d5] 	
+ DEBUG [cb8601d5] 	    are supported and installed on your system.
+ DEBUG [cb8601d5] 	
+ DEBUG [cb8601d5] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [cb8601d5] 	
+ DEBUG [cb8601d5] 	ERROR:  syntax error at or near "-"
+ DEBUG [cb8601d5] 	
+ DEBUG [cb8601d5] 	LINE 1: CREATE user fut-std_production WITH password '02c7cab54d37c3...
+ DEBUG [cb8601d5] 	
+ DEBUG [cb8601d5] 	                       ^
+ DEBUG [cb8601d5] 	
+ DEBUG [cb8601d5] Finished in 0.849 seconds with exit status 1 (failed).
+ ERROR postgresql: creating database user failed!
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-29 21:59:05 +0200 cap production postgresql:setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e227d12f] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [e227d12f] Command: [ -d $HOME/.rbenv ]
+ DEBUG [e227d12f] Finished in 3.736 seconds with exit status 0 (successful).
+ DEBUG [6fa9be5e] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [6fa9be5e] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [6fa9be5e] Finished in 3.154 seconds with exit status 0 (successful).
+ DEBUG [a577023b] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [a577023b] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [a577023b] Finished in 0.548 seconds with exit status 0 (successful).
+ DEBUG [01927163] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [01927163] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [01927163] 	true
+ DEBUG [01927163] 	
+ DEBUG [01927163] Finished in 0.842 seconds with exit status 0 (successful).
+ DEBUG [ae39b9be] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [ae39b9be] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [ae39b9be] Finished in 0.550 seconds with exit status 0 (successful).
+ DEBUG [0bd01cb6] Running /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='deployer';" | grep -q 1 as deployer@138.197.73.98
+ DEBUG [0bd01cb6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='deployer';" | grep -q 1 )
+ DEBUG [0bd01cb6] 	perl: warning: Setting locale failed.
+ DEBUG [0bd01cb6] 	
+ DEBUG [0bd01cb6] 	perl: warning: Please check that your locale settings:
+ DEBUG [0bd01cb6] 	
+ DEBUG [0bd01cb6] 		
+ DEBUG [0bd01cb6] 	LANGUAGE = (unset),
+ DEBUG [0bd01cb6] 	
+ DEBUG [0bd01cb6] 		
+ DEBUG [0bd01cb6] 	LC_ALL = (unset),
+ DEBUG [0bd01cb6] 	
+ DEBUG [0bd01cb6] 		
+ DEBUG [0bd01cb6] 	LC_CTYPE = "UTF-8",
+ DEBUG [0bd01cb6] 	
+ DEBUG [0bd01cb6] 		
+ DEBUG [0bd01cb6] 	LANG = "en_US.UTF-8"
+ DEBUG [0bd01cb6] 	
+ DEBUG [0bd01cb6] 	    are supported and installed on your system.
+ DEBUG [0bd01cb6] 	
+ DEBUG [0bd01cb6] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [0bd01cb6] 	
+ DEBUG [0bd01cb6] Finished in 0.819 seconds with exit status 1 (failed).
+ DEBUG [581516bd] Running /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user deployer WITH password '3a0a65bf6630c260b64e';" as deployer@138.197.73.98
+ DEBUG [581516bd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user deployer WITH password '3a0a65bf6630c260b64e';" )
+ DEBUG [581516bd] 	perl: warning: Setting locale failed.
+ DEBUG [581516bd] 	
+ DEBUG [581516bd] 	perl: warning: Please check that your locale settings:
+ DEBUG [581516bd] 	
+ DEBUG [581516bd] 		
+ DEBUG [581516bd] 	LANGUAGE = (unset),
+ DEBUG [581516bd] 	
+ DEBUG [581516bd] 		
+ DEBUG [581516bd] 	LC_ALL = (unset),
+ DEBUG [581516bd] 	
+ DEBUG [581516bd] 		
+ DEBUG [581516bd] 	LC_CTYPE = "UTF-8",
+ DEBUG [581516bd] 	
+ DEBUG [581516bd] 		
+ DEBUG [581516bd] 	LANG = "en_US.UTF-8"
+ DEBUG [581516bd] 	
+ DEBUG [581516bd] 	    are supported and installed on your system.
+ DEBUG [581516bd] 	
+ DEBUG [581516bd] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [581516bd] 	
+ DEBUG [581516bd] 	CREATE ROLE
+ DEBUG [581516bd] 	
+ DEBUG [581516bd] Finished in 0.814 seconds with exit status 0 (successful).
+ DEBUG [fc9c6a76] Running /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_database WHERE datname='fut-std_production';" | grep -q 1 as deployer@138.197.73.98
+ DEBUG [fc9c6a76] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_database WHERE datname='fut-std_production';" | grep -q 1 )
+ DEBUG [fc9c6a76] 	perl: warning: Setting locale failed.
+ DEBUG [fc9c6a76] 	
+ DEBUG [fc9c6a76] 	perl: warning: Please check that your locale settings:
+ DEBUG [fc9c6a76] 	
+ DEBUG [fc9c6a76] 		
+ DEBUG [fc9c6a76] 	LANGUAGE = (unset),
+ DEBUG [fc9c6a76] 	
+ DEBUG [fc9c6a76] 		
+ DEBUG [fc9c6a76] 	LC_ALL = (unset),
+ DEBUG [fc9c6a76] 	
+ DEBUG [fc9c6a76] 		
+ DEBUG [fc9c6a76] 	LC_CTYPE = "UTF-8",
+ DEBUG [fc9c6a76] 	
+ DEBUG [fc9c6a76] 		
+ DEBUG [fc9c6a76] 	LANG = "en_US.UTF-8"
+ DEBUG [fc9c6a76] 	
+ DEBUG [fc9c6a76] 	    are supported and installed on your system.
+ DEBUG [fc9c6a76] 	
+ DEBUG [fc9c6a76] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [fc9c6a76] 	
+ DEBUG [fc9c6a76] Finished in 0.609 seconds with exit status 1 (failed).
+ DEBUG [9f93e218] Running /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE database fut-std_production owner deployer;" as deployer@138.197.73.98
+ DEBUG [9f93e218] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE database fut-std_production owner deployer;" )
+ DEBUG [9f93e218] 	perl: warning: Setting locale failed.
+ DEBUG [9f93e218] 	
+ DEBUG [9f93e218] 	perl: warning: Please check that your locale settings:
+ DEBUG [9f93e218] 	
+ DEBUG [9f93e218] 		
+ DEBUG [9f93e218] 	LANGUAGE = (unset),
+ DEBUG [9f93e218] 	
+ DEBUG [9f93e218] 		
+ DEBUG [9f93e218] 	LC_ALL = (unset),
+ DEBUG [9f93e218] 	
+ DEBUG [9f93e218] 		
+ DEBUG [9f93e218] 	LC_CTYPE = "UTF-8",
+ DEBUG [9f93e218] 	
+ DEBUG [9f93e218] 		
+ DEBUG [9f93e218] 	LANG = "en_US.UTF-8"
+ DEBUG [9f93e218] 	
+ DEBUG [9f93e218] 	    are supported and installed on your system.
+ DEBUG [9f93e218] 	
+ DEBUG [9f93e218] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [9f93e218] 	
+ DEBUG [9f93e218] 	ERROR:  syntax error at or near "-"
+ DEBUG [9f93e218] 	
+ DEBUG [9f93e218] 	LINE 1: CREATE database fut-std_production owner deployer;
+ DEBUG [9f93e218] 	
+ DEBUG [9f93e218] 	                           ^
+ DEBUG [9f93e218] 	
+ DEBUG [9f93e218] Finished in 0.828 seconds with exit status 1 (failed).
+ ERROR postgresql: creating database failed!
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-31 15:29:40 +0200 cap production postgresql:generate_database_yml
+  INFO ---------------------------------------------------------------------------
+ DEBUG [803cee0d] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [803cee0d] Command: [ -d $HOME/.rbenv ]
+ DEBUG [803cee0d] Finished in 3.235 seconds with exit status 0 (successful).
+ DEBUG [95302002] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [95302002] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [95302002] Finished in 3.210 seconds with exit status 0 (successful).
+ DEBUG [fe5bcf69] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [fe5bcf69] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [fe5bcf69] Finished in 0.566 seconds with exit status 0 (successful).
+ DEBUG [66fca544] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [66fca544] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [66fca544] 	true
+ DEBUG [66fca544] 	
+ DEBUG [66fca544] Finished in 1.004 seconds with exit status 0 (successful).
+ DEBUG [bfe08363] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [bfe08363] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [bfe08363] Finished in 0.567 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-31 15:37:57 +0200 cap production postgresql:generate_database_yml
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a6242329] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [a6242329] Command: [ -d $HOME/.rbenv ]
+ DEBUG [a6242329] Finished in 3.304 seconds with exit status 0 (successful).
+ DEBUG [a9913fec] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [a9913fec] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [a9913fec] Finished in 3.331 seconds with exit status 0 (successful).
+ DEBUG [1ef5f2c6] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [1ef5f2c6] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [1ef5f2c6] Finished in 0.545 seconds with exit status 0 (successful).
+ DEBUG [3dfbd62a] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [3dfbd62a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [3dfbd62a] 	true
+ DEBUG [3dfbd62a] 	
+ DEBUG [3dfbd62a] Finished in 0.780 seconds with exit status 0 (successful).
+ DEBUG [e86f9637] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [e86f9637] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [e86f9637] Finished in 0.555 seconds with exit status 0 (successful).

@@ -1,0 +1,5 @@
+production:
+  <<: *default
+  database: fut-std_production
+  username: fut-std
+  password: <%= ENV['STD_DATABASE_PASSWORD'] %>

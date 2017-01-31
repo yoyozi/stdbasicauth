@@ -129,6 +129,7 @@ namespace :droplet do
         execute :sudo, "/usr/bin/apt-get -y update"
         execute :sudo, "/usr/bin/apt-get -y install python-software-properties"
         execute :sudo,  "apt-get -y install git-core curl zlib1g-dev logrotate build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libpq-dev"
+        execute :sudo, "apt-get -y install nginx"
         execute :sudo, "apt-get -y install postgresql postgresql-contrib libpq-dev"
         execute :sudo, "service postgresql start"
         execute 'echo | sudo add-apt-repository ppa:chris-lea/node.js'          
@@ -157,7 +158,8 @@ require 'capistrano/secrets_yml'
 > git commit -m "Ready" 
 > git push -u origin master
 
-And FINALY run 
+And FINALY run
+
 >cap production deploy
 
 

@@ -19915,3 +19915,326 @@
  DEBUG [48bcadb3] 	
  DEBUG [48bcadb3] Finished in 0.561 seconds with exit status 1 (failed).
  ERROR postgresql: creating database user failed!
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-31 16:33:17 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d89dc15c] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [d89dc15c] Command: [ -d $HOME/.rbenv ]
+ DEBUG [d89dc15c] Finished in 3.286 seconds with exit status 0 (successful).
+ DEBUG [7ef31905] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [7ef31905] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [7ef31905] Finished in 3.711 seconds with exit status 0 (successful).
+ DEBUG [e35fb3ed] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [e35fb3ed] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [e35fb3ed] Finished in 0.550 seconds with exit status 0 (successful).
+ DEBUG [037ed872] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [037ed872] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [037ed872] 	true
+ DEBUG [037ed872] 	
+ DEBUG [037ed872] Finished in 0.803 seconds with exit status 0 (successful).
+ DEBUG [9a62ab00] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [9a62ab00] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [9a62ab00] Finished in 0.553 seconds with exit status 0 (successful).
+  INFO [654ce40f] Running /usr/bin/env mkdir -p /tmp as deployer@138.197.73.98
+ DEBUG [654ce40f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [654ce40f] Finished in 0.555 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-fut-std-production-craig.sh 0.0%
+  INFO Uploading /tmp/git-ssh-fut-std-production-craig.sh 100.0%
+  INFO [c2101d85] Running /usr/bin/env chmod 700 /tmp/git-ssh-fut-std-production-craig.sh as deployer@138.197.73.98
+ DEBUG [c2101d85] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-fut-std-production-craig.sh )
+  INFO [c2101d85] Finished in 0.555 seconds with exit status 0 (successful).
+  INFO [c9a9f26d] Running /usr/bin/env git ls-remote --heads https://github.com/yoyozi/fut-std.git as deployer@138.197.73.98
+ DEBUG [c9a9f26d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env git ls-remote --heads https://github.com/yoyozi/fut-std.git )
+ DEBUG [c9a9f26d] 	a8ffee50791d254d0b670aa95e8b0e27f217d16c
+ DEBUG [c9a9f26d] 		
+ DEBUG [c9a9f26d] 	refs/heads/master
+ DEBUG [c9a9f26d] 	
+  INFO [c9a9f26d] Finished in 0.832 seconds with exit status 0 (successful).
+  INFO [a2b2c31f] Running /usr/bin/env sudo mkdir -pv /home/deployer/apps/fut-std as deployer@138.197.73.98
+ DEBUG [a2b2c31f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mkdir -pv /home/deployer/apps/fut-std )
+  INFO [a2b2c31f] Finished in 0.570 seconds with exit status 0 (successful).
+ DEBUG [9a9f3857] Running /usr/bin/env id -un as deployer@138.197.73.98
+ DEBUG [9a9f3857] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -un )
+ DEBUG [9a9f3857] 	deployer
+ DEBUG [9a9f3857] 	
+ DEBUG [9a9f3857] Finished in 0.557 seconds with exit status 0 (successful).
+ DEBUG [0e7992e0] Running /usr/bin/env id -gn as deployer@138.197.73.98
+ DEBUG [0e7992e0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -gn )
+ DEBUG [0e7992e0] 	deployer
+ DEBUG [0e7992e0] 	
+ DEBUG [0e7992e0] Finished in 0.557 seconds with exit status 0 (successful).
+  INFO [7ee5d013] Running /usr/bin/env sudo chown deployer:deployer /home/deployer/apps/fut-std as deployer@138.197.73.98
+ DEBUG [7ee5d013] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo chown deployer:deployer /home/deployer/apps/fut-std )
+  INFO [7ee5d013] Finished in 0.563 seconds with exit status 0 (successful).
+  INFO [f1f9934d] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/shared /home/deployer/apps/fut-std/releases as deployer@138.197.73.98
+ DEBUG [f1f9934d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/shared /home/deployer/apps/fut-std/releases )
+  INFO [f1f9934d] Finished in 0.556 seconds with exit status 0 (successful).
+  INFO [08f99633] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/shared/log /home/deployer/apps/fut-std/shared/tmp/pids /home/deployer/apps/fut-std/shared/public/assets as deployer@138.197.73.98
+ DEBUG [08f99633] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/shared/log /home/deployer/apps/fut-std/shared/tmp/pids /home/deployer/apps/fut-std/shared/public/assets )
+  INFO [08f99633] Finished in 0.556 seconds with exit status 0 (successful).
+ DEBUG [491d0a95] Running [ -f /home/deployer/apps/fut-std/current/REVISION ] as deployer@138.197.73.98
+ DEBUG [491d0a95] Command: [ -f /home/deployer/apps/fut-std/current/REVISION ]
+ DEBUG [491d0a95] Finished in 0.553 seconds with exit status 1 (failed).
+ DEBUG [705b754b] Running [ -f /home/deployer/apps/fut-std/repo/HEAD ] as deployer@138.197.73.98
+ DEBUG [705b754b] Command: [ -f /home/deployer/apps/fut-std/repo/HEAD ]
+ DEBUG [705b754b] Finished in 0.551 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deployer/apps/fut-std/repo
+ DEBUG [84ed2884] Running if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [84ed2884] Command: if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi
+ DEBUG [84ed2884] Finished in 0.555 seconds with exit status 0 (successful).
+  INFO [926782f5] Running /usr/bin/env git remote update --prune as deployer@138.197.73.98
+ DEBUG [926782f5] Command: cd /home/deployer/apps/fut-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [926782f5] 	Fetching origin
+ DEBUG [926782f5] 	
+ DEBUG [926782f5] 	remote: Counting objects: 11, done.[K
+ DEBUG [926782f5] 	
+ DEBUG [926782f5] 	remote: Compressing objects:  16% (1/6)   [K
+ DEBUG [926782f5] 	remote: Compressing objects:  33% (2/6)   [K
+ DEBUG [926782f5] 	remote: Compressing objects:  50% (3/6)   [K
+ DEBUG [926782f5] 	remote: Compressing objects:  66% (4/6)   [K
+ DEBUG [926782f5] 	remote: Compressing objects:  83% (5/6)   [K
+ DEBUG [926782f5] 	remote: Compressing objects: 100% (6/6)   [K
+ DEBUG [926782f5] 	remote: Compressing objects: 100% (6/6), done.[K
+ DEBUG [926782f5] 	
+ DEBUG [926782f5] 	Unpacking objects:   9% (1/11)   
+ DEBUG [926782f5] 	Unpacking objects:  18% (2/11)   
+ DEBUG [926782f5] 	Unpacking objects:  27% (3/11)   
+ DEBUG [926782f5] 	Unpacking objects:  36% (4/11)   
+ DEBUG [926782f5] 	Unpacking objects:  45% (5/11)   
+ DEBUG [926782f5] 	Unpacking objects:  54% (6/11)   
+ DEBUG [926782f5] 	Unpacking objects:  63% (7/11)   
+ DEBUG [926782f5] 	Unpacking objects:  72% (8/11)   
+ DEBUG [926782f5] 	remote: Total 11 (delta 6), reused 10 (delta 5), pack-reused 0[K
+ DEBUG [926782f5] 	
+ DEBUG [926782f5] 	Unpacking objects:  81% (9/11)   
+ DEBUG [926782f5] 	Unpacking objects:  90% (10/11)   
+ DEBUG [926782f5] 	Unpacking objects: 100% (11/11)   
+ DEBUG [926782f5] 	Unpacking objects: 100% (11/11), done.
+ DEBUG [926782f5] 	
+ DEBUG [926782f5] 	From https://github.com/yoyozi/fut-std
+ DEBUG [926782f5] 	
+ DEBUG [926782f5] 	   8f6736b..a8ffee5  master     -> master
+ DEBUG [926782f5] 	
+  INFO [926782f5] Finished in 1.343 seconds with exit status 0 (successful).
+ DEBUG [f0c788f8] Running if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [f0c788f8] Command: if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi
+ DEBUG [f0c788f8] Finished in 0.554 seconds with exit status 0 (successful).
+  INFO [3a6d64e8] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170131143334 as deployer@138.197.73.98
+ DEBUG [3a6d64e8] Command: cd /home/deployer/apps/fut-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170131143334 )
+  INFO [3a6d64e8] Finished in 0.556 seconds with exit status 0 (successful).
+  INFO [acf4e1cc] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deployer/apps/fut-std/releases/20170131143334 as deployer@138.197.73.98
+ DEBUG [acf4e1cc] Command: cd /home/deployer/apps/fut-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deployer/apps/fut-std/releases/20170131143334 )
+  INFO [acf4e1cc] Finished in 0.575 seconds with exit status 0 (successful).
+ DEBUG [278be3a7] Running if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [278be3a7] Command: if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi
+ DEBUG [278be3a7] Finished in 0.557 seconds with exit status 0 (successful).
+ DEBUG [16555d45] Running /usr/bin/env git rev-list --max-count=1 master as deployer@138.197.73.98
+ DEBUG [16555d45] Command: cd /home/deployer/apps/fut-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [16555d45] 	a8ffee50791d254d0b670aa95e8b0e27f217d16c
+ DEBUG [16555d45] 	
+ DEBUG [16555d45] Finished in 0.561 seconds with exit status 0 (successful).
+ DEBUG [0ed4c7b8] Running if test ! -d /home/deployer/apps/fut-std/releases/20170131143334; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170131143334'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [0ed4c7b8] Command: if test ! -d /home/deployer/apps/fut-std/releases/20170131143334; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170131143334'" 1>&2; false; fi
+ DEBUG [0ed4c7b8] Finished in 0.557 seconds with exit status 0 (successful).
+  INFO [c34cd897] Running /usr/bin/env echo "a8ffee50791d254d0b670aa95e8b0e27f217d16c" >> REVISION as deployer@138.197.73.98
+ DEBUG [c34cd897] Command: cd /home/deployer/apps/fut-std/releases/20170131143334 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "a8ffee50791d254d0b670aa95e8b0e27f217d16c" >> REVISION )
+  INFO [c34cd897] Finished in 0.556 seconds with exit status 0 (successful).
+  INFO [da827db4] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170131143334/config as deployer@138.197.73.98
+ DEBUG [da827db4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170131143334/config )
+  INFO [da827db4] Finished in 0.558 seconds with exit status 0 (successful).
+ DEBUG [34cef346] Running [ -L /home/deployer/apps/fut-std/releases/20170131143334/config/database.yml ] as deployer@138.197.73.98
+ DEBUG [34cef346] Command: [ -L /home/deployer/apps/fut-std/releases/20170131143334/config/database.yml ]
+ DEBUG [34cef346] Finished in 0.555 seconds with exit status 1 (failed).
+ DEBUG [9ea7419b] Running [ -f /home/deployer/apps/fut-std/releases/20170131143334/config/database.yml ] as deployer@138.197.73.98
+ DEBUG [9ea7419b] Command: [ -f /home/deployer/apps/fut-std/releases/20170131143334/config/database.yml ]
+ DEBUG [9ea7419b] Finished in 0.554 seconds with exit status 1 (failed).
+  INFO [0c66ebc4] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/config/database.yml /home/deployer/apps/fut-std/releases/20170131143334/config/database.yml as deployer@138.197.73.98
+ DEBUG [0c66ebc4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/config/database.yml /home/deployer/apps/fut-std/releases/20170131143334/config/database.yml )
+  INFO [0c66ebc4] Finished in 0.556 seconds with exit status 0 (successful).
+ DEBUG [cbf5d089] Running [ -L /home/deployer/apps/fut-std/releases/20170131143334/config/secrets.yml ] as deployer@138.197.73.98
+ DEBUG [cbf5d089] Command: [ -L /home/deployer/apps/fut-std/releases/20170131143334/config/secrets.yml ]
+ DEBUG [cbf5d089] Finished in 0.552 seconds with exit status 1 (failed).
+ DEBUG [22427078] Running [ -f /home/deployer/apps/fut-std/releases/20170131143334/config/secrets.yml ] as deployer@138.197.73.98
+ DEBUG [22427078] Command: [ -f /home/deployer/apps/fut-std/releases/20170131143334/config/secrets.yml ]
+ DEBUG [22427078] Finished in 0.576 seconds with exit status 1 (failed).
+  INFO [821226b3] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/config/secrets.yml /home/deployer/apps/fut-std/releases/20170131143334/config/secrets.yml as deployer@138.197.73.98
+ DEBUG [821226b3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/config/secrets.yml /home/deployer/apps/fut-std/releases/20170131143334/config/secrets.yml )
+  INFO [821226b3] Finished in 0.558 seconds with exit status 0 (successful).
+  INFO [813ef3da] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170131143334 /home/deployer/apps/fut-std/releases/20170131143334/tmp /home/deployer/apps/fut-std/releases/20170131143334/public as deployer@138.197.73.98
+ DEBUG [813ef3da] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170131143334 /home/deployer/apps/fut-std/releases/20170131143334/tmp /home/deployer/apps/fut-std/releases/20170131143334/public )
+  INFO [813ef3da] Finished in 0.558 seconds with exit status 0 (successful).
+ DEBUG [05de6e34] Running [ -L /home/deployer/apps/fut-std/releases/20170131143334/log ] as deployer@138.197.73.98
+ DEBUG [05de6e34] Command: [ -L /home/deployer/apps/fut-std/releases/20170131143334/log ]
+ DEBUG [05de6e34] Finished in 0.555 seconds with exit status 1 (failed).
+ DEBUG [409a5e82] Running [ -d /home/deployer/apps/fut-std/releases/20170131143334/log ] as deployer@138.197.73.98
+ DEBUG [409a5e82] Command: [ -d /home/deployer/apps/fut-std/releases/20170131143334/log ]
+ DEBUG [409a5e82] Finished in 0.554 seconds with exit status 0 (successful).
+  INFO [2ff33f3d] Running /usr/bin/env rm -rf /home/deployer/apps/fut-std/releases/20170131143334/log as deployer@138.197.73.98
+ DEBUG [2ff33f3d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /home/deployer/apps/fut-std/releases/20170131143334/log )
+  INFO [2ff33f3d] Finished in 0.557 seconds with exit status 0 (successful).
+  INFO [9bf212cd] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/log /home/deployer/apps/fut-std/releases/20170131143334/log as deployer@138.197.73.98
+ DEBUG [9bf212cd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/log /home/deployer/apps/fut-std/releases/20170131143334/log )
+  INFO [9bf212cd] Finished in 0.559 seconds with exit status 0 (successful).
+ DEBUG [16a9967a] Running [ -L /home/deployer/apps/fut-std/releases/20170131143334/tmp/pids ] as deployer@138.197.73.98
+ DEBUG [16a9967a] Command: [ -L /home/deployer/apps/fut-std/releases/20170131143334/tmp/pids ]
+ DEBUG [16a9967a] Finished in 0.554 seconds with exit status 1 (failed).
+ DEBUG [d35efaca] Running [ -d /home/deployer/apps/fut-std/releases/20170131143334/tmp/pids ] as deployer@138.197.73.98
+ DEBUG [d35efaca] Command: [ -d /home/deployer/apps/fut-std/releases/20170131143334/tmp/pids ]
+ DEBUG [d35efaca] Finished in 0.552 seconds with exit status 1 (failed).
+  INFO [2c0bd5e1] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/tmp/pids /home/deployer/apps/fut-std/releases/20170131143334/tmp/pids as deployer@138.197.73.98
+ DEBUG [2c0bd5e1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/tmp/pids /home/deployer/apps/fut-std/releases/20170131143334/tmp/pids )
+  INFO [2c0bd5e1] Finished in 0.556 seconds with exit status 0 (successful).
+ DEBUG [093222dc] Running [ -L /home/deployer/apps/fut-std/releases/20170131143334/public/assets ] as deployer@138.197.73.98
+ DEBUG [093222dc] Command: [ -L /home/deployer/apps/fut-std/releases/20170131143334/public/assets ]
+ DEBUG [093222dc] Finished in 0.554 seconds with exit status 1 (failed).
+ DEBUG [4c77fe30] Running [ -d /home/deployer/apps/fut-std/releases/20170131143334/public/assets ] as deployer@138.197.73.98
+ DEBUG [4c77fe30] Command: [ -d /home/deployer/apps/fut-std/releases/20170131143334/public/assets ]
+ DEBUG [4c77fe30] Finished in 0.553 seconds with exit status 1 (failed).
+  INFO [9851eadb] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/public/assets /home/deployer/apps/fut-std/releases/20170131143334/public/assets as deployer@138.197.73.98
+ DEBUG [9851eadb] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/public/assets /home/deployer/apps/fut-std/releases/20170131143334/public/assets )
+  INFO [9851eadb] Finished in 0.555 seconds with exit status 0 (successful).
+ DEBUG [6da5e4e2] Running if test ! -d /home/deployer/apps/fut-std/releases/20170131143334; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170131143334'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [6da5e4e2] Command: if test ! -d /home/deployer/apps/fut-std/releases/20170131143334; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170131143334'" 1>&2; false; fi
+ DEBUG [6da5e4e2] Finished in 0.555 seconds with exit status 0 (successful).
+ DEBUG [863c9069] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deployer/apps/fut-std/shared/bundle as deployer@138.197.73.98
+ DEBUG [863c9069] Command: cd /home/deployer/apps/fut-std/releases/20170131143334 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deployer/apps/fut-std/shared/bundle )
+ DEBUG [863c9069] 	[31mThe following gems are missing[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * net-ssh (4.0.1)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * sshkit (1.11.5)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * airbrussh (1.1.2)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * debug_inspector (0.0.2)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * binding_of_caller (0.7.2)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * byebug (9.0.6)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * capistrano (3.7.1)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * capistrano-bundler (1.2.0)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * capistrano-postgresql (4.2.1)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * capistrano-rails (1.2.2)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * capistrano-rbenv (2.0.4)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * capistrano-rbenv-install (1.2.0)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * capistrano-safe-deploy-to (1.1.1)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * capistrano-secrets-yml (1.0.0)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * capistrano-ssh-doctor (1.0.0)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * capistrano-unicorn-nginx (4.0.0)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * spring (2.0.1)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[31m * web-console (2.3.0)[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [863c9069] 	
+ DEBUG [863c9069] Finished in 1.184 seconds with exit status 1 (failed).
+  INFO [ed8d54ae] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deployer/apps/fut-std/shared/bundle --without development test --deployment --quiet as deployer@138.197.73.98
+ DEBUG [ed8d54ae] Command: cd /home/deployer/apps/fut-std/releases/20170131143334 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deployer/apps/fut-std/shared/bundle --without development test --deployment --quiet )
+  INFO [ed8d54ae] Finished in 3.101 seconds with exit status 0 (successful).
+ DEBUG [f38c0d9c] Running if test ! -d /home/deployer/apps/fut-std/releases/20170131143334; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170131143334'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [f38c0d9c] Command: if test ! -d /home/deployer/apps/fut-std/releases/20170131143334; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170131143334'" 1>&2; false; fi
+ DEBUG [f38c0d9c] Finished in 0.556 seconds with exit status 0 (successful).
+  INFO [bbce4f4a] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deployer@138.197.73.98
+ DEBUG [bbce4f4a] Command: cd /home/deployer/apps/fut-std/releases/20170131143334 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [bbce4f4a] Finished in 5.053 seconds with exit status 0 (successful).
+ DEBUG [e333e7ab] Running if test ! -d /home/deployer/apps/fut-std/releases/20170131143334; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170131143334'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [e333e7ab] Command: if test ! -d /home/deployer/apps/fut-std/releases/20170131143334; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170131143334'" 1>&2; false; fi
+ DEBUG [e333e7ab] Finished in 0.556 seconds with exit status 0 (successful).
+  INFO [165ab74d] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170131143334/assets_manifest_backup as deployer@138.197.73.98
+ DEBUG [165ab74d] Command: cd /home/deployer/apps/fut-std/releases/20170131143334 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170131143334/assets_manifest_backup )
+  INFO [165ab74d] Finished in 0.556 seconds with exit status 0 (successful).
+ DEBUG [82e11ed9] Running /usr/bin/env ls /home/deployer/apps/fut-std/releases/20170131143334/public/assets/.sprockets-manifest* as deployer@138.197.73.98
+ DEBUG [82e11ed9] Command: cd /home/deployer/apps/fut-std/releases/20170131143334 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /home/deployer/apps/fut-std/releases/20170131143334/public/assets/.sprockets-manifest* )
+ DEBUG [82e11ed9] 	/home/deployer/apps/fut-std/releases/20170131143334/public/assets/.sprockets-manifest-2b910709200b6fbd9f3fb06cca919ba4.json
+ DEBUG [82e11ed9] 	
+ DEBUG [82e11ed9] Finished in 0.558 seconds with exit status 0 (successful).
+ DEBUG [a483cfd3] Running /usr/bin/env ls /home/deployer/apps/fut-std/releases/20170131143334/public/assets/.sprockets-manifest* as deployer@138.197.73.98
+ DEBUG [a483cfd3] Command: cd /home/deployer/apps/fut-std/releases/20170131143334 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /home/deployer/apps/fut-std/releases/20170131143334/public/assets/.sprockets-manifest* )
+ DEBUG [a483cfd3] 	/home/deployer/apps/fut-std/releases/20170131143334/public/assets/.sprockets-manifest-2b910709200b6fbd9f3fb06cca919ba4.json
+ DEBUG [a483cfd3] 	
+ DEBUG [a483cfd3] Finished in 0.561 seconds with exit status 0 (successful).
+  INFO [d267d156] Running /usr/bin/env cp /home/deployer/apps/fut-std/releases/20170131143334/public/assets/.sprockets-manifest-2b910709200b6fbd9f3fb06cca919ba4.json /home/deployer/apps/fut-std/releases/20170131143334/assets_manifest_backup as deployer@138.197.73.98
+ DEBUG [d267d156] Command: cd /home/deployer/apps/fut-std/releases/20170131143334 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /home/deployer/apps/fut-std/releases/20170131143334/public/assets/.sprockets-manifest-2b910709200b6fbd9f3fb06cca919ba4.json /home/deployer/apps/fut-std/releases/20170131143334/assets_manifest_backup )
+  INFO [d267d156] Finished in 0.560 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [43f507e4] Running if test ! -d /home/deployer/apps/fut-std/releases/20170131143334; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170131143334'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [43f507e4] Command: if test ! -d /home/deployer/apps/fut-std/releases/20170131143334; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170131143334'" 1>&2; false; fi
+ DEBUG [43f507e4] Finished in 0.554 seconds with exit status 0 (successful).
+  INFO [931f8b92] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as deployer@138.197.73.98
+ DEBUG [931f8b92] Command: cd /home/deployer/apps/fut-std/releases/20170131143334 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [931f8b92] 	rake aborted!
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	PG::ConnectionBad: FATAL:  password authentication failed for user "deployer"
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	FATAL:  password authentication failed for user "deployer"
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/co
+ DEBUG [931f8b92] 	nnection_adapters/abstract/connection_pool.rb:262:in `connection'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_handling.rb:87:in `connection'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:916:in `initialize'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:823:in `new'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:823:in `up'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:801:in `migrate'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:137:in `migrate'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/railties/databases.rake:44:in `block (2 levels) in <top (required)>'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/apps/fut-std/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	/home/deployer/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	Tasks: TOP => db:migrate
+ DEBUG [931f8b92] 	
+ DEBUG [931f8b92] 	(See full trace by running task with --trace)
+ DEBUG [931f8b92] 	

@@ -112,7 +112,6 @@ In the Capfile make sure these are all commented out
 # require "capistrano/rails/migrations"
 # require 'capistrano/safe_deploy_to'
 # require 'capistrano/unicorn_nginx'
-# require 'capistrano/postgresql'
 # require 'capistrano/rbenv_install'
 # require 'capistrano/secrets_yml'
 ```
@@ -126,6 +125,11 @@ namespace :droplet do
   desc "Updating the server"  
   task :dsetup do   
       on roles(:app) do 
+      execute "echo 'export LANG=\"en_US.utf8\"' >> ~/.bashrc"
+            execute "echo 'export LANGUAGE=\"en_US.utf8\"' >> ~/.bashrc"
+            execute "echo 'export LC_ALL=\"en_US.UTF-8\"' >> ~/.bashrc"
+            execute "source /home/#{fetch(:user)}/.bashrc"
+            execute "source /home/deployer/.bashrc"
         execute :sudo, "/usr/bin/apt-get -y update"
         execute :sudo, "/usr/bin/apt-get -y install python-software-properties"
         execute :sudo,  "apt-get -y install git-core curl zlib1g-dev logrotate build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libpq-dev"
@@ -148,7 +152,6 @@ require "capistrano/rails/assets"
 require "capistrano/rails/migrations"
 require 'capistrano/safe_deploy_to'
 require 'capistrano/unicorn_nginx'
-require 'capistrano/postgresql'
 require 'capistrano/rbenv_install'
 require 'capistrano/secrets_yml'
 ```
@@ -160,7 +163,7 @@ require 'capistrano/secrets_yml'
 
 And FINALY run
 
->cap production deploy
+> cap production setup
 
 
 

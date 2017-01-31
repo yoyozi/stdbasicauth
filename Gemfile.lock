@@ -53,8 +53,6 @@ GEM
       capistrano (~> 3.1)
       sshkit (~> 1.2)
     capistrano-harrow (0.5.3)
-    capistrano-postgresql (4.2.1)
-      capistrano (>= 3.0)
     capistrano-rails (1.2.2)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
@@ -189,9 +187,8 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  capistrano (~> 3.7.1)
+  capistrano (~> 3.7.2)
   capistrano-bundler
-  capistrano-postgresql
   capistrano-rails
   capistrano-rbenv
   capistrano-rbenv-install

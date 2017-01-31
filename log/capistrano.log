@@ -19686,3 +19686,232 @@
  DEBUG [06ea9298] 	
  DEBUG [06ea9298] 	(See full trace by running task with --trace)
  DEBUG [06ea9298] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-31 16:12:10 +0200 cap production postgresql:setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d53ec120] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [d53ec120] Command: [ -d $HOME/.rbenv ]
+ DEBUG [d53ec120] Finished in 3.163 seconds with exit status 0 (successful).
+ DEBUG [d27733d3] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [d27733d3] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [d27733d3] Finished in 3.244 seconds with exit status 0 (successful).
+ DEBUG [221f075f] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [221f075f] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [221f075f] Finished in 0.567 seconds with exit status 0 (successful).
+ DEBUG [02b51c4c] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [02b51c4c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [02b51c4c] 	true
+ DEBUG [02b51c4c] 	
+ DEBUG [02b51c4c] Finished in 0.808 seconds with exit status 0 (successful).
+ DEBUG [1e9c20c5] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [1e9c20c5] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [1e9c20c5] Finished in 0.568 seconds with exit status 0 (successful).
+ DEBUG [17a2ea0f] Running /usr/bin/env sudo -u psql psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 as deployer@138.197.73.98
+ DEBUG [17a2ea0f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u psql psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 )
+ DEBUG [17a2ea0f] 	sudo: unknown user: psql
+ DEBUG [17a2ea0f] 	
+ DEBUG [17a2ea0f] 	sudo: unable to initialize policy plugin
+ DEBUG [17a2ea0f] 	
+ DEBUG [17a2ea0f] Finished in 0.578 seconds with exit status 1 (failed).
+ DEBUG [63e55f61] Running /usr/bin/env sudo -u psql psql -d postgres -c "CREATE user fut-std_production WITH password '9241363a17bc9c67adf7';" as deployer@138.197.73.98
+ DEBUG [63e55f61] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u psql psql -d postgres -c "CREATE user fut-std_production WITH password '9241363a17bc9c67adf7';" )
+ DEBUG [63e55f61] 	sudo: unknown user: psql
+ DEBUG [63e55f61] 	
+ DEBUG [63e55f61] 	sudo: unable to initialize policy plugin
+ DEBUG [63e55f61] 	
+ DEBUG [63e55f61] Finished in 0.583 seconds with exit status 1 (failed).
+ ERROR postgresql: creating database user failed!
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-31 16:12:56 +0200 cap production postgresql:setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [5c4aafbc] Running [ -d $HOME/.rbenv ] on 138.197.73.98
+ DEBUG [5c4aafbc] Command: [ -d $HOME/.rbenv ]
+ DEBUG [5c4aafbc] Finished in 3.210 seconds with exit status 0 (successful).
+ DEBUG [50442478] Running [ -d $HOME/.rbenv/plugins/ruby-build ] on 138.197.73.98
+ DEBUG [50442478] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [50442478] Finished in 3.573 seconds with exit status 0 (successful).
+ DEBUG [b5fa4f44] Running [ -d $HOME/.rbenv/versions/2.3.1 ] on 138.197.73.98
+ DEBUG [b5fa4f44] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [b5fa4f44] Finished in 0.566 seconds with exit status 0 (successful).
+ DEBUG [428c4658] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ on 138.197.73.98
+ DEBUG [428c4658] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [428c4658] 	true
+ DEBUG [428c4658] 	
+ DEBUG [428c4658] Finished in 0.806 seconds with exit status 0 (successful).
+ DEBUG [b913fda2] Running [ -d $HOME/.rbenv/versions/2.3.1 ] on 138.197.73.98
+ DEBUG [b913fda2] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [b913fda2] Finished in 0.567 seconds with exit status 0 (successful).
+ DEBUG [c5ba5a75] Running /usr/bin/env sudo -u psql psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 on 138.197.73.98
+ DEBUG [c5ba5a75] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u psql psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 )
+ DEBUG [c5ba5a75] 	sudo: unknown user: psql
+ DEBUG [c5ba5a75] 	
+ DEBUG [c5ba5a75] 	sudo: unable to initialize policy plugin
+ DEBUG [c5ba5a75] 	
+ DEBUG [c5ba5a75] Finished in 0.574 seconds with exit status 1 (failed).
+ DEBUG [90f57f12] Running /usr/bin/env sudo -u psql psql -d postgres -c "CREATE user fut-std_production WITH password 'ad7b9c0a0ba42553b0a0';" on 138.197.73.98
+ DEBUG [90f57f12] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u psql psql -d postgres -c "CREATE user fut-std_production WITH password 'ad7b9c0a0ba42553b0a0';" )
+ DEBUG [90f57f12] 	sudo: unknown user: psql
+ DEBUG [90f57f12] 	
+ DEBUG [90f57f12] 	sudo: unable to initialize policy plugin
+ DEBUG [90f57f12] 	
+ DEBUG [90f57f12] Finished in 0.581 seconds with exit status 1 (failed).
+ ERROR postgresql: creating database user failed!
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-31 16:13:12 +0200 cap production postgresql:generate_database_yml
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a87fc552] Running [ -d $HOME/.rbenv ] on 138.197.73.98
+ DEBUG [a87fc552] Command: [ -d $HOME/.rbenv ]
+ DEBUG [a87fc552] Finished in 3.200 seconds with exit status 0 (successful).
+ DEBUG [fd809db9] Running [ -d $HOME/.rbenv/plugins/ruby-build ] on 138.197.73.98
+ DEBUG [fd809db9] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [fd809db9] Finished in 3.187 seconds with exit status 0 (successful).
+ DEBUG [223a1d3b] Running [ -d $HOME/.rbenv/versions/2.3.1 ] on 138.197.73.98
+ DEBUG [223a1d3b] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [223a1d3b] Finished in 0.546 seconds with exit status 0 (successful).
+ DEBUG [76626c70] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ on 138.197.73.98
+ DEBUG [76626c70] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [76626c70] 	true
+ DEBUG [76626c70] 	
+ DEBUG [76626c70] Finished in 0.802 seconds with exit status 0 (successful).
+ DEBUG [2b083a12] Running [ -d $HOME/.rbenv/versions/2.3.1 ] on 138.197.73.98
+ DEBUG [2b083a12] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [2b083a12] Finished in 0.548 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-31 16:13:35 +0200 cap production postgresql:generate_database_yml_archetype
+  INFO ---------------------------------------------------------------------------
+ DEBUG [577cb365] Running [ -d $HOME/.rbenv ] on 138.197.73.98
+ DEBUG [577cb365] Command: [ -d $HOME/.rbenv ]
+ DEBUG [577cb365] Finished in 3.219 seconds with exit status 0 (successful).
+ DEBUG [91c437a4] Running [ -d $HOME/.rbenv/plugins/ruby-build ] on 138.197.73.98
+ DEBUG [91c437a4] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [91c437a4] Finished in 3.143 seconds with exit status 0 (successful).
+ DEBUG [ca1cdefe] Running [ -d $HOME/.rbenv/versions/2.3.1 ] on 138.197.73.98
+ DEBUG [ca1cdefe] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [ca1cdefe] Finished in 0.548 seconds with exit status 0 (successful).
+ DEBUG [82d8147a] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ on 138.197.73.98
+ DEBUG [82d8147a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [82d8147a] 	true
+ DEBUG [82d8147a] 	
+ DEBUG [82d8147a] Finished in 1.073 seconds with exit status 0 (successful).
+ DEBUG [b77a53da] Running [ -d $HOME/.rbenv/versions/2.3.1 ] on 138.197.73.98
+ DEBUG [b77a53da] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [b77a53da] Finished in 0.636 seconds with exit status 0 (successful).
+ DEBUG [1736a2bc] Running [ -e /home//apps/fut-std/db/database.yml ] on 138.197.73.98
+ DEBUG [1736a2bc] Command: [ -e /home//apps/fut-std/db/database.yml ]
+ DEBUG [1736a2bc] Finished in 0.585 seconds with exit status 1 (failed).
+  INFO [2b62b7be] Running /usr/bin/env mkdir -pv /home//apps/fut-std/db on 138.197.73.98
+ DEBUG [2b62b7be] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -pv /home//apps/fut-std/db )
+ DEBUG [2b62b7be] 	mkdir: cannot create directory '/home//apps': Permission denied
+ DEBUG [2b62b7be] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-31 16:13:59 +0200 cap production postgresql:generate_database_yml_archetype
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a448ea9d] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [a448ea9d] Command: [ -d $HOME/.rbenv ]
+ DEBUG [a448ea9d] Finished in 3.168 seconds with exit status 0 (successful).
+ DEBUG [778a9a20] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [778a9a20] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [778a9a20] Finished in 3.202 seconds with exit status 0 (successful).
+ DEBUG [110b2d7a] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [110b2d7a] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [110b2d7a] Finished in 0.556 seconds with exit status 0 (successful).
+ DEBUG [458769d1] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [458769d1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [458769d1] 	true
+ DEBUG [458769d1] 	
+ DEBUG [458769d1] Finished in 0.893 seconds with exit status 0 (successful).
+ DEBUG [c21df666] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [c21df666] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [c21df666] Finished in 0.557 seconds with exit status 0 (successful).
+ DEBUG [bec2cf05] Running [ -e /home/deployer/apps/fut-std/db/database.yml ] as deployer@138.197.73.98
+ DEBUG [bec2cf05] Command: [ -e /home/deployer/apps/fut-std/db/database.yml ]
+ DEBUG [bec2cf05] Finished in 0.558 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-31 16:14:12 +0200 cap production postgresql:generate_database_yml
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ba6f52cf] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [ba6f52cf] Command: [ -d $HOME/.rbenv ]
+ DEBUG [ba6f52cf] Finished in 3.513 seconds with exit status 0 (successful).
+ DEBUG [c191a6ff] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [c191a6ff] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [c191a6ff] Finished in 3.119 seconds with exit status 0 (successful).
+ DEBUG [ebf2670f] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [ebf2670f] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [ebf2670f] Finished in 0.546 seconds with exit status 0 (successful).
+ DEBUG [4c8fc07d] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [4c8fc07d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [4c8fc07d] 	true
+ DEBUG [4c8fc07d] 	
+ DEBUG [4c8fc07d] Finished in 0.792 seconds with exit status 0 (successful).
+ DEBUG [234c1274] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [234c1274] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [234c1274] Finished in 0.550 seconds with exit status 0 (successful).
+ DEBUG Downloading database.yml 0.0%
+  INFO Downloading database.yml 100.0%
+  INFO [261453f8] Running /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config as deployer@138.197.73.98
+ DEBUG [261453f8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config )
+  INFO [261453f8] Finished in 0.856 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/deployer/apps/fut-std/shared/config/database.yml 0.0%
+  INFO Uploading /home/deployer/apps/fut-std/shared/config/database.yml 100.0%
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-31 16:16:23 +0200 cap production postgresql:generate_database_yml
+  INFO ---------------------------------------------------------------------------
+ DEBUG [72d41670] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [72d41670] Command: [ -d $HOME/.rbenv ]
+ DEBUG [72d41670] Finished in 3.165 seconds with exit status 0 (successful).
+ DEBUG [c78d9ef4] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [c78d9ef4] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [c78d9ef4] Finished in 3.249 seconds with exit status 0 (successful).
+ DEBUG [4656895b] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [4656895b] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [4656895b] Finished in 0.572 seconds with exit status 0 (successful).
+ DEBUG [f04f06ac] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [f04f06ac] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [f04f06ac] 	true
+ DEBUG [f04f06ac] 	
+ DEBUG [f04f06ac] Finished in 0.838 seconds with exit status 0 (successful).
+ DEBUG [968e994b] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [968e994b] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [968e994b] Finished in 0.573 seconds with exit status 0 (successful).
+ DEBUG Downloading database.yml 0.0%
+  INFO Downloading database.yml 100.0%
+  INFO [c8d10e51] Running /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config as deployer@138.197.73.98
+ DEBUG [c8d10e51] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config )
+  INFO [c8d10e51] Finished in 0.893 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/deployer/apps/fut-std/shared/config/database.yml 0.0%
+  INFO Uploading /home/deployer/apps/fut-std/shared/config/database.yml 100.0%
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-31 16:31:54 +0200 cap production postgresql:setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [5ad7e18f] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [5ad7e18f] Command: [ -d $HOME/.rbenv ]
+ DEBUG [5ad7e18f] Finished in 3.284 seconds with exit status 0 (successful).
+ DEBUG [2e834885] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [2e834885] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [2e834885] Finished in 3.168 seconds with exit status 0 (successful).
+ DEBUG [f58aca39] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [f58aca39] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [f58aca39] Finished in 0.546 seconds with exit status 0 (successful).
+ DEBUG [52fd2755] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [52fd2755] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [52fd2755] 	true
+ DEBUG [52fd2755] 	
+ DEBUG [52fd2755] Finished in 0.778 seconds with exit status 0 (successful).
+ DEBUG [0170d9c9] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [0170d9c9] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [0170d9c9] Finished in 0.574 seconds with exit status 0 (successful).
+ DEBUG [0ea66c30] Running /usr/bin/env sudo -u psql psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 as deployer@138.197.73.98
+ DEBUG [0ea66c30] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u psql psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 )
+ DEBUG [0ea66c30] 	sudo: unknown user: psql
+ DEBUG [0ea66c30] 	
+ DEBUG [0ea66c30] 	sudo: unable to initialize policy plugin
+ DEBUG [0ea66c30] 	
+ DEBUG [0ea66c30] Finished in 0.561 seconds with exit status 1 (failed).
+ DEBUG [48bcadb3] Running /usr/bin/env sudo -u psql psql -d postgres -c "CREATE user fut-std_production WITH password '144c963411f598df89d4';" as deployer@138.197.73.98
+ DEBUG [48bcadb3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u psql psql -d postgres -c "CREATE user fut-std_production WITH password '144c963411f598df89d4';" )
+ DEBUG [48bcadb3] 	sudo: unknown user: psql
+ DEBUG [48bcadb3] 	
+ DEBUG [48bcadb3] 	sudo: unable to initialize policy plugin
+ DEBUG [48bcadb3] 	
+ DEBUG [48bcadb3] Finished in 0.561 seconds with exit status 1 (failed).
+ ERROR postgresql: creating database user failed!

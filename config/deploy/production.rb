@@ -14,8 +14,6 @@ server          '138.197.73.98', roles: [:web, :app, :db], port: fetch(:port), u
 #set :nginx_server_name, 'mydomain.com'
 set :unicorn_logrotate_enabled, true
 
-set :pg_system_user, 'psql'
-set :pg_ask_for_password
 
 # role-based syntax
 # ==================

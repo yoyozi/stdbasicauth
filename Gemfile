@@ -37,12 +37,11 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  gem 'capistrano', '~> 3.2.0'
+  gem 'capistrano', '~> 3.7.1'
   gem 'capistrano-ssh-doctor'
   gem 'spring'
   gem 'capistrano-safe-deploy-to', '~> 1.1.1'
   gem 'capistrano-unicorn-nginx'
-  gem 'capistrano-postgresql'
   gem 'capistrano-rbenv'
   gem 'capistrano-rbenv-install'
   gem 'capistrano-bundler'

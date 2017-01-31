@@ -32,7 +32,6 @@ require "capistrano/rails/assets"
 require "capistrano/rails/migrations"
 require 'capistrano/safe_deploy_to'
 require 'capistrano/unicorn_nginx'
-require 'capistrano/postgresql'
 require 'capistrano/rbenv_install'
 require 'capistrano/secrets_yml'
 

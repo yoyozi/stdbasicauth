@@ -20238,3 +20238,149 @@
  DEBUG [931f8b92] 	
  DEBUG [931f8b92] 	(See full trace by running task with --trace)
  DEBUG [931f8b92] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-31 21:49:38 +0200 cap production postgresql:setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [173ef1cf] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [173ef1cf] Command: [ -d $HOME/.rbenv ]
+ DEBUG [173ef1cf] Finished in 3.682 seconds with exit status 0 (successful).
+ DEBUG [9f4c9a12] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [9f4c9a12] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [9f4c9a12] Finished in 3.659 seconds with exit status 0 (successful).
+ DEBUG [4347e861] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [4347e861] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [4347e861] Finished in 0.622 seconds with exit status 0 (successful).
+ DEBUG [c5c5b200] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [c5c5b200] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [c5c5b200] 	true
+ DEBUG [c5c5b200] 	
+ DEBUG [c5c5b200] Finished in 0.864 seconds with exit status 0 (successful).
+ DEBUG [ea5e7a53] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [ea5e7a53] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [ea5e7a53] Finished in 0.630 seconds with exit status 0 (successful).
+ DEBUG [9f4543c3] Running /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 as deployer@138.197.73.98
+ DEBUG [9f4543c3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 )
+ DEBUG [9f4543c3] 	perl: warning: Setting locale failed.
+ DEBUG [9f4543c3] 	
+ DEBUG [9f4543c3] 	perl: warning: Please check that your locale settings:
+ DEBUG [9f4543c3] 	
+ DEBUG [9f4543c3] 		
+ DEBUG [9f4543c3] 	LANGUAGE = (unset),
+ DEBUG [9f4543c3] 	
+ DEBUG [9f4543c3] 		
+ DEBUG [9f4543c3] 	LC_ALL = (unset),
+ DEBUG [9f4543c3] 	
+ DEBUG [9f4543c3] 		
+ DEBUG [9f4543c3] 	LC_CTYPE = "UTF-8",
+ DEBUG [9f4543c3] 	
+ DEBUG [9f4543c3] 		
+ DEBUG [9f4543c3] 	LANG = "en_US.UTF-8"
+ DEBUG [9f4543c3] 	
+ DEBUG [9f4543c3] 	    are supported and installed on your system.
+ DEBUG [9f4543c3] 	
+ DEBUG [9f4543c3] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [9f4543c3] 	
+ DEBUG [9f4543c3] Finished in 0.936 seconds with exit status 1 (failed).
+ DEBUG [6589b5d7] Running /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password 'b85870cd3dbb7ffe4065';" as deployer@138.197.73.98
+ DEBUG [6589b5d7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password 'b85870cd3dbb7ffe4065';" )
+ DEBUG [6589b5d7] 	perl: warning: Setting locale failed.
+ DEBUG [6589b5d7] 	
+ DEBUG [6589b5d7] 	perl: warning: Please check that your locale settings:
+ DEBUG [6589b5d7] 	
+ DEBUG [6589b5d7] 		
+ DEBUG [6589b5d7] 	LANGUAGE = (unset),
+ DEBUG [6589b5d7] 	
+ DEBUG [6589b5d7] 		
+ DEBUG [6589b5d7] 	LC_ALL = (unset),
+ DEBUG [6589b5d7] 	
+ DEBUG [6589b5d7] 		
+ DEBUG [6589b5d7] 	LC_CTYPE = "UTF-8",
+ DEBUG [6589b5d7] 	
+ DEBUG [6589b5d7] 		
+ DEBUG [6589b5d7] 	LANG = "en_US.UTF-8"
+ DEBUG [6589b5d7] 	
+ DEBUG [6589b5d7] 	    are supported and installed on your system.
+ DEBUG [6589b5d7] 	
+ DEBUG [6589b5d7] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [6589b5d7] 	
+ DEBUG [6589b5d7] 	ERROR:  syntax error at or near "-"
+ DEBUG [6589b5d7] 	
+ DEBUG [6589b5d7] 	LINE 1: CREATE user fut-std_production WITH password 'b85870cd3dbb7f...
+ DEBUG [6589b5d7] 	
+ DEBUG [6589b5d7] 	                       ^
+ DEBUG [6589b5d7] 	
+ DEBUG [6589b5d7] Finished in 0.892 seconds with exit status 1 (failed).
+ ERROR postgresql: creating database user failed!
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-31 21:50:11 +0200 cap production postgresql:create_db_user
+  INFO ---------------------------------------------------------------------------
+ DEBUG [70fbcf20] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [70fbcf20] Command: [ -d $HOME/.rbenv ]
+ DEBUG [70fbcf20] Finished in 3.745 seconds with exit status 0 (successful).
+ DEBUG [9f46b358] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [9f46b358] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [9f46b358] Finished in 3.699 seconds with exit status 0 (successful).
+ DEBUG [e8cb56b1] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [e8cb56b1] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [e8cb56b1] Finished in 0.635 seconds with exit status 0 (successful).
+ DEBUG [d5b20988] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [d5b20988] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [d5b20988] 	true
+ DEBUG [d5b20988] 	
+ DEBUG [d5b20988] Finished in 0.902 seconds with exit status 0 (successful).
+ DEBUG [0d9bfbb3] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [0d9bfbb3] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [0d9bfbb3] Finished in 0.671 seconds with exit status 0 (successful).
+ DEBUG [36290660] Running /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 as deployer@138.197.73.98
+ DEBUG [36290660] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='fut-std_production';" | grep -q 1 )
+ DEBUG [36290660] 	perl: warning: Setting locale failed.
+ DEBUG [36290660] 	
+ DEBUG [36290660] 	perl: warning: Please check that your locale settings:
+ DEBUG [36290660] 	
+ DEBUG [36290660] 		
+ DEBUG [36290660] 	LANGUAGE = (unset),
+ DEBUG [36290660] 	
+ DEBUG [36290660] 		
+ DEBUG [36290660] 	LC_ALL = (unset),
+ DEBUG [36290660] 	
+ DEBUG [36290660] 		
+ DEBUG [36290660] 	LC_CTYPE = "UTF-8",
+ DEBUG [36290660] 	
+ DEBUG [36290660] 		
+ DEBUG [36290660] 	LANG = "en_US.UTF-8"
+ DEBUG [36290660] 	
+ DEBUG [36290660] 	    are supported and installed on your system.
+ DEBUG [36290660] 	
+ DEBUG [36290660] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [36290660] 	
+ DEBUG [36290660] Finished in 0.986 seconds with exit status 1 (failed).
+ DEBUG [5e3e2145] Running /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password '73a47cad9af82082a7a2';" as deployer@138.197.73.98
+ DEBUG [5e3e2145] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo -u postgres psql -d postgres -c "CREATE user fut-std_production WITH password '73a47cad9af82082a7a2';" )
+ DEBUG [5e3e2145] 	perl: warning: Setting locale failed.
+ DEBUG [5e3e2145] 	
+ DEBUG [5e3e2145] 	perl: warning: Please check that your locale settings:
+ DEBUG [5e3e2145] 	
+ DEBUG [5e3e2145] 		
+ DEBUG [5e3e2145] 	LANGUAGE = (unset),
+ DEBUG [5e3e2145] 	
+ DEBUG [5e3e2145] 		
+ DEBUG [5e3e2145] 	LC_ALL = (unset),
+ DEBUG [5e3e2145] 	
+ DEBUG [5e3e2145] 		
+ DEBUG [5e3e2145] 	LC_CTYPE = "UTF-8",
+ DEBUG [5e3e2145] 	
+ DEBUG [5e3e2145] 		
+ DEBUG [5e3e2145] 	LANG = "en_US.UTF-8"
+ DEBUG [5e3e2145] 	
+ DEBUG [5e3e2145] 	    are supported and installed on your system.
+ DEBUG [5e3e2145] 	
+ DEBUG [5e3e2145] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [5e3e2145] 	
+ DEBUG [5e3e2145] 	ERROR:  syntax error at or near "-"
+ DEBUG [5e3e2145] 	
+ DEBUG [5e3e2145] 	LINE 1: CREATE user fut-std_production WITH password '73a47cad9af820...
+ DEBUG [5e3e2145] 	
+ DEBUG [5e3e2145] 	                       ^
+ DEBUG [5e3e2145] 	
+ DEBUG [5e3e2145] Finished in 1.006 seconds with exit status 1 (failed).
+ ERROR postgresql: creating database user failed!

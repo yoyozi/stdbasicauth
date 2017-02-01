@@ -26,6 +26,7 @@ install_plugin Capistrano::SCM::Git
 #   https://github.com/capistrano/rails
 #   https://github.com/capistrano/passenger
 #
+require 'capistrano/figaro_yml'
 require "capistrano/rbenv"
 require "capistrano/bundler"
 require "capistrano/rails/assets"
@@ -35,6 +36,7 @@ require 'capistrano/unicorn_nginx'
 require 'capistrano/rbenv_install'
 require 'capistrano/secrets_yml'
 require 'capistrano/database_yml'
+
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }

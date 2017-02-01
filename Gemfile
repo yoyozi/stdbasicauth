@@ -28,6 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 gem 'unicorn'
+gem 'figaro'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -36,10 +37,11 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'spring'
+  gem 'capistrano-figaro-yml'
   gem 'web-console', '~> 2.0'
   gem 'capistrano', '~> 3.7.2'
   gem 'capistrano-ssh-doctor'
-  gem 'spring'
   gem 'capistrano-safe-deploy-to', '~> 1.1.1'
   gem 'capistrano-unicorn-nginx'
   gem 'capistrano-rbenv'

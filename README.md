@@ -106,14 +106,16 @@ production:
 
 In the Capfile make sure these are all commented out
 ```
-# require "capistrano/rbenv"
-# require "capistrano/bundler"
-# require "capistrano/rails/assets"
-# require "capistrano/rails/migrations"
-# require 'capistrano/safe_deploy_to'
-# require 'capistrano/unicorn_nginx'
-# require 'capistrano/rbenv_install'
-# require 'capistrano/secrets_yml'
+require 'capistrano/figaro_yml'
+require "capistrano/rbenv"
+require "capistrano/bundler"
+require "capistrano/rails/assets"
+require "capistrano/rails/migrations"
+require 'capistrano/safe_deploy_to'
+require 'capistrano/unicorn_nginx'
+require 'capistrano/rbenv_install'
+require 'capistrano/secrets_yml'
+require 'capistrano/database_yml'
 ```
 
 
@@ -144,25 +146,13 @@ namespace :droplet do
 end
 ```
 
-In the Capfile remove comments
-```
-require "capistrano/rbenv"
-require "capistrano/bundler"
-require "capistrano/rails/assets"
-require "capistrano/rails/migrations"
-require 'capistrano/safe_deploy_to'
-require 'capistrano/unicorn_nginx'
-require 'capistrano/rbenv_install'
-require 'capistrano/secrets_yml'
-```
-
 ## Submit to repo
 > git add -A
 > git commit -m "Ready" 
 > git push -u origin master
 > cap production setup
 
-## Now lets setup postgresql
+## Now lets setup postgresql on the remote server
 > sudo -u postgresql createuser -s rails-psql-user
 > sudo -u postgres psql
 > /password (set the postgres user password)
@@ -170,21 +160,6 @@ require 'capistrano/secrets_yml'
 > /q
 > createdb "name"
 
-**Create the connection in ./shared/config**
-> vi database.yml
-
-```
-production:
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  host: localhost
-  database: name
-  username: rails-psql-user
-  password: 'cccccc'
-```
-
-> chmod 500 ./database.yml 
 
 **Create linked files and directories by adding into deploy.rb**
 

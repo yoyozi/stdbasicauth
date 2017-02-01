@@ -2,8 +2,13 @@
 
 **Clone the std app to your desktop as the name of the new application**
 
-> git clone https://github.com/yoyozi/std.git fut-std
-> git remote set-url origin https://github.com/yoyozi/fut-std.git
+> git clone https://github.com/yoyozi/reponame.git newreponame
+> git remote set-url origin https://github.com/yoyozi/newreponame.git
+
+## Submit to repo
+> git add -A
+> git commit -m "Ready" 
+> git push -u origin master
 > git push -u origin master
 
 ## On remote: Sign up with Digital Ocean or rebuild your existing droplet
@@ -33,6 +38,7 @@ deploy_user ALL=NOPASSWD:/usr/bin/apt-get
 
 ## On local machine (on mac use):
 > ssh-copy-id deploy_user@x.x.x.x
+> ssh-copy-id username@x.x.x.x
 
 **Test that you can login with the deployer user and your own username, and su to root BEFORE removing root remote login!!!**
 > ssh -p xxxx deployer@x.x.x.x
@@ -68,8 +74,60 @@ Set the locale (add at end of file)
 > sudo vi /etc/environment
 > export LANG=en_US.utf8
 
-## On local : ensure IP address and the project repo is adjusted to suite in:
-1deploy.rb and production.rb
+## On local 
+
+In the Capfile make sure these are all commented out
+```
+#require 'capistrano/figaro_yml'
+#require "capistrano/rbenv"
+#require "capistrano/bundler"
+#require "capistrano/rails/assets"
+#require "capistrano/rails/migrations"
+#require 'capistrano/safe_deploy_to'
+#require 'capistrano/unicorn_nginx'
+#require 'capistrano/rbenv_install'
+#require 'capistrano/secrets_yml'
+#require 'capistrano/database_yml'
+```
+
+## Run the task droplet:dsetup
+Make sure file looks like this
+```
+namespace :droplet do
+
+  desc "Updating the server"  
+  task :setup do   
+      on roles(:app) do 
+        execute "echo 'export LANG=\"en_US.utf8\"' >> ~/.bashrc"
+        execute "echo 'export LANGUAGE=\"en_US.utf8\"' >> ~/.bashrc"
+        execute "echo 'export LC_ALL=\"en_US.UTF-8\"' >> ~/.bashrc"
+        execute "source /home/#{fetch(:user)}/.bashrc"
+        execute "source /home/deployer/.bashrc"
+        execute :sudo, "/usr/bin/apt-get -y update"
+        execute :sudo, "/usr/bin/apt-get -y install python-software-properties"
+        execute :sudo,  "apt-get -y install git-core curl zlib1g-dev logrotate build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libpq-dev"
+        execute :sudo, "apt-get -y install nginx"
+        execute :sudo, "apt-get -y install postgresql postgresql-contrib libpq-dev"
+        execute :sudo, "service postgresql start"
+        execute 'echo | sudo add-apt-repository ppa:chris-lea/node.js'          
+        execute :sudo, "/usr/bin/apt-get -y install nodejs"
+        execute :sudo, "/usr/bin/apt-get -y update"  
+    end  
+  end 
+end
+```
+
+## On remote: setup postgresql on the remote server
+> sudo -u postgresql createuser -s rails-psql-user
+> sudo -u postgres psql
+> /password (set the postgres user password)
+> /password rails-psql-user (set the rails-user password)
+> /q
+> createdb "name"
+
+
+**Ensure IP address and the project repo is adjusted to suite**
+deploy.rb and production.rb
 
 Recreate the keys using "rake secrets"
 ```
@@ -101,64 +159,9 @@ production:
   <<: *default
   database: db_production
   username: db
-  password: <%= ENV['STD_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DBPW'] %>
 ```
 
-In the Capfile make sure these are all commented out
-```
-require 'capistrano/figaro_yml'
-require "capistrano/rbenv"
-require "capistrano/bundler"
-require "capistrano/rails/assets"
-require "capistrano/rails/migrations"
-require 'capistrano/safe_deploy_to'
-require 'capistrano/unicorn_nginx'
-require 'capistrano/rbenv_install'
-require 'capistrano/secrets_yml'
-require 'capistrano/database_yml'
-```
-
-
-## Run the task droplet:dsetup
-Make sure file looks like this
-```
-namespace :droplet do
-
-  desc "Updating the server"  
-  task :setup do   
-      on roles(:app) do 
-      execute "echo 'export LANG=\"en_US.utf8\"' >> ~/.bashrc"
-            execute "echo 'export LANGUAGE=\"en_US.utf8\"' >> ~/.bashrc"
-            execute "echo 'export LC_ALL=\"en_US.UTF-8\"' >> ~/.bashrc"
-            execute "source /home/#{fetch(:user)}/.bashrc"
-            execute "source /home/deployer/.bashrc"
-        execute :sudo, "/usr/bin/apt-get -y update"
-        execute :sudo, "/usr/bin/apt-get -y install python-software-properties"
-        execute :sudo,  "apt-get -y install git-core curl zlib1g-dev logrotate build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev libpq-dev"
-        execute :sudo, "apt-get -y install nginx"
-        execute :sudo, "apt-get -y install postgresql postgresql-contrib libpq-dev"
-        execute :sudo, "service postgresql start"
-        execute 'echo | sudo add-apt-repository ppa:chris-lea/node.js'          
-        execute :sudo, "/usr/bin/apt-get -y install nodejs"
-        execute :sudo, "/usr/bin/apt-get -y update"  
-    end  
-  end 
-end
-```
-
-## Submit to repo
-> git add -A
-> git commit -m "Ready" 
-> git push -u origin master
-> cap production setup
-
-## Now lets setup postgresql on the remote server
-> sudo -u postgresql createuser -s rails-psql-user
-> sudo -u postgres psql
-> /password (set the postgres user password)
-> /password rails-psql-user (set the rails-user password)
-> /q
-> createdb "name"
 
 
 **Create linked files and directories by adding into deploy.rb**

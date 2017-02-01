@@ -125,18 +125,24 @@ end
 > /q
 > createdb "name"
 
-
 **Ensure IP address and the project repo is adjusted to suite**
 deploy.rb and production.rb
 
 Recreate the keys using "rake secrets"
 ```
 development:
-  secret_key_base: 
+  secret_key_base: xxx
 test:
-  secret_key_base: 
+  secret_key_base: xxxcxccv
 production:
-  secret_key_base: 
+  secret_key_base: <%= ENV['SECTRETSTRING'] %>
+```
+
+Create application.yml file in the config directory
+```
+production:
+   DBPW: thepw
+   SECTRETSTRING: thestring
 ```
 
 Create the database.yml file
@@ -158,11 +164,9 @@ test:
 production:
   <<: *default
   database: db_production
-  username: db
+  username: rails-psql-user
   password: <%= ENV['DBPW'] %>
 ```
-
-
 
 **Create linked files and directories by adding into deploy.rb**
 
@@ -171,8 +175,23 @@ set :linked_files, %w{config/database.yml}
 set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 ```
 
+In the Capfile make sure these are all NOT commented out
+```
+require 'capistrano/figaro_yml'
+require "capistrano/rbenv"
+require "capistrano/bundler"
+require "capistrano/rails/assets"
+require "capistrano/rails/migrations"
+require 'capistrano/safe_deploy_to'
+require 'capistrano/unicorn_nginx'
+require 'capistrano/rbenv_install'
+require 'capistrano/secrets_yml'
+require 'capistrano/database_yml'
+```
+
 ## Setup the server
 
+> cap -T
 > cap production setup
 > cap production deploy
 

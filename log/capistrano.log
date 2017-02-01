@@ -28524,3 +28524,1406 @@
  DEBUG [e692af02] 	Reading package lists... Done
  DEBUG [e692af02] 	
   INFO [e692af02] Finished in 11.142 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-02-02 00:01:44 +0200 cap production setup
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-02-02 00:03:10 +0200 cap production setup
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-02-02 00:03:36 +0200 cap production setup
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-02-02 00:06:58 +0200 cap production safe_deploy_to:ensure
+  INFO ---------------------------------------------------------------------------
+ DEBUG [b013c4d9] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [b013c4d9] Command: [ -d $HOME/.rbenv ]
+ DEBUG [b013c4d9] Finished in 3.501 seconds with exit status 1 (failed).
+  INFO [8cc9421d] Running /usr/bin/env git clone https://github.com/sstephenson/rbenv.git $HOME/.rbenv as deployer@138.197.73.98
+ DEBUG [8cc9421d] Command: /usr/bin/env git clone https://github.com/sstephenson/rbenv.git $HOME/.rbenv
+ DEBUG [8cc9421d] 	Cloning into '/home/deployer/.rbenv'...
+ DEBUG [8cc9421d] 	
+ DEBUG [8cc9421d] 	remote: Counting objects: 2595, done.[K
+ DEBUG [8cc9421d] 	
+ DEBUG [8cc9421d] 	Receiving objects:   0% (1/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:   1% (26/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:   2% (52/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:   3% (78/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:   4% (104/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:   5% (130/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:   6% (156/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:   7% (182/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:   8% (208/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:   9% (234/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  10% (260/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  11% (286/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  12% (312/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  13% (338/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  14% (364/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  15% (390/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  16% (416/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  17% (442/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  18% (468/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  19% (494/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  20% (519/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  21% (545/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  22% (571/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  23% (597/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  24% (623/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  25% (649/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  26% (675/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  27% (701/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  28% (727/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  29% (753/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  30% (779/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  31% (805/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  32% (831/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  33% (857/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  34% (883/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  35% (909/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  36% (935/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  37% (961/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  38% (987/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  39% (1013/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  40% (1038/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  41% (1064/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  42% (1090/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  43% (1116/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  44% (1142/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  45% (1168/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  46% (1194/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  47% (1220/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  48% (1246/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  49% (1272/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  50% (1298/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  51% (1324/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  52% (1350/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  53% (1376/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  54% (1402/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  55% (1428/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  56% (1454/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  57% (1480/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  58% (1506/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  59% (1532/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  60% (1557/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  61% (1583/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  62% (1609/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  63% (1635/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  64% (1661/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  65% (1687/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  66% (1713/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  67% (1739/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  68% (1765/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  69% (1791/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  70% (1817/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  71% (1843/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  72% (1869/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  73% (1895/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  74% (1921/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  75% (1947/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  76% (1973/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  77% (1999/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  78% (2025/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  79% (2051/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  80% (2076/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  81% (2102/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  82% (2128/2595)   
+ DEBUG [8cc9421d] 	remote: Total 2595 (delta 0), reused 0 (delta 0), pack-reused 2595[K
+ DEBUG [8cc9421d] 	
+ DEBUG [8cc9421d] 	Receiving objects:  83% (2154/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  84% (2180/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  85% (2206/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  86% (2232/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  87% (2258/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  88% (2284/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  89% (2310/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  90% (2336/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  91% (2362/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  92% (2388/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  93% (2414/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  94% (2440/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  95% (2466/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  96% (2492/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  97% (2518/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  98% (2544/2595)   
+ DEBUG [8cc9421d] 	Receiving objects:  99% (2570/2595)   
+ DEBUG [8cc9421d] 	Receiving objects: 100% (2595/2595)   
+ DEBUG [8cc9421d] 	Receiving objects: 100% (2595/2595), 475.80 KiB | 0 bytes/s, done.
+ DEBUG [8cc9421d] 	
+ DEBUG [8cc9421d] 	Resolving deltas:   0% (0/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:   1% (22/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:   2% (35/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:   3% (49/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:   4% (73/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:   5% (86/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:   6% (106/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:   8% (132/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:   9% (153/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  10% (165/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  11% (183/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  12% (197/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  13% (226/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  14% (229/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  15% (246/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  16% (264/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  17% (277/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  21% (351/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  22% (361/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  23% (386/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  24% (394/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  26% (438/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  27% (445/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  28% (463/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  29% (476/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  31% (514/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  32% (526/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  36% (599/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  38% (623/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  39% (647/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  40% (652/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  43% (716/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  44% (728/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  45% (733/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  46% (756/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  49% (804/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  53% (863/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  54% (891/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  55% (905/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  57% (943/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  58% (946/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  61% (1003/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  64% (1054/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  65% (1063/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  66% (1081/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  67% (1096/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  68% (1119/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  69% (1124/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  70% (1142/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  71% (1160/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  75% (1226/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  76% (1240/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  77% (1267/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  78% (1274/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  79% (1297/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  80% (1303/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  81% (1322/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  84% (1369/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  86% (1402/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  87% (1417/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  88% (1434/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  89% (1449/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  90% (1470/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  94% (1534/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  95% (1552/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  96% (1564/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  98% (1608/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas:  99% (1613/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas: 100% (1628/1628)   
+ DEBUG [8cc9421d] 	Resolving deltas: 100% (1628/1628), done.
+ DEBUG [8cc9421d] 	
+ DEBUG [8cc9421d] 	Checking connectivity... 
+ DEBUG [8cc9421d] 	done.
+ DEBUG [8cc9421d] 	
+  INFO [8cc9421d] Finished in 4.581 seconds with exit status 0 (successful).
+ DEBUG [0544f3eb] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [0544f3eb] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [0544f3eb] Finished in 5.307 seconds with exit status 1 (failed).
+  INFO [cdf52071] Running /usr/bin/env git clone https://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-build as deployer@138.197.73.98
+ DEBUG [cdf52071] Command: /usr/bin/env git clone https://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-build
+ DEBUG [cdf52071] 	Cloning into '/home/deployer/.rbenv/plugins/ruby-build'...
+ DEBUG [cdf52071] 	
+ DEBUG [cdf52071] 	remote: Counting objects: 7371, done.[K
+ DEBUG [cdf52071] 	
+ DEBUG [cdf52071] 	remote: Compressing objects:   0% (1/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:   1% (3/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:   2% (5/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:   3% (8/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:   4% (10/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:   5% (13/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:   6% (15/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:   7% (18/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:   8% (20/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:   9% (23/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  10% (25/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  11% (27/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  12% (30/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  13% (32/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  14% (35/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  15% (37/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  16% (40/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  17% (42/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  18% (45/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  19% (47/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  20% (49/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  21% (52/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  22% (54/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  23% (57/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  24% (59/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  25% (62/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  26% (64/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  27% (67/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  28% (69/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  29% (72/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  30% (74/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  31% (76/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  32% (79/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  33% (81/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  34% (84/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  35% (86/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  36% (89/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  37% (91/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  38% (94/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  39% (96/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  40% (98/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  41% (101/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  42% (103/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  43% (106/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  44% (108/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  45% (111/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  46% (113/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  47% (116/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  48% (118/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  49% (121/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  50% (123/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  51% (125/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  52% (128/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  53% (130/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  54% (133/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  55% (135/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  56% (138/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  57% (140/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  58% (143/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  59% (145/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  60% (147/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  61% (150/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  62% (152/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  63% (155/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  64% (157/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  65% (160/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  66% (162/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  67% (165/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  68% (167/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  69% (170/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  70% (172/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  71% (174/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  72% (177/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  73% (179/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  74% (182/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  75% (184/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  76% (187/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  77% (189/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  78% (192/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  79% (194/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  80% (196/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  81% (199/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  82% (201/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  83% (204/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  84% (206/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  85% (209/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  86% (211/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  87% (214/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  88% (216/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  89% (219/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  90% (221/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  91% (223/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  92% (226/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  93% (228/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  94% (231/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  95% (233/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  96% (236/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  97% (238/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  98% (241/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects:  99% (243/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects: 100% (245/245)   [K
+ DEBUG [cdf52071] 	remote: Compressing objects: 100% (245/245), done.[K
+ DEBUG [cdf52071] 	
+ DEBUG [cdf52071] 	Receiving objects:   0% (1/7371)   
+ DEBUG [cdf52071] 	Receiving objects:   1% (74/7371)   
+ DEBUG [cdf52071] 	Receiving objects:   2% (148/7371)   
+ DEBUG [cdf52071] 	Receiving objects:   3% (222/7371)   
+ DEBUG [cdf52071] 	Receiving objects:   4% (295/7371)   
+ DEBUG [cdf52071] 	Receiving objects:   5% (369/7371)   
+ DEBUG [cdf52071] 	Receiving objects:   6% (443/7371)   
+ DEBUG [cdf52071] 	Receiving objects:   7% (516/7371)   
+ DEBUG [cdf52071] 	Receiving objects:   8% (590/7371)   
+ DEBUG [cdf52071] 	Receiving objects:   9% (664/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  10% (738/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  11% (811/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  12% (885/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  13% (959/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  14% (1032/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  15% (1106/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  16% (1180/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  17% (1254/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  18% (1327/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  19% (1401/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  20% (1475/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  21% (1548/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  22% (1622/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  23% (1696/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  24% (1770/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  25% (1843/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  26% (1917/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  27% (1991/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  28% (2064/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  29% (2138/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  30% (2212/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  31% (2286/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  32% (2359/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  33% (2433/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  34% (2507/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  35% (2580/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  36% (2654/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  37% (2728/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  38% (2801/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  39% (2875/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  40% (2949/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  41% (3023/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  42% (3096/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  43% (3170/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  44% (3244/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  45% (3317/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  46% (3391/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  47% (3465/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  48% (3539/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  49% (3612/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  50% (3686/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  51% (3760/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  52% (3833/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  53% (3907/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  54% (3981/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  55% (4055/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  56% (4128/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  57% (4202/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  58% (4276/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  59% (4349/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  60% (4423/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  61% (4497/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  62% (4571/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  63% (4644/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  64% (4718/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  65% (4792/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  66% (4865/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  67% (4939/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  68% (5013/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  69% (5086/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  70% (5160/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  71% (5234/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  72% (5308/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  73% (5381/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  74% (5455/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  75% (5529/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  76% (5602/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  77% (5676/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  78% (5750/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  79% (5824/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  80% (5897/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  81% (5971/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  82% (6045/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  83% (6118/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  84% (6192/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  85% (6266/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  86% (6340/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  87% (6413/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  88% (6487/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  89% (6561/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  90% (6634/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  91% (6708/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  92% (6782/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  93% (6856/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  94% (6929/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  95% (7003/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  96% (7077/7371)   
+ DEBUG [cdf52071] 	remote: Total 7371 (delta 161), reused 0 (delta 0), pack-reused 7122[K
+ DEBUG [cdf52071] 	
+ DEBUG [cdf52071] 	Receiving objects:  97% (7150/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  98% (7224/7371)   
+ DEBUG [cdf52071] 	Receiving objects:  99% (7298/7371)   
+ DEBUG [cdf52071] 	Receiving objects: 100% (7371/7371)   
+ DEBUG [cdf52071] 	Receiving objects: 100% (7371/7371), 1.46 MiB | 0 bytes/s, done.
+ DEBUG [cdf52071] 	
+ DEBUG [cdf52071] 	Resolving deltas:   0% (0/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:   1% (48/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:   2% (89/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:   3% (133/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:   4% (180/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:   5% (221/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:   6% (268/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:   7% (339/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:   8% (361/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:   9% (401/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  10% (452/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  16% (740/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  17% (750/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  18% (795/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  19% (835/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  20% (879/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  21% (924/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  22% (969/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  23% (1014/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  24% (1062/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  25% (1098/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  26% (1144/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  27% (1186/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  28% (1231/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  29% (1278/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  30% (1324/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  31% (1361/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  32% (1438/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  33% (1484/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  34% (1533/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  37% (1635/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  38% (1682/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  39% (1712/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  40% (1775/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  41% (1801/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  42% (1848/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  43% (1895/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  44% (1935/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  45% (1983/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  46% (2019/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  47% (2066/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  48% (2110/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  49% (2155/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  57% (2507/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  58% (2561/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  59% (2590/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  61% (2680/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  62% (2760/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  63% (2793/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  64% (2815/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  65% (2864/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  66% (2911/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  67% (2973/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  68% (3014/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  69% (3041/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  70% (3073/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  71% (3122/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  72% (3169/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  73% (3205/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  74% (3248/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  75% (3293/4389)   Resolving deltas:  76% (3339/4389)   Resolving deltas:  77% (3407/4389)   Resolving deltas:  78% (3433/4389)   Resolving deltas:  79% (3486/4389)   Resolving deltas:  80% (3517/4389)   Resolving deltas:  81% (3562/4389)   Resolving deltas:  82% (3600/4389)   Resolving deltas:  83% (3673/4389)   Resolving deltas:  84% (3688/4389)   Resolving deltas:  85% (3732/4389)   Resolving deltas:  86% (3782/4389)   Resolving deltas:  87% (3827/4389)   Resolving deltas:  88% (3863/4389)   Resolving deltas:  89% (3922/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  90% (3962/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  91% (4018/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  92% (4038/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  93% (4083/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  94% (4127/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  95% (4170/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  96% (4216/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  97% (4268/4389)   
+ DEBUG [cdf52071] 	Resolving deltas:  98% (4302/4389)   
+ DEBUG [cdf52071] 	Resolving deltas: 100% (4389/4389)   
+ DEBUG [cdf52071] 	Resolving deltas: 100% (4389/4389), done.
+ DEBUG [cdf52071] 	
+ DEBUG [cdf52071] 	Checking connectivity... 
+ DEBUG [cdf52071] 	done.
+ DEBUG [cdf52071] 	
+  INFO [cdf52071] Finished in 5.221 seconds with exit status 0 (successful).
+ DEBUG [39308f6b] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [39308f6b] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [39308f6b] Finished in 0.638 seconds with exit status 1 (failed).
+ DEBUG [a9873a8e] Running [ ! -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [a9873a8e] Command: [ ! -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [a9873a8e] Finished in 0.625 seconds with exit status 1 (failed).
+ DEBUG [2de62c16] Running if test ! -d $HOME/.rbenv/plugins/ruby-build; then echo "Directory does not exist '$HOME/.rbenv/plugins/ruby-build'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [2de62c16] Command: if test ! -d $HOME/.rbenv/plugins/ruby-build; then echo "Directory does not exist '$HOME/.rbenv/plugins/ruby-build'" 1>&2; false; fi
+ DEBUG [2de62c16] Finished in 0.622 seconds with exit status 0 (successful).
+  INFO [bd92b713] Running /usr/bin/env git pull as deployer@138.197.73.98
+ DEBUG [bd92b713] Command: cd $HOME/.rbenv/plugins/ruby-build && /usr/bin/env git pull
+ DEBUG [bd92b713] 	Already up-to-date.
+ DEBUG [bd92b713] 	
+  INFO [bd92b713] Finished in 0.896 seconds with exit status 0 (successful).
+  INFO [4ba10555] Running /usr/bin/env $HOME/.rbenv/bin/rbenv install 2.3.1 as deployer@138.197.73.98
+ DEBUG [4ba10555] Command: /usr/bin/env $HOME/.rbenv/bin/rbenv install 2.3.1
+ DEBUG [4ba10555] 	perl: warning: Setting locale failed.
+ DEBUG [4ba10555] 	
+ DEBUG [4ba10555] 	perl: warning: Please check that your locale settings:
+ DEBUG [4ba10555] 	
+ DEBUG [4ba10555] 		
+ DEBUG [4ba10555] 	LANGUAGE = (unset),
+ DEBUG [4ba10555] 	
+ DEBUG [4ba10555] 		
+ DEBUG [4ba10555] 	LC_ALL = (unset),
+ DEBUG [4ba10555] 	
+ DEBUG [4ba10555] 		
+ DEBUG [4ba10555] 	LC_CTYPE = "UTF-8",
+ DEBUG [4ba10555] 	
+ DEBUG [4ba10555] 		
+ DEBUG [4ba10555] 	LANG = "en_US.UTF-8"
+ DEBUG [4ba10555] 	
+ DEBUG [4ba10555] 	    are supported and installed on your system.
+ DEBUG [4ba10555] 	
+ DEBUG [4ba10555] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [4ba10555] 	
+ DEBUG [4ba10555] 	Downloading ruby-2.3.1.tar.bz2...
+ DEBUG [4ba10555] 	
+ DEBUG [4ba10555] 	-> https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.1.tar.bz2
+ DEBUG [4ba10555] 	
+ DEBUG [4ba10555] 	Installing ruby-2.3.1...
+ DEBUG [4ba10555] 	
+ DEBUG [4ba10555] 	Installed ruby-2.3.1 to /home/deployer/.rbenv/versions/2.3.1
+ DEBUG [4ba10555] 	
+ DEBUG [4ba10555] 	
+  INFO [4ba10555] Finished in 480.755 seconds with exit status 0 (successful).
+ DEBUG [57fe74b6] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [57fe74b6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [57fe74b6] 	false
+ DEBUG [57fe74b6] 	
+ DEBUG [57fe74b6] Finished in 0.862 seconds with exit status 1 (failed).
+  INFO [f7c200d2] Running $HOME/.rbenv/bin/rbenv exec gem install bundler --quiet --no-rdoc --no-ri as deployer@138.197.73.98
+ DEBUG [f7c200d2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem install bundler --quiet --no-rdoc --no-ri )
+ DEBUG [f7c200d2] 	Bundler and RubyGems.org are free for anyone to use, but maintaining them costs more than $25,000 USD every month. Help us cover those costs so that we can keep the gem ecosystem free for everyone: https://ruby.to/support-bundler
+ DEBUG [f7c200d2] 	
+ DEBUG [f7c200d2] 	Successfully installed bundler-1.14.3
+ DEBUG [f7c200d2] 	
+ DEBUG [f7c200d2] 	1 gem installed
+ DEBUG [f7c200d2] 	
+  INFO [f7c200d2] Finished in 1.263 seconds with exit status 0 (successful).
+ DEBUG [e6b37c19] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [e6b37c19] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [e6b37c19] Finished in 0.624 seconds with exit status 0 (successful).
+  INFO [d0fa2a3c] Running /usr/bin/env sudo mkdir -pv /home/deployer/apps/fut-std as deployer@138.197.73.98
+ DEBUG [d0fa2a3c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mkdir -pv /home/deployer/apps/fut-std )
+ DEBUG [d0fa2a3c] 	mkdir: created directory '/home/deployer/apps'
+ DEBUG [d0fa2a3c] 	
+ DEBUG [d0fa2a3c] 	mkdir: created directory '/home/deployer/apps/fut-std'
+ DEBUG [d0fa2a3c] 	
+  INFO [d0fa2a3c] Finished in 0.622 seconds with exit status 0 (successful).
+ DEBUG [325832bb] Running /usr/bin/env id -un as deployer@138.197.73.98
+ DEBUG [325832bb] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -un )
+ DEBUG [325832bb] 	deployer
+ DEBUG [325832bb] 	
+ DEBUG [325832bb] Finished in 0.640 seconds with exit status 0 (successful).
+ DEBUG [7a61994d] Running /usr/bin/env id -gn as deployer@138.197.73.98
+ DEBUG [7a61994d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -gn )
+ DEBUG [7a61994d] 	deployer
+ DEBUG [7a61994d] 	
+ DEBUG [7a61994d] Finished in 0.664 seconds with exit status 0 (successful).
+  INFO [f7ab79f2] Running /usr/bin/env sudo chown deployer:deployer /home/deployer/apps/fut-std as deployer@138.197.73.98
+ DEBUG [f7ab79f2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo chown deployer:deployer /home/deployer/apps/fut-std )
+  INFO [f7ab79f2] Finished in 0.647 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-02-02 00:18:42 +0200 cap production setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d9072127] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [d9072127] Command: [ -d $HOME/.rbenv ]
+ DEBUG [d9072127] Finished in 3.656 seconds with exit status 0 (successful).
+ DEBUG [82c92448] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [82c92448] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [82c92448] Finished in 3.202 seconds with exit status 0 (successful).
+ DEBUG [6cb2928f] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [6cb2928f] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [6cb2928f] Finished in 0.543 seconds with exit status 0 (successful).
+ DEBUG [19dd5162] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [19dd5162] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [19dd5162] 	true
+ DEBUG [19dd5162] 	
+ DEBUG [19dd5162] Finished in 0.859 seconds with exit status 0 (successful).
+ DEBUG [0728bc9b] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [0728bc9b] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [0728bc9b] Finished in 0.608 seconds with exit status 0 (successful).
+  INFO [e6d48c71] Running /usr/bin/env sudo mkdir -pv /home/deployer/apps/fut-std as deployer@138.197.73.98
+ DEBUG [e6d48c71] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mkdir -pv /home/deployer/apps/fut-std )
+  INFO [e6d48c71] Finished in 0.623 seconds with exit status 0 (successful).
+ DEBUG [afed5fcc] Running /usr/bin/env id -un as deployer@138.197.73.98
+ DEBUG [afed5fcc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -un )
+ DEBUG [afed5fcc] 	deployer
+ DEBUG [afed5fcc] 	
+ DEBUG [afed5fcc] Finished in 0.664 seconds with exit status 0 (successful).
+ DEBUG [318b0c80] Running /usr/bin/env id -gn as deployer@138.197.73.98
+ DEBUG [318b0c80] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -gn )
+ DEBUG [318b0c80] 	deployer
+ DEBUG [318b0c80] 	
+ DEBUG [318b0c80] Finished in 0.629 seconds with exit status 0 (successful).
+  INFO [2697a4ae] Running /usr/bin/env sudo chown deployer:deployer /home/deployer/apps/fut-std as deployer@138.197.73.98
+ DEBUG [2697a4ae] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo chown deployer:deployer /home/deployer/apps/fut-std )
+  INFO [2697a4ae] Finished in 0.658 seconds with exit status 0 (successful).
+  INFO [b60ef39e] Running /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config as deployer@138.197.73.98
+ DEBUG [b60ef39e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config )
+ DEBUG [b60ef39e] 	mkdir: created directory '/home/deployer/apps/fut-std/shared'
+ DEBUG [b60ef39e] 	
+ DEBUG [b60ef39e] 	mkdir: created directory '/home/deployer/apps/fut-std/shared/config'
+ DEBUG [b60ef39e] 	
+  INFO [b60ef39e] Finished in 0.649 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/deployer/apps/fut-std/shared/config/application.yml 0.0%
+  INFO Uploading /home/deployer/apps/fut-std/shared/config/application.yml 100.0%
+ DEBUG Uploading /tmp/fut-std_production 0.0%
+  INFO Uploading /tmp/fut-std_production 100.0%
+  INFO [9390a8c3] Running /usr/bin/env sudo mv /tmp/fut-std_production /etc/nginx/sites-available as deployer@138.197.73.98
+ DEBUG [9390a8c3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/fut-std_production /etc/nginx/sites-available )
+  INFO [9390a8c3] Finished in 0.631 seconds with exit status 0 (successful).
+  INFO [2517f32d] Running /usr/bin/env sudo ln -fs /etc/nginx/sites-available/fut-std_production /etc/nginx/sites-enabled/fut-std_production as deployer@138.197.73.98
+ DEBUG [2517f32d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo ln -fs /etc/nginx/sites-available/fut-std_production /etc/nginx/sites-enabled/fut-std_production )
+  INFO [2517f32d] Finished in 0.639 seconds with exit status 0 (successful).
+ DEBUG [a9b57aed] Running /usr/bin/env id -un as deployer@138.197.73.98
+ DEBUG [a9b57aed] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -un )
+ DEBUG [a9b57aed] 	deployer
+ DEBUG [a9b57aed] 	
+ DEBUG [a9b57aed] Finished in 0.608 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/unicorn_fut-std_production 0.0%
+  INFO Uploading /tmp/unicorn_fut-std_production 100.0%
+  INFO [12278db8] Running /usr/bin/env sudo mv /tmp/unicorn_fut-std_production /etc/init.d as deployer@138.197.73.98
+ DEBUG [12278db8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/unicorn_fut-std_production /etc/init.d )
+  INFO [12278db8] Finished in 0.636 seconds with exit status 0 (successful).
+  INFO [02410519] Running /usr/bin/env chmod +x /etc/init.d/unicorn_fut-std_production as deployer@138.197.73.98
+ DEBUG [02410519] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod +x /etc/init.d/unicorn_fut-std_production )
+  INFO [02410519] Finished in 0.621 seconds with exit status 0 (successful).
+  INFO [1bc7455e] Running /usr/bin/env sudo update-rc.d -f unicorn_fut-std_production defaults as deployer@138.197.73.98
+ DEBUG [1bc7455e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo update-rc.d -f unicorn_fut-std_production defaults )
+ DEBUG [1bc7455e] 	perl: warning: Setting locale failed.
+ DEBUG [1bc7455e] 	
+ DEBUG [1bc7455e] 	perl: warning: Please check that your locale settings:
+ DEBUG [1bc7455e] 	
+ DEBUG [1bc7455e] 		
+ DEBUG [1bc7455e] 	LANGUAGE = (unset),
+ DEBUG [1bc7455e] 	
+ DEBUG [1bc7455e] 		
+ DEBUG [1bc7455e] 	LC_ALL = (unset),
+ DEBUG [1bc7455e] 	
+ DEBUG [1bc7455e] 		
+ DEBUG [1bc7455e] 	LC_CTYPE = "UTF-8",
+ DEBUG [1bc7455e] 	
+ DEBUG [1bc7455e] 		
+ DEBUG [1bc7455e] 	LANG = "en_US.UTF-8"
+ DEBUG [1bc7455e] 	
+ DEBUG [1bc7455e] 	    are supported and installed on your system.
+ DEBUG [1bc7455e] 	
+ DEBUG [1bc7455e] 	perl: warning: Falling back to the standard locale ("C").
+ DEBUG [1bc7455e] 	
+ DEBUG [1bc7455e] 	 Adding system startup for /etc/init.d/unicorn_fut-std_production ...
+ DEBUG [1bc7455e] 	
+ DEBUG [1bc7455e] 	   /etc/rc0.d/K20unicorn_fut-std_production -> ../init.d/unicorn_fut-std_production
+ DEBUG [1bc7455e] 	
+ DEBUG [1bc7455e] 	   /etc/rc1.d/K20unicorn_fut-std_production -> ../init.d/unicorn_fut-std_production
+ DEBUG [1bc7455e] 	
+ DEBUG [1bc7455e] 	   /etc/rc6.d/K20unicorn_fut-std_production -> ../init.d/unicorn_fut-std_production
+ DEBUG [1bc7455e] 	
+ DEBUG [1bc7455e] 	   /etc/rc2.d/S20unicorn_fut-std_production -> ../init.d/unicorn_fut-std_production
+ DEBUG [1bc7455e] 	
+ DEBUG [1bc7455e] 	   /etc/rc3.d/S20unicorn_fut-std_production -> ../init.d/unicorn_fut-std_production
+ DEBUG [1bc7455e] 	
+ DEBUG [1bc7455e] 	   /etc/rc4.d/S20unicorn_fut-std_production -> ../init.d/unicorn_fut-std_production
+ DEBUG [1bc7455e] 	
+ DEBUG [1bc7455e] 	   /etc/rc5.d/S20unicorn_fut-std_production -> ../init.d/unicorn_fut-std_production
+ DEBUG [1bc7455e] 	
+  INFO [1bc7455e] Finished in 0.997 seconds with exit status 0 (successful).
+  INFO [d200b0d4] Running /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config as deployer@138.197.73.98
+ DEBUG [d200b0d4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config )
+  INFO [d200b0d4] Finished in 0.622 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/deployer/apps/fut-std/shared/config/unicorn.rb 0.0%
+  INFO Uploading /home/deployer/apps/fut-std/shared/config/unicorn.rb 100.0%
+  INFO [fd0be4a5] Running /usr/bin/env sudo mkdir -pv /etc/logrotate.d as deployer@138.197.73.98
+ DEBUG [fd0be4a5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mkdir -pv /etc/logrotate.d )
+  INFO [fd0be4a5] Finished in 0.647 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/unicorn_fut-std_production 0.0%
+  INFO Uploading /tmp/unicorn_fut-std_production 100.0%
+  INFO [4703e384] Running /usr/bin/env sudo mv /tmp/unicorn_fut-std_production /etc/logrotate.d as deployer@138.197.73.98
+ DEBUG [4703e384] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mv /tmp/unicorn_fut-std_production /etc/logrotate.d )
+  INFO [4703e384] Finished in 0.634 seconds with exit status 0 (successful).
+  INFO [785c1c00] Running /usr/bin/env sudo chown root:root /etc/logrotate.d/unicorn_fut-std_production as deployer@138.197.73.98
+ DEBUG [785c1c00] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo chown root:root /etc/logrotate.d/unicorn_fut-std_production )
+  INFO [785c1c00] Finished in 0.648 seconds with exit status 0 (successful).
+  INFO [431f028e] Running /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config as deployer@138.197.73.98
+ DEBUG [431f028e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config )
+  INFO [431f028e] Finished in 0.617 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/deployer/apps/fut-std/shared/config/secrets.yml 0.0%
+  INFO Uploading /home/deployer/apps/fut-std/shared/config/secrets.yml 100.0%
+  INFO [8e63c40e] Running /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config as deployer@138.197.73.98
+ DEBUG [8e63c40e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -pv /home/deployer/apps/fut-std/shared/config )
+  INFO [8e63c40e] Finished in 0.628 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/deployer/apps/fut-std/shared/config/database.yml 0.0%
+  INFO Uploading /home/deployer/apps/fut-std/shared/config/database.yml 100.0%
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-02-02 00:19:51 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ba13eb5d] Running [ -d $HOME/.rbenv ] as deployer@138.197.73.98
+ DEBUG [ba13eb5d] Command: [ -d $HOME/.rbenv ]
+ DEBUG [ba13eb5d] Finished in 3.246 seconds with exit status 0 (successful).
+ DEBUG [73a2873e] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as deployer@138.197.73.98
+ DEBUG [73a2873e] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [73a2873e] Finished in 3.385 seconds with exit status 0 (successful).
+ DEBUG [453a92c8] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [453a92c8] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [453a92c8] Finished in 0.630 seconds with exit status 0 (successful).
+ DEBUG [f0a9f357] Running $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as deployer@138.197.73.98
+ DEBUG [f0a9f357] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [f0a9f357] 	true
+ DEBUG [f0a9f357] 	
+ DEBUG [f0a9f357] Finished in 0.921 seconds with exit status 0 (successful).
+ DEBUG [39c210b1] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deployer@138.197.73.98
+ DEBUG [39c210b1] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [39c210b1] Finished in 0.598 seconds with exit status 0 (successful).
+  INFO [92f2f327] Running /usr/bin/env mkdir -p /tmp as deployer@138.197.73.98
+ DEBUG [92f2f327] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [92f2f327] Finished in 0.629 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-fut-std-production-craig.sh 0.0%
+  INFO Uploading /tmp/git-ssh-fut-std-production-craig.sh 100.0%
+  INFO [6b803d8a] Running /usr/bin/env chmod 700 /tmp/git-ssh-fut-std-production-craig.sh as deployer@138.197.73.98
+ DEBUG [6b803d8a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-fut-std-production-craig.sh )
+  INFO [6b803d8a] Finished in 0.601 seconds with exit status 0 (successful).
+  INFO [f50e4e5a] Running /usr/bin/env git ls-remote https://github.com/yoyozi/fut-std.git HEAD as deployer@138.197.73.98
+ DEBUG [f50e4e5a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env git ls-remote https://github.com/yoyozi/fut-std.git HEAD )
+ DEBUG [f50e4e5a] 	f8a95b32a06672441744362cb6e3f25b9fd583d6
+ DEBUG [f50e4e5a] 		
+ DEBUG [f50e4e5a] 	HEAD
+ DEBUG [f50e4e5a] 	
+  INFO [f50e4e5a] Finished in 1.267 seconds with exit status 0 (successful).
+  INFO [b8996877] Running /usr/bin/env sudo mkdir -pv /home/deployer/apps/fut-std as deployer@138.197.73.98
+ DEBUG [b8996877] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mkdir -pv /home/deployer/apps/fut-std )
+  INFO [b8996877] Finished in 0.692 seconds with exit status 0 (successful).
+ DEBUG [c3bdb019] Running /usr/bin/env id -un as deployer@138.197.73.98
+ DEBUG [c3bdb019] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -un )
+ DEBUG [c3bdb019] 	deployer
+ DEBUG [c3bdb019] 	
+ DEBUG [c3bdb019] Finished in 0.581 seconds with exit status 0 (successful).
+ DEBUG [f76e2257] Running /usr/bin/env id -gn as deployer@138.197.73.98
+ DEBUG [f76e2257] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env id -gn )
+ DEBUG [f76e2257] 	deployer
+ DEBUG [f76e2257] 	
+ DEBUG [f76e2257] Finished in 0.608 seconds with exit status 0 (successful).
+  INFO [c78c5cf4] Running /usr/bin/env sudo chown deployer:deployer /home/deployer/apps/fut-std as deployer@138.197.73.98
+ DEBUG [c78c5cf4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo chown deployer:deployer /home/deployer/apps/fut-std )
+  INFO [c78c5cf4] Finished in 0.621 seconds with exit status 0 (successful).
+  INFO [e1e1f502] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/shared /home/deployer/apps/fut-std/releases as deployer@138.197.73.98
+ DEBUG [e1e1f502] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/shared /home/deployer/apps/fut-std/releases )
+  INFO [e1e1f502] Finished in 0.645 seconds with exit status 0 (successful).
+  INFO [140ffc3c] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/shared/bin /home/deployer/apps/fut-std/shared/log /home/deployer/apps/fut-std/shared/tmp/pids /home/deployer/apps/fut-std/shared/tmp/cache /home/deployer/apps/fut-std/shared/tmp/sockets /home/deployer/apps/fut-std/shared/vendor/bundle /home/deployer/apps/fut-std/shared/public/system /home/deployer/apps/fut-std/shared/public/assets as deployer@138.197.73.98
+ DEBUG [140ffc3c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/shared/bin /home/deployer/apps/fut-std/shared/log /home/deployer/apps/fut-std/shared/tmp/pids /home/deployer/apps/fut-std/shared/tmp/cache /home/deployer/apps/fut-std/shared/tmp/sockets /home/deployer/apps/fut-std/shared/vendor/bundle /home/deployer/apps/fut-std/shared/public/system /home/deployer/apps/fut-std/shared/public/assets )
+  INFO [140ffc3c] Finished in 0.640 seconds with exit status 0 (successful).
+  INFO [a1ab4024] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/shared/config as deployer@138.197.73.98
+ DEBUG [a1ab4024] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/shared/config )
+  INFO [a1ab4024] Finished in 0.680 seconds with exit status 0 (successful).
+ DEBUG [ea15f42a] Running [ -f /home/deployer/apps/fut-std/shared/config/database.yml ] as deployer@138.197.73.98
+ DEBUG [ea15f42a] Command: [ -f /home/deployer/apps/fut-std/shared/config/database.yml ]
+ DEBUG [ea15f42a] Finished in 0.563 seconds with exit status 0 (successful).
+ DEBUG [dfd6643b] Running [ -f /home/deployer/apps/fut-std/current/REVISION ] as deployer@138.197.73.98
+ DEBUG [dfd6643b] Command: [ -f /home/deployer/apps/fut-std/current/REVISION ]
+ DEBUG [dfd6643b] Finished in 0.656 seconds with exit status 1 (failed).
+ DEBUG [4e0d52f2] Running [ -f /home/deployer/apps/fut-std/repo/HEAD ] as deployer@138.197.73.98
+ DEBUG [4e0d52f2] Command: [ -f /home/deployer/apps/fut-std/repo/HEAD ]
+ DEBUG [4e0d52f2] Finished in 0.595 seconds with exit status 1 (failed).
+ DEBUG [20c075b1] Running if test ! -d /home/deployer/apps/fut-std; then echo "Directory does not exist '/home/deployer/apps/fut-std'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [20c075b1] Command: if test ! -d /home/deployer/apps/fut-std; then echo "Directory does not exist '/home/deployer/apps/fut-std'" 1>&2; false; fi
+ DEBUG [20c075b1] Finished in 0.623 seconds with exit status 0 (successful).
+  INFO [b66c139f] Running /usr/bin/env git clone --mirror https://github.com/yoyozi/fut-std.git /home/deployer/apps/fut-std/repo as deployer@138.197.73.98
+ DEBUG [b66c139f] Command: cd /home/deployer/apps/fut-std && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env git clone --mirror https://github.com/yoyozi/fut-std.git /home/deployer/apps/fut-std/repo )
+ DEBUG [b66c139f] 	Cloning into bare repository '/home/deployer/apps/fut-std/repo'...
+ DEBUG [b66c139f] 	
+ DEBUG [b66c139f] 	remote: Counting objects: 282, done.[K
+ DEBUG [b66c139f] 	
+ DEBUG [b66c139f] 	remote: Compressing objects:   0% (1/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:   1% (2/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:   2% (4/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objec
+ DEBUG [b66c139f] 	ts:   3% (6/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:   4% (8/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:   5% (10/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:   6% (11/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:   7% (13/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:   8% (15/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:   9% (17/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  10% (19/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  11% (21/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  12% (22/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  13% (24/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  14% (26/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  15% (28/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  16% (30/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  17% (32/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  18% (33/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  19% (35/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  20% (37/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  21% (39/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  22% (41/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  23% (43/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  24% (44/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  25% (46/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  26% (48/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  27% (50/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  28% (52/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  29% (54/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  30% (55/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  31% (57/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  32% (59/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  33% (61/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  34% (63/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  35% (65/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  36% (66/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  37% (68/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  38% (70/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  39% (72/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  40% (74/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  41% (76/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  42% (77/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  43% (79/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  44% (81/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  45% (83/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  46% (85/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  47% (87/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  48% (88/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  49% (90/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  50% (92/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  51% (94/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  52% (96/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  53% (97/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  54% (99/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  55% (101/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  56% (103/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  57% (105/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  58% (107/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  59% (108/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  60% (110/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  61% (112/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  62% (114/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  63% (116/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  64% (118/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  65% (119/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  66% (121/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  67% (123/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  68% (125/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  69% (127/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  70% (129/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  71% (130/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  72% (132/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  73% (134/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  74% (136/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  75% (138/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  76% (140/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  77% (141/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  78% (143/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  79% (145/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  80% (147/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  81% (149/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  82% (151/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  83% (152/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  84% (154/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  85% (156/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  86% (158/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  87% (160/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  88% (162/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  89% (163/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  90% (165/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  91% (167/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  92% (169/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  93% (171/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  94% (173/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  95% (174/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  96% (176/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  97% (178/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  98% (180/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects:  99% (182/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects: 100% (183/183)   [K
+ DEBUG [b66c139f] 	remote: Compressing objects: 100% (183/183), done.[K
+ DEBUG [b66c139f] 	
+ DEBUG [b66c139f] 	Receiving objects:   0% (1/282)   
+ DEBUG [b66c139f] 	Receiving objects:   1% (3/282)   
+ DEBUG [b66c139f] 	Receiving objects:   2% (6/282)   
+ DEBUG [b66c139f] 	Receiving objects:   3% (9/282)   
+ DEBUG [b66c139f] 	Receiving objects:   4% (12/282)   
+ DEBUG [b66c139f] 	Receiving objects:   5% (15/282)   
+ DEBUG [b66c139f] 	Receiving objects:   6% (17/282)   
+ DEBUG [b66c139f] 	Receiving objects:   7% (20/282)   
+ DEBUG [b66c139f] 	Receiving objects:   8% (23/282)   
+ DEBUG [b66c139f] 	Receiving objects:   9% (26/282)   
+ DEBUG [b66c139f] 	Receiving objects:  10% (29/282)   
+ DEBUG [b66c139f] 	Receiving objects:  11% (32/282)   
+ DEBUG [b66c139f] 	Receiving objects:  12% (34/282)   
+ DEBUG [b66c139f] 	Receiving objects:  13% (37/282)   
+ DEBUG [b66c139f] 	Receiving objects:  14% (40/282)   
+ DEBUG [b66c139f] 	Receiving objects:  15% (43/282)   
+ DEBUG [b66c139f] 	Receiving objects:  16% (46/282)   
+ DEBUG [b66c139f] 	Receiving objects:  17% (48/282)   
+ DEBUG [b66c139f] 	Receiving objects:  18% (51/282)   
+ DEBUG [b66c139f] 	Receiving objects:  19% (54/282)   
+ DEBUG [b66c139f] 	Receiving objects:  20% (57/282)   
+ DEBUG [b66c139f] 	Receiving objects:  21% (60/282)   
+ DEBUG [b66c139f] 	Receiving objects:  22% (63/282)   
+ DEBUG [b66c139f] 	Receiving objects:  23% (65/282)   
+ DEBUG [b66c139f] 	Receiving objects:  24% (68/282)   
+ DEBUG [b66c139f] 	Receiving objects:  25% (71/282)   
+ DEBUG [b66c139f] 	Receiving objects:  26% (74/282)   
+ DEBUG [b66c139f] 	Receiving objects:  27% (77/282)   
+ DEBUG [b66c139f] 	Receiving objects:  28% (79/282)   
+ DEBUG [b66c139f] 	Receiving objects:  29% (82/282)   
+ DEBUG [b66c139f] 	Receiving objects:  30% (85/282)   
+ DEBUG [b66c139f] 	Receiving objects:  31% (88/282)   
+ DEBUG [b66c139f] 	Receiving objects:  32% (91/282)   
+ DEBUG [b66c139f] 	Receiving objects:  33% (94/282)   
+ DEBUG [b66c139f] 	Receiving objects:  34% (96/282)   
+ DEBUG [b66c139f] 	Receiving objects:  35% (99/282)   
+ DEBUG [b66c139f] 	Receiving objects:  36% (102/282)   
+ DEBUG [b66c139f] 	Receiving objects:  37% (105/282)   
+ DEBUG [b66c139f] 	Receiving objects:  38% (108/282)   
+ DEBUG [b66c139f] 	Receiving objects:  39% (110/282)   
+ DEBUG [b66c139f] 	Receiving objects:  40% (113/282)   
+ DEBUG [b66c139f] 	Receiving objects:  41% (116/282)   
+ DEBUG [b66c139f] 	Receiving objects:  42% (119/282)   
+ DEBUG [b66c139f] 	Receiving objects:  43% (122/282)   
+ DEBUG [b66c139f] 	Receiving objects:  44% (125/282)   
+ DEBUG [b66c139f] 	Receiving objects:  45% (127/282)   
+ DEBUG [b66c139f] 	Receiving objects:  46% (130/282)   
+ DEBUG [b66c139f] 	remote: Total 282 (delta 124), reused 225 (delta 67), pack-reused 0[K
+ DEBUG [b66c139f] 	
+ DEBUG [b66c139f] 	Receiving objects:  47% (133/282)   
+ DEBUG [b66c139f] 	Receiving objects:  48% (136/282)   
+ DEBUG [b66c139f] 	Receiving objects:  49% (139/282)   
+ DEBUG [b66c139f] 	Receiving objects:  50% (141/282)   
+ DEBUG [b66c139f] 	Receiving objects:  51% (144/282)   
+ DEBUG [b66c139f] 	Receiving objects:  52% (147/282)   
+ DEBUG [b66c139f] 	Receiving objects:  53% (150/282)   
+ DEBUG [b66c139f] 	Receiving objects:  54% (153/282)   
+ DEBUG [b66c139f] 	Receiving objects:  55% (156/282)   
+ DEBUG [b66c139f] 	Receiving objects:  56% (158/282)   
+ DEBUG [b66c139f] 	Receiving objects:  57% (161/282)   
+ DEBUG [b66c139f] 	Receiving objects:  58% (164/282)   
+ DEBUG [b66c139f] 	Receiving objects:  59% (167/282)   
+ DEBUG [b66c139f] 	Receiving objects:  60% (170/282)   
+ DEBUG [b66c139f] 	Receiving objects:  61% (173/282)   
+ DEBUG [b66c139f] 	Receiving objects:  62% (175/282)   
+ DEBUG [b66c139f] 	Receiving objects:  63% (178/282)   
+ DEBUG [b66c139f] 	Receiving objects:  64% (181/282)   
+ DEBUG [b66c139f] 	Receiving objects:  65% (184/282)   
+ DEBUG [b66c139f] 	Receiving objects:  66% (187/282)   
+ DEBUG [b66c139f] 	Receiving objects:  67% (189/282)   
+ DEBUG [b66c139f] 	Receiving objects:  68% (192/282)   
+ DEBUG [b66c139f] 	Receiving objects:  69% (195/282)   
+ DEBUG [b66c139f] 	Receiving objects:  70% (198/282)   
+ DEBUG [b66c139f] 	Receiving objects:  71% (201/282)   
+ DEBUG [b66c139f] 	Receiving objects:  72% (204/282)   
+ DEBUG [b66c139f] 	Receiving objects:  73% (206/282)   
+ DEBUG [b66c139f] 	Receiving objects:  74% (209/282)   
+ DEBUG [b66c139f] 	Receiving objects:  75% (212/282)   
+ DEBUG [b66c139f] 	Receiving objects:  76% (215/282)   
+ DEBUG [b66c139f] 	Receiving objects:  77% (218/282)   
+ DEBUG [b66c139f] 	Receiving objects:  78% (220/282)   
+ DEBUG [b66c139f] 	Receiving objects:  79% (223/282)   
+ DEBUG [b66c139f] 	Receiving objects:  80% (226/282)   
+ DEBUG [b66c139f] 	Receiving objects:  81% (229/282)   
+ DEBUG [b66c139f] 	Receiving objects:  82% (232/282)   
+ DEBUG [b66c139f] 	Receiving objects:  83% (235/282)   
+ DEBUG [b66c139f] 	Receiving objects:  84% (237/282)   
+ DEBUG [b66c139f] 	Receiving objects:  85% (240/282)   
+ DEBUG [b66c139f] 	Receiving objects:  86% (243/282)   
+ DEBUG [b66c139f] 	Receiving objects:  87% (246/282)   
+ DEBUG [b66c139f] 	Receiving objects:  88% (249/282)   
+ DEBUG [b66c139f] 	Receiving objects:  89% (251/282)   
+ DEBUG [b66c139f] 	Receiving objects:  90% (254/282)   
+ DEBUG [b66c139f] 	Receiving objects:  91% (257/282)   
+ DEBUG [b66c139f] 	Receiving objects:  92% (260/282)   
+ DEBUG [b66c139f] 	Receiving objects:  93% (263/282)   
+ DEBUG [b66c139f] 	Receiving objects:  94% (266/282)   
+ DEBUG [b66c139f] 	Receiving objects:  95% (268/282)   
+ DEBUG [b66c139f] 	Receiving objects:  96% (271/282)   
+ DEBUG [b66c139f] 	Receiving objects:  97% (274/282)   
+ DEBUG [b66c139f] 	Receiving objects:  98% (277/282)   
+ DEBUG [b66c139f] 	Receiving objects:  99% (280/282)   
+ DEBUG [b66c139f] 	Receiving objects: 100% (282/282)   
+ DEBUG [b66c139f] 	Receiving objects: 100% (282/282), 238.50 KiB | 0 bytes/s, done.
+ DEBUG [b66c139f] 	
+ DEBUG [b66c139f] 	Resolving deltas:   0% (0/124)   
+ DEBUG [b66c139f] 	Resolving deltas:   1% (2/124)   
+ DEBUG [b66c139f] 	Resolving deltas:   3% (4/124)   
+ DEBUG [b66c139f] 	Resolving deltas:   9% (12/124)   
+ DEBUG [b66c139f] 	Resolving deltas:  16% (20/124)   
+ DEBUG [b66c139f] 	Resolving deltas:  23% (29/124)   
+ DEBUG [b66c139f] 	Resolving deltas:  33% (41/124)   
+ DEBUG [b66c139f] 	Resolving deltas:  34% (43/124)   
+ DEBUG [b66c139f] 	Resolving deltas:  44% (55/124)   
+ DEBUG [b66c139f] 	Resolving deltas:  50% (63/124)   
+ DEBUG [b66c139f] 	Resolving deltas:  55% (69/124)   
+ DEBUG [b66c139f] 	Resolving deltas:  56% (70/124)   
+ DEBUG [b66c139f] 	Resolving deltas:  62% (78/124)   
+ DEBUG [b66c139f] 	Resolving deltas:  80% (100/124)   
+ DEBUG [b66c139f] 	Resolving deltas:  81% (101/124)   
+ DEBUG [b66c139f] 	Resolving deltas:  83% (103/124)   
+ DEBUG [b66c139f] 	Resolving deltas:  99% (123/124)   
+ DEBUG [b66c139f] 	Resolving deltas: 100% (124/124)   
+ DEBUG [b66c139f] 	Resolving deltas: 100% (124/124), done.
+ DEBUG [b66c139f] 	
+ DEBUG [b66c139f] 	Checking connectivity... 
+ DEBUG [b66c139f] 	done.
+ DEBUG [b66c139f] 	
+  INFO [b66c139f] Finished in 1.809 seconds with exit status 0 (successful).
+ DEBUG [496321d3] Running if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [496321d3] Command: if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi
+ DEBUG [496321d3] Finished in 0.627 seconds with exit status 0 (successful).
+  INFO [e7508f92] Running /usr/bin/env git remote set-url origin https://github.com/yoyozi/fut-std.git as deployer@138.197.73.98
+ DEBUG [e7508f92] Command: cd /home/deployer/apps/fut-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env git remote set-url origin https://github.com/yoyozi/fut-std.git )
+  INFO [e7508f92] Finished in 0.622 seconds with exit status 0 (successful).
+  INFO [a2e0472e] Running /usr/bin/env git remote update --prune as deployer@138.197.73.98
+ DEBUG [a2e0472e] Command: cd /home/deployer/apps/fut-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [a2e0472e] 	Fetching origin
+ DEBUG [a2e0472e] 	
+  INFO [a2e0472e] Finished in 0.897 seconds with exit status 0 (successful).
+ DEBUG [b4959a71] Running if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [b4959a71] Command: if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi
+ DEBUG [b4959a71] Finished in 0.582 seconds with exit status 0 (successful).
+  INFO [aa64f680] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170201222010 as deployer@138.197.73.98
+ DEBUG [aa64f680] Command: cd /home/deployer/apps/fut-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170201222010 )
+  INFO [aa64f680] Finished in 0.657 seconds with exit status 0 (successful).
+  INFO [0ae8c320] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deployer/apps/fut-std/releases/20170201222010 as deployer@138.197.73.98
+ DEBUG [0ae8c320] Command: cd /home/deployer/apps/fut-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deployer/apps/fut-std/releases/20170201222010 )
+  INFO [0ae8c320] Finished in 0.684 seconds with exit status 0 (successful).
+ DEBUG [1e167656] Running if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [1e167656] Command: if test ! -d /home/deployer/apps/fut-std/repo; then echo "Directory does not exist '/home/deployer/apps/fut-std/repo'" 1>&2; false; fi
+ DEBUG [1e167656] Finished in 0.607 seconds with exit status 0 (successful).
+ DEBUG [4eba0d07] Running /usr/bin/env git rev-list --max-count=1 master as deployer@138.197.73.98
+ DEBUG [4eba0d07] Command: cd /home/deployer/apps/fut-std/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fut-std-production-craig.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [4eba0d07] 	f8a95b32a06672441744362cb6e3f25b9fd583d6
+ DEBUG [4eba0d07] 	
+ DEBUG [4eba0d07] Finished in 0.630 seconds with exit status 0 (successful).
+ DEBUG [f5326925] Running if test ! -d /home/deployer/apps/fut-std/releases/20170201222010; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170201222010'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [f5326925] Command: if test ! -d /home/deployer/apps/fut-std/releases/20170201222010; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170201222010'" 1>&2; false; fi
+ DEBUG [f5326925] Finished in 0.646 seconds with exit status 0 (successful).
+  INFO [2090c242] Running /usr/bin/env echo "f8a95b32a06672441744362cb6e3f25b9fd583d6" >> REVISION as deployer@138.197.73.98
+ DEBUG [2090c242] Command: cd /home/deployer/apps/fut-std/releases/20170201222010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "f8a95b32a06672441744362cb6e3f25b9fd583d6" >> REVISION )
+  INFO [2090c242] Finished in 0.627 seconds with exit status 0 (successful).
+  INFO [f690503d] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170201222010/config as deployer@138.197.73.98
+ DEBUG [f690503d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170201222010/config )
+  INFO [f690503d] Finished in 0.621 seconds with exit status 0 (successful).
+ DEBUG [d15d3c94] Running [ -L /home/deployer/apps/fut-std/releases/20170201222010/config/database.yml ] as deployer@138.197.73.98
+ DEBUG [d15d3c94] Command: [ -L /home/deployer/apps/fut-std/releases/20170201222010/config/database.yml ]
+ DEBUG [d15d3c94] Finished in 0.616 seconds with exit status 1 (failed).
+ DEBUG [692523d6] Running [ -f /home/deployer/apps/fut-std/releases/20170201222010/config/database.yml ] as deployer@138.197.73.98
+ DEBUG [692523d6] Command: [ -f /home/deployer/apps/fut-std/releases/20170201222010/config/database.yml ]
+ DEBUG [692523d6] Finished in 0.630 seconds with exit status 1 (failed).
+  INFO [5fc26591] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/config/database.yml /home/deployer/apps/fut-std/releases/20170201222010/config/database.yml as deployer@138.197.73.98
+ DEBUG [5fc26591] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/config/database.yml /home/deployer/apps/fut-std/releases/20170201222010/config/database.yml )
+  INFO [5fc26591] Finished in 0.618 seconds with exit status 0 (successful).
+ DEBUG [063b65d6] Running [ -L /home/deployer/apps/fut-std/releases/20170201222010/config/application.yml ] as deployer@138.197.73.98
+ DEBUG [063b65d6] Command: [ -L /home/deployer/apps/fut-std/releases/20170201222010/config/application.yml ]
+ DEBUG [063b65d6] Finished in 0.609 seconds with exit status 1 (failed).
+ DEBUG [187042fa] Running [ -f /home/deployer/apps/fut-std/releases/20170201222010/config/application.yml ] as deployer@138.197.73.98
+ DEBUG [187042fa] Command: [ -f /home/deployer/apps/fut-std/releases/20170201222010/config/application.yml ]
+ DEBUG [187042fa] Finished in 0.622 seconds with exit status 1 (failed).
+  INFO [a674d28e] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/config/application.yml /home/deployer/apps/fut-std/releases/20170201222010/config/application.yml as deployer@138.197.73.98
+ DEBUG [a674d28e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/config/application.yml /home/deployer/apps/fut-std/releases/20170201222010/config/application.yml )
+  INFO [a674d28e] Finished in 0.592 seconds with exit status 0 (successful).
+ DEBUG [f784be5e] Running [ -L /home/deployer/apps/fut-std/releases/20170201222010/config/secrets.yml ] as deployer@138.197.73.98
+ DEBUG [f784be5e] Command: [ -L /home/deployer/apps/fut-std/releases/20170201222010/config/secrets.yml ]
+ DEBUG [f784be5e] Finished in 0.602 seconds with exit status 1 (failed).
+ DEBUG [ae71306c] Running [ -f /home/deployer/apps/fut-std/releases/20170201222010/config/secrets.yml ] as deployer@138.197.73.98
+ DEBUG [ae71306c] Command: [ -f /home/deployer/apps/fut-std/releases/20170201222010/config/secrets.yml ]
+ DEBUG [ae71306c] Finished in 0.620 seconds with exit status 1 (failed).
+  INFO [ef0a1d4d] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/config/secrets.yml /home/deployer/apps/fut-std/releases/20170201222010/config/secrets.yml as deployer@138.197.73.98
+ DEBUG [ef0a1d4d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/config/secrets.yml /home/deployer/apps/fut-std/releases/20170201222010/config/secrets.yml )
+  INFO [ef0a1d4d] Finished in 0.536 seconds with exit status 0 (successful).
+ DEBUG [f593d9f1] Running [ -L /home/deployer/apps/fut-std/releases/20170201222010/config/database.yml ] as deployer@138.197.73.98
+ DEBUG [f593d9f1] Command: [ -L /home/deployer/apps/fut-std/releases/20170201222010/config/database.yml ]
+ DEBUG [f593d9f1] Finished in 0.531 seconds with exit status 0 (successful).
+  INFO [00d59261] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170201222010 /home/deployer/apps/fut-std/releases/20170201222010/tmp /home/deployer/apps/fut-std/releases/20170201222010/vendor /home/deployer/apps/fut-std/releases/20170201222010/public as deployer@138.197.73.98
+ DEBUG [00d59261] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170201222010 /home/deployer/apps/fut-std/releases/20170201222010/tmp /home/deployer/apps/fut-std/releases/20170201222010/vendor /home/deployer/apps/fut-std/releases/20170201222010/public )
+  INFO [00d59261] Finished in 0.539 seconds with exit status 0 (successful).
+ DEBUG [eb464484] Running [ -L /home/deployer/apps/fut-std/releases/20170201222010/bin ] as deployer@138.197.73.98
+ DEBUG [eb464484] Command: [ -L /home/deployer/apps/fut-std/releases/20170201222010/bin ]
+ DEBUG [eb464484] Finished in 0.542 seconds with exit status 1 (failed).
+ DEBUG [ff84341a] Running [ -d /home/deployer/apps/fut-std/releases/20170201222010/bin ] as deployer@138.197.73.98
+ DEBUG [ff84341a] Command: [ -d /home/deployer/apps/fut-std/releases/20170201222010/bin ]
+ DEBUG [ff84341a] Finished in 0.749 seconds with exit status 0 (successful).
+  INFO [ae83fa7c] Running /usr/bin/env rm -rf /home/deployer/apps/fut-std/releases/20170201222010/bin as deployer@138.197.73.98
+ DEBUG [ae83fa7c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /home/deployer/apps/fut-std/releases/20170201222010/bin )
+  INFO [ae83fa7c] Finished in 0.540 seconds with exit status 0 (successful).
+  INFO [cfa1687a] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/bin /home/deployer/apps/fut-std/releases/20170201222010/bin as deployer@138.197.73.98
+ DEBUG [cfa1687a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/bin /home/deployer/apps/fut-std/releases/20170201222010/bin )
+  INFO [cfa1687a] Finished in 0.528 seconds with exit status 0 (successful).
+ DEBUG [4442f136] Running [ -L /home/deployer/apps/fut-std/releases/20170201222010/log ] as deployer@138.197.73.98
+ DEBUG [4442f136] Command: [ -L /home/deployer/apps/fut-std/releases/20170201222010/log ]
+ DEBUG [4442f136] Finished in 0.862 seconds with exit status 1 (failed).
+ DEBUG [b23c685d] Running [ -d /home/deployer/apps/fut-std/releases/20170201222010/log ] as deployer@138.197.73.98
+ DEBUG [b23c685d] Command: [ -d /home/deployer/apps/fut-std/releases/20170201222010/log ]
+ DEBUG [b23c685d] Finished in 0.592 seconds with exit status 0 (successful).
+  INFO [0178d02a] Running /usr/bin/env rm -rf /home/deployer/apps/fut-std/releases/20170201222010/log as deployer@138.197.73.98
+ DEBUG [0178d02a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /home/deployer/apps/fut-std/releases/20170201222010/log )
+  INFO [0178d02a] Finished in 0.620 seconds with exit status 0 (successful).
+  INFO [01060df6] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/log /home/deployer/apps/fut-std/releases/20170201222010/log as deployer@138.197.73.98
+ DEBUG [01060df6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/log /home/deployer/apps/fut-std/releases/20170201222010/log )
+  INFO [01060df6] Finished in 0.620 seconds with exit status 0 (successful).
+ DEBUG [683f9fe8] Running [ -L /home/deployer/apps/fut-std/releases/20170201222010/tmp/pids ] as deployer@138.197.73.98
+ DEBUG [683f9fe8] Command: [ -L /home/deployer/apps/fut-std/releases/20170201222010/tmp/pids ]
+ DEBUG [683f9fe8] Finished in 0.599 seconds with exit status 1 (failed).
+ DEBUG [88bc1e14] Running [ -d /home/deployer/apps/fut-std/releases/20170201222010/tmp/pids ] as deployer@138.197.73.98
+ DEBUG [88bc1e14] Command: [ -d /home/deployer/apps/fut-std/releases/20170201222010/tmp/pids ]
+ DEBUG [88bc1e14] Finished in 0.610 seconds with exit status 1 (failed).
+  INFO [4db924e9] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/tmp/pids /home/deployer/apps/fut-std/releases/20170201222010/tmp/pids as deployer@138.197.73.98
+ DEBUG [4db924e9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/tmp/pids /home/deployer/apps/fut-std/releases/20170201222010/tmp/pids )
+  INFO [4db924e9] Finished in 0.646 seconds with exit status 0 (successful).
+ DEBUG [c8781efc] Running [ -L /home/deployer/apps/fut-std/releases/20170201222010/tmp/cache ] as deployer@138.197.73.98
+ DEBUG [c8781efc] Command: [ -L /home/deployer/apps/fut-std/releases/20170201222010/tmp/cache ]
+ DEBUG [c8781efc] Finished in 0.624 seconds with exit status 1 (failed).
+ DEBUG [a22795d5] Running [ -d /home/deployer/apps/fut-std/releases/20170201222010/tmp/cache ] as deployer@138.197.73.98
+ DEBUG [a22795d5] Command: [ -d /home/deployer/apps/fut-std/releases/20170201222010/tmp/cache ]
+ DEBUG [a22795d5] Finished in 0.601 seconds with exit status 1 (failed).
+  INFO [1ea69852] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/tmp/cache /home/deployer/apps/fut-std/releases/20170201222010/tmp/cache as deployer@138.197.73.98
+ DEBUG [1ea69852] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/tmp/cache /home/deployer/apps/fut-std/releases/20170201222010/tmp/cache )
+  INFO [1ea69852] Finished in 0.642 seconds with exit status 0 (successful).
+ DEBUG [a6794305] Running [ -L /home/deployer/apps/fut-std/releases/20170201222010/tmp/sockets ] as deployer@138.197.73.98
+ DEBUG [a6794305] Command: [ -L /home/deployer/apps/fut-std/releases/20170201222010/tmp/sockets ]
+ DEBUG [a6794305] Finished in 0.605 seconds with exit status 1 (failed).
+ DEBUG [d3ad3f2b] Running [ -d /home/deployer/apps/fut-std/releases/20170201222010/tmp/sockets ] as deployer@138.197.73.98
+ DEBUG [d3ad3f2b] Command: [ -d /home/deployer/apps/fut-std/releases/20170201222010/tmp/sockets ]
+ DEBUG [d3ad3f2b] Finished in 0.624 seconds with exit status 1 (failed).
+  INFO [6461f8ac] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/tmp/sockets /home/deployer/apps/fut-std/releases/20170201222010/tmp/sockets as deployer@138.197.73.98
+ DEBUG [6461f8ac] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/tmp/sockets /home/deployer/apps/fut-std/releases/20170201222010/tmp/sockets )
+  INFO [6461f8ac] Finished in 0.610 seconds with exit status 0 (successful).
+ DEBUG [9748e284] Running [ -L /home/deployer/apps/fut-std/releases/20170201222010/vendor/bundle ] as deployer@138.197.73.98
+ DEBUG [9748e284] Command: [ -L /home/deployer/apps/fut-std/releases/20170201222010/vendor/bundle ]
+ DEBUG [9748e284] Finished in 0.628 seconds with exit status 1 (failed).
+ DEBUG [5eced49e] Running [ -d /home/deployer/apps/fut-std/releases/20170201222010/vendor/bundle ] as deployer@138.197.73.98
+ DEBUG [5eced49e] Command: [ -d /home/deployer/apps/fut-std/releases/20170201222010/vendor/bundle ]
+ DEBUG [5eced49e] Finished in 0.546 seconds with exit status 1 (failed).
+  INFO [00d56cc7] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/vendor/bundle /home/deployer/apps/fut-std/releases/20170201222010/vendor/bundle as deployer@138.197.73.98
+ DEBUG [00d56cc7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/vendor/bundle /home/deployer/apps/fut-std/releases/20170201222010/vendor/bundle )
+  INFO [00d56cc7] Finished in 0.616 seconds with exit status 0 (successful).
+ DEBUG [f913f302] Running [ -L /home/deployer/apps/fut-std/releases/20170201222010/public/system ] as deployer@138.197.73.98
+ DEBUG [f913f302] Command: [ -L /home/deployer/apps/fut-std/releases/20170201222010/public/system ]
+ DEBUG [f913f302] Finished in 0.591 seconds with exit status 1 (failed).
+ DEBUG [c480bdfe] Running [ -d /home/deployer/apps/fut-std/releases/20170201222010/public/system ] as deployer@138.197.73.98
+ DEBUG [c480bdfe] Command: [ -d /home/deployer/apps/fut-std/releases/20170201222010/public/system ]
+ DEBUG [c480bdfe] Finished in 0.606 seconds with exit status 1 (failed).
+  INFO [acbe4816] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/public/system /home/deployer/apps/fut-std/releases/20170201222010/public/system as deployer@138.197.73.98
+ DEBUG [acbe4816] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/public/system /home/deployer/apps/fut-std/releases/20170201222010/public/system )
+  INFO [acbe4816] Finished in 0.624 seconds with exit status 0 (successful).
+ DEBUG [0c4da482] Running [ -L /home/deployer/apps/fut-std/releases/20170201222010/public/assets ] as deployer@138.197.73.98
+ DEBUG [0c4da482] Command: [ -L /home/deployer/apps/fut-std/releases/20170201222010/public/assets ]
+ DEBUG [0c4da482] Finished in 0.614 seconds with exit status 1 (failed).
+ DEBUG [1cd51afa] Running [ -d /home/deployer/apps/fut-std/releases/20170201222010/public/assets ] as deployer@138.197.73.98
+ DEBUG [1cd51afa] Command: [ -d /home/deployer/apps/fut-std/releases/20170201222010/public/assets ]
+ DEBUG [1cd51afa] Finished in 0.526 seconds with exit status 1 (failed).
+  INFO [de819504] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/public/assets /home/deployer/apps/fut-std/releases/20170201222010/public/assets as deployer@138.197.73.98
+ DEBUG [de819504] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/shared/public/assets /home/deployer/apps/fut-std/releases/20170201222010/public/assets )
+  INFO [de819504] Finished in 0.608 seconds with exit status 0 (successful).
+ DEBUG [2a0b840f] Running if test ! -d /home/deployer/apps/fut-std/releases/20170201222010; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170201222010'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [2a0b840f] Command: if test ! -d /home/deployer/apps/fut-std/releases/20170201222010; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170201222010'" 1>&2; false; fi
+ DEBUG [2a0b840f] Finished in 0.589 seconds with exit status 0 (successful).
+ DEBUG [ae5e7459] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deployer/apps/fut-std/shared/bundle as deployer@138.197.73.98
+ DEBUG [ae5e7459] Command: cd /home/deployer/apps/fut-std/releases/20170201222010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deployer/apps/fut-std/shared/bundle )
+ DEBUG [ae5e7459] 	[31mThe following gems are missing[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * rake (12.0.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * i18n (0.7.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * json (1.8.6)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * minitest (5.10.1)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * thread_safe (0.3.5)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * tzinfo (1.2.2)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * activesupport (4.2.5)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * builder (3.2.3)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * erubis (2.7.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * mini_portile2 (2.1.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * nokogiri (1.7.0.1)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * rails-deprecated_sanitizer (1.0.3)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * rails-dom-testing (1.0.8)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * loofah (2.0.3)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * rails-html-sanitizer (1.0.3)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * actionview (4.2.5)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * rack (1.6.5)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * rack-test (0.6.3)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * actionpack (4.2.5)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * globalid (0.3.7)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * activejob (4.2.5)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * mime-types-data (3.2016.0521)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * mime-types (3.1)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * mail (2.6.4)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * actionmailer (4.2.5)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * activemodel (4.2.5)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * arel (6.0.4)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * activerecord (4.2.5)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * net-ssh (4.0.1)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * sshkit (1.11.5)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * airbrussh (1.1.2)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * debug_inspector (0.0.2)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * binding_of_caller (0.7.2)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * byebug (9.0.6)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * capistrano (3.7.2)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * capistrano-bundler (1.2.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * capistrano-database-yml (1.0.1)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * capistrano-figaro-yml (1.0.5)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * capistrano-rails (1.2.2)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * capistrano-rbenv (2.0.4)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * capistrano-rbenv-install (1.2.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * capistrano-safe-deploy-to (1.1.1)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * capistrano-secrets-yml (1.0.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * capistrano-ssh-doctor (1.0.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * capistrano-unicorn-nginx (4.0.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * coffee-script-source (1.12.2)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * execjs (2.7.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * coffee-script (2.4.1)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * thor (0.19.4)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * railties (4.2.5)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * coffee-rails (4.1.1)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * concurrent-ruby (1.0.4)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * figaro (1.1.1)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * multi_json (1.12.1)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * jbuilder (2.6.1)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * jquery-rails (4.2.2)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * kgio (2.11.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * pg (0.19.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * sprockets (3.7.1)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * sprockets-rails (3.2.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * rails (4.2.5)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * raindrops (0.17.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * rdoc (4.3.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * sass (3.4.23)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * tilt (2.0.5)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * sass-rails (5.0.6)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * sdoc (0.4.2)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * spring (2.0.1)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * turbolinks-source (5.0.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * turbolinks (5.0.1)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * uglifier (3.0.4)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * unicorn (5.2.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[31m * web-console (2.3.0)[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [ae5e7459] 	
+ DEBUG [ae5e7459] Finished in 1.363 seconds with exit status 1 (failed).
+  INFO [45b15b80] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deployer/apps/fut-std/shared/bundle --without development test --deployment --quiet as deployer@138.197.73.98
+ DEBUG [45b15b80] Command: cd /home/deployer/apps/fut-std/releases/20170201222010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deployer/apps/fut-std/shared/bundle --without development test --deployment --quiet )
+  INFO [45b15b80] Finished in 120.981 seconds with exit status 0 (successful).
+ DEBUG [76c305ae] Running if test ! -d /home/deployer/apps/fut-std/releases/20170201222010; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170201222010'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [76c305ae] Command: if test ! -d /home/deployer/apps/fut-std/releases/20170201222010; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170201222010'" 1>&2; false; fi
+ DEBUG [76c305ae] Finished in 1.219 seconds with exit status 0 (successful).
+  INFO [244ee1c8] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deployer@138.197.73.98
+ DEBUG [244ee1c8] Command: cd /home/deployer/apps/fut-std/releases/20170201222010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+ DEBUG [244ee1c8] 	I, [2017-02-01T22:22:53.785725 #8747]  INFO -- : Writing /home/deployer/apps/fut-std/releases/20170201222010/public/assets/application-b57b3bdfe72296fe43304d7dcc0d525ba53322bda7a2be20284f11d266ddd7ba.js
+ DEBUG [244ee1c8] 	
+ DEBUG [244ee1c8] 	I, [2017-02-01T22:22:53.787066 #8747]  INFO -- : Writing /home/deployer/apps/fut-std/releases/20170201222010/public/assets/application-b57b3bdfe72296fe43304d7dcc0d525ba53322bda7a2be20284f11d266ddd7ba.js.gz
+ DEBUG [244ee1c8] 	
+ DEBUG [244ee1c8] 	I, [2017-02-01T22:22:53.799678 #8747]  INFO -- : Writing /home/deployer/apps/fut-std/releases/20170201222010/public/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css
+ DEBUG [244ee1c8] 	
+ DEBUG [244ee1c8] 	I, [2017-02-01T22:22:53.803223 #8747]  INFO -- : Writing /home/deployer/apps/fut-std/releases/20170201222010/public/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css.gz
+ DEBUG [244ee1c8] 	
+  INFO [244ee1c8] Finished in 6.921 seconds with exit status 0 (successful).
+ DEBUG [4f75bc60] Running if test ! -d /home/deployer/apps/fut-std/releases/20170201222010; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170201222010'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [4f75bc60] Command: if test ! -d /home/deployer/apps/fut-std/releases/20170201222010; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170201222010'" 1>&2; false; fi
+ DEBUG [4f75bc60] Finished in 0.581 seconds with exit status 0 (successful).
+  INFO [515bb358] Running /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170201222010/assets_manifest_backup as deployer@138.197.73.98
+ DEBUG [515bb358] Command: cd /home/deployer/apps/fut-std/releases/20170201222010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deployer/apps/fut-std/releases/20170201222010/assets_manifest_backup )
+  INFO [515bb358] Finished in 0.584 seconds with exit status 0 (successful).
+ DEBUG [24f16a8c] Running /usr/bin/env ls /home/deployer/apps/fut-std/releases/20170201222010/public/assets/.sprockets-manifest* as deployer@138.197.73.98
+ DEBUG [24f16a8c] Command: cd /home/deployer/apps/fut-std/releases/20170201222010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /home/deployer/apps/fut-std/releases/20170201222010/public/assets/.sprockets-manifest* )
+ DEBUG [24f16a8c] 	/home/deployer/apps/fut-std/releases/20170201222010/public/assets/.sprockets-manifest-1714354c74136aecfbbc31af7b46e3e3.json
+ DEBUG [24f16a8c] 	
+ DEBUG [24f16a8c] Finished in 0.644 seconds with exit status 0 (successful).
+ DEBUG [eb873095] Running /usr/bin/env ls /home/deployer/apps/fut-std/releases/20170201222010/public/assets/.sprockets-manifest* as deployer@138.197.73.98
+ DEBUG [eb873095] Command: cd /home/deployer/apps/fut-std/releases/20170201222010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /home/deployer/apps/fut-std/releases/20170201222010/public/assets/.sprockets-manifest* )
+ DEBUG [eb873095] 	/home/deployer/apps/fut-std/releases/20170201222010/public/assets/.sprockets-manifest-1714354c74136aecfbbc31af7b46e3e3.json
+ DEBUG [eb873095] 	
+ DEBUG [eb873095] Finished in 0.617 seconds with exit status 0 (successful).
+  INFO [0a7bf34f] Running /usr/bin/env cp /home/deployer/apps/fut-std/releases/20170201222010/public/assets/.sprockets-manifest-1714354c74136aecfbbc31af7b46e3e3.json /home/deployer/apps/fut-std/releases/20170201222010/assets_manifest_backup as deployer@138.197.73.98
+ DEBUG [0a7bf34f] Command: cd /home/deployer/apps/fut-std/releases/20170201222010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /home/deployer/apps/fut-std/releases/20170201222010/public/assets/.sprockets-manifest-1714354c74136aecfbbc31af7b46e3e3.json /home/deployer/apps/fut-std/releases/20170201222010/assets_manifest_backup )
+  INFO [0a7bf34f] Finished in 0.582 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [b899cd37] Running if test ! -d /home/deployer/apps/fut-std/releases/20170201222010; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170201222010'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [b899cd37] Command: if test ! -d /home/deployer/apps/fut-std/releases/20170201222010; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases/20170201222010'" 1>&2; false; fi
+ DEBUG [b899cd37] Finished in 0.634 seconds with exit status 0 (successful).
+  INFO [5b84a639] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as deployer@138.197.73.98
+ DEBUG [5b84a639] Command: cd /home/deployer/apps/fut-std/releases/20170201222010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+  INFO [5b84a639] Finished in 3.153 seconds with exit status 0 (successful).
+  INFO [97bfd967] Running /usr/bin/env ln -s /home/deployer/apps/fut-std/releases/20170201222010 /home/deployer/apps/fut-std/releases/current as deployer@138.197.73.98
+ DEBUG [97bfd967] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deployer/apps/fut-std/releases/20170201222010 /home/deployer/apps/fut-std/releases/current )
+  INFO [97bfd967] Finished in 0.625 seconds with exit status 0 (successful).
+  INFO [ddbeb8d4] Running /usr/bin/env mv /home/deployer/apps/fut-std/releases/current /home/deployer/apps/fut-std as deployer@138.197.73.98
+ DEBUG [ddbeb8d4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mv /home/deployer/apps/fut-std/releases/current /home/deployer/apps/fut-std )
+  INFO [ddbeb8d4] Finished in 0.604 seconds with exit status 0 (successful).
+  INFO [8fb58a43] Running /usr/bin/env sudo /etc/init.d/nginx reload as deployer@138.197.73.98
+ DEBUG [8fb58a43] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo /etc/init.d/nginx reload )
+ DEBUG [8fb58a43] 	 * Reloading nginx configuration nginx       
+ DEBUG [8fb58a43] 	[80G
+ DEBUG [8fb58a43] 	 
+ DEBUG [8fb58a43] 	
+ DEBUG [8fb58a43] 	[74G
+ DEBUG [8fb58a43] 	[ OK ]
+ DEBUG [8fb58a43] 	
+  INFO [8fb58a43] Finished in 0.667 seconds with exit status 0 (successful).
+  INFO [60111524] Running /usr/bin/env sudo service unicorn_fut-std_production restart as deployer@138.197.73.98
+ DEBUG [60111524] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo service unicorn_fut-std_production restart )
+ DEBUG [60111524] 	Couldn't reload, starting 'export HOME; true /home/deployer ; cd /home/deployer/apps/fut-std/current &&  ( export RBENV_ROOT=/home/deployer/.rbenv RBENV_VERSION=2.3.1 ; /home/deployer/.rbenv/bin/rbenv exec bundle exec unicorn -D -c /home/deployer/apps/fut-std/shared/config/unicorn.rb -E production )' instead
+ DEBUG [60111524] 	
+  INFO [60111524] Finished in 5.073 seconds with exit status 0 (successful).
+ DEBUG [58b6c040] Running /usr/bin/env ls -x /home/deployer/apps/fut-std/releases as deployer@138.197.73.98
+ DEBUG [58b6c040] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls -x /home/deployer/apps/fut-std/releases )
+ DEBUG [58b6c040] 	20170201222010
+ DEBUG [58b6c040] 	
+ DEBUG [58b6c040] Finished in 0.605 seconds with exit status 0 (successful).
+ DEBUG [1d1aafb4] Running if test ! -d /home/deployer/apps/fut-std/releases; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases'" 1>&2; false; fi as deployer@138.197.73.98
+ DEBUG [1d1aafb4] Command: if test ! -d /home/deployer/apps/fut-std/releases; then echo "Directory does not exist '/home/deployer/apps/fut-std/releases'" 1>&2; false; fi
+ DEBUG [1d1aafb4] Finished in 0.641 seconds with exit status 0 (successful).
+  INFO [64fb105a] Running /usr/bin/env echo "Branch master (at f8a95b32a06672441744362cb6e3f25b9fd583d6) deployed as release 20170201222010 by craig" >> /home/deployer/apps/fut-std/revisions.log as deployer@138.197.73.98
+ DEBUG [64fb105a] Command: cd /home/deployer/apps/fut-std/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at f8a95b32a06672441744362cb6e3f25b9fd583d6) deployed as release 20170201222010 by craig" >> /home/deployer/apps/fut-std/revisions.log )
+  INFO [64fb105a] Finished in 0.612 seconds with exit status 0 (successful).

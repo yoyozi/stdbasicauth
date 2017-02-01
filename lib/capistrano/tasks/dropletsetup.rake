@@ -2,7 +2,7 @@
 namespace :droplet do
 
   desc "Updating the server"  
-  task :dsetup do   
+  task :setup do   
       on roles(:app) do 
             execute "echo 'export LANG=\"en_US.utf8\"' >> ~/.bashrc"
             execute "echo 'export LANGUAGE=\"en_US.utf8\"' >> ~/.bashrc"

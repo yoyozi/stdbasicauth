@@ -47,5 +47,6 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano-secrets-yml'
+  gem 'capistrano-database-yml'
 end
 

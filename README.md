@@ -3,9 +3,10 @@
 **Clone the std app to your desktop as the name of the new application**
 
 > git clone https://github.com/yoyozi/reponame.git newreponame
+Create newreponame on github
 > git remote set-url origin https://github.com/yoyozi/newreponame.git
 
-## Submit to repo
+## Submit to repo just created
 > git add -A
 > git commit -m "Ready" 
 > git push -u origin master
@@ -192,6 +193,7 @@ require 'capistrano/database_yml'
 ## Setup the server
 
 > cap -T
+> cap production safe_deploy_to:ensure
 > cap production setup
 > cap production deploy
 

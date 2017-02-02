@@ -59,10 +59,34 @@ UseDNS no
 AllowUsers username username
 ```
 
+**To squeulch the perl WARNIG**
+
+Edit the /etc/ssh/ssh_config file
+> vi /etc/ssh/ssh_config
+Find the line "SendEnv LANG LC_*"
+
+```
+# SendEnv LANG LC_*
+```
+
 Save the file
 > reload ssh
 
+## Digital Ocean specific
+
+Configure the time zone and ntp service
+> sudo dpkg-reconfigure tzdata
+> sudo apt-get install ntp
+
+Configure swap space
+> sudo fallocate -l 4G /swapfile
+> sudo chmod 600 /swapfile
+> sudo mkswap /swapfile
+> sudo swapon /swapfile
+> sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
+
 **Setup ssh login to Github from the droplet server so no password is used to pull repository**
+
 As the deploying user run
 > ssh-keygen -t rsa
 
@@ -123,15 +147,17 @@ end
 ## On remote: setup postgresql on the remote server
 > sudo -u postgresql createuser -s rails-psql-user
 > sudo -u postgres psql
-> /password (set the postgres user password)
-> /password rails-psql-user (set the rails-user password)
-> /q
-> createdb "name"
+> \password (set the postgres user password)
+> \password rails-psql-user (set the rails-user password)
+> sudo -u postgres createdb chraig_production
+> \q
+
+## on local
 
 **Ensure IP address and the project repo is adjusted to suite**
 deploy.rb and production.rb
 
-Recreate the keys using "rake secrets"
+Create the ./config/secrets.yml file and use keys "rake secret" to populate
 ```
 development:
   secret_key_base: xxx
@@ -141,11 +167,11 @@ production:
   secret_key_base: <%= ENV['SECTRETSTRING'] %>
 ```
 
-Create application.yml file in the config directory
+Create ./config/application.yml file for figaro
 ```
 production:
    DBPW: thepw
-   SECTRETSTRING: thestring
+   SECTRETSTRING: "the string from rake secret"
 ```
 
 Create the database.yml file
@@ -168,11 +194,10 @@ production:
   <<: *default
   database: db_production
   username: rails-psql-user
-  password: <%= ENV['DBPW'] %>
+  password: <%= ENV['production-DB-password'] %>
 ```
 
-**Create linked files and directories by adding into deploy.rb**
-
+Create linked files and directories by adding into deploy.rb
 ```
 set :linked_files, %w{config/database.yml}
 set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}

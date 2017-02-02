@@ -1,12 +1,14 @@
 ## Loading this App to build on Digital Ocean
 
 **Clone the std app to your desktop as the name of the new application**
-
 > git clone https://github.com/yoyozi/reponame.git newreponame
-Create newreponame on github
+
+**Create newreponame on github**
+**Set the remote to created**
+
 > git remote set-url origin https://github.com/yoyozi/newreponame.git
 
-## Submit to repo just created
+**Submit to repo just created**
 > git add -A
 > git commit -m "Ready" 
 > git push -u origin master

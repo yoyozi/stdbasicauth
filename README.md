@@ -1,4 +1,6 @@
-## Loading this App to build on Digital Ocean
+## Basic AUTH and AUTH using TDD with RSpec and Capybara
+
+## A clone of std
 
 **Clone the std app to your desktop as the name of the new application**
 > git clone https://github.com/yoyozi/reponame.git newreponame
@@ -12,7 +14,260 @@
 > git add -A
 > git commit -m "Ready" 
 > git push -u origin master
-> git push -u origin master
+
+**Change IPAddress and project repo name: so no mistake**
+deploy.rb and production.rb
+
+Create the ./config/secrets.yml file and use keys "rake secret" to populate
+```
+development:
+  secret_key_base: xxx
+test:
+  secret_key_base: xxxcxccv
+production:
+  secret_key_base: <%= ENV['SECTRETSTRING'] %>
+```
+
+Create ./config/application.yml file for figaro
+```
+production:
+   DBPW: thepw
+   SECTRETSTRING: "the string from rake secret"
+```
+
+Create the database.yml file
+```
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+
+development:
+  <<: *default
+  database: db_development
+
+test:
+  <<: *default
+  database: db_test
+
+production:
+  <<: *default
+  database: db_production
+  username: rails-psql-user
+  password: <%= ENV['DBPW'] %>
+```
+
+**MAKE SURE .gitignore has**
+
+```
+/db/*.sqlite3
+/db/*.sqlite3-journal
+*/log/
+!/log/.keep
+/tmp
+/config/database.yml
+/.env
+/config/secrets.yml
+
+# Ignore application configuration
+/config/application.yml
+```
+
+## Setup testing environment
+**Add gems**
+
+gem 'faker'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+end
+
+> bundle
+
+**Setup rpec**
+
+>rails g rspec:install
+
+Edit the rails helper file
+```
+# This file is copied to spec/ when you run 'rails generate rspec:install'
+
+ENV['RAILS_ENV'] ||= 'test'
+require File.expand_path('../../config/environment', __FILE__)
+
+# Prevent database truncation if the environment is production
+abort("The Rails environment is running in production mode!") if Rails.env.production?
+require 'spec_helper'
+require 'rspec/rails'
+require 'capybara/rails'
+require 'shoulda/matchers'
+require 'database_cleaner'
+
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+
+ActiveRecord::Migration.maintain_test_schema!
+
+RSpec.configure do |config|
+  config.use_transactional_fixtures = false
+  config.include FactoryGirl::Syntax::Methods
+  # config.include Features, type => feature
+  # config.include Features::SessionHelpers, type: :feature
+
+end
+```
+
+**Test rspec**
+
+> rspec 
+Should get no examples found
+
+**Get the server up and running**
+
+> rake db:create
+> rails s
+
+## Testing
+
+> rails g model post title:string body:text (this creates spec files for us)
+>  rake db:migrate
+
+./spec/model/post_spec.rb
+```
+require 'rails_helper'
+
+RSpec.describe Post, type: :model do
+  before(:all) do 
+    @post = Post.new(body: "My body", title: "My Title")
+  end
+  it "Should have matching body" do 
+    expect(@post.body).to eq("Your body")
+  end
+end
+```
+
+Run the test and it should fail: change to pass
+>rspec ./spec/model/post_spec.rb
+
+**To bring in Capybara a "Features test suite: testing user interactions"**
+
+> rails g controller posts 
+> mkdir ./spec/features
+> touch ./spec/features/add_posts_spec.rb
+
+```
+require rails_helper.rb 
+
+Rspec.feature "adding posts" do 
+
+
+  scenario ' allow a user to add a post' do   
+
+    visit new_post_path
+
+    fill_in "Tital", with: "My Title"
+    fill_in "Body", with: "My body"
+
+    click_on("Create post")
+
+    expect(page).to have_content("My Title")
+    expect(page).to have_content("My body")
+    
+  end 
+
+end
+```
+
+Run the test 
+> rspec ./spec/features/add_post_spec.rb 
+
+Should fail : undefined local variable or method `new_post_path'
+No routes so create one
+Add to routes:   resources :posts
+Now run test and need to add controller action new 
+
+Added simple form: gem 'simple_form', '~> 3.4'
+> bundle 
+> rails generate simple_form:install
+
+Created views for new and _form
+Go through the motions of finding failure and correcting**
+
+**Bringing in FactoryGirl (replaces fixtures)**
+Factory girl methods
+
+build(:post) (returns model instance but doesnt save to DB)
+create(:post) (returns model instance  and saves to DB)
+attributes_for(:post) returns hash of the attributes: good for testing the params in the controller
+build_stubbed(:post)  similar to build but returns an unsaved model instance and assigns a fake active record id to the model
+
+Make sure you have this in your rails_helper.rb fileconfig.include FactoryGirl::Syntax::Methods
+
+> mkdir ./spec/factories (if doesnt exist)
+Do testing using factorygirl
+
+## Bootstrap
+
+In Gemfile add and bundle:
+```
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'font-awesome-sass', '~> 4.5.0'
+gem 'bootstrap-sass-extras', '~> 0.0.2'
+```
+
+Application.css rename to application.css.scss if using sass for first time
+> vi application.css.scss 
+
+And add:
+```
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap";
+@import "bootstrap-sprockets";
+
+@import "font-awesome";
+@import "font-awesome-sprockets";
+```
+
+> rails g bootstrap:install
+
+and for responsive layout run 
+> rails g bootstrap:layout application fluid
+> rails generate simple_form:install --bootstrap
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Doing later
+## Loading this App to build on Digital Ocean with Capistrano3
 
 ## On remote: Sign up with Digital Ocean or rebuild your existing droplet
 Delete the fingerprints of the known host in the known hosts file on your local machine
@@ -154,48 +409,7 @@ end
 
 ## on local
 
-**Ensure IP address and the project repo is adjusted to suite**
-deploy.rb and production.rb
 
-Create the ./config/secrets.yml file and use keys "rake secret" to populate
-```
-development:
-  secret_key_base: xxx
-test:
-  secret_key_base: xxxcxccv
-production:
-  secret_key_base: <%= ENV['SECTRETSTRING'] %>
-```
-
-Create ./config/application.yml file for figaro
-```
-production:
-   DBPW: thepw
-   SECTRETSTRING: "the string from rake secret"
-```
-
-Create the database.yml file
-```
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  host: localhost
-
-development:
-  <<: *default
-  database: db_development
-
-test:
-  <<: *default
-  database: db_test
-
-production:
-  <<: *default
-  database: db_production
-  username: rails-psql-user
-  password: <%= ENV['production-DB-password'] %>
-```
 
 Create linked files and directories by adding into deploy.rb
 ```
